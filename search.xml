@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title></title>
+      <link href="/2021/07/30/package-lock/"/>
+      <url>/2021/07/30/package-lock/</url>
+      
+        <content type="html"><![CDATA[{"requires":true,"lockfileVersion":1,"dependencies":{"boolbase":{"version":"1.0.0","resolved":"https://registry.nlark.com/boolbase/download/boolbase-1.0.0.tgz","integrity":"sha1-aN/1++YMUes3cl6p4+0xDcwed24="},"cheerio":{"version":"0.19.0","resolved":"https://registry.nlark.com/cheerio/download/cheerio-0.19.0.tgz?cache=0&sync_timestamp=1623169700794&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcheerio%2Fdownload%2Fcheerio-0.19.0.tgz","integrity":"sha1-dy5wFfLuKZZQltcepBdbdas1SSU=","requires":{"css-select":"~1.0.0","dom-serializer":"~0.1.0","entities":"~1.1.1","htmlparser2":"~3.8.1","lodash":"^3.2.0"}},"core-util-is":{"version":"1.0.2","resolved":"https://registry.npm.taobao.org/core-util-is/download/core-util-is-1.0.2.tgz","integrity":"sha1-tf1UIgqivFq1eqtxQMlAdUUDwac="},"css-select":{"version":"1.0.0","resolved":"https://registry.nlark.com/css-select/download/css-select-1.0.0.tgz","integrity":"sha1-sRIcpRhI3SZOIkTQWM7iVN7rRLA=","requires":{"boolbase":"~1.0.0","css-what":"1.0","domutils":"1.4","nth-check":"~1.0.0"}},"css-what":{"version":"1.0.0","resolved":"https://registry.nlark.com/css-what/download/css-what-1.0.0.tgz?cache=0&sync_timestamp=1622227658327&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcss-what%2Fdownload%2Fcss-what-1.0.0.tgz","integrity":"sha1-18wt9FGAZm+Z0rFEYmOUaeAPc2w="},"dom-serializer":{"version":"0.1.1","resolved":"https://registry.nlark.com/dom-serializer/download/dom-serializer-0.1.1.tgz?cache=0&sync_timestamp=1621256858583&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fdom-serializer%2Fdownload%2Fdom-serializer-0.1.1.tgz","integrity":"sha1-HsQFnihLq+027sKUHUqXChic58A=","requires":{"domelementtype":"^1.3.0","entities":"^1.1.1"}},"domelementtype":{"version":"1.3.1","resolved":"https://registry.nlark.com/domelementtype/download/domelementtype-1.3.1.tgz","integrity":"sha1-0EjESzew0Qp/Kj1f7j9DM9eQSB8="},"domhandler":{"version":"2.3.0","resolved":"https://registry.npm.taobao.org/domhandler/download/domhandler-2.3.0.tgz?cache=0&sync_timestamp=1618563983578&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdomhandler%2Fdownload%2Fdomhandler-2.3.0.tgz","integrity":"sha1-LeWaCCLVAn+r/28DLCsloqir5zg=","requires":{"domelementtype":"1"}},"domutils":{"version":"1.4.3","resolved":"https://registry.nlark.com/domutils/download/domutils-1.4.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fdomutils%2Fdownload%2Fdomutils-1.4.3.tgz","integrity":"sha1-CGVRN5bGswYDGFDhdVFrr4C3Km8=","requires":{"domelementtype":"1"}},"entities":{"version":"1.1.2","resolved":"https://registry.npm.taobao.org/entities/download/entities-1.1.2.tgz?cache=0&sync_timestamp=1611535326982&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fentities%2Fdownload%2Fentities-1.1.2.tgz","integrity":"sha1-vfpzUplmTfr9NFKe1PhSKidf6lY="},"hexo-asset-image":{"version":"git+https://github.com/CodeFalling/hexo-asset-image.git#3c114cf0c0343ab28469635085b225fcae7fb9d3","from":"git+https://github.com/CodeFalling/hexo-asset-image.git","requires":{"cheerio":"^0.19.0","entities":"^1.1.2"}},"htmlparser2":{"version":"3.8.3","resolved":"https://registry.npm.taobao.org/htmlparser2/download/htmlparser2-3.8.3.tgz?cache=0&sync_timestamp=1617916210217&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhtmlparser2%2Fdownload%2Fhtmlparser2-3.8.3.tgz","integrity":"sha1-mWwosZFRaovoZQGn15dX5ccMEGg=","requires":{"domelementtype":"1","domhandler":"2.3","domutils":"1.5","entities":"1.0","readable-stream":"1.1"},"dependencies":{"domutils":{"version":"1.5.1","resolved":"https://registry.nlark.com/domutils/download/domutils-1.5.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fdomutils%2Fdownload%2Fdomutils-1.5.1.tgz","integrity":"sha1-3NhIiib1Y9YQeeSMn3t+Mjc2gs8=","requires":{"dom-serializer":"0","domelementtype":"1"}},"entities":{"version":"1.0.0","resolved":"https://registry.npm.taobao.org/entities/download/entities-1.0.0.tgz?cache=0&sync_timestamp=1611535326982&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fentities%2Fdownload%2Fentities-1.0.0.tgz","integrity":"sha1-sph6o4ITR/zeZCsk/fyeT7cSvyY="}}},"inherits":{"version":"2.0.4","resolved":"https://registry.npm.taobao.org/inherits/download/inherits-2.0.4.tgz","integrity":"sha1-D6LGT5MpF8NDOg3tVTY6rjdBa3w="},"isarray":{"version":"0.0.1","resolved":"https://registry.npm.taobao.org/isarray/download/isarray-0.0.1.tgz","integrity":"sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8="},"lodash":{"version":"3.10.1","resolved":"https://registry.nlark.com/lodash/download/lodash-3.10.1.tgz","integrity":"sha1-W/Rejkm6QYnhfUgnid/RW9FAt7Y="},"nth-check":{"version":"1.0.2","resolved":"https://registry.nlark.com/nth-check/download/nth-check-1.0.2.tgz","integrity":"sha1-sr0pXDfj3VijvwcAN2Zjuk2c8Fw=","requires":{"boolbase":"~1.0.0"}},"readable-stream":{"version":"1.1.14","resolved":"https://registry.nlark.com/readable-stream/download/readable-stream-1.1.14.tgz","integrity":"sha1-fPTFTvZI44EwhMY23SB54WbAgdk=","requires":{"core-util-is":"~1.0.0","inherits":"~2.0.1","isarray":"0.0.1","string_decoder":"~0.10.x"}},"string_decoder":{"version":"0.10.31","resolved":"https://registry.npm.taobao.org/string_decoder/download/string_decoder-0.10.31.tgz","integrity":"sha1-YuIDvEF2bGwoyfyEMB2rHFMQ+pQ="}}}]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>(转)Types of Memory Interleaving</title>
+      <link href="/2021/07/30/%E8%BD%AC-Types-of-Memory-Interleaving/"/>
+      <url>/2021/07/30/%E8%BD%AC-Types-of-Memory-Interleaving/</url>
+      
+        <content type="html"><![CDATA[<h1 id="转-Types-of-Memory-Interleaving"><a href="#转-Types-of-Memory-Interleaving" class="headerlink" title="(转)Types of Memory Interleaving"></a>(转)Types of Memory Interleaving</h1><p><a href="https://www.geeksforgeeks.org/memory-interleaving/">Memory Interleaving</a> is an abstraction technique which divides memory into a number of modules such that successive words in the address space are placed in the different module.</p><p>Suppose a 64 MB memory made up of the 4 MB chips as shown in the below:</p><p><img "" class="lazyload placeholder" data-original="/1406-4.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p><p>We organize the memory into 4 MB banks, each having eight of the 4 MB chips. The memory thus has 16 banks, each of 4 MB.</p><p>64 MB memory = $2^{26}$, so 26 bits are used for addressing.<br>16 = $2^4$, so 4 bits of address select the bank, and 4 MB = $2^{22}$, so 22 bits of address to each chip.</p><p>In general, an N-bit address, with $N = L + M$, is broken into two parts:</p><ol><li>L-bit bank select, used to activate one of the $2^L$ banks of memory, and</li><li>M-bit address that is sent to each of the memory banks.</li></ol><p>When one of the memory banks is active, the other ($2^L – 1$) are inactive. All banks receive the M-bit address, but the inactive one do not respond to it.</p><p><strong>Classification of Memory Interleaving:</strong><br>Memory interleaving is classified into two types:</p><ol><li><strong>High Order Interleaving –</strong> In high-order interleaving, the most significant bits of the address select the memory chip. The least significant bits are sent as addresses to each chip. One problem is that consecutive addresses tend to be in the same chip. The maximum rate of data transfer is limited by the memory cycle time.</li></ol><p>It is also known as Memory Banking.</p><p><img "" class="lazyload placeholder" data-original="/223-1.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p><ol start="2"><li><strong>Low Order Interleaving –</strong> In low-order interleaving, the least significant bits select the memory bank (module). In this, consecutive memory addresses are in different memory modules. This allows memory access at much faster rates than allowed by the cycle time.</li></ol><p><img "" class="lazyload placeholder" data-original="/3164-1.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p><p>注：转载于<a href="https://www.geeksforgeeks.org/types-of-memory-interleaving/">https://www.geeksforgeeks.org/types-of-memory-interleaving/</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 计算机体系架构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CACTI 7.0介绍</title>
+      <link href="/2021/07/29/CACTI-7-0%E4%BB%8B%E7%BB%8D/"/>
+      <url>/2021/07/29/CACTI-7-0%E4%BB%8B%E7%BB%8D/</url>
+      
+        <content type="html"><![CDATA[<h1 id="CACTI-7-0介绍"><a href="#CACTI-7-0介绍" class="headerlink" title="CACTI 7.0介绍"></a>CACTI 7.0介绍</h1><h2 id="1-CACTI发展"><a href="#1-CACTI发展" class="headerlink" title="1. CACTI发展"></a>1. CACTI发展</h2><p>CACTI是HP公司推出的一款开源开源工具，广泛应用于对cache/DRAM的延时，功耗，cycle time[^1]和面积的评估。</p><p>[^1]: <font color="gray">(暂时不知道如何翻译比较好，感觉前面的延时指的是各个部分的延时信息，这边的cycle time应该指的是访问周期)</font></p><p>CACTI最初由Dr. Jouppi和Dr. Wilton于1993年开发，此后经历了六次版本的迭代。</p><h2 id="2-CACTI支持的特性"><a href="#2-CACTI支持的特性" class="headerlink" title="2. CACTI支持的特性"></a>2. CACTI支持的特性</h2><ul><li>以下memory的功耗、延时、cycle time的建模<ul><li>direct mapped caches</li><li>set-associative caches</li><li>fully associative caches</li><li>Embedded DRAM memories</li><li>Commodity DRAM memories</li></ul></li><li>多端口UCA(uniform cache access)，多端口的NUCA(non-uniform cache access)的建模</li><li>工作温度对泄露功耗的影响</li><li>路由功耗模型</li><li>具有不同延迟、功耗和面积属性的互连模型，包括低摆幅线模型</li><li>用于执行功率、延迟、面积和带宽之间权衡分析的接口</li><li>该工具使用的所有工艺特定值均从 ITRS 获得，目前该工具支持 90nm、65nm、45nm 和 32nm 技术节点</li><li>用于计算DDR总线延迟和能量的芯片IO模型。用户可以模拟不同的负载（扇出）并评估对频率和能量的影响。该模型可用于研究LR-DIMM、R-DIMM等。</li><li>Version 7.0在6.5版本的基础之上还融合了CACTI 3D</li></ul><h2 id="3-CACTI的使用方法"><a href="#3-CACTI的使用方法" class="headerlink" title="3. CACTI的使用方法"></a>3. CACTI的使用方法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/HewlettPackard/cacti</span><br><span class="line"><span class="built_in">cd</span> cacti</span><br><span class="line"><span class="comment"># modify the xxx.cfg for self configuration</span></span><br><span class="line">make</span><br><span class="line">./cacti -infile xxx.cfg</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 计算机体系架构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Windows使用sftp获取服务器运行记录</title>
+      <link href="/2021/07/25/Windows%E4%BD%BF%E7%94%A8sftp%E8%8E%B7%E5%8F%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E8%A1%8C%E8%AE%B0%E5%BD%95/"/>
+      <url>/2021/07/25/Windows%E4%BD%BF%E7%94%A8sftp%E8%8E%B7%E5%8F%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E8%A1%8C%E8%AE%B0%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>函数的副作用</title>
+      <link href="/2021/07/25/%E5%87%BD%E6%95%B0%E7%9A%84%E5%89%AF%E4%BD%9C%E7%94%A8/"/>
+      <url>/2021/07/25/%E5%87%BD%E6%95%B0%E7%9A%84%E5%89%AF%E4%BD%9C%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<h1 id="转-函数的副作用"><a href="#转-函数的副作用" class="headerlink" title="(转)函数的副作用"></a>(转)函数的副作用</h1><p><strong>函数的副作用</strong>指当调用函数时，除了返回函数值之外，还对主调用函数产生附加的影响。例如修改全局变量（函数外的变量）或修改参数。</p><p>函数副作用会给程序设计带来不必要的麻烦，给程序带来十分难以查找的错误，并且降低程序的可读性。严格的函数式语言要求函数必须无副作用。</p><p>函数的副作用相关的几个概念， Pure Function、 Impure Function、 Referential Transparent。</p><ul><li><p><strong>纯函数 (Pure Function)</strong><br>输入输出数据流全是显式（Explicit）的。 显式（Explicit）的意思是，函数与外界交换数据只有一个唯一渠道——参数和返回值。函数从函数外部接受的所有输入信息都通过参数传递到该函数内部。函数输出到函数外部的所有信息都通过返回值传递到该函数外部。</p></li><li><p><strong>非纯函数 (Impure Function)</strong></p><p>与之相反。 隐式（Implicit）的意思是，函数通过参数和返回值以外的渠道，和外界进行数据交换。比如读取/修改全局变量，都叫作以隐式的方式和外界进行数据交换。</p></li><li><p><strong>引用透明 (Referential Transparent)</strong></p><p>引用透明的概念与函数的副作用相关，且受其影响。 如果程序中两个相同值得表达式能在该程序的任何地方互相替换，而不影响程序的动作，那么该程序就具有引用透明性。它的优点是比非引用透明的语言的语义更容易理解，不那么晦涩。纯函数式语言没有变量，所以它们都具有引用透明性。</p></li></ul><p>以下示例说明了引用透明与函数副作用的结合</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">result1 = (fun(a) + b) / (fun(a) - c);</span><br><span class="line">temp = func(a);</span><br><span class="line">result2 = (temp + b) / (temp - c);</span><br></pre></td></tr></table></figure><p>如果函数没有副作用，那么result1和result2将是等价的。然而如果fun有副作用，比如让b或c加1，那么result1和result2将不相等。因此，副作用违背了引用透明性。</p><p>在JavaScript中，引入了函数。但显然JS中的函数可以访问、修改全局变量（或定义在函数外的变量），如下</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">5</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">a = <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line">fun();<span class="comment">// a变成了10</span></span><br></pre></td></tr></table></figure><p>JS中要想保证函数无副作用这项特性，只能依靠编程人员的习惯，即</p><ol><li><p>函数入口使用参数运算，而不修改它</p></li><li><p>函数内不修改函数外的变量，如全局变量</p></li><li><p>运算结果通过函数返回给外部（出口）</p></li></ol><blockquote><p>转载自：<a href="https://www.cnblogs.com/snandy/archive/2011/08/14/2137898.html">https://www.cnblogs.com/snandy/archive/2011/08/14/2137898.html</a></p></blockquote>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>(转)多核处理器的九大关键技术</title>
+      <link href="/2021/07/23/%E8%BD%AC-%E5%A4%9A%E6%A0%B8%E5%A4%84%E7%90%86%E5%99%A8%E7%9A%84%E4%B9%9D%E5%A4%A7%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/"/>
+      <url>/2021/07/23/%E8%BD%AC-%E5%A4%9A%E6%A0%B8%E5%A4%84%E7%90%86%E5%99%A8%E7%9A%84%E4%B9%9D%E5%A4%A7%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/</url>
+      
+        <content type="html"><![CDATA[<h1 id="转-多核处理器的九大关键技术"><a href="#转-多核处理器的九大关键技术" class="headerlink" title="(转)多核处理器的九大关键技术"></a>(转)多核处理器的九大关键技术</h1><p>与单核处理器相比，多核处理器在体系结构、软件、功耗和安全性设计等方面面临着巨大的挑战，但也蕴含着巨大的潜能。</p><p>CMP和SMT一样，致力于发掘计算的粗粒度并行性。CMP可以看做是随着大规模集成电路技术的发展，在芯片容量足够大时，就可以将大规模并行处理机结构中的SMP（对称多处理机）或DSM（分布共享处理机）节点集成到同一芯片内，各个处理器并行执行不同的线程或进程。在基于SMP结构的单芯片多处理机中，处理器之间通过片外Cache或者是片外的共享存储器来进行通信。而基于DSM结构的单芯片多处理器中，处理器间通过连接分布式存储器的片内高速交叉开关网络进行通信。由于SMP和DSM已经是非常成熟的技术了，CMP结构设计比较容易，只是后端设计和芯片制造工艺的要求较高而已。正因为这样，CMP成为了最先被应用于商用CPU的“未来”高性能处理器结构。</p><p>虽然多核能利用集成度提高带来的诸多好处，让芯片的性能成倍地增加，但很明显的是原来系统级的一些问题便引入到了处理器内部。</p><ol><li><p>核结构研究: 同构还是异构</p><p>CMP的构成分成同构和异构两类，同构是指内部核的结构是相同的，而异构是指内部的核结构是不同的。为此，面对不同的应用研究核结构的实现对未来微处理器的性能至关重要。核本身的结构，关系到整个芯片的面积、功耗和性能。怎样继承和发展传统处理器的成果，直接影响多核的性能和实现周期。同时，根据Amdahl定理，程序的加速比决定于串行部分的性能，所以，从理论上来看似乎异构微处理器的结构具有更好的性能。</p><p>核所用的指令系统对系统的实现也是很重要的，采用多核之间采用相同的指令系统还是不同的指令系统，能否运行操作系统等，也将是研究的内容之一。</p></li><li><p>程序执行模型</p><p>多核处理器设计的首要问题是选择程序执行模型。程序执行模型的适用性决定多核处理器能否以最低的代价提供最高的性能。程序执行模型是编译器设计人员与系统实现人员之间的接口。编译器设计人员决定如何将一种高级语言程序按一种程序执行模型转换成一种目标机器语言程序; 系统实现人员则决定该程序执行模型在具体目标机器上的有效实现。当目标机器是多核体系结构时，产生的问题是: 多核体系结构如何支持重要的程序执行模型？是否有其他的程序执行模型更适于多核的体系结构？这些程序执行模型能多大程度上满足应用的需要并为用户所接受？</p></li><li><p>Cache设计: 多级Cache设计与一致性问题</p><p>处理器和主存间的速度差距对CMP来说是个突出的矛盾，因此必须使用多级Cache来缓解。目前有共享一级Cache的CMP、共享二级Cache的CMP以及共享主存的CMP。通常，CMP采用共享二级Cache的CMP结构，即每个处理器核心拥有私有的一级Cache，且所有处理器核心共享二级Cache。</p><p>Cache自身的体系结构设计也直接关系到系统整体性能。但是在CMP结构中，共享Cache或独有Cache孰优孰劣、需不需要在一块芯片上建立多级Cache，以及建立几级Cache等等，由于对整个芯片的尺寸、功耗、布局、性能以及运行效率等都有很大的影响，因而这些都是需要认真研究和探讨的问题。</p><p>另一方面，多级Cache又引发一致性问题。采用何种Cache一致性模型和机制都将对CMP整体性能产生重要影响。在传统多处理器系统结构中广泛采用的Cache一致性模型有: 顺序一致性模型、弱一致性模型、释放一致性模型等。与之相关的Cache一致性机制主要有总线的侦听协议和基于目录的目录协议。目前的CMP系统大多采用基于总线的侦听协议。</p></li><li><p>核间通信技术</p><p>CMP处理器的各CPU核心执行的程序之间有时需要进行数据共享与同步，因此其硬件结构必须支持核间通信。高效的通信机制是CMP处理器高性能的重要保障，目前比较主流的片上高效通信机制有两种，一种是基于总线共享的Cache结构，一种是基于片上的互连结构。</p><p>总线共享Cache结构是指每个CPU内核拥有共享的二级或三级Cache，用于保存比较常用的数据，并通过连接核心的总线进行通信。这种系统的优点是结构简单，通信速度高，缺点是基于总线的结构可扩展性较差。</p><p>基于片上互连的结构是指每个CPU核心具有独立的处理单元和Cache，各个CPU核心通过交叉开关或片上网络等方式连接在一起。各个CPU核心间通过消息通信。这种结构的优点是可扩展性好，数据带宽有保证; 缺点是硬件结构复杂，且软件改动较大。</p><p>也许这两者的竞争结果不是互相取代而是互相合作，例如在全局范围采用片上网络而局部采用总线方式，来达到性能与复杂性的平衡。</p></li><li><p>总线设计</p><p>传统微处理器中，Cache不命中或访存事件都会对CPU的执行效率产生负面影响，而总线接口单元（BIU）的工作效率会决定此影响的程度。当多个CPU核心同时要求访问内存或多个CPU核心内私有Cache同时出现Cache不命中事件时，BIU对这多个访问请求的仲裁机制以及对外存储访问的转换机制的效率决定了CMP系统的整体性能。因此寻找高效的多端口总线接口单元（BIU）结构，将多核心对主存的单字访问转为更为高效的猝发（burst）访问; 同时寻找对CMP处理器整体效率最佳的一次Burst访问字的数量模型以及高效多端口BIU访问的仲裁机制将是CMP处理器研究的重要内容。</p></li><li><p>操作系统设计: 任务调度、中断处理、同步互斥</p><p>对于多核CPU，优化操作系统任务调度算法是保证效率的关键。一般任务调度算法有全局队列调度和局部队列调度。前者是指操作系统维护一个全局的任务等待队列，当系统中有一个CPU核心空闲时，操作系统就从全局任务等待队列中选取就绪任务开始在此核心上执行。这种方法的优点是CPU核心利用率较高。后者是指操作系统为每个CPU内核维护一个局部的任务等待队列，当系统中有一个CPU内核空闲时，便从该核心的任务等待队列中选取恰当的任务执行，这种方法的优点是任务基本上无需在多个CPU核心间切换，有利于提高CPU核心局部Cache命中率。目前多数多核CPU操作系统采用的是基于全局队列的任务调度算法。</p><p>多核的中断处理和单核有很大不同。多核的各处理器之间需要通过中断方式进行通信，所以多个处理器之间的本地中断控制器和负责仲裁各核之间中断分配的全局中断控制器也需要封装在芯片内部。</p><p>另外,多核CPU是一个多任务系统。由于不同任务会竞争共享资源，因此需要系统提供同步与互斥机制。而传统的用于单核的解决机制并不能满足多核，需要利用硬件提供的“读－修改－写”的原子操作或其他同步互斥机制来保证。</p></li><li><p>低功耗设计</p><p>半导体工艺的迅速发展使微处理器的集成度越来越高，同时处理器表面温度也变得越来越高并呈指数级增长，每三年处理器的功耗密度就能翻一番。目前，低功耗和热优化设计已经成为微处理器研究中的核心问题。CMP的多核心结构决定了其相关的功耗研究是一个至关重要的课题。</p><p>低功耗设计是一个多层次问题，需要同时在操作系统级、算法级、结构级、电路级等多个层次上进行研究。每个层次的低功耗设计方法实现的效果不同——抽象层次越高，功耗和温度降低的效果越明显。</p></li><li><p>存储器墙</p><p>为了使芯片内核充分地工作，最起码的要求是芯片能提供与芯片性能相匹配的存储器带宽，虽然内部Cache的容量能解决一些问题，但随着性能的进一步提高，必须有其他一些手段来提高存储器接口的带宽，如增加单个管脚带宽的DDR、DDR2、QDR、XDR等。同样，系统也必须有能提供高带宽的存储器。所以，芯片对封装的要求也越来越高，虽然封装的管脚数每年以20%的数目提升，但还不能完全解决问题，而且还带来了成本提高的问题，为此，怎样提供一个高带宽，低延迟的接口带宽，是必须解决的一个重要问题。</p></li><li><p>可靠性及安全性设计</p><p> 随着技术革新的发展，处理器的应用渗透到现代社会的各个层面，但是在安全性方面却存在着很大的隐患。一方面，处理器结构自身的可靠性低下，由于超微细化与时钟设计的高速化、低电源电压化，设计上的安全系数越来越难以保证，故障的发生率逐渐走高。另一方面，来自第三方的恶意攻击越来越多，手段越来越先进，已成为具有普遍性的社会问题。现在，可靠性与安全性的提高在计算机体系结构研究领域备受注目。</p></li></ol><p>转载于:<a href="http://blog.itpub.net/312079/viewspace-245322/">http://blog.itpub.net/312079/viewspace-245322/</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 计算机体系架构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux Tools Mannual</title>
+      <link href="/2021/07/22/Linux-Tools-Mannual/"/>
+      <url>/2021/07/22/Linux-Tools-Mannual/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Linux-常用工具使用命令速查表"><a href="#Linux-常用工具使用命令速查表" class="headerlink" title="Linux 常用工具使用命令速查表"></a>Linux 常用工具使用命令速查表</h1><h2 id="tmux"><a href="#tmux" class="headerlink" title="tmux"></a>tmux</h2><h3 id="tmu常用操作指令及快捷键"><a href="#tmu常用操作指令及快捷键" class="headerlink" title="tmu常用操作指令及快捷键"></a>tmu常用操作指令及快捷键</h3><ol><li>查看有所有tmux会话<br>指令：tmux ls<br>快捷键：Ctrl+b s</li><li>新建tmux窗口<br>指令：tmux new -s <session-name></session-name></li><li>重命名会话<br>指令：tmux rename-session -t <old-name> <new-name><br>快捷键：Ctrl+b $</new-name></old-name></li><li>分离会话<br>指令：tmux detach/exit(关闭窗口，杀死会话)<br>快捷键：Ctrl+b d</li><li>平铺当前窗口<br>快捷键：Ctrl+b z(再次Ctrl+b d恢复)</li><li>杀死会话<br>指令：tmux kill-session -t <session-name></session-name></li><li>切换会话<br>指令：tmux switch -t <session-name></session-name></li><li>划分上下两个窗格<br>指令：tmux split<br>快捷键：Ctrl+b “</li><li>划分左右两个窗格<br>指令：tmux split -h<br>快捷键：Ctrl+b %</li><li>光标切换到上方窗格<br>指令：tmux select-pane -U<br>快捷键：Ctrl+b 方向键上</li><li>光标切换到下方窗格<br>指令：tmux select-pane -D<br>快捷键：Ctrl+b 方向键下</li><li>光标切换到左边窗格<br>指令：tmux select-pane -L<br>快捷键：Ctrl+b 方向键左</li><li>光标钱换到右边窗格<br>指令：tmux select-pane -R<br>快捷键：Ctrl+b 方向键右</li></ol><p><a href="https://zhuanlan.zhihu.com/p/90464490">https://zhuanlan.zhihu.com/p/90464490</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2021/07/15/hello-world/"/>
+      <url>/2021/07/15/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
