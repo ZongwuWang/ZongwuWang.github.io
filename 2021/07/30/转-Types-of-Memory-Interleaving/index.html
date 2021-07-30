@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>CACTI 7.0介绍 | Hexo</title>
+  <title>(转)Types of Memory Interleaving | Hexo</title>
 
   
     
@@ -310,14 +310,14 @@
 
 
 
-<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/8.jpg" style="background-repeat: no-repeat; background-size: cover; 
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/5.jpg" style="background-repeat: no-repeat; background-size: cover; 
   background-position: center center;position: relative;">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="title-box">
     <span class="title">
-      CACTI 7.0介绍
+      (转)Types of Memory Interleaving
     </span>
   </div>
   
@@ -334,7 +334,7 @@
       
       <div class="post-meta">
         <i class="fa fa-clock-o" aria-hidden="true"></i>
-        <span class="post-time">2021-07-29</span>
+        <span class="post-time">2021-07-30</span>
       </div>
       
       <div class="post-tags-categories">
@@ -351,28 +351,28 @@
         
       </div>
       <div class="post-content">
-        <h1 id="CACTI-7-0介绍"><a href="#CACTI-7-0介绍" class="headerlink" title="CACTI 7.0介绍"></a>CACTI 7.0介绍</h1><h2 id="1-CACTI发展"><a href="#1-CACTI发展" class="headerlink" title="1. CACTI发展"></a>1. CACTI发展</h2><p>CACTI是HP公司推出的一款开源开源工具，广泛应用于对cache/DRAM的延时，功耗，cycle time[^1]和面积的评估。</p>
-<p>[^1]: <font color=gray>(暂时不知道如何翻译比较好，感觉前面的延时指的是各个部分的延时信息，这边的cycle time应该指的是访问周期)</font></p>
-<p>CACTI最初由Dr. Jouppi和Dr. Wilton于1993年开发，此后经历了六次版本的迭代。</p>
-<h2 id="2-CACTI支持的特性"><a href="#2-CACTI支持的特性" class="headerlink" title="2. CACTI支持的特性"></a>2. CACTI支持的特性</h2><ul>
-<li>以下memory的功耗、延时、cycle time的建模<ul>
-<li>direct mapped caches</li>
-<li>set-associative caches</li>
-<li>fully associative caches</li>
-<li>Embedded DRAM memories</li>
-<li>Commodity DRAM memories</li>
-</ul>
-</li>
-<li>多端口UCA(uniform cache access)，多端口的NUCA(non-uniform cache access)的建模</li>
-<li>工作温度对泄露功耗的影响</li>
-<li>路由功耗模型</li>
-<li>具有不同延迟、功耗和面积属性的互连模型，包括低摆幅线模型</li>
-<li>用于执行功率、延迟、面积和带宽之间权衡分析的接口</li>
-<li>该工具使用的所有工艺特定值均从 ITRS 获得，目前该工具支持 90nm、65nm、45nm 和 32nm 技术节点</li>
-<li>用于计算DDR总线延迟和能量的芯片IO模型。用户可以模拟不同的负载（扇出）并评估对频率和能量的影响。该模型可用于研究LR-DIMM、R-DIMM等。</li>
-<li>Version 7.0在6.5版本的基础之上还融合了CACTI 3D</li>
-</ul>
-<h2 id="3-CACTI的使用方法"><a href="#3-CACTI的使用方法" class="headerlink" title="3. CACTI的使用方法"></a>3. CACTI的使用方法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/HewlettPackard/cacti</span><br><span class="line"><span class="built_in">cd</span> cacti</span><br><span class="line"><span class="comment"># modify the xxx.cfg for self configuration</span></span><br><span class="line">make</span><br><span class="line">./cacti -infile xxx.cfg</span><br></pre></td></tr></table></figure>
+        <h1 id="转-Types-of-Memory-Interleaving"><a href="#转-Types-of-Memory-Interleaving" class="headerlink" title="(转)Types of Memory Interleaving"></a>(转)Types of Memory Interleaving</h1><p><a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/memory-interleaving/">Memory Interleaving</a> is an abstraction technique which divides memory into a number of modules such that successive words in the address space are placed in the different module.</p>
+<p>Suppose a 64 MB memory made up of the 4 MB chips as shown in the below:</p>
+<p><img "" class="lazyload placeholder" data-original="/%E8%BD%AC-Types-of-Memory-Interleaving/1406-4.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
+<p>We organize the memory into 4 MB banks, each having eight of the 4 MB chips. The memory thus has 16 banks, each of 4 MB.</p>
+<p>64 MB memory = $2^{26}$, so 26 bits are used for addressing.<br>16 = $2^4$, so 4 bits of address select the bank, and 4 MB = $2^{22}$, so 22 bits of address to each chip.</p>
+<p>In general, an N-bit address, with $N = L + M$, is broken into two parts:</p>
+<ol>
+<li>L-bit bank select, used to activate one of the $2^L$ banks of memory, and</li>
+<li>M-bit address that is sent to each of the memory banks.</li>
+</ol>
+<p>When one of the memory banks is active, the other ($2^L – 1$) are inactive. All banks receive the M-bit address, but the inactive one do not respond to it.</p>
+<p><strong>Classification of Memory Interleaving:</strong><br>Memory interleaving is classified into two types:</p>
+<ol>
+<li><strong>High Order Interleaving –</strong> In high-order interleaving, the most significant bits of the address select the memory chip. The least significant bits are sent as addresses to each chip. One problem is that consecutive addresses tend to be in the same chip. The maximum rate of data transfer is limited by the memory cycle time.</li>
+</ol>
+<p>It is also known as Memory Banking.</p>
+<p><img "" class="lazyload placeholder" data-original="/%E8%BD%AC-Types-of-Memory-Interleaving/223-1.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
+<ol start="2">
+<li><strong>Low Order Interleaving –</strong> In low-order interleaving, the least significant bits select the memory bank (module). In this, consecutive memory addresses are in different memory modules. This allows memory access at much faster rates than allowed by the cycle time.</li>
+</ol>
+<p><img "" class="lazyload placeholder" data-original="/%E8%BD%AC-Types-of-Memory-Interleaving/3164-1.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
+<p>注：转载于<a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/types-of-memory-interleaving/">https://www.geeksforgeeks.org/types-of-memory-interleaving/</a></p>
 
       </div>
       
@@ -383,7 +383,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>link:  </strong>
-    <a href="/2021/07/29/CACTI-7-0介绍/" target="_blank" title="CACTI 7.0介绍">http://example.com/2021/07/29/CACTI-7-0介绍/</a>
+    <a href="/2021/07/30/转-Types-of-Memory-Interleaving/" target="_blank" title="(转)Types of Memory Interleaving">http://example.com/2021/07/30/转-Types-of-Memory-Interleaving/</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright notice:   </strong>
@@ -401,37 +401,20 @@
 
 
 
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/5.jpg" style="background-size: cover; 
-      background-position: center center;">
-    </div>
-    <a href="/2021/07/30/%E8%BD%AC-Types-of-Memory-Interleaving/" class="post-nav-link">
-      <div class="title">
-        <i class="fa fa-angle-left"></i> Prev:
-        <div>(转)Types of Memory Interleaving</div>
-      </div>
-      
-      <!-- <div class="content">
-        (转)Types of Memory InterleavingMemory Interleaving is an abs
-      </div> -->
-    </a>
-  </div>
-
 
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/9.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/8.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/07/25/Windows%E4%BD%BF%E7%94%A8sftp%E8%8E%B7%E5%8F%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E8%A1%8C%E8%AE%B0%E5%BD%95/" class="post-nav-link">
+    <a href="/2021/07/29/CACTI-7-0%E4%BB%8B%E7%BB%8D/" class="post-nav-link">
       <div class="title">
         Next: <i class="fa fa-angle-right"></i>
-        <div>Windows使用sftp获取服务器运行记录</div>
+        <div>CACTI 7.0介绍</div>
       </div>
       <!-- <div class="content">
-        
+        CACTI 7.0介绍1. CACTI发展CACTI是HP公司推出的一款开源开源工具，广泛应用于对cache/DRAM的
       </div> -->
     </a>
   </div>
