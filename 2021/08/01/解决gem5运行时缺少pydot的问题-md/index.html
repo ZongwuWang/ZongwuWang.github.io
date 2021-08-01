@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>(转)Types of Memory Interleaving | Hexo</title>
+  <title>解决gem5运行时缺少pydot的问题.md | Hexo</title>
 
   
     
@@ -310,14 +310,14 @@
 
 
 
-<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/5.jpg" style="background-repeat: no-repeat; background-size: cover; 
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/1.jpg" style="background-repeat: no-repeat; background-size: cover; 
   background-position: center center;position: relative;">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="title-box">
     <span class="title">
-      (转)Types of Memory Interleaving
+      解决gem5运行时缺少pydot的问题.md
     </span>
   </div>
   
@@ -334,45 +334,41 @@
       
       <div class="post-meta">
         <i class="fa fa-clock-o" aria-hidden="true"></i>
-        <span class="post-time">2021-07-30</span>
+        <span class="post-time">2021-08-01</span>
       </div>
       
       <div class="post-tags-categories">
         
-        <div class="tags">
-          <i class="iconfont icontag"></i>
-          
-            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/" class="">
-              计算机体系架构
-            </a>
-          
-        </div>
-        
         
       </div>
       <div class="post-content">
-        <h1 id="转-Types-of-Memory-Interleaving"><a href="#转-Types-of-Memory-Interleaving" class="headerlink" title="(转)Types of Memory Interleaving"></a>(转)Types of Memory Interleaving</h1><p><a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/memory-interleaving/">Memory Interleaving</a> is an abstraction technique which divides memory into a number of modules such that successive words in the address space are placed in the different module.</p>
-<p>Suppose a 64 MB memory made up of the 4 MB chips as shown in the below:</p>
-<p><img "" class="lazyload placeholder" data-original="/1406-4.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
-<p>We organize the memory into 4 MB banks, each having eight of the 4 MB chips. The memory thus has 16 banks, each of 4 MB.</p>
-<p>64 MB memory = $2^{26}$, so 26 bits are used for addressing.<br>16 = $2^4$, so 4 bits of address select the bank, and 4 MB = $2^{22}$, so 22 bits of address to each chip.</p>
-<p>In general, an N-bit address, with $N = L + M$, is broken into two parts:</p>
+        <h1 id="解决gem5运行时缺少pydot的问题"><a href="#解决gem5运行时缺少pydot的问题" class="headerlink" title="解决gem5运行时缺少pydot的问题"></a>解决gem5运行时缺少pydot的问题</h1><p>在运行gem5时，会显示：</p>
+<blockquote>
+<p>warn: No dot file generated. Please install pydot to generate the dot file and pdf.</p>
+</blockquote>
+<p>作为一个高度强迫症患者，实在无法忍受每次运行出现这个刺眼的warning，而且在进行系统仿真的时候，产生的config.dot.svg和config.dot.pdf等文件还可以可视化整个系统的架构，为此记录一下我解决这个问题的方法。</p>
+<p>在网上搜索博客，基本上都是如下的<a target="_blank" rel="noopener" href="https://blog.csdn.net/mjl960108/article/details/79981794">解决方案</a>：</p>
+<blockquote>
+<p>sudo apt install python-pydot python-pydot-ng graphviz </p>
+</blockquote>
+<p>但是运行时会事与愿违：</p>
+<blockquote>
+<p>root@9187b8755600:~/gem5/m5out# apt install python-pydot python-pydot-ng graphviz<br>Reading package lists… Done<br>Building dependency tree<br>Reading state information… Done<br>E: Unable to locate package python-pydot<br>E: Unable to locate package python-pydot-ng</p>
+</blockquote>
+<p>找不到安装包，也有博客指出需要使用pip命令安装，但是ubuntu自带的python无法找到pip命令，而也最好不要使用conda的虚拟python环境，因为无法定位到虚拟环境中的scons命令，这个我至今也没有解决，而是直接安装docker环境，配置python2.7和python3.8，用于不同版本的gem5，非常方便。</p>
+<p>为此解决系统python环境缺少pydot的方法如下：</p>
 <ol>
-<li>L-bit bank select, used to activate one of the $2^L$ banks of memory, and</li>
-<li>M-bit address that is sent to each of the memory banks.</li>
+<li>下载<a target="_blank" rel="noopener" href="https://pypi.org/project/pydot/#files">pydot源</a><blockquote>
+<p>wget <a target="_blank" rel="noopener" href="https://files.pythonhosted.org/packages/13/6e/916cdf94f9b38ae0777b254c75c3bdddee49a54cc4014aac1460a7a172b3/pydot-1.4.2.tar.gz">https://files.pythonhosted.org/packages/13/6e/916cdf94f9b38ae0777b254c75c3bdddee49a54cc4014aac1460a7a172b3/pydot-1.4.2.tar.gz</a></p>
+</blockquote>
+</li>
+<li>解压文件</li>
+<li>安装pydot<blockquote>
+<p>python setup.py install (for python2.7)<br>python3 setup.py install (for python3.8)</p>
+</blockquote>
+</li>
 </ol>
-<p>When one of the memory banks is active, the other ($2^L – 1$) are inactive. All banks receive the M-bit address, but the inactive one do not respond to it.</p>
-<p><strong>Classification of Memory Interleaving:</strong><br>Memory interleaving is classified into two types:</p>
-<ol>
-<li><strong>High Order Interleaving –</strong> In high-order interleaving, the most significant bits of the address select the memory chip. The least significant bits are sent as addresses to each chip. One problem is that consecutive addresses tend to be in the same chip. The maximum rate of data transfer is limited by the memory cycle time.</li>
-</ol>
-<p>It is also known as Memory Banking.</p>
-<p><img "" class="lazyload placeholder" data-original="/223-1.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
-<ol start="2">
-<li><strong>Low Order Interleaving –</strong> In low-order interleaving, the least significant bits select the memory bank (module). In this, consecutive memory addresses are in different memory modules. This allows memory access at much faster rates than allowed by the cycle time.</li>
-</ol>
-<p><img "" class="lazyload placeholder" data-original="/3164-1.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
-<p>注：转载于<a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/types-of-memory-interleaving/">https://www.geeksforgeeks.org/types-of-memory-interleaving/</a></p>
+<p>完美解决！！！</p>
 
       </div>
       
@@ -383,7 +379,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>link:  </strong>
-    <a href="/2021/07/30/转-Types-of-Memory-Interleaving/" target="_blank" title="(转)Types of Memory Interleaving">http://example.com/2021/07/30/转-Types-of-Memory-Interleaving/</a>
+    <a href="/2021/08/01/解决gem5运行时缺少pydot的问题-md/" target="_blank" title="解决gem5运行时缺少pydot的问题.md">http://example.com/2021/08/01/解决gem5运行时缺少pydot的问题-md/</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright notice:   </strong>
@@ -401,39 +397,20 @@
 
 
 
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
-      background-position: center center;">
-    </div>
-    <a href="/2021/08/01/%E8%A7%A3%E5%86%B3gem5%E8%BF%90%E8%A1%8C%E6%97%B6%E7%BC%BA%E5%B0%91pydot%E7%9A%84%E9%97%AE%E9%A2%98-md/" class="post-nav-link">
-      <div class="title">
-        <i class="fa fa-angle-left"></i> Prev:
-        <div>解决gem5运行时缺少pydot的问题.md</div>
-      </div>
-      
-      <!-- <div class="content">
-        解决gem5运行时缺少pydot的问题在运行gem5时，会显示：
-
-warn: No dot file generate
-      </div> -->
-    </a>
-  </div>
-
 
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/8.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/5.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/07/29/CACTI-7-0%E4%BB%8B%E7%BB%8D/" class="post-nav-link">
+    <a href="/2021/07/30/%E8%BD%AC-Types-of-Memory-Interleaving/" class="post-nav-link">
       <div class="title">
         Next: <i class="fa fa-angle-right"></i>
-        <div>CACTI 7.0介绍</div>
+        <div>(转)Types of Memory Interleaving</div>
       </div>
       <!-- <div class="content">
-        CACTI 7.0介绍1. CACTI发展CACTI是HP公司推出的一款开源开源工具，广泛应用于对cache/DRAM的
+        (转)Types of Memory InterleavingMemory Interleaving is an abs
       </div> -->
     </a>
   </div>

@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>解决gem5运行时缺少pydot的问题.md</title>
+      <link href="/2021/08/01/%E8%A7%A3%E5%86%B3gem5%E8%BF%90%E8%A1%8C%E6%97%B6%E7%BC%BA%E5%B0%91pydot%E7%9A%84%E9%97%AE%E9%A2%98-md/"/>
+      <url>/2021/08/01/%E8%A7%A3%E5%86%B3gem5%E8%BF%90%E8%A1%8C%E6%97%B6%E7%BC%BA%E5%B0%91pydot%E7%9A%84%E9%97%AE%E9%A2%98-md/</url>
+      
+        <content type="html"><![CDATA[<h1 id="解决gem5运行时缺少pydot的问题"><a href="#解决gem5运行时缺少pydot的问题" class="headerlink" title="解决gem5运行时缺少pydot的问题"></a>解决gem5运行时缺少pydot的问题</h1><p>在运行gem5时，会显示：</p><blockquote><p>warn: No dot file generated. Please install pydot to generate the dot file and pdf.</p></blockquote><p>作为一个高度强迫症患者，实在无法忍受每次运行出现这个刺眼的warning，而且在进行系统仿真的时候，产生的config.dot.svg和config.dot.pdf等文件还可以可视化整个系统的架构，为此记录一下我解决这个问题的方法。</p><p>在网上搜索博客，基本上都是如下的<a href="https://blog.csdn.net/mjl960108/article/details/79981794">解决方案</a>：</p><blockquote><p>sudo apt install python-pydot python-pydot-ng graphviz </p></blockquote><p>但是运行时会事与愿违：</p><blockquote><p>root@9187b8755600:~/gem5/m5out# apt install python-pydot python-pydot-ng graphviz<br>Reading package lists… Done<br>Building dependency tree<br>Reading state information… Done<br>E: Unable to locate package python-pydot<br>E: Unable to locate package python-pydot-ng</p></blockquote><p>找不到安装包，也有博客指出需要使用pip命令安装，但是ubuntu自带的python无法找到pip命令，而也最好不要使用conda的虚拟python环境，因为无法定位到虚拟环境中的scons命令，这个我至今也没有解决，而是直接安装docker环境，配置python2.7和python3.8，用于不同版本的gem5，非常方便。</p><p>为此解决系统python环境缺少pydot的方法如下：</p><ol><li>下载<a href="https://pypi.org/project/pydot/#files">pydot源</a><blockquote><p>wget <a href="https://files.pythonhosted.org/packages/13/6e/916cdf94f9b38ae0777b254c75c3bdddee49a54cc4014aac1460a7a172b3/pydot-1.4.2.tar.gz">https://files.pythonhosted.org/packages/13/6e/916cdf94f9b38ae0777b254c75c3bdddee49a54cc4014aac1460a7a172b3/pydot-1.4.2.tar.gz</a></p></blockquote></li><li>解压文件</li><li>安装pydot<blockquote><p>python setup.py install (for python2.7)<br>python3 setup.py install (for python3.8)</p></blockquote></li></ol><p>完美解决！！！</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>(转)Types of Memory Interleaving</title>
       <link href="/2021/07/30/%E8%BD%AC-Types-of-Memory-Interleaving/"/>
       <url>/2021/07/30/%E8%BD%AC-Types-of-Memory-Interleaving/</url>
