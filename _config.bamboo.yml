@@ -1,22 +1,22 @@
 # 菜单
 menu:
-  # Home:
-  #   url: /
-  #   icon: fa fa-home
-  # Archives:
-  #   url: /archives
-  #   icon: fa fa-archive
-  # Tags:
-  #   url: /tags
-  #   icon: fa fa-tags
-  # Categories:
-  #   url: /categories
-  #   icon: fa fa-bookmark
-  # About:
-  #   url: /about
-  #   icon: fa fa-user
-  # Friends:
-  #   url: /friends
+  Home:
+    url: /
+    icon: fa fa-home
+  Archives:
+    url: /archives
+    icon: fa fa-archive
+  Tags:
+    url: /tags
+    icon: fa fa-tags
+  Categories:
+    url: /categories
+    icon: fa fa-bookmark
+  About:
+    url: /about
+    icon: fa fa-user
+  Friends:
+    url: /friends
   # 更多: # 这是二级菜单的写法
   #  icon: fa fa-link
   #  children:
@@ -37,10 +37,12 @@ menu:
 Github: https://github.com/ZongwuWang/ZongwuWang.github.io
 
 # 网站logo
-logo: /medias/logo.png # 为空则不显示
+# logo: /medias/logo.png # 为空则不显示
+logo: /medias/sjtu_logo.png
 
 # 网站 favicon
-favicon: /favicon.ico # or .png .jpg .svg .gif .jpeg .ico
+# favicon: /favicon.ico # or .png .jpg .svg .gif .jpeg .ico
+favicon: /medias/sjtu_logo.png # or .png .jpg .svg .gif .jpeg .ico
 
 # 页面预加载动画
 preloader:
@@ -51,7 +53,7 @@ swiper:
   # 当在.md文件中，设置swiper:true，会将该文章放到轮播中，
   showPrevNext: true # 是否显示左右切换按钮
   showIndicators: true  # 是否显示指示器
-  autoplay: false # 是否自动轮播
+  autoplay: true # 是否自动轮播
   loop: true # 让轮播看起来是循环的, 例如false的话，到达最后一个轮播图的时候，右按钮不能点击
   delay: 5000 # 切换延迟时间
   effect: 'slide' # 'fade': 淡入淡出效果
@@ -66,10 +68,12 @@ swiper:
   defaultVideo: '' # video，min-width:992px show
   defaultVideoLoadingImg: 'https://img14.360buyimg.com/ddimg/jfs/t1/150557/6/19578/249564/60320406Ed5c42418/0d18299f505e4268.gif' # video loading img -- use .gif img, 视频预加载动画，使用gif图片作为loading，为空则视频没有预加载动画
   defaultTile: '青墨书晚风' # 标题
-  defaultDesc: [] #描 述，例如 ['煮酒洗净尘嚣，论知交', '万般付之一笑，共偕老']
-  defaultLeftBtnText: '阅读文档' # 左边按钮文字, 空字符串则不显示
+  defaultDesc: '虚负凌云壮志才，一生襟抱未曾开' #描 述，例如 ['煮酒洗净尘嚣，论知交', '万般付之一笑，共偕老']
+  # defaultLeftBtnText: '阅读文档' # 左边按钮文字, 空字符串则不显示
+  defaultLeftBtnText: '' # 左边按钮文字, 空字符串则不显示
   defaultLeftBtnLink: 'https://yuang01.gitee.io/2021/02/08/hexo-theme-bamboo-new/' # 左边按钮链接 
-  defaultRightBtnText: '下载主题' # 右边按钮的文字，空字符串则不显示
+  # defaultRightBtnText: '下载主题' # 右边按钮的文字，空字符串则不显示
+  defaultRightBtnText: '' # 右边按钮的文字，空字符串则不显示
   defaultRightBtnLink: 'https://gitee.com/yuang01/hexo-theme-bamboo/repository/archive/dev.zip' # 右边的按钮的链接
   defaultDescTyped: true # defaultDesc文字是否开启打字特效
   defaultDescTypedLoop: true # defaultDesc文字的打字特效是否循环
@@ -100,7 +104,7 @@ show_count: true
 
 # 打赏功能
 donate:
-  on: true
+  on: false
 donate_message: 你的赏识是我前进的动力
 # 支付宝打赏图片相对路径
 Alipay: '/medias/zfb.jpg'
@@ -564,7 +568,7 @@ site_footer:
     #   url: https://github.com/yuang01/hexo-theme-bamboo
     # - icon: fa fa-qq
     #   url: tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1730241541
-  copyright: 'Copyright © 2019 - 2020 <a href="https://github.com/yuang01">yuang01</a> | Powered by <a href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a href="https://github.com/yuang01/theme">Bamboo</a> '
+  copyright: 'Copyright © 2019 - 2021 <a href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a href="https://github.com/yuang01/theme">Bamboo</a> '
   custom: # 根据需要自行取消注释，label: 'markdown格式'，会在下面继续增加内容
     # - label: '<br>'
     # - label: '[Hello World](http://baidu.com)'
