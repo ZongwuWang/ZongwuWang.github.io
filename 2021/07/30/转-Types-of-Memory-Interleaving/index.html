@@ -9,19 +9,19 @@
   <meta name="description" content="(转)Types of Memory InterleavingMemory Interleaving is an abstraction technique which divides memory into a number of modules such that successive words in the address space are placed in the different">
 <meta property="og:type" content="article">
 <meta property="og:title" content="(转)Types of Memory Interleaving">
-<meta property="og:url" content="https://zongwuwang.github.io/project/2021/07/30/%E8%BD%AC-Types-of-Memory-Interleaving/index.html">
+<meta property="og:url" content="http://example.com/2021/07/30/%E8%BD%AC-Types-of-Memory-Interleaving/index.html">
 <meta property="og:site_name" content="SJTU-ACA-WZW">
 <meta property="og:description" content="(转)Types of Memory InterleavingMemory Interleaving is an abstraction technique which divides memory into a number of modules such that successive words in the address space are placed in the different">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://zongwuwang.github.io/.io//1406-4.png">
-<meta property="og:image" content="https://zongwuwang.github.io/.io//223-1.png">
-<meta property="og:image" content="https://zongwuwang.github.io/.io//3164-1.png">
+<meta property="og:image" content="http://example.com/.com//1406-4.png">
+<meta property="og:image" content="http://example.com/.com//223-1.png">
+<meta property="og:image" content="http://example.com/.com//3164-1.png">
 <meta property="article:published_time" content="2021-07-30T05:38:47.000Z">
 <meta property="article:modified_time" content="2021-07-30T06:55:24.000Z">
 <meta property="article:author" content="Zongwu Wang">
 <meta property="article:tag" content="计算机体系架构">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://zongwuwang.github.io/.io//1406-4.png">
+<meta name="twitter:image" content="http://example.com/.com//1406-4.png">
   
     <link rel="alternate" href="/atom.xml" title="SJTU-ACA-WZW" type="application/atom+xml">
   
@@ -71,7 +71,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://zongwuwang.github.io/project"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
       </div>
     </div>
   </div>
@@ -102,7 +102,7 @@
       
         <h1 id="转-Types-of-Memory-Interleaving"><a href="#转-Types-of-Memory-Interleaving" class="headerlink" title="(转)Types of Memory Interleaving"></a>(转)Types of Memory Interleaving</h1><p><a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/memory-interleaving/">Memory Interleaving</a> is an abstraction technique which divides memory into a number of modules such that successive words in the address space are placed in the different module.</p>
 <p>Suppose a 64 MB memory made up of the 4 MB chips as shown in the below:</p>
-<p><img src="/.io//1406-4.png"></p>
+<p><img src="/.com//1406-4.png"></p>
 <p>We organize the memory into 4 MB banks, each having eight of the 4 MB chips. The memory thus has 16 banks, each of 4 MB.</p>
 <p>64 MB memory = $2^{26}$, so 26 bits are used for addressing.<br>16 = $2^4$, so 4 bits of address select the bank, and 4 MB = $2^{22}$, so 22 bits of address to each chip.</p>
 <p>In general, an N-bit address, with $N = L + M$, is broken into two parts:</p>
@@ -116,17 +116,17 @@
 <li><strong>High Order Interleaving –</strong> In high-order interleaving, the most significant bits of the address select the memory chip. The least significant bits are sent as addresses to each chip. One problem is that consecutive addresses tend to be in the same chip. The maximum rate of data transfer is limited by the memory cycle time.</li>
 </ol>
 <p>It is also known as Memory Banking.</p>
-<p><img src="/.io//223-1.png"></p>
+<p><img src="/.com//223-1.png"></p>
 <ol start="2">
 <li><strong>Low Order Interleaving –</strong> In low-order interleaving, the least significant bits select the memory bank (module). In this, consecutive memory addresses are in different memory modules. This allows memory access at much faster rates than allowed by the cycle time.</li>
 </ol>
-<p><img src="/.io//3164-1.png"></p>
+<p><img src="/.com//3164-1.png"></p>
 <p>注：转载于<a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/types-of-memory-interleaving/">https://www.geeksforgeeks.org/types-of-memory-interleaving/</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zongwuwang.github.io/project/2021/07/30/%E8%BD%AC-Types-of-Memory-Interleaving/" data-id="ckssysp1f000a88s45lla6dg0" data-title="(转)Types of Memory Interleaving" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/07/30/%E8%BD%AC-Types-of-Memory-Interleaving/" data-id="ckssyye1t000abws47n4b9vty" data-title="(转)Types of Memory Interleaving" class="article-share-link">Share</a>
       
       
       
