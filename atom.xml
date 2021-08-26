@@ -3,11 +3,11 @@
   <title>SJTU-ACA-WZW</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://zongwuwang.github.io/"/>
   <updated>2021-08-26T14:39:54.982Z</updated>
-  <id>http://example.com/</id>
+  <id>https://zongwuwang.github.io/</id>
   
   <author>
     <name>Zongwu Wang</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Compute Caches</title>
-    <link href="http://example.com/2021/08/26/compute-caches/"/>
-    <id>http://example.com/2021/08/26/compute-caches/</id>
+    <link href="https://zongwuwang.github.io/2021/08/26/compute-caches/"/>
+    <id>https://zongwuwang.github.io/2021/08/26/compute-caches/</id>
     <published>2021-08-26T14:39:54.000Z</published>
     <updated>2021-08-26T14:39:54.982Z</updated>
     
@@ -31,8 +31,8 @@
   
   <entry>
     <title>转-四种基本的编程命名规范</title>
-    <link href="http://example.com/2021/08/13/zhuan-si-chong-ji-ben-de-bian-cheng-ming-ming-gui-fan/"/>
-    <id>http://example.com/2021/08/13/zhuan-si-chong-ji-ben-de-bian-cheng-ming-ming-gui-fan/</id>
+    <link href="https://zongwuwang.github.io/2021/08/13/zhuan-si-chong-ji-ben-de-bian-cheng-ming-ming-gui-fan/"/>
+    <id>https://zongwuwang.github.io/2021/08/13/zhuan-si-chong-ji-ben-de-bian-cheng-ming-ming-gui-fan/</id>
     <published>2021-08-13T14:53:04.000Z</published>
     <updated>2021-08-13T15:05:29.455Z</updated>
     
@@ -52,8 +52,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2021/08/07/hello-world/"/>
-    <id>http://example.com/2021/08/07/hello-world/</id>
+    <link href="https://zongwuwang.github.io/2021/08/07/hello-world/"/>
+    <id>https://zongwuwang.github.io/2021/08/07/hello-world/</id>
     <published>2021-08-07T07:50:28.306Z</published>
     <updated>2021-07-15T08:43:43.000Z</updated>
     
@@ -73,8 +73,8 @@
   
   <entry>
     <title>A 28 nm Configurable Memory (TCAM/BCAM/SRAM) Using Push-Rule 6T Bit Cell Enabling Logic-in-Memory</title>
-    <link href="http://example.com/2021/08/04/a-28-nm-configurable-memory-tcam-bcam-sram-using-push-rule-6t-bit-cell-enabling-logic-in-memory/"/>
-    <id>http://example.com/2021/08/04/a-28-nm-configurable-memory-tcam-bcam-sram-using-push-rule-6t-bit-cell-enabling-logic-in-memory/</id>
+    <link href="https://zongwuwang.github.io/2021/08/04/a-28-nm-configurable-memory-tcam-bcam-sram-using-push-rule-6t-bit-cell-enabling-logic-in-memory/"/>
+    <id>https://zongwuwang.github.io/2021/08/04/a-28-nm-configurable-memory-tcam-bcam-sram-using-push-rule-6t-bit-cell-enabling-logic-in-memory/</id>
     <published>2021-08-04T13:16:47.000Z</published>
     <updated>2021-08-26T14:34:13.519Z</updated>
     
@@ -90,14 +90,14 @@
     
     
     
-    <category term="挖坑待填" scheme="http://example.com/tags/%E6%8C%96%E5%9D%91%E5%BE%85%E5%A1%AB/"/>
+    <category term="挖坑待填" scheme="https://zongwuwang.github.io/tags/%E6%8C%96%E5%9D%91%E5%BE%85%E5%A1%AB/"/>
     
   </entry>
   
   <entry>
     <title>解决gem5运行时缺少pydot的问题</title>
-    <link href="http://example.com/2021/08/03/jie-jue-gem5-yun-xing-shi-que-shao-pydot-de-wen-ti/"/>
-    <id>http://example.com/2021/08/03/jie-jue-gem5-yun-xing-shi-que-shao-pydot-de-wen-ti/</id>
+    <link href="https://zongwuwang.github.io/2021/08/03/jie-jue-gem5-yun-xing-shi-que-shao-pydot-de-wen-ti/"/>
+    <id>https://zongwuwang.github.io/2021/08/03/jie-jue-gem5-yun-xing-shi-que-shao-pydot-de-wen-ti/</id>
     <published>2021-08-03T06:10:54.000Z</published>
     <updated>2021-08-03T06:11:52.000Z</updated>
     
@@ -117,8 +117,8 @@
   
   <entry>
     <title>(转)Types of Memory Interleaving</title>
-    <link href="http://example.com/2021/07/30/zhuan-types-of-memory-interleaving/"/>
-    <id>http://example.com/2021/07/30/zhuan-types-of-memory-interleaving/</id>
+    <link href="https://zongwuwang.github.io/2021/07/30/zhuan-types-of-memory-interleaving/"/>
+    <id>https://zongwuwang.github.io/2021/07/30/zhuan-types-of-memory-interleaving/</id>
     <published>2021-07-30T05:38:47.000Z</published>
     <updated>2021-07-30T06:55:24.000Z</updated>
     
@@ -134,14 +134,14 @@
     
     
     
-    <category term="计算机体系架构" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>CACTI 7.0介绍</title>
-    <link href="http://example.com/2021/07/29/cacti-7-0-jie-shao/"/>
-    <id>http://example.com/2021/07/29/cacti-7-0-jie-shao/</id>
+    <link href="https://zongwuwang.github.io/2021/07/29/cacti-7-0-jie-shao/"/>
+    <id>https://zongwuwang.github.io/2021/07/29/cacti-7-0-jie-shao/</id>
     <published>2021-07-28T17:13:38.000Z</published>
     <updated>2021-07-28T17:40:02.000Z</updated>
     
@@ -157,14 +157,14 @@
     
     
     
-    <category term="计算机体系架构" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>Windows使用sftp获取服务器运行记录</title>
-    <link href="http://example.com/2021/07/25/windows-shi-yong-sftp-huo-qu-fu-wu-qi-yun-xing-ji-lu/"/>
-    <id>http://example.com/2021/07/25/windows-shi-yong-sftp-huo-qu-fu-wu-qi-yun-xing-ji-lu/</id>
+    <link href="https://zongwuwang.github.io/2021/07/25/windows-shi-yong-sftp-huo-qu-fu-wu-qi-yun-xing-ji-lu/"/>
+    <id>https://zongwuwang.github.io/2021/07/25/windows-shi-yong-sftp-huo-qu-fu-wu-qi-yun-xing-ji-lu/</id>
     <published>2021-07-25T09:59:18.000Z</published>
     <updated>2021-07-25T09:59:18.000Z</updated>
     
@@ -176,8 +176,8 @@
   
   <entry>
     <title>函数的副作用</title>
-    <link href="http://example.com/2021/07/25/han-shu-de-fu-zuo-yong/"/>
-    <id>http://example.com/2021/07/25/han-shu-de-fu-zuo-yong/</id>
+    <link href="https://zongwuwang.github.io/2021/07/25/han-shu-de-fu-zuo-yong/"/>
+    <id>https://zongwuwang.github.io/2021/07/25/han-shu-de-fu-zuo-yong/</id>
     <published>2021-07-25T09:56:22.000Z</published>
     <updated>2021-07-25T10:18:00.000Z</updated>
     
@@ -197,8 +197,8 @@
   
   <entry>
     <title>(转)多核处理器的九大关键技术</title>
-    <link href="http://example.com/2021/07/23/zhuan-duo-he-chu-li-qi-de-jiu-da-guan-jian-ji-zhu/"/>
-    <id>http://example.com/2021/07/23/zhuan-duo-he-chu-li-qi-de-jiu-da-guan-jian-ji-zhu/</id>
+    <link href="https://zongwuwang.github.io/2021/07/23/zhuan-duo-he-chu-li-qi-de-jiu-da-guan-jian-ji-zhu/"/>
+    <id>https://zongwuwang.github.io/2021/07/23/zhuan-duo-he-chu-li-qi-de-jiu-da-guan-jian-ji-zhu/</id>
     <published>2021-07-23T07:06:09.000Z</published>
     <updated>2021-07-23T07:14:02.000Z</updated>
     
@@ -214,14 +214,14 @@
     
     
     
-    <category term="计算机体系架构" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>Linux Tools Mannual</title>
-    <link href="http://example.com/2021/07/22/linux-tools-mannual/"/>
-    <id>http://example.com/2021/07/22/linux-tools-mannual/</id>
+    <link href="https://zongwuwang.github.io/2021/07/22/linux-tools-mannual/"/>
+    <id>https://zongwuwang.github.io/2021/07/22/linux-tools-mannual/</id>
     <published>2021-07-22T05:47:27.000Z</published>
     <updated>2021-07-22T06:05:43.000Z</updated>
     
