@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>转-四种基本的编程命名规范 | SJTU-ACA-WZW</title>
+  <title>(转)Types of Memory Interleaving | SJTU-ACA-WZW</title>
 
   
     
@@ -65,7 +65,8 @@
     </style>
     <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
     <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="SJTU-ACA-WZW" type="application/atom+xml">
+</head>
 
   
   <!-- 依赖于jquery和vue -->
@@ -193,13 +194,13 @@
         <h2>
           <span>
             <i class="fa fa-search" aria-hidden="true"></i>
-            <span class="title">Search</span>
+            <span class="title">本地搜索</span>
           </span>
           <i class="fa fa-close close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
         </h2>
         <form class="site-search-form">
           <input type="text"
-            placeholder="Please enter keywords"
+            placeholder="请输入关键字"
             id="local-search-input" 
             @click="getSearchFile()"
             class="st-search-input"
@@ -310,14 +311,14 @@
 
 
 
-<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/7.jpg" style="background-repeat: no-repeat; background-size: cover; 
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/5.jpg" style="background-repeat: no-repeat; background-size: cover; 
   background-position: center center;position: relative;">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="title-box">
     <span class="title">
-      转-四种基本的编程命名规范
+      (转)Types of Memory Interleaving
     </span>
   </div>
   
@@ -334,56 +335,61 @@
       
       <div class="post-meta">
         <i class="fa fa-clock-o" aria-hidden="true"></i>
-        <span class="post-time">2021-08-13</span>
+        <span class="post-time">2021-07-30</span>
       </div>
       
       <div class="post-tags-categories">
         
+        <div class="tags">
+          <i class="iconfont icontag"></i>
+          
+            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/" class="">
+              计算机体系架构
+            </a>
+          
+        </div>
+        
         
       </div>
       <div class="post-content">
-        <h1 id="转-四种基本的编程命名规范（匈牙利命名法、驼峰式命名法、帕斯卡命名法、下划线命名法）"><a href="#转-四种基本的编程命名规范（匈牙利命名法、驼峰式命名法、帕斯卡命名法、下划线命名法）" class="headerlink" title="转-四种基本的编程命名规范（匈牙利命名法、驼峰式命名法、帕斯卡命名法、下划线命名法）"></a>转-四种基本的编程命名规范（匈牙利命名法、驼峰式命名法、帕斯卡命名法、下划线命名法）</h1><h2 id="匈牙利命名法"><a href="#匈牙利命名法" class="headerlink" title="匈牙利命名法"></a>匈牙利命名法</h2><p>匈牙利命名法是早期的规范，由微软的一个匈牙利人发明的，是IDE还十分智障的年代的产物。那个年代，当代码量很多的时候，想要确定一个变量的类型是很麻烦的，不像现在IDE都会给提示，所以才产生了这样一个命名规范，估计现在已经没啥人用了吧……一个十分系统却又琐碎的命名规范。</p>
-<p>该命名规范，要求前缀字母用变量类型的缩写，其余部分用变量的英文或英文的缩写，单词第一个字母大写。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int iMyAge;        #  &quot;i&quot;: int</span><br><span class="line">char cMyName[10];  #  &quot;c&quot;: char</span><br><span class="line">float fManHeight;  #  &quot;f&quot;: float</span><br></pre></td></tr></table></figure>
-
-<p>其他前缀类型还有：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">a      数组（Array）</span><br><span class="line">b      布尔值（Boolean）</span><br><span class="line">by     字节（Byte）</span><br><span class="line">c      有符号字符（Char）</span><br><span class="line">cb     无符号字符（Char Byte，并没有神马人用的）</span><br><span class="line">cr     颜色参考值（Color Ref）</span><br><span class="line">cx,cy  坐标差（长度 Short Int）</span><br><span class="line">dw     双字（Double Word）</span><br><span class="line">fn     函数（Function）</span><br><span class="line">h      Handle（句柄）</span><br><span class="line">i      整形（Int）</span><br><span class="line">l      长整型（Long Int）</span><br><span class="line">lp     长指针（Long Pointer）</span><br><span class="line">m_     类成员（Class Member）</span><br><span class="line">n      短整型（Short Int）</span><br><span class="line">np     近程指针（Near Pointer）</span><br><span class="line">p      指针（Pointer）</span><br><span class="line">s      字符串（String）</span><br><span class="line">sz     以 Null 做结尾的字符串型（String with Zero End）</span><br><span class="line">w      字（Word）</span><br></pre></td></tr></table></figure>
-
-<p>还有其他更多的前缀是根据微软自己的MFC/句柄/控件/结构等东西定义的，就不过多描述了。</p>
-<h2 id="驼峰式命名法"><a href="#驼峰式命名法" class="headerlink" title="驼峰式命名法"></a>驼峰式命名法</h2><p>驼峰式命名法，又叫小驼峰式命名法（所以自然就存在大驼峰命名法啦……)。</p>
-<p>该命名规范，要求第一个单词首字母小写，后面其他单词首字母大写，简单粗暴易学易用。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int myAge;</span><br><span class="line">char myName[10];</span><br><span class="line">float manHeight;</span><br></pre></td></tr></table></figure>
-
-<h2 id="帕斯卡命名法"><a href="#帕斯卡命名法" class="headerlink" title="帕斯卡命名法"></a>帕斯卡命名法</h2><p>帕斯卡命名法，又叫大驼峰式命名法。</p>
-<p>与小驼峰式命名法的最大区别在于，每个单词的第一个字母都要大写。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int MyAge;</span><br><span class="line">char MyName[10];</span><br><span class="line">float ManHeight;</span><br></pre></td></tr></table></figure>
-
-<h2 id="下划线命名法"><a href="#下划线命名法" class="headerlink" title="下划线命名法"></a>下划线命名法</h2><p>下划线命名法并不如大小驼峰式命名法那么备受推崇，但是也是浓墨重彩的一笔。尤其在宏定义和常量中使用比较多，通过下划线来分割全部都是大写的单词。</p>
-<p>该命名规范，也是很简单，要求单词与单词之间通过下划线连接即可。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int my_age;</span><br><span class="line">char my_name[10];</span><br><span class="line">float man_height;</span><br></pre></td></tr></table></figure>
-
-<h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><p>随着技术的发展，命名规范也在不断的细化，一种命名规范早已无法系统的满足各方需求（匈牙利命名法除外，但是已经基本淘汰了），不同的语言不同 IDE 推崇的规范也有所不同，无法评判哪一种最好，但是可以肯定的是，集后三种命名规范大成者，一定是受众最广的。</p>
-<p>例如，谷歌 C++ 编程规范，从项目的命名到文件的命名，再到类和变量以及宏定义的命名都做到了细致入微，充分的结合了下划线命名法与驼峰式命名法（早先推崇的小驼峰，不过今年好像改成大驼峰了），又加入了一些新的元素，十分的系统完善。</p>
-<p>当然，命名规范并不代表着编程规范，仅仅是编程规范的一部分而已，除去命名规范，还有很多编程上的细节是必须关注的，例如，等号两边留空格还是等号对齐？空行神马时候神马地方留更加符合代码结构？空格神马时候神马地方留更加美观？花括号是否对齐？</p>
-<p>诸如此类，还有很多，无法一下子全部掌握并应用，但是在编程经验增加的过程中，一定也要不断的留意，自己所在的公司部门使用的是神马样的规范，没错，并不提倡大家练就自己的规范，一定要去融入工作环境的需求。</p>
-<p>每次去新的工作环境，第一个要看的文档不是别的，一定是编程规范，如果没有这个东西，那么就努力去推一个统一的规范，推不动的话，那可以换工作了，否则日后将会带来无尽的麻烦。</p>
-<p>本文转载自：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/89909623">https://zhuanlan.zhihu.com/p/89909623</a></p>
+        <h1 id="转-Types-of-Memory-Interleaving"><a href="#转-Types-of-Memory-Interleaving" class="headerlink" title="(转)Types of Memory Interleaving"></a>(转)Types of Memory Interleaving</h1><p><a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/memory-interleaving/">Memory Interleaving</a> is an abstraction technique which divides memory into a number of modules such that successive words in the address space are placed in the different module.</p>
+<p>Suppose a 64 MB memory made up of the 4 MB chips as shown in the below:</p>
+<p><img "" class="lazyload placeholder" data-original="/1406-4.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
+<p>We organize the memory into 4 MB banks, each having eight of the 4 MB chips. The memory thus has 16 banks, each of 4 MB.</p>
+<p>64 MB memory = $2^{26}$, so 26 bits are used for addressing.<br>16 = $2^4$, so 4 bits of address select the bank, and 4 MB = $2^{22}$, so 22 bits of address to each chip.</p>
+<p>In general, an N-bit address, with $N = L + M$, is broken into two parts:</p>
+<ol>
+<li>L-bit bank select, used to activate one of the $2^L$ banks of memory, and</li>
+<li>M-bit address that is sent to each of the memory banks.</li>
+</ol>
+<p>When one of the memory banks is active, the other ($2^L – 1$) are inactive. All banks receive the M-bit address, but the inactive one do not respond to it.</p>
+<p><strong>Classification of Memory Interleaving:</strong><br>Memory interleaving is classified into two types:</p>
+<ol>
+<li><strong>High Order Interleaving –</strong> In high-order interleaving, the most significant bits of the address select the memory chip. The least significant bits are sent as addresses to each chip. One problem is that consecutive addresses tend to be in the same chip. The maximum rate of data transfer is limited by the memory cycle time.</li>
+</ol>
+<p>It is also known as Memory Banking.</p>
+<p><img "" class="lazyload placeholder" data-original="/223-1.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
+<ol start="2">
+<li><strong>Low Order Interleaving –</strong> In low-order interleaving, the least significant bits select the memory bank (module). In this, consecutive memory addresses are in different memory modules. This allows memory access at much faster rates than allowed by the cycle time.</li>
+</ol>
+<p><img "" class="lazyload placeholder" data-original="/3164-1.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
+<p>注：转载于<a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/types-of-memory-interleaving/">https://www.geeksforgeeks.org/types-of-memory-interleaving/</a></p>
 
       </div>
       
         <div class="copyright">
   <ul class="post-copyright">
     <li class="post-copyright-author">
-    <strong>author:  </strong>Zongwu Wang</a>
+    <strong>作者:  </strong>Zongwu Wang</a>
     </li>
     <li class="post-copyright-link">
-    <strong>link:  </strong>
-    <a href="/2021/08/13/转-四种基本的编程命名规范/" target="_blank" title="转-四种基本的编程命名规范">https://zongwuwang.github.io/2021/08/13/转-四种基本的编程命名规范/</a>
+    <strong>文章链接:  </strong>
+    <a href="/2021/07/30/zhuan-types-of-memory-interleaving/" target="_blank" title="(转)Types of Memory Interleaving">https://zongwuwang.github.io/2021/07/30/zhuan-types-of-memory-interleaving/</a>
     </li>
     <li class="post-copyright-license">
-      <strong>Copyright notice:   </strong>
-      All articles on this website, unless otherwise stated, adopt <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
-      reprint policy. If reproduced, please indicate source!
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
     </li>
   </ul>
 <div>
@@ -398,17 +404,19 @@
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/3.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/7.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/08/26/Compute-Caches/" class="post-nav-link">
+    <a href="/2021/08/03/jie-jue-gem5-yun-xing-shi-que-shao-pydot-de-wen-ti/" class="post-nav-link">
       <div class="title">
-        <i class="fa fa-angle-left"></i> Prev:
-        <div>Compute Caches</div>
+        <i class="fa fa-angle-left"></i> 上一篇:
+        <div>解决gem5运行时缺少pydot的问题</div>
       </div>
       
       <!-- <div class="content">
-        
+        解决gem5运行时缺少pydot的问题在运行gem5时，会显示：
+
+warn: No dot file generate
       </div> -->
     </a>
   </div>
@@ -417,16 +425,16 @@
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/7.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/8.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/08/07/hello-world/" class="post-nav-link">
+    <a href="/2021/07/29/cacti-7-0-jie-shao/" class="post-nav-link">
       <div class="title">
-        Next: <i class="fa fa-angle-right"></i>
-        <div>Hello World</div>
+        下一篇: <i class="fa fa-angle-right"></i>
+        <div>CACTI 7.0介绍</div>
       </div>
       <!-- <div class="content">
-        Welcome to Hexo! This is your very first post. Check documen
+        CACTI 7.0介绍1. CACTI发展CACTI是HP公司推出的一款开源开源工具，广泛应用于对cache/DRAM的
       </div> -->
     </a>
   </div>
@@ -1441,8 +1449,8 @@
   <div class="toc-aside">
     <div class="toc-main">
       <div class="toc-aside-title">
-        <i class="fa fa-list-ul" aria-hidden="true"></i><span>catalog</span>
-        <div class="toc-open-close">catalog</div>
+        <i class="fa fa-list-ul" aria-hidden="true"></i><span>本文目录</span>
+        <div class="toc-open-close">本文目录</div>
       </div>
       <div class="toc-content">
         <link href="/js/tocbot/tocbot.css" rel="stylesheet">
@@ -1683,7 +1691,7 @@
       
     </div>
     <div class="footer-copyright">
-      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/yuang01">yuang01</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
+      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
 
     </div>
     <div class="footer-custom">
@@ -1694,14 +1702,14 @@
       
   <!-- 不蒜子统计 -->
   <span id="busuanzi_container_site_pv">
-        <i class="fa fa-book" aria-hidden="true"></i>Total reading：<span id="busuanzi_value_page_pv"></span> times
+        <i class="fa fa-book" aria-hidden="true"></i>本站总阅读量：<span id="busuanzi_value_page_pv"></span> 次
   </span>
   <span id="busuanzi_container_site_pv">
-        <i class="fa fa-eye" aria-hidden="true"></i>Total visits：<span id="busuanzi_value_site_pv"></span> times
+        <i class="fa fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
   </span>
   <span class="post-meta-divider">|</span>
   <span id="busuanzi_container_site_uv" style='display:none'>
-        <i class="fa fa-users" aria-hidden="true"></i>Number of visitors：<span id="busuanzi_value_site_uv"></span> people
+        <i class="fa fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
   </span>
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
@@ -1961,7 +1969,7 @@
 <script src="/js/clipboard/clipboard.min.js"></script>
 <script>
   !function (e, t, a) {
-    var copy = 'copy';
+    var copy = '复制';
     /* code */
     var initCopyCode = function () {
       var copyHtml = '';

@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>(转)多核处理器的九大关键技术 | SJTU-ACA-WZW</title>
+  <title>解决gem5运行时缺少pydot的问题 | SJTU-ACA-WZW</title>
 
   
     
@@ -65,7 +65,8 @@
     </style>
     <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
     <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="SJTU-ACA-WZW" type="application/atom+xml">
+</head>
 
   
   <!-- 依赖于jquery和vue -->
@@ -193,13 +194,13 @@
         <h2>
           <span>
             <i class="fa fa-search" aria-hidden="true"></i>
-            <span class="title">Search</span>
+            <span class="title">本地搜索</span>
           </span>
           <i class="fa fa-close close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
         </h2>
         <form class="site-search-form">
           <input type="text"
-            placeholder="Please enter keywords"
+            placeholder="请输入关键字"
             id="local-search-input" 
             @click="getSearchFile()"
             class="st-search-input"
@@ -310,14 +311,14 @@
 
 
 
-<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/15.jpg" style="background-repeat: no-repeat; background-size: cover; 
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/7.jpg" style="background-repeat: no-repeat; background-size: cover; 
   background-position: center center;position: relative;">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="title-box">
     <span class="title">
-      (转)多核处理器的九大关键技术
+      解决gem5运行时缺少pydot的问题
     </span>
   </div>
   
@@ -334,81 +335,57 @@
       
       <div class="post-meta">
         <i class="fa fa-clock-o" aria-hidden="true"></i>
-        <span class="post-time">2021-07-23</span>
+        <span class="post-time">2021-08-03</span>
       </div>
       
       <div class="post-tags-categories">
         
-        <div class="tags">
-          <i class="iconfont icontag"></i>
-          
-            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/" class="">
-              计算机体系架构
-            </a>
-          
-        </div>
-        
         
       </div>
       <div class="post-content">
-        <h1 id="转-多核处理器的九大关键技术"><a href="#转-多核处理器的九大关键技术" class="headerlink" title="(转)多核处理器的九大关键技术"></a>(转)多核处理器的九大关键技术</h1><p>与单核处理器相比，多核处理器在体系结构、软件、功耗和安全性设计等方面面临着巨大的挑战，但也蕴含着巨大的潜能。</p>
-<p>CMP和SMT一样，致力于发掘计算的粗粒度并行性。CMP可以看做是随着大规模集成电路技术的发展，在芯片容量足够大时，就可以将大规模并行处理机结构中的SMP（对称多处理机）或DSM（分布共享处理机）节点集成到同一芯片内，各个处理器并行执行不同的线程或进程。在基于SMP结构的单芯片多处理机中，处理器之间通过片外Cache或者是片外的共享存储器来进行通信。而基于DSM结构的单芯片多处理器中，处理器间通过连接分布式存储器的片内高速交叉开关网络进行通信。由于SMP和DSM已经是非常成熟的技术了，CMP结构设计比较容易，只是后端设计和芯片制造工艺的要求较高而已。正因为这样，CMP成为了最先被应用于商用CPU的“未来”高性能处理器结构。</p>
-<p>虽然多核能利用集成度提高带来的诸多好处，让芯片的性能成倍地增加，但很明显的是原来系统级的一些问题便引入到了处理器内部。</p>
+        <h1 id="解决gem5运行时缺少pydot的问题"><a href="#解决gem5运行时缺少pydot的问题" class="headerlink" title="解决gem5运行时缺少pydot的问题"></a>解决gem5运行时缺少pydot的问题</h1><p>在运行gem5时，会显示：</p>
+<blockquote>
+<p>warn: No dot file generated. Please install pydot to generate the dot file and pdf.</p>
+</blockquote>
+<p>作为一个高度强迫症患者，实在无法忍受每次运行出现这个刺眼的warning，而且在进行系统仿真的时候，产生的config.dot.svg和config.dot.pdf等文件还可以可视化整个系统的架构，为此记录一下我解决这个问题的方法。</p>
+<p>在网上搜索博客，基本上都是如下的<a target="_blank" rel="noopener" href="https://blog.csdn.net/mjl960108/article/details/79981794">解决方案</a>：</p>
+<blockquote>
+<p>sudo apt install python-pydot python-pydot-ng graphviz</p>
+</blockquote>
+<p>但是运行时会事与愿违：</p>
+<blockquote>
+<p>root@9187b8755600:~/gem5/m5out# apt install python-pydot python-pydot-ng graphviz<br>Reading package lists… Done<br>Building dependency tree<br>Reading state information… Done<br>E: Unable to locate package python-pydot<br>E: Unable to locate package python-pydot-ng</p>
+</blockquote>
+<p>找不到安装包，也有博客指出需要使用pip命令安装，但是ubuntu自带的python无法找到pip命令，而也最好不要使用conda的虚拟python环境，因为无法定位到虚拟环境中的scons命令，这个我至今也没有解决，而是直接安装docker环境，配置python2.7和python3.8，用于不同版本的gem5，非常方便。</p>
+<p>为此解决系统python环境缺少pydot的方法如下：</p>
 <ol>
-<li><p>核结构研究: 同构还是异构</p>
-<p>CMP的构成分成同构和异构两类，同构是指内部核的结构是相同的，而异构是指内部的核结构是不同的。为此，面对不同的应用研究核结构的实现对未来微处理器的性能至关重要。核本身的结构，关系到整个芯片的面积、功耗和性能。怎样继承和发展传统处理器的成果，直接影响多核的性能和实现周期。同时，根据Amdahl定理，程序的加速比决定于串行部分的性能，所以，从理论上来看似乎异构微处理器的结构具有更好的性能。</p>
-<p>核所用的指令系统对系统的实现也是很重要的，采用多核之间采用相同的指令系统还是不同的指令系统，能否运行操作系统等，也将是研究的内容之一。</p>
+<li>下载<a target="_blank" rel="noopener" href="https://pypi.org/project/pydot/#files">pydot源</a><blockquote>
+<p>wget <a target="_blank" rel="noopener" href="https://files.pythonhosted.org/packages/13/6e/916cdf94f9b38ae0777b254c75c3bdddee49a54cc4014aac1460a7a172b3/pydot-1.4.2.tar.gz">https://files.pythonhosted.org/packages/13/6e/916cdf94f9b38ae0777b254c75c3bdddee49a54cc4014aac1460a7a172b3/pydot-1.4.2.tar.gz</a></p>
+</blockquote>
 </li>
-<li><p>程序执行模型</p>
-<p>多核处理器设计的首要问题是选择程序执行模型。程序执行模型的适用性决定多核处理器能否以最低的代价提供最高的性能。程序执行模型是编译器设计人员与系统实现人员之间的接口。编译器设计人员决定如何将一种高级语言程序按一种程序执行模型转换成一种目标机器语言程序; 系统实现人员则决定该程序执行模型在具体目标机器上的有效实现。当目标机器是多核体系结构时，产生的问题是: 多核体系结构如何支持重要的程序执行模型？是否有其他的程序执行模型更适于多核的体系结构？这些程序执行模型能多大程度上满足应用的需要并为用户所接受？</p>
-</li>
-<li><p>Cache设计: 多级Cache设计与一致性问题</p>
-<p>处理器和主存间的速度差距对CMP来说是个突出的矛盾，因此必须使用多级Cache来缓解。目前有共享一级Cache的CMP、共享二级Cache的CMP以及共享主存的CMP。通常，CMP采用共享二级Cache的CMP结构，即每个处理器核心拥有私有的一级Cache，且所有处理器核心共享二级Cache。</p>
-<p>Cache自身的体系结构设计也直接关系到系统整体性能。但是在CMP结构中，共享Cache或独有Cache孰优孰劣、需不需要在一块芯片上建立多级Cache，以及建立几级Cache等等，由于对整个芯片的尺寸、功耗、布局、性能以及运行效率等都有很大的影响，因而这些都是需要认真研究和探讨的问题。</p>
-<p>另一方面，多级Cache又引发一致性问题。采用何种Cache一致性模型和机制都将对CMP整体性能产生重要影响。在传统多处理器系统结构中广泛采用的Cache一致性模型有: 顺序一致性模型、弱一致性模型、释放一致性模型等。与之相关的Cache一致性机制主要有总线的侦听协议和基于目录的目录协议。目前的CMP系统大多采用基于总线的侦听协议。</p>
-</li>
-<li><p>核间通信技术</p>
-<p>CMP处理器的各CPU核心执行的程序之间有时需要进行数据共享与同步，因此其硬件结构必须支持核间通信。高效的通信机制是CMP处理器高性能的重要保障，目前比较主流的片上高效通信机制有两种，一种是基于总线共享的Cache结构，一种是基于片上的互连结构。</p>
-<p>总线共享Cache结构是指每个CPU内核拥有共享的二级或三级Cache，用于保存比较常用的数据，并通过连接核心的总线进行通信。这种系统的优点是结构简单，通信速度高，缺点是基于总线的结构可扩展性较差。</p>
-<p>基于片上互连的结构是指每个CPU核心具有独立的处理单元和Cache，各个CPU核心通过交叉开关或片上网络等方式连接在一起。各个CPU核心间通过消息通信。这种结构的优点是可扩展性好，数据带宽有保证; 缺点是硬件结构复杂，且软件改动较大。</p>
-<p>也许这两者的竞争结果不是互相取代而是互相合作，例如在全局范围采用片上网络而局部采用总线方式，来达到性能与复杂性的平衡。</p>
-</li>
-<li><p>总线设计</p>
-<p>传统微处理器中，Cache不命中或访存事件都会对CPU的执行效率产生负面影响，而总线接口单元（BIU）的工作效率会决定此影响的程度。当多个CPU核心同时要求访问内存或多个CPU核心内私有Cache同时出现Cache不命中事件时，BIU对这多个访问请求的仲裁机制以及对外存储访问的转换机制的效率决定了CMP系统的整体性能。因此寻找高效的多端口总线接口单元（BIU）结构，将多核心对主存的单字访问转为更为高效的猝发（burst）访问; 同时寻找对CMP处理器整体效率最佳的一次Burst访问字的数量模型以及高效多端口BIU访问的仲裁机制将是CMP处理器研究的重要内容。</p>
-</li>
-<li><p>操作系统设计: 任务调度、中断处理、同步互斥</p>
-<p>对于多核CPU，优化操作系统任务调度算法是保证效率的关键。一般任务调度算法有全局队列调度和局部队列调度。前者是指操作系统维护一个全局的任务等待队列，当系统中有一个CPU核心空闲时，操作系统就从全局任务等待队列中选取就绪任务开始在此核心上执行。这种方法的优点是CPU核心利用率较高。后者是指操作系统为每个CPU内核维护一个局部的任务等待队列，当系统中有一个CPU内核空闲时，便从该核心的任务等待队列中选取恰当的任务执行，这种方法的优点是任务基本上无需在多个CPU核心间切换，有利于提高CPU核心局部Cache命中率。目前多数多核CPU操作系统采用的是基于全局队列的任务调度算法。</p>
-<p>多核的中断处理和单核有很大不同。多核的各处理器之间需要通过中断方式进行通信，所以多个处理器之间的本地中断控制器和负责仲裁各核之间中断分配的全局中断控制器也需要封装在芯片内部。</p>
-<p>另外,多核CPU是一个多任务系统。由于不同任务会竞争共享资源，因此需要系统提供同步与互斥机制。而传统的用于单核的解决机制并不能满足多核，需要利用硬件提供的“读－修改－写”的原子操作或其他同步互斥机制来保证。</p>
-</li>
-<li><p>低功耗设计</p>
-<p>半导体工艺的迅速发展使微处理器的集成度越来越高，同时处理器表面温度也变得越来越高并呈指数级增长，每三年处理器的功耗密度就能翻一番。目前，低功耗和热优化设计已经成为微处理器研究中的核心问题。CMP的多核心结构决定了其相关的功耗研究是一个至关重要的课题。</p>
-<p>低功耗设计是一个多层次问题，需要同时在操作系统级、算法级、结构级、电路级等多个层次上进行研究。每个层次的低功耗设计方法实现的效果不同——抽象层次越高，功耗和温度降低的效果越明显。</p>
-</li>
-<li><p>存储器墙</p>
-<p>为了使芯片内核充分地工作，最起码的要求是芯片能提供与芯片性能相匹配的存储器带宽，虽然内部Cache的容量能解决一些问题，但随着性能的进一步提高，必须有其他一些手段来提高存储器接口的带宽，如增加单个管脚带宽的DDR、DDR2、QDR、XDR等。同样，系统也必须有能提供高带宽的存储器。所以，芯片对封装的要求也越来越高，虽然封装的管脚数每年以20%的数目提升，但还不能完全解决问题，而且还带来了成本提高的问题，为此，怎样提供一个高带宽，低延迟的接口带宽，是必须解决的一个重要问题。</p>
-</li>
-<li><p>可靠性及安全性设计</p>
-<p> 随着技术革新的发展，处理器的应用渗透到现代社会的各个层面，但是在安全性方面却存在着很大的隐患。一方面，处理器结构自身的可靠性低下，由于超微细化与时钟设计的高速化、低电源电压化，设计上的安全系数越来越难以保证，故障的发生率逐渐走高。另一方面，来自第三方的恶意攻击越来越多，手段越来越先进，已成为具有普遍性的社会问题。现在，可靠性与安全性的提高在计算机体系结构研究领域备受注目。</p>
+<li>解压文件</li>
+<li>安装pydot<blockquote>
+<p>python setup.py install (for python2.7)<br>python3 setup.py install (for python3.8)</p>
+</blockquote>
 </li>
 </ol>
-<p>转载于:<a target="_blank" rel="noopener" href="http://blog.itpub.net/312079/viewspace-245322/">http://blog.itpub.net/312079/viewspace-245322/</a></p>
+<p>完美解决！！！</p>
 
       </div>
       
         <div class="copyright">
   <ul class="post-copyright">
     <li class="post-copyright-author">
-    <strong>author:  </strong>Zongwu Wang</a>
+    <strong>作者:  </strong>Zongwu Wang</a>
     </li>
     <li class="post-copyright-link">
-    <strong>link:  </strong>
-    <a href="/2021/07/23/转-多核处理器的九大关键技术/" target="_blank" title="(转)多核处理器的九大关键技术">https://zongwuwang.github.io/2021/07/23/转-多核处理器的九大关键技术/</a>
+    <strong>文章链接:  </strong>
+    <a href="/2021/08/03/jie-jue-gem5-yun-xing-shi-que-shao-pydot-de-wen-ti/" target="_blank" title="解决gem5运行时缺少pydot的问题">https://zongwuwang.github.io/2021/08/03/jie-jue-gem5-yun-xing-shi-que-shao-pydot-de-wen-ti/</a>
     </li>
     <li class="post-copyright-license">
-      <strong>Copyright notice:   </strong>
-      All articles on this website, unless otherwise stated, adopt <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
-      reprint policy. If reproduced, please indicate source!
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
     </li>
   </ul>
 <div>
@@ -423,17 +400,17 @@
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/14.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/8.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/07/25/%E5%87%BD%E6%95%B0%E7%9A%84%E5%89%AF%E4%BD%9C%E7%94%A8/" class="post-nav-link">
+    <a href="/2021/08/04/a-28-nm-configurable-memory-tcam-bcam-sram-using-push-rule-6t-bit-cell-enabling-logic-in-memory/" class="post-nav-link">
       <div class="title">
-        <i class="fa fa-angle-left"></i> Prev:
-        <div>函数的副作用</div>
+        <i class="fa fa-angle-left"></i> 上一篇:
+        <div>A 28 nm Configurable Memory (TCAM/BCAM/SRAM) Using Push-Rule 6T Bit Cell Enabling Logic-in-Memory</div>
       </div>
       
       <!-- <div class="content">
-        (转)函数的副作用函数的副作用指当调用函数时，除了返回函数值之外，还对主调用函数产生附加的影响。例如修改全局变量（函数外
+        今天在阅读“CAPE: A Content-Addressable Processing Engine”这篇论文时，论文
       </div> -->
     </a>
   </div>
@@ -442,17 +419,16 @@
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/12.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/5.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/07/22/Linux-Tools-Mannual/" class="post-nav-link">
+    <a href="/2021/07/30/zhuan-types-of-memory-interleaving/" class="post-nav-link">
       <div class="title">
-        Next: <i class="fa fa-angle-right"></i>
-        <div>Linux Tools Mannual</div>
+        下一篇: <i class="fa fa-angle-right"></i>
+        <div>(转)Types of Memory Interleaving</div>
       </div>
       <!-- <div class="content">
-        Linux 常用工具使用命令速查表tmuxtmu常用操作指令及快捷键
-查看有所有tmux会话指令：tmux ls快捷键：
+        (转)Types of Memory InterleavingMemory Interleaving is an abs
       </div> -->
     </a>
   </div>
@@ -1467,8 +1443,8 @@
   <div class="toc-aside">
     <div class="toc-main">
       <div class="toc-aside-title">
-        <i class="fa fa-list-ul" aria-hidden="true"></i><span>catalog</span>
-        <div class="toc-open-close">catalog</div>
+        <i class="fa fa-list-ul" aria-hidden="true"></i><span>本文目录</span>
+        <div class="toc-open-close">本文目录</div>
       </div>
       <div class="toc-content">
         <link href="/js/tocbot/tocbot.css" rel="stylesheet">
@@ -1709,7 +1685,7 @@
       
     </div>
     <div class="footer-copyright">
-      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/yuang01">yuang01</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
+      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
 
     </div>
     <div class="footer-custom">
@@ -1720,14 +1696,14 @@
       
   <!-- 不蒜子统计 -->
   <span id="busuanzi_container_site_pv">
-        <i class="fa fa-book" aria-hidden="true"></i>Total reading：<span id="busuanzi_value_page_pv"></span> times
+        <i class="fa fa-book" aria-hidden="true"></i>本站总阅读量：<span id="busuanzi_value_page_pv"></span> 次
   </span>
   <span id="busuanzi_container_site_pv">
-        <i class="fa fa-eye" aria-hidden="true"></i>Total visits：<span id="busuanzi_value_site_pv"></span> times
+        <i class="fa fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
   </span>
   <span class="post-meta-divider">|</span>
   <span id="busuanzi_container_site_uv" style='display:none'>
-        <i class="fa fa-users" aria-hidden="true"></i>Number of visitors：<span id="busuanzi_value_site_uv"></span> people
+        <i class="fa fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
   </span>
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
@@ -1987,7 +1963,7 @@
 <script src="/js/clipboard/clipboard.min.js"></script>
 <script>
   !function (e, t, a) {
-    var copy = 'copy';
+    var copy = '复制';
     /* code */
     var initCopyCode = function () {
       var copyHtml = '';
