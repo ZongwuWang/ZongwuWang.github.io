@@ -477,12 +477,12 @@
       <div class="post-content">
         <h1 id="Linux-常用工具使用命令速查表"><a href="#Linux-常用工具使用命令速查表" class="headerlink" title="Linux 常用工具使用命令速查表"></a>Linux 常用工具使用命令速查表</h1><h2 id="tmux"><a href="#tmux" class="headerlink" title="tmux"></a>tmux</h2><h3 id="tmu常用操作指令及快捷键"><a href="#tmu常用操作指令及快捷键" class="headerlink" title="tmu常用操作指令及快捷键"></a>tmu常用操作指令及快捷键</h3><ol>
 <li>查看有所有tmux会话<br>指令：tmux ls<br>快捷键：Ctrl+b s</li>
-<li>新建tmux窗口<br>指令：tmux new -s <session-name></li>
-<li>重命名会话<br>指令：tmux rename-session -t <old-name> <new-name><br>快捷键：Ctrl+b $</li>
+<li>新建tmux窗口<br>指令：tmux new -s <session-name></session-name></li>
+<li>重命名会话<br>指令：tmux rename-session -t <old-name> <new-name><br>快捷键：Ctrl+b $</new-name></old-name></li>
 <li>分离会话<br>指令：tmux detach/exit(关闭窗口，杀死会话)<br>快捷键：Ctrl+b d</li>
 <li>平铺当前窗口<br>快捷键：Ctrl+b z(再次Ctrl+b d恢复)</li>
-<li>杀死会话<br>指令：tmux kill-session -t <session-name></li>
-<li>切换会话<br>指令：tmux switch -t <session-name></li>
+<li>杀死会话<br>指令：tmux kill-session -t <session-name></session-name></li>
+<li>切换会话<br>指令：tmux switch -t <session-name></session-name></li>
 <li>划分上下两个窗格<br>指令：tmux split<br>快捷键：Ctrl+b “</li>
 <li>划分左右两个窗格<br>指令：tmux split -h<br>快捷键：Ctrl+b %</li>
 <li>光标切换到上方窗格<br>指令：tmux select-pane -U<br>快捷键：Ctrl+b 方向键上</li>

@@ -490,11 +490,9 @@
 </ul>
 <p>以下示例说明了引用透明与函数副作用的结合</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">result1 = (fun(a) + b) / (fun(a) - c);</span><br><span class="line">temp = func(a);</span><br><span class="line">result2 = (temp + b) / (temp - c);</span><br></pre></td></tr></table></figure>
-
 <p>如果函数没有副作用，那么result1和result2将是等价的。然而如果fun有副作用，比如让b或c加1，那么result1和result2将不相等。因此，副作用违背了引用透明性。</p>
 <p>在JavaScript中，引入了函数。但显然JS中的函数可以访问、修改全局变量（或定义在函数外的变量），如下</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">5</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	a = <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line">fun();		<span class="comment">// a变成了10</span></span><br></pre></td></tr></table></figure>
-
 <p>JS中要想保证函数无副作用这项特性，只能依靠编程人员的习惯，即</p>
 <ol>
 <li><p>函数入口使用参数运算，而不修改它</p>
