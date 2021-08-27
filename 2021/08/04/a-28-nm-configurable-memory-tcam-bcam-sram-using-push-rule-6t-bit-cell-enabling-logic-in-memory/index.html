@@ -485,9 +485,9 @@
       </div>
       <div class="post-content">
         <p>今天在阅读“CAPE: A Content-Addressable Processing Engine”这篇论文时，论文中引用的一篇仅使用6T SRAM实现CAM的工作引起了我的兴趣。</p>
-<p>由于可以对存储的所有entry进行并行数据搜索/匹配的优良特性，CAM是高关联性缓存、TLB和寄存器重命名电路中不可或缺的部分。LUT也是IP路由器表的主要功能，如Fig. 1所示，因此CAM是许多路由器芯片的主要组成部分。</p>
-<!-- ![](./A-28-nm-Configurable-Memory-TCAM-BCAM-SRAM-Using-Push-Rule-6T-Bit-Cell-Enabling-Logic-in-Memory/202184-222208.jpg) -->
-<p><img "" class="lazyload placeholder" data-original="/2021/08/04/a-28-nm-configurable-memory-tcam-bcam-sram-using-push-rule-6t-bit-cell-enabling-logic-in-memory/202184-222208.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
+<p>由于可以对存储的所有entry进行并行数据搜索/匹配的优良特性，CAM是高关联性缓存、TLB和寄存器重命名电路中不可或缺的部分。LUT也是IP路由器表的主要功能，如Fig. 1所示，因此CAM是许多路由器芯片的主要组成部分。<br><img "" class="lazyload placeholder" data-original="/2021/08/04/a-28-nm-configurable-memory-tcam-bcam-sram-using-push-rule-6t-bit-cell-enabling-logic-in-memory/202184-222208.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
+<!-- ![](202184-222208.jpg) -->
+
 <p>但是传统的CAM存在一个严重的问题就是资源开销很大，无法高密度集成，比如一个BCAM需要10个晶体管，一个TCAM需要16个晶体管，如Fig. 2所示。<br><img "" class="lazyload placeholder" data-original="/2021/08/04/a-28-nm-configurable-memory-tcam-bcam-sram-using-push-rule-6t-bit-cell-enabling-logic-in-memory/202184-222641.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
 <p>因此本文能够使用6T SRAM紧凑的单元实现CAM的方案就显得非常有意义。同时，该论文在保留SRAM存储功能的基础上还实现了TCAM以及一些基础的逻辑操作（AND和NOR）。该论文不仅提出了实现方案，还通过一些精巧的设计保证了该设计的高性能，而且分析的面面俱到，是一个相当优秀的工作。</p>
 <p>在此也先简单总结一下该设计的最终性能：基于6T 28nm FDSOI SRAM工艺，实现了$64\times 64 (4kb)$ BCAM，在1V工作电压下，BCAM的工作频率为370 MHz，能效为$0.5\ fJ/search/bit$，两个64-bit words的逻辑操作的频率达到787 MHz。</p>
