@@ -540,8 +540,7 @@
 <li>the maximum internal bandwidth available inside each DRAM array;</li>
 <li>the memory-level parallelism across multiple DRAM arrays.</li>
 </ul>
-<h3 id="Detailed-Design"><a href="#Detailed-Design" class="headerlink" title="Detailed Design"></a>Detailed Design</h3><h4 id="Ambit-AND-OR"><a href="#Ambit-AND-OR" class="headerlink" title="Ambit-AND-OR"></a>Ambit-AND-OR</h4><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-01-31-11-44-34.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class title="TRA">
-
+<h3 id="Detailed-Design"><a href="#Detailed-Design" class="headerlink" title="Detailed Design"></a>Detailed Design</h3><h4 id="Ambit-AND-OR"><a href="#Ambit-AND-OR" class="headerlink" title="Ambit-AND-OR"></a>Ambit-AND-OR</h4><p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-01-31-11-44-34.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="TRA"></p>
 <p>TRA (triple-row activation) 同时将一个读出放大器与同一位线上的三个DRAM单元相连，假设这三个单元的电容相同，都为$C_c$，bitline的寄生电容为$C_b$，基于电荷共享原则，在电荷共享结束之后，bitline上的电压偏差为：<br>$$\delta = \frac{k\cdot C_c \cdot V_{DD} + C_b \cdot \frac{1}{2} \cdot V_{DD}}{3C_c + C_b} - \frac{1}{2}V_{DD} = \frac{(2k-3)C_c}{6C_c + 2C_b}V_{DD}$$<br>从上面的公式可以看出，如果$k = 2, 3$，则bitline deviation为正，如果$k = 0, 1$，则bitline deviation为负。<br>分别使用A, B, C表示三个cell的逻辑值，则最终的输出可以表示为$C(A+B) + \overline{C}(AB)$，由此我们可以得到：通过控制C的逻辑值，我们可以使用TRA实现逻辑AND和OR。</p>
 <h4 id="TRA能够工作需要解决的问题"><a href="#TRA能够工作需要解决的问题" class="headerlink" title="TRA能够工作需要解决的问题"></a>TRA能够工作需要解决的问题</h4><ol>
 <li>当同时激活三个单元时，位线上的偏差可能小于仅激活一个单元时的偏差。 这可能会延长感测放大的时间或更糟，感测放大器可能会检测到错误的值。</li>
@@ -558,19 +557,16 @@
 <li>Activate designated rows T0, T1, and T2 simultaneously</li>
 <li>Copy data of row T0 to row R</li>
 </ol>
-<h4 id="Ambit-NOT"><a href="#Ambit-NOT" class="headerlink" title="Ambit-NOT"></a>Ambit-NOT</h4><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-01-31-15-46-47.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class title="Ambit-NOT">
-
+<h4 id="Ambit-NOT"><a href="#Ambit-NOT" class="headerlink" title="Ambit-NOT"></a>Ambit-NOT</h4><p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-01-31-15-46-47.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Ambit-NOT"></p>
 <p>$\overline{\text{bitline}}$上的电压表示cell逻辑值的NOT逻辑，因此Ambit-NOT的方法是将$\overline{\text{bitline}}$上的数值连接到$bitline$，从而实现NOT逻辑，如上图所示。</p>
-<img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-01-31-15-52-29.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class title="Bitwise NOT using a dual-contact cell">
-
+<p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-01-31-15-52-29.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Bitwise NOT using a dual-contact cell"></p>
 <ol>
 <li>Activate the source row A;</li>
 <li>Activate n-wordline of DCC (address B5);</li>
 <li>Precharge the bank;</li>
 <li>Copy data from d-wordline of DCC to row R (RowClone).</li>
 </ol>
-<h3 id="Ambit-Putting-it-all-together"><a href="#Ambit-Putting-it-all-together" class="headerlink" title="Ambit: Putting it  all together"></a>Ambit: Putting it  all together</h3><h4 id="Row-address-grouping"><a href="#Row-address-grouping" class="headerlink" title="Row address grouping"></a>Row address grouping</h4><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-01-31-15-58-18.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class title="Row address grouping">
-
+<h3 id="Ambit-Putting-it-all-together"><a href="#Ambit-Putting-it-all-together" class="headerlink" title="Ambit: Putting it  all together"></a>Ambit: Putting it  all together</h3><h4 id="Row-address-grouping"><a href="#Row-address-grouping" class="headerlink" title="Row address grouping"></a>Row address grouping</h4><p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-01-31-15-58-18.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Row address grouping"></p>
 <p>Ambit将每个subarray中的行地址分为三类：</p>
 <ul>
 <li><strong>B</strong>itwise group</li>
@@ -578,10 +574,8 @@
 <li><strong>D</strong>ata group</li>
 </ul>
 <p>Bitwise group的地址译码如下表所示：</p>
-<img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-01-31-16-07-51.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class title="Mappping of B-group address">
-
-<h4 id="Executing-Bitwise-Ops-The-AAP-Primitive"><a href="#Executing-Bitwise-Ops-The-AAP-Primitive" class="headerlink" title="Executing Bitwise Ops: The AAP Primitive"></a>Executing Bitwise Ops: The AAP Primitive</h4><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-01-31-16-29-14.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class title="Command sequences for different bitwise operations">
-
+<p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-01-31-16-07-51.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Mappping of B-group address"></p>
+<h4 id="Executing-Bitwise-Ops-The-AAP-Primitive"><a href="#Executing-Bitwise-Ops-The-AAP-Primitive" class="headerlink" title="Executing Bitwise Ops: The AAP Primitive"></a>Executing Bitwise Ops: The AAP Primitive</h4><p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-01-31-16-29-14.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Command sequences for different bitwise operations"></p>
 <p>从上图可以看出逻辑操作基本上可以使用AAP操作和AP操作来实现。</p>
 <h4 id="Accelerating-AAP-with-a-Split-Row-Decoder"><a href="#Accelerating-AAP-with-a-Split-Row-Decoder" class="headerlink" title="Accelerating AAP with a Split Row Decoder"></a>Accelerating AAP with a Split Row Decoder</h4><h4 id="Integrating-Ambit-with-the-System"><a href="#Integrating-Ambit-with-the-System" class="headerlink" title="Integrating Ambit with the System"></a>Integrating Ambit with the System</h4><ol>
 <li><p>ISA Support<br>$$bbop dst, src1, [src2], size$$</p>
@@ -611,27 +605,21 @@
 <p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-10-29-22.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><!-- 作者给了哪些strong conclusion, 又给了哪些weak conclusion? -->
 
-<h3 id="Circuit-level-SPICE-Simulation"><a href="#Circuit-level-SPICE-Simulation" class="headerlink" title="Circuit-level SPICE Simulation"></a>Circuit-level SPICE Simulation</h3><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-10-21-41.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class title="Effect of process variation on TRA">
-
+<h3 id="Circuit-level-SPICE-Simulation"><a href="#Circuit-level-SPICE-Simulation" class="headerlink" title="Circuit-level SPICE Simulation"></a>Circuit-level SPICE Simulation</h3><p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-10-21-41.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Effect of process variation on TRA"></p>
 <p><strong>Simulation tools:</strong><br>    HSPICE with the sense amplifier using 55nm DDR3 model parameters.<br><strong>Conclusion:</strong></p>
 <ul>
 <li>up to $\pm5%$ variation, there are zero errors in TRA.</li>
 <li>even with $\pm10%$ and $\pm15%$ variation, the percentage of erroneous TRAs across 100,000 iterations each is just 0.29% and 6.01%.</li>
 </ul>
-<h3 id="Analysis-of-Throughput-amp-Energy"><a href="#Analysis-of-Throughput-amp-Energy" class="headerlink" title="Analysis of Throughput &amp; Energy"></a>Analysis of Throughput &amp; Energy</h3><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-10-32-10.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class title="Through of bbop">
-
+<h3 id="Analysis-of-Throughput-amp-Energy"><a href="#Analysis-of-Throughput-amp-Energy" class="headerlink" title="Analysis of Throughput &amp; Energy"></a>Analysis of Throughput &amp; Energy</h3><p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-10-32-10.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Through of bbop"></p>
 <p> Ambit (with 8 DRAM banks) outperform Skylake by 44.9%, GTX745 by 32.0x, and HMC 2.0 by 2.4X.</p>
- <img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-10-39-42.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class title="Energy of bbop">
-
+<p> <img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-10-39-42.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Energy of bbop"></p>
 <p><strong>Conclusion:</strong> Ambit reduces energy consumption by 25.1X-59.5X compared to copying data with the memory controller using the DDR3 interface.</p>
 <h3 id="Effect-on-Real-World-Application"><a href="#Effect-on-Real-World-Application" class="headerlink" title="Effect on Real-World Application"></a>Effect on Real-World Application</h3><p><strong>Tools:</strong> GEM5<br><strong>Benchmark:</strong><br>    - a database bitmap index<br>    - BitWeaving, a mechanism to accelerate database column scan operations<br>    - a bitvector-based implementation of the widely-used set data structure</p>
-<img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-10-53-03.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class title="Bitmap index performance">
-
+<p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-10-53-03.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Bitmap index performance"></p>
 <p><strong>Conclusion:</strong> Ambit significantly reduces the query execution time compared to the baseline by 6X on average.</p>
-<img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-10-54-54.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class title="Speedup offered by Ambit for BitWeaving">
-
-<img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-10-58-20.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class title="Performance of set operations">
-
+<p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-10-54-54.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Speedup offered by Ambit for BitWeaving"></p>
+<p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-10-58-20.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Performance of set operations"></p>
 <p><font color="blue" size="5">现有基于忆阻器的PIM能够加速的一大原因在于神经网络计算的高并行度，但是一旦并行度不高，这些慢的访存速度将强烈限制PIM的性能，因此在比cache访存速度慢的memory中实现非规则计算加速是不现实的，物理特性和容量升高都会导致访存变慢。但是有可能实现低功耗PIM。</font></p>
 <h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><!-- 在这些框架外额外需要记录的笔记。 -->
 
@@ -639,19 +627,13 @@
 <h3 id="Interleaved-Memory-System-交错存储系统"><a href="#Interleaved-Memory-System-交错存储系统" class="headerlink" title="Interleaved Memory System (交错存储系统)"></a>Interleaved Memory System (交错存储系统)</h3><blockquote>
 <p>参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/wbcuc/article/details/8183369">https://blog.csdn.net/wbcuc/article/details/8183369</a></p>
 </blockquote>
-<img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-00-47-52.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class title="Non-interleaved Memory Organization">
-
+<p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-00-47-52.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Non-interleaved Memory Organization"></p>
 <p>非交错存储系统如上图所示，单个bank内地址连续，因此访问连续内存需要串行访问，如下图所示。</p>
-<img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-00-51-32.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class title="Non-interleaved Burst Access Timing">
-
+<p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-00-51-32.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Non-interleaved Burst Access Timing"></p>
 <p>不难看出上面这种方式的访问延时比较高，为了降低访存的延时，交错存储系统将地址连续的分布在bank之间，如下图所示。</p>
-<img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-00-53-18.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class title="Interleaved Memory Organization">
-
+<p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-00-53-18.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Interleaved Memory Organization"></p>
 <p>因此bank0和bank1的可以并行访问，从而将地址0和1并行读出，降低了访存的延时，如下图所示。</p>
-<img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-00-55-01.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class title="Intereaved Burst Access Timing">
-
-
-
+<p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-00-55-01.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Intereaved Burst Access Timing"></p>
 
       </div>
       
