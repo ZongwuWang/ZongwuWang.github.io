@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-08-26T14:39:54.982Z</updated>
+  <updated>2021-08-27T12:30:57.551Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ambit: In-Memory Accelerator for Bulk Bitwise Operations Using Commodity DRAM Technology</title>
+    <link href="https://zongwuwang.github.io/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/"/>
+    <id>https://zongwuwang.github.io/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/</id>
+    <published>2021-08-27T12:29:15.000Z</published>
+    <updated>2021-08-27T12:30:57.551Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;!-- 文章标题 --&gt;
+
+
+&lt;!-- TOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#summary&quot;&gt;Summary&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#research-objective&quot;&gt;Research</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Compute Caches</title>
