@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>转-四种基本的编程命名规范 | SJTU-ACA-WZW</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="转-四种基本的编程命名规范（匈牙利命名法、驼峰式命名法、帕斯卡命名法、下划线命名法）匈牙利命名法匈牙利命名法是早期的规范，由微软的一个匈牙利人发明的，是IDE还十分智障的年代的产物。那个年代，当代码量很多的时候，想要确定一个变量的类型是很麻烦的，不像现在IDE都会给提示，所以才产生了这样一个命名规范，估计现在已经没啥人用了吧……一个十分系统却又琐碎的命名规范。 该命名规范，要求前缀字母用变量类型的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="转-四种基本的编程命名规范">
+<meta property="og:url" content="https://zongwuwang.github.io/2021/08/13/zhuan-si-chong-ji-ben-de-bian-cheng-ming-ming-gui-fan/index.html">
+<meta property="og:site_name" content="SJTU-ACA-WZW">
+<meta property="og:description" content="转-四种基本的编程命名规范（匈牙利命名法、驼峰式命名法、帕斯卡命名法、下划线命名法）匈牙利命名法匈牙利命名法是早期的规范，由微软的一个匈牙利人发明的，是IDE还十分智障的年代的产物。那个年代，当代码量很多的时候，想要确定一个变量的类型是很麻烦的，不像现在IDE都会给提示，所以才产生了这样一个命名规范，估计现在已经没啥人用了吧……一个十分系统却又琐碎的命名规范。 该命名规范，要求前缀字母用变量类型的">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-08-13T14:53:04.000Z">
+<meta property="article:modified_time" content="2021-08-13T15:05:29.455Z">
+<meta property="article:author" content="Zongwu Wang">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="SJTU-ACA-WZW" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">SJTU-ACA-WZW</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://zongwuwang.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-转-四种基本的编程命名规范" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/08/13/zhuan-si-chong-ji-ben-de-bian-cheng-ming-ming-gui-fan/" class="article-date">
+  <time class="dt-published" datetime="2021-08-13T14:53:04.000Z" itemprop="datePublished">2021-08-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      转-四种基本的编程命名规范
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="转-四种基本的编程命名规范（匈牙利命名法、驼峰式命名法、帕斯卡命名法、下划线命名法）"><a href="#转-四种基本的编程命名规范（匈牙利命名法、驼峰式命名法、帕斯卡命名法、下划线命名法）" class="headerlink" title="转-四种基本的编程命名规范（匈牙利命名法、驼峰式命名法、帕斯卡命名法、下划线命名法）"></a>转-四种基本的编程命名规范（匈牙利命名法、驼峰式命名法、帕斯卡命名法、下划线命名法）</h1><h2 id="匈牙利命名法"><a href="#匈牙利命名法" class="headerlink" title="匈牙利命名法"></a>匈牙利命名法</h2><p>匈牙利命名法是早期的规范，由微软的一个匈牙利人发明的，是IDE还十分智障的年代的产物。那个年代，当代码量很多的时候，想要确定一个变量的类型是很麻烦的，不像现在IDE都会给提示，所以才产生了这样一个命名规范，估计现在已经没啥人用了吧……一个十分系统却又琐碎的命名规范。</p>
+<p>该命名规范，要求前缀字母用变量类型的缩写，其余部分用变量的英文或英文的缩写，单词第一个字母大写。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int iMyAge;        #  &quot;i&quot;: int</span><br><span class="line">char cMyName[10];  #  &quot;c&quot;: char</span><br><span class="line">float fManHeight;  #  &quot;f&quot;: float</span><br></pre></td></tr></table></figure>
+
+<p>其他前缀类型还有：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">a      数组（Array）</span><br><span class="line">b      布尔值（Boolean）</span><br><span class="line">by     字节（Byte）</span><br><span class="line">c      有符号字符（Char）</span><br><span class="line">cb     无符号字符（Char Byte，并没有神马人用的）</span><br><span class="line">cr     颜色参考值（Color Ref）</span><br><span class="line">cx,cy  坐标差（长度 Short Int）</span><br><span class="line">dw     双字（Double Word）</span><br><span class="line">fn     函数（Function）</span><br><span class="line">h      Handle（句柄）</span><br><span class="line">i      整形（Int）</span><br><span class="line">l      长整型（Long Int）</span><br><span class="line">lp     长指针（Long Pointer）</span><br><span class="line">m_     类成员（Class Member）</span><br><span class="line">n      短整型（Short Int）</span><br><span class="line">np     近程指针（Near Pointer）</span><br><span class="line">p      指针（Pointer）</span><br><span class="line">s      字符串（String）</span><br><span class="line">sz     以 Null 做结尾的字符串型（String with Zero End）</span><br><span class="line">w      字（Word）</span><br></pre></td></tr></table></figure>
+
+<p>还有其他更多的前缀是根据微软自己的MFC/句柄/控件/结构等东西定义的，就不过多描述了。</p>
+<h2 id="驼峰式命名法"><a href="#驼峰式命名法" class="headerlink" title="驼峰式命名法"></a>驼峰式命名法</h2><p>驼峰式命名法，又叫小驼峰式命名法（所以自然就存在大驼峰命名法啦……)。</p>
+<p>该命名规范，要求第一个单词首字母小写，后面其他单词首字母大写，简单粗暴易学易用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int myAge;</span><br><span class="line">char myName[10];</span><br><span class="line">float manHeight;</span><br></pre></td></tr></table></figure>
+
+<h2 id="帕斯卡命名法"><a href="#帕斯卡命名法" class="headerlink" title="帕斯卡命名法"></a>帕斯卡命名法</h2><p>帕斯卡命名法，又叫大驼峰式命名法。</p>
+<p>与小驼峰式命名法的最大区别在于，每个单词的第一个字母都要大写。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int MyAge;</span><br><span class="line">char MyName[10];</span><br><span class="line">float ManHeight;</span><br></pre></td></tr></table></figure>
+
+<h2 id="下划线命名法"><a href="#下划线命名法" class="headerlink" title="下划线命名法"></a>下划线命名法</h2><p>下划线命名法并不如大小驼峰式命名法那么备受推崇，但是也是浓墨重彩的一笔。尤其在宏定义和常量中使用比较多，通过下划线来分割全部都是大写的单词。</p>
+<p>该命名规范，也是很简单，要求单词与单词之间通过下划线连接即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int my_age;</span><br><span class="line">char my_name[10];</span><br><span class="line">float man_height;</span><br></pre></td></tr></table></figure>
+
+<h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><p>随着技术的发展，命名规范也在不断的细化，一种命名规范早已无法系统的满足各方需求（匈牙利命名法除外，但是已经基本淘汰了），不同的语言不同 IDE 推崇的规范也有所不同，无法评判哪一种最好，但是可以肯定的是，集后三种命名规范大成者，一定是受众最广的。</p>
+<p>例如，谷歌 C++ 编程规范，从项目的命名到文件的命名，再到类和变量以及宏定义的命名都做到了细致入微，充分的结合了下划线命名法与驼峰式命名法（早先推崇的小驼峰，不过今年好像改成大驼峰了），又加入了一些新的元素，十分的系统完善。</p>
+<p>当然，命名规范并不代表着编程规范，仅仅是编程规范的一部分而已，除去命名规范，还有很多编程上的细节是必须关注的，例如，等号两边留空格还是等号对齐？空行神马时候神马地方留更加符合代码结构？空格神马时候神马地方留更加美观？花括号是否对齐？</p>
+<p>诸如此类，还有很多，无法一下子全部掌握并应用，但是在编程经验增加的过程中，一定也要不断的留意，自己所在的公司部门使用的是神马样的规范，没错，并不提倡大家练就自己的规范，一定要去融入工作环境的需求。</p>
+<p>每次去新的工作环境，第一个要看的文档不是别的，一定是编程规范，如果没有这个东西，那么就努力去推一个统一的规范，推不动的话，那可以换工作了，否则日后将会带来无尽的麻烦。</p>
+<p>本文转载自：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/89909623">https://zhuanlan.zhihu.com/p/89909623</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://zongwuwang.github.io/2021/08/13/zhuan-si-chong-ji-ben-de-bian-cheng-ming-ming-gui-fan/" data-id="cksufs4r9000levs47l70e87k" data-title="转-四种基本的编程命名规范" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/08/26/compute-caches/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          Compute Caches
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/08/07/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8C%96%E5%9D%91%E5%BE%85%E5%A1%AB/" rel="tag">挖坑待填</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/" rel="tag">计算机体系架构</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E6%8C%96%E5%9D%91%E5%BE%85%E5%A1%AB/" style="font-size: 10px;">挖坑待填</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/" style="font-size: 20px;">计算机体系架构</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">八月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/">Ambit: In-Memory Accelerator for Bulk Bitwise Operations Using Commodity DRAM Technology</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/26/compute-caches/">Compute Caches</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/13/zhuan-si-chong-ji-ben-de-bian-cheng-ming-ming-gui-fan/">转-四种基本的编程命名规范</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/07/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/04/a-28-nm-configurable-memory-tcam-bcam-sram-using-push-rule-6t-bit-cell-enabling-logic-in-memory/">A 28 nm Configurable Memory (TCAM/BCAM/SRAM) Using Push-Rule 6T Bit Cell Enabling Logic-in-Memory</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 Zongwu Wang<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>解决gem5运行时缺少pydot的问题 | SJTU-ACA-WZW</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="解决gem5运行时缺少pydot的问题在运行gem5时，会显示：  warn: No dot file generated. Please install pydot to generate the dot file and pdf.  作为一个高度强迫症患者，实在无法忍受每次运行出现这个刺眼的warning，而且在进行系统仿真的时候，产生的config.dot.svg和config.dot.pd">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解决gem5运行时缺少pydot的问题">
+<meta property="og:url" content="https://zongwuwang.github.io/2021/08/03/jie-jue-gem5-yun-xing-shi-que-shao-pydot-de-wen-ti/index.html">
+<meta property="og:site_name" content="SJTU-ACA-WZW">
+<meta property="og:description" content="解决gem5运行时缺少pydot的问题在运行gem5时，会显示：  warn: No dot file generated. Please install pydot to generate the dot file and pdf.  作为一个高度强迫症患者，实在无法忍受每次运行出现这个刺眼的warning，而且在进行系统仿真的时候，产生的config.dot.svg和config.dot.pd">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-08-03T06:10:54.000Z">
+<meta property="article:modified_time" content="2021-08-03T06:11:52.000Z">
+<meta property="article:author" content="Zongwu Wang">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="SJTU-ACA-WZW" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">SJTU-ACA-WZW</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://zongwuwang.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-解决gem5运行时缺少pydot的问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/08/03/jie-jue-gem5-yun-xing-shi-que-shao-pydot-de-wen-ti/" class="article-date">
+  <time class="dt-published" datetime="2021-08-03T06:10:54.000Z" itemprop="datePublished">2021-08-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      解决gem5运行时缺少pydot的问题
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="解决gem5运行时缺少pydot的问题"><a href="#解决gem5运行时缺少pydot的问题" class="headerlink" title="解决gem5运行时缺少pydot的问题"></a>解决gem5运行时缺少pydot的问题</h1><p>在运行gem5时，会显示：</p>
+<blockquote>
+<p>warn: No dot file generated. Please install pydot to generate the dot file and pdf.</p>
+</blockquote>
+<p>作为一个高度强迫症患者，实在无法忍受每次运行出现这个刺眼的warning，而且在进行系统仿真的时候，产生的config.dot.svg和config.dot.pdf等文件还可以可视化整个系统的架构，为此记录一下我解决这个问题的方法。</p>
+<p>在网上搜索博客，基本上都是如下的<a target="_blank" rel="noopener" href="https://blog.csdn.net/mjl960108/article/details/79981794">解决方案</a>：</p>
+<blockquote>
+<p>sudo apt install python-pydot python-pydot-ng graphviz</p>
+</blockquote>
+<p>但是运行时会事与愿违：</p>
+<blockquote>
+<p>root@9187b8755600:~/gem5/m5out# apt install python-pydot python-pydot-ng graphviz<br>Reading package lists… Done<br>Building dependency tree<br>Reading state information… Done<br>E: Unable to locate package python-pydot<br>E: Unable to locate package python-pydot-ng</p>
+</blockquote>
+<p>找不到安装包，也有博客指出需要使用pip命令安装，但是ubuntu自带的python无法找到pip命令，而也最好不要使用conda的虚拟python环境，因为无法定位到虚拟环境中的scons命令，这个我至今也没有解决，而是直接安装docker环境，配置python2.7和python3.8，用于不同版本的gem5，非常方便。</p>
+<p>为此解决系统python环境缺少pydot的方法如下：</p>
+<ol>
+<li>下载<a target="_blank" rel="noopener" href="https://pypi.org/project/pydot/#files">pydot源</a><blockquote>
+<p>wget <a target="_blank" rel="noopener" href="https://files.pythonhosted.org/packages/13/6e/916cdf94f9b38ae0777b254c75c3bdddee49a54cc4014aac1460a7a172b3/pydot-1.4.2.tar.gz">https://files.pythonhosted.org/packages/13/6e/916cdf94f9b38ae0777b254c75c3bdddee49a54cc4014aac1460a7a172b3/pydot-1.4.2.tar.gz</a></p>
+</blockquote>
+</li>
+<li>解压文件</li>
+<li>安装pydot<blockquote>
+<p>python setup.py install (for python2.7)<br>python3 setup.py install (for python3.8)</p>
+</blockquote>
+</li>
+</ol>
+<p>完美解决！！！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://zongwuwang.github.io/2021/08/03/jie-jue-gem5-yun-xing-shi-que-shao-pydot-de-wen-ti/" data-id="cksufs4r7000ievs4ehsu8a18" data-title="解决gem5运行时缺少pydot的问题" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/08/04/a-28-nm-configurable-memory-tcam-bcam-sram-using-push-rule-6t-bit-cell-enabling-logic-in-memory/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          A 28 nm Configurable Memory (TCAM/BCAM/SRAM) Using Push-Rule 6T Bit Cell Enabling Logic-in-Memory
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/07/30/zhuan-types-of-memory-interleaving/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">(转)Types of Memory Interleaving</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8C%96%E5%9D%91%E5%BE%85%E5%A1%AB/" rel="tag">挖坑待填</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/" rel="tag">计算机体系架构</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E6%8C%96%E5%9D%91%E5%BE%85%E5%A1%AB/" style="font-size: 10px;">挖坑待填</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/" style="font-size: 20px;">计算机体系架构</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">八月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/">Ambit: In-Memory Accelerator for Bulk Bitwise Operations Using Commodity DRAM Technology</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/26/compute-caches/">Compute Caches</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/13/zhuan-si-chong-ji-ben-de-bian-cheng-ming-ming-gui-fan/">转-四种基本的编程命名规范</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/07/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/04/a-28-nm-configurable-memory-tcam-bcam-sram-using-push-rule-6t-bit-cell-enabling-logic-in-memory/">A 28 nm Configurable Memory (TCAM/BCAM/SRAM) Using Push-Rule 6T Bit Cell Enabling Logic-in-Memory</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 Zongwu Wang<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
