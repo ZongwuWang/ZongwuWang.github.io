@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-08-27T16:28:01.632Z</updated>
+  <updated>2021-09-07T05:18:10.075Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -17,11 +17,95 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>X-SRAM: Enabling In-Memory Boolean Computations in CMOS Static Random Access Memories</title>
+    <link href="https://zongwuwang.github.io/2021/09/07/x-sram-enabling-in-memory-boolean-computations-in-cmos-static-random-access-memories/"/>
+    <id>https://zongwuwang.github.io/2021/09/07/x-sram-enabling-in-memory-boolean-computations-in-cmos-static-random-access-memories/</id>
+    <published>2021-09-07T05:18:10.000Z</published>
+    <updated>2021-09-07T05:18:10.075Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>A 4 + 2T SRAM for Searching and In-Memory Computing With 0.3-V VDDmin</title>
+    <link href="https://zongwuwang.github.io/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/"/>
+    <id>https://zongwuwang.github.io/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/</id>
+    <published>2021-09-06T17:37:24.000Z</published>
+    <updated>2021-09-07T02:48:44.130Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;A-4-2T-SRAM-for-Searching-and-In-Memory-Computing-With-0-3-V-VDDmin&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>A Survey of SRAM-based Processing-in-Memory Techniques and Applications</title>
+    <link href="https://zongwuwang.github.io/2021/09/01/a-survey-of-sram-based-processing-in-memory-techniques-and-applications/"/>
+    <id>https://zongwuwang.github.io/2021/09/01/a-survey-of-sram-based-processing-in-memory-techniques-and-applications/</id>
+    <published>2021-09-01T02:09:58.000Z</published>
+    <updated>2021-09-01T08:27:37.058Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;A-Survey-of-SRAM-based-Processing-in-Memory-Techniques-and-Applications&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Chronos: Efcient Speculative Parallelism for Accelerators</title>
+    <link href="https://zongwuwang.github.io/2021/08/31/chronos-efcient-speculative-parallelismfor-accelerators/"/>
+    <id>https://zongwuwang.github.io/2021/08/31/chronos-efcient-speculative-parallelismfor-accelerators/</id>
+    <published>2021-08-31T13:31:54.000Z</published>
+    <updated>2021-08-31T20:12:29.989Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;ASPLOS-2020&lt;br&gt;Author: Maleen Abeydeera, Daniel Sanchez&lt;br&gt;Affiliations: MIT&lt;/p&gt;
+&lt;!-- TOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Ambit: In-Memory Accelerator for Bulk Bitwise Operations Using Commodity DRAM Technology</title>
     <link href="https://zongwuwang.github.io/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/"/>
     <id>https://zongwuwang.github.io/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/</id>
     <published>2021-08-27T12:29:15.000Z</published>
-    <updated>2021-08-27T16:28:01.632Z</updated>
+    <updated>2021-09-01T03:50:08.309Z</updated>
     
     
       
@@ -51,8 +135,16 @@
     <link href="https://zongwuwang.github.io/2021/08/26/compute-caches/"/>
     <id>https://zongwuwang.github.io/2021/08/26/compute-caches/</id>
     <published>2021-08-26T14:39:54.000Z</published>
-    <updated>2021-08-26T14:39:54.982Z</updated>
+    <updated>2021-09-03T09:55:58.456Z</updated>
     
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Compute-Caches&quot;&gt;&lt;a href=&quot;#Compute-Caches&quot; class=&quot;headerlink&quot; title=&quot;Compute Caches&quot;&gt;&lt;/a&gt;Compute Caches&lt;/h1&gt;&lt;h2 id=&quot;Introduction&quot;&gt;&lt;a</summary>
+        
+      
     
     
     
@@ -106,7 +198,7 @@
     <link href="https://zongwuwang.github.io/2021/08/04/a-28-nm-configurable-memory-tcam-bcam-sram-using-push-rule-6t-bit-cell-enabling-logic-in-memory/"/>
     <id>https://zongwuwang.github.io/2021/08/04/a-28-nm-configurable-memory-tcam-bcam-sram-using-push-rule-6t-bit-cell-enabling-logic-in-memory/</id>
     <published>2021-08-04T13:16:47.000Z</published>
-    <updated>2021-08-27T16:55:26.081Z</updated>
+    <updated>2021-09-02T17:30:53.846Z</updated>
     
     
       

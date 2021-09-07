@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>Ambit: In-Memory Accelerator for Bulk Bitwise Operations Using Commodity DRAM Technology | SJTU-ACA-WZW</title>
+  <title>A 4 + 2T SRAM for Searching and In-Memory Computing With 0.3-V VDDmin | SJTU-ACA-WZW</title>
 
   
     
@@ -443,14 +443,14 @@
 
 
 
-<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/13.jpg" style="background-repeat: no-repeat; background-size: cover; 
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/10.jpg" style="background-repeat: no-repeat; background-size: cover; 
   background-position: center center;position: relative;">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="title-box">
     <span class="title">
-      Ambit: In-Memory Accelerator for Bulk Bitwise Operations Using Commodity DRAM Technology
+      A 4 + 2T SRAM for Searching and In-Memory Computing With 0.3-V VDDmin
     </span>
   </div>
   
@@ -467,173 +467,109 @@
       
       <div class="post-meta">
         <i class="fa fa-clock-o" aria-hidden="true"></i>
-        <span class="post-time">2021-08-27</span>
+        <span class="post-time">2021-09-07</span>
       </div>
       
       <div class="post-tags-categories">
         
-        <div class="tags">
-          <i class="iconfont icontag"></i>
-          
-            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/" class="">
-              计算机体系架构
-            </a>
-          
-        </div>
-        
         
       </div>
       <div class="post-content">
-        <!-- 文章标题 -->
+        <h1 id="A-4-2T-SRAM-for-Searching-and-In-Memory-Computing-With-0-3-V-VDDmin"><a href="#A-4-2T-SRAM-for-Searching-and-In-Memory-Computing-With-0-3-V-VDDmin" class="headerlink" title="A 4 + 2T SRAM for Searching and In-Memory Computing With 0.3-V VDDmin"></a>A 4 + 2T SRAM for Searching and In-Memory Computing With 0.3-V VDDmin</h1><h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><img "" class="lazyload placeholder" data-original="/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/202197-14056.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class>
 
+<p>传统的冯诺依曼 (CVN) 架构在memory bank和计算元素之间持续传输数据，会产生大量的能源和延迟成本，这些成本可能会影响系统功率和性能，如图1所示。为了最小化能耗和延迟，最近提出了IMC(In-Memory Computing)。IMC同时激活多行，直接在BL上进行逻辑操作。IMC不仅减少了数据移动以及操作的延迟，而且受益于memory bank的高带宽，有可能实现高并行计算。</p>
+<img "" class="lazyload placeholder" data-original="/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/202197-14602.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class>
 
-<!-- TOC -->
-
+<p>如图2所示，基于6T SRAM的IMC相比于传统冯诺依曼（CVN）显示出比较大的能效和速度优势。</p>
+<h2 id="现有工作存在的问题"><a href="#现有工作存在的问题" class="headerlink" title="现有工作存在的问题"></a>现有工作存在的问题</h2><p>但是SRAM-based IMC仍存在一下问题：</p>
 <ul>
-<li><a href="#summary">Summary</a></li>
-<li><a href="#research-objective">Research Objective</a></li>
-<li><a href="#problem-statement">Problem Statement</a></li>
-<li><a href="#methods">Method(s)</a><ul>
-<li><a href="#detailed-design">Detailed Design</a><ul>
-<li><a href="#ambit-and-or">Ambit-AND-OR</a></li>
-<li><a href="#tra%E8%83%BD%E5%A4%9F%E5%B7%A5%E4%BD%9C%E9%9C%80%E8%A6%81%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98">TRA能够工作需要解决的问题</a></li>
-<li><a href="#%E8%A7%A3%E5%86%B335%E7%9A%84ambit-and-or-flow">解决3~5的Ambit-AND-OR Flow</a></li>
-<li><a href="#ambit-not">Ambit-NOT</a></li>
+<li>当多行同时激活时，传统的6T SRAM的读取噪声容限会降低。因此需要WL欠驱动来改善噪声容限，这会大幅度降低读取速度。此外，由于读取噪声容限下降，$VDD_{min}$被限制在大约0.7V。因此整体功耗很高。（memory access和leakage仍然主导IMC的系统能耗，如图2b所示。）</li>
+<li>8T SRAM通过隔离SRAM的读取路径和编程路径，能够有效的提高读取的噪声容限，但是面积开销会增加30%。同时由于只有一根BL用于读取，8T SRAM只能实现AND逻辑。</li>
+<li>10T SRAM能够克服8T SRAM的不足，但是会带来更大的面积开销。</li>
 </ul>
-</li>
-<li><a href="#ambit-putting-it--all-together">Ambit: Putting it  all together</a><ul>
-<li><a href="#row-address-grouping">Row address grouping</a></li>
-<li><a href="#executing-bitwise-ops-the-aap-primitive">Executing Bitwise Ops: The AAP Primitive</a></li>
-<li><a href="#accelerating-aap-with-a-split-row-decoder">Accelerating AAP with a Split Row Decoder</a></li>
-<li><a href="#integrating-ambit-with-the-system">Integrating Ambit with the System</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#evaluation">Evaluation</a></li>
-<li><a href="#conclusion">Conclusion</a><ul>
-<li><a href="#circuit-level-spice-simulation">Circuit-level SPICE Simulation</a></li>
-<li><a href="#analysis-of-throughput--energy">Analysis of Throughput &amp; Energy</a></li>
-<li><a href="#effect-on-real-world-application">Effect on Real-World Application</a></li>
-</ul>
-</li>
-<li><a href="#notes">Notes</a><ul>
-<li><a href="#bulk-bitwise-operations%E7%9A%84%E5%8A%A0%E9%80%9F%E5%9C%BA%E6%99%AF%E5%8F%8A%E6%84%8F%E4%B9%89">Bulk bitwise operations的加速场景及意义</a></li>
-<li><a href="#interleaved-memory-system-%E4%BA%A4%E9%94%99%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F">Interleaved Memory System (交错存储系统)</a></li>
-</ul>
-</li>
-</ul>
-<!-- /TOC -->
+<h2 id="本文的目标"><a href="#本文的目标" class="headerlink" title="本文的目标"></a>本文的目标</h2><p>因此，本文的目标是：<font color="blue">提出4 + 2T SRAM单元的方案，能够实现比传统6T SRAM更好的读取噪声容限，同时带来较小的面积开销，以及以较小的能耗支持更多的计算。</font></p>
+<h2 id="本文工作细节"><a href="#本文工作细节" class="headerlink" title="本文工作细节"></a>本文工作细节</h2><h3 id="4-2T-SRAM-Cell-结构"><a href="#4-2T-SRAM-Cell-结构" class="headerlink" title="4 + 2T SRAM Cell 结构"></a>4 + 2T SRAM Cell 结构</h3><img "" class="lazyload placeholder" data-original="/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/202197-15742.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class>
 
-<p>HPCA-2020</p>
-<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><!-- 写完笔记之后最后填，概述文章的内容，以后查阅笔记的时候先看这一段。 -->
-<p>这篇文章介绍了一种存内计算的方法Ambit，可以在DRAM中实现整行的AND/OR/NOT逻辑操作，将源数据复制到预留的操作数行，不破坏原始数据，同时降低操作数译码电路的复杂度。</p>
-<h2 id="Research-Objective"><a href="#Research-Objective" class="headerlink" title="Research Objective"></a>Research Objective</h2><!-- 作者的研究目标 -->
+<p>该论文提出的4 + 2T SRAM结构如图3(a)所示。该SRAM中PU是使用DNW制作的深耗尽PMOS，能够通过体偏效应控制PMOS的阈值电压，从而不需要PG，只需要四个管子即可进行SRAM的编程。同时，读取BL也通过栅控晶体管与SRAM cell进行隔离，cell的电位能够通过栅控晶体管控制BL的放电与否，但是BL上的电压无法反向传播改写SRAM的值，因此可以同时打开多行SRAM进行计算。此外，互补的RBL和RBLB可以实现更多的逻辑操作。</p>
+<h3 id="SRAM支持的操作模式"><a href="#SRAM支持的操作模式" class="headerlink" title="SRAM支持的操作模式"></a>SRAM支持的操作模式</h3><img "" class="lazyload placeholder" data-original="/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/202197-21449.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class>
 
-<h2 id="Problem-Statement"><a href="#Problem-Statement" class="headerlink" title="Problem Statement"></a>Problem Statement</h2><!-- 问题陈述，要解决什么问题？ -->
-
-<p>In existing architectures, the throughput of bulk bitwise operations is limited by the memory bandwidth available to the processing unit (e.g., CPU, GPU, FPGA, processing-in-memory).</p>
-<h2 id="Method-s"><a href="#Method-s" class="headerlink" title="Method(s)"></a>Method(s)</h2><!-- 解决问题的方法/算法是什么？ -->
-
-<p>Ambit利用DRAM技术的模拟操作完全在DRAM内部执行按位运算，从而充分利用了内部DRAM的全部带宽。<br>With modest changes to the DRAM design, Ambit can exploit:</p>
-<ul>
-<li>the maximum internal bandwidth available inside each DRAM array;</li>
-<li>the memory-level parallelism across multiple DRAM arrays.</li>
-</ul>
-<h3 id="Detailed-Design"><a href="#Detailed-Design" class="headerlink" title="Detailed Design"></a>Detailed Design</h3><h4 id="Ambit-AND-OR"><a href="#Ambit-AND-OR" class="headerlink" title="Ambit-AND-OR"></a>Ambit-AND-OR</h4><p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-01-31-11-44-34.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="TRA"></p>
-<p>TRA (triple-row activation) 同时将一个读出放大器与同一位线上的三个DRAM单元相连，假设这三个单元的电容相同，都为$C_c$，bitline的寄生电容为$C_b$，基于电荷共享原则，在电荷共享结束之后，bitline上的电压偏差为：<br>$$\delta = \frac{k\cdot C_c \cdot V_{DD} + C_b \cdot \frac{1}{2} \cdot V_{DD}}{3C_c + C_b} - \frac{1}{2}V_{DD} = \frac{(2k-3)C_c}{6C_c + 2C_b}V_{DD}$$<br>从上面的公式可以看出，如果$k = 2, 3$，则bitline deviation为正，如果$k = 0, 1$，则bitline deviation为负。<br>分别使用A, B, C表示三个cell的逻辑值，则最终的输出可以表示为$C(A+B) + \overline{C}(AB)$，由此我们可以得到：通过控制C的逻辑值，我们可以使用TRA实现逻辑AND和OR。</p>
-<h4 id="TRA能够工作需要解决的问题"><a href="#TRA能够工作需要解决的问题" class="headerlink" title="TRA能够工作需要解决的问题"></a>TRA能够工作需要解决的问题</h4><ol>
-<li>当同时激活三个单元时，位线上的偏差可能小于仅激活一个单元时的偏差。 这可能会延长感测放大的时间或更糟，感测放大器可能会检测到错误的值。</li>
-<li>由于工艺的变化，所有电容相等的假设在实际设计中是不正确的。这会影响TRA的可靠性，从而影响其结果的正确性。</li>
-<li>TRA会改写三个cell的原始数据。</li>
-<li>电容可能会没有充电到满电荷，或者由于漏电会导致电荷随时间减少，如果漏电明显会影响运算结果。</li>
-<li>同时激活DRAM子阵列中的三个任意行需要内存控制器和行解码器同时通信和解码三个行地址。这将在地址总线和行解码器上引入大量成本。</li>
-</ol>
-<h4 id="解决3-5的Ambit-AND-OR-Flow"><a href="#解决3-5的Ambit-AND-OR-Flow" class="headerlink" title="解决3~5的Ambit-AND-OR Flow"></a>解决3~5的Ambit-AND-OR Flow</h4><p>Ambit reserves a set of designed rows in each subarray thar are used to perform TRAs. These designated rows are chosen statically at design time.</p>
+<p>4 + 2T SRAM支持的所有操作以及各端口电压配置如表1所示。</p>
 <ol>
-<li>Copy data of row A to designated row T0</li>
-<li>Copy data of row B to designated row T1</li>
-<li>Initialize designated row T2 to 0</li>
-<li>Activate designated rows T0, T1, and T2 simultaneously</li>
-<li>Copy data of row T0 to row R</li>
-</ol>
-<h4 id="Ambit-NOT"><a href="#Ambit-NOT" class="headerlink" title="Ambit-NOT"></a>Ambit-NOT</h4><p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-01-31-15-46-47.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Ambit-NOT"></p>
-<p>$\overline{\text{bitline}}$上的电压表示cell逻辑值的NOT逻辑，因此Ambit-NOT的方法是将$\overline{\text{bitline}}$上的数值连接到$bitline$，从而实现NOT逻辑，如上图所示。</p>
-<p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-01-31-15-52-29.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Bitwise NOT using a dual-contact cell"></p>
-<ol>
-<li>Activate the source row A;</li>
-<li>Activate n-wordline of DCC (address B5);</li>
-<li>Precharge the bank;</li>
-<li>Copy data from d-wordline of DCC to row R (RowClone).</li>
-</ol>
-<h3 id="Ambit-Putting-it-all-together"><a href="#Ambit-Putting-it-all-together" class="headerlink" title="Ambit: Putting it  all together"></a>Ambit: Putting it  all together</h3><h4 id="Row-address-grouping"><a href="#Row-address-grouping" class="headerlink" title="Row address grouping"></a>Row address grouping</h4><p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-01-31-15-58-18.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Row address grouping"></p>
-<p>Ambit将每个subarray中的行地址分为三类：</p>
-<ul>
-<li><strong>B</strong>itwise group</li>
-<li><strong>C</strong>ontrol group</li>
-<li><strong>D</strong>ata group</li>
-</ul>
-<p>Bitwise group的地址译码如下表所示：</p>
-<p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-01-31-16-07-51.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Mappping of B-group address"></p>
-<h4 id="Executing-Bitwise-Ops-The-AAP-Primitive"><a href="#Executing-Bitwise-Ops-The-AAP-Primitive" class="headerlink" title="Executing Bitwise Ops: The AAP Primitive"></a>Executing Bitwise Ops: The AAP Primitive</h4><p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-01-31-16-29-14.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Command sequences for different bitwise operations"></p>
-<p>从上图可以看出逻辑操作基本上可以使用AAP操作和AP操作来实现。</p>
-<h4 id="Accelerating-AAP-with-a-Split-Row-Decoder"><a href="#Accelerating-AAP-with-a-Split-Row-Decoder" class="headerlink" title="Accelerating AAP with a Split Row Decoder"></a>Accelerating AAP with a Split Row Decoder</h4><h4 id="Integrating-Ambit-with-the-System"><a href="#Integrating-Ambit-with-the-System" class="headerlink" title="Integrating Ambit with the System"></a>Integrating Ambit with the System</h4><ol>
-<li><p>ISA Support<br>$$bbop dst, src1, [src2], size$$</p>
-</li>
-<li><p>Ambit API/Driver Support</p>
-<ul>
-<li>an API that enables applications to specify bitvectors that are likely to be involved in bitwise operations;</li>
-<li>a driver that is aware of the internal mapping of DRAM rows to subarrays and maps the bitvectors involved in bulk bitwise operations to the same DRAM array.</li>
-</ul>
-</li>
-<li><p>Implementing the $bbop$ Instruction<br> 微架构需要检查：1)Ambit操作的源/目的地址是否行对齐；2)操作的长度是否是DRAM行长度的整数倍。如果检查通过，则CPU将操作发送到memory controller，否则CPU执行该操作。</p>
-</li>
-<li><p>Maintaining On-chip Cache Coherence</p>
-<ul>
-<li>flush any dirty cache lines from the source rows;</li>
-<li>invalidate any cache lines from the source rows;<blockquote>
-<p>Note: The above mechanism is already required by DMA. As Ambit operations are always row-wide, we can use structures like the Dirty-Block Index to speed up flushing dirty data.</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>Error Correction and Data Scrambling<br>暂时不深入这一块</p>
-</li>
-</ol>
-<h2 id="Evaluation"><a href="#Evaluation" class="headerlink" title="Evaluation"></a>Evaluation</h2><!-- 作者如何评估自己的方法，有没有问题或者可以借鉴的地方 -->
+<li><p>Write</p>
+<img "" class="lazyload placeholder" data-original="/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/202197-21738.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class>
 
-<p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-10-29-22.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><!-- 作者给了哪些strong conclusion, 又给了哪些weak conclusion? -->
+<p>图5展示了对2x2 SRAM阵列进行写操作。在Standby模式下，WBL和WBLB都处于高电平$VDD_H$，其中$VDD_H$高于$VDD$。对SRAM单元进行写操作时，以写”0”为例，先将WBL拉低至GND，此时节点n1从$VDD$降低至$V_{thp}$。然后拉低WWL，以降低PU的阈值电压，n1对应的PU导通，将n1拉低到0，同时n2对应的PU开启，PD关断，n2被上拉到1，WBL/WBLB上的输入会被写入SRAM单元中。</p>
+</li>
+<li><p>Read</p>
+<img "" class="lazyload placeholder" data-original="/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/202197-24145.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class>
 
-<h3 id="Circuit-level-SPICE-Simulation"><a href="#Circuit-level-SPICE-Simulation" class="headerlink" title="Circuit-level SPICE Simulation"></a>Circuit-level SPICE Simulation</h3><p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-10-21-41.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Effect of process variation on TRA"></p>
-<p><strong>Simulation tools:</strong><br>    HSPICE with the sense amplifier using 55nm DDR3 model parameters.<br><strong>Conclusion:</strong></p>
+<p>正常读操作如图9(a)所示，读操作时，某一行对应的RWL/RWLB被拉低到GND以激活读操作，SRAM cell保存的值决定两个栅控晶体管的开关，从而导致RBL或RBLB连通到RWL或RWLB放电，通过两个差分SA可以检测出RBL和RBLB上的电压。这边存在两点考虑：(1) 使用差分SA代替单端反相器，以提高感测速度；(2) 如果未选择行保存的值为1，则会导致RWL向RBL漏电，RBL无法下拉到GND，因此使用差分交叉耦合SA，能够检测RBL上很小的电压下降。</p>
+</li>
+<li><p>In-Memory-Logic operations</p>
+<p>如图9(b)所示，该电路支持AND, NOR和XOR逻辑操作，所有的逻辑操作都在一个周期内完成。</p>
+</li>
+<li><p>BCAM</p>
+<img "" class="lazyload placeholder" data-original="/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/202197-24717.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class>
+
+<p>BCAM操作如图11(a)所示，此时RBL和RBLB复用为SL和SLB，作为搜索的输入。RWL复用为ML。如果搜索的属于与该行保存的数据完全匹配，则不存在任何的ML不存在任何的放电通路。否则，SL或SLB将ML拉低，行方向的SA用于BCAM的检测。<br>该方案于传统的6T SRAM-based BCAM的优势在于：(1) 搜索仍是按行进行，因此保存的数据不需要转置（按列保存）；(2) 多行同时激活，数据不会被改写。图12展示的是一个BCAM搜索的例子。</p>
+<img "" class="lazyload placeholder" data-original="/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/202197-25515.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class></li>
+<li><p>TCAM</p>
+<p>TCAM操作原理如图11(b)所示，操作于BCAM类似，区别在于使用2个cell保存三种状态。图13展示的是一个TCAM搜索的例子。</p>
+<img "" class="lazyload placeholder" data-original="/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/202197-25525.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class></li>
+</ol>
+<h2 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果"></a>测试结果</h2><img "" class="lazyload placeholder" data-original="/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/202197-95055.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class>
+
+<img "" class="lazyload placeholder" data-original="/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/202197-95240.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class>
+
+<img "" class="lazyload placeholder" data-original="/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/202197-95317.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class>
+
+<p>图16显示了测量单元的write margin，绿色区域表明超过5$\sigma$的write margin，其中标注的balanced green region至少存在200mV margin。</p>
+<img "" class="lazyload placeholder" data-original="/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/202197-95331.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class>
+
+<p>图17显示：</p>
 <ul>
-<li>up to $\pm5%$ variation, there are zero errors in TRA.</li>
-<li>even with $\pm10%$ and $\pm15%$ variation, the percentage of erroneous TRAs across 100,000 iterations each is just 0.29% and 6.01%.</li>
+<li>0.8V VDD下，写频率达到600MHz；</li>
+<li>最小供电电压为VDD/VDDH=0.25/0.30V；</li>
+<li>最优的写能效为4.02 fJ/bit，对应VDD=0.35V.</li>
 </ul>
-<h3 id="Analysis-of-Throughput-amp-Energy"><a href="#Analysis-of-Throughput-amp-Energy" class="headerlink" title="Analysis of Throughput &amp; Energy"></a>Analysis of Throughput &amp; Energy</h3><p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-10-32-10.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Through of bbop"></p>
-<p> Ambit (with 8 DRAM banks) outperform Skylake by 44.9%, GTX745 by 32.0x, and HMC 2.0 by 2.4X.</p>
-<p> <img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-10-39-42.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Energy of bbop"></p>
-<p><strong>Conclusion:</strong> Ambit reduces energy consumption by 25.1X-59.5X compared to copying data with the memory controller using the DDR3 interface.</p>
-<h3 id="Effect-on-Real-World-Application"><a href="#Effect-on-Real-World-Application" class="headerlink" title="Effect on Real-World Application"></a>Effect on Real-World Application</h3><p><strong>Tools:</strong> GEM5<br><strong>Benchmark:</strong><br>    - a database bitmap index<br>    - BitWeaving, a mechanism to accelerate database column scan operations<br>    - a bitvector-based implementation of the widely-used set data structure</p>
-<p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-10-53-03.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Bitmap index performance"></p>
-<p><strong>Conclusion:</strong> Ambit significantly reduces the query execution time compared to the baseline by 6X on average.</p>
-<p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-10-54-54.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Speedup offered by Ambit for BitWeaving"></p>
-<p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-10-58-20.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Performance of set operations"></p>
-<p><font color="blue" size="5">现有基于忆阻器的PIM能够加速的一大原因在于神经网络计算的高并行度，但是一旦并行度不高，这些慢的访存速度将强烈限制PIM的性能，因此在比cache访存速度慢的memory中实现非规则计算加速是不现实的，物理特性和容量升高都会导致访存变慢。但是有可能实现低功耗PIM。</font></p>
-<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><!-- 在这些框架外额外需要记录的笔记。 -->
+<img "" class="lazyload placeholder" data-original="/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/202197-95920.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class>
 
-<h3 id="Bulk-bitwise-operations的加速场景及意义"><a href="#Bulk-bitwise-operations的加速场景及意义" class="headerlink" title="Bulk bitwise operations的加速场景及意义"></a>Bulk bitwise operations的加速场景及意义</h3><p>In fact, many real-world databases support bitmap indice. A recent work, WideTable, designs an entire database around a technique called BitWeaving, which accelerates scans completely using bulk bitwise operations. Microsoft recently open-sourced a technology called BitFunnel that accelerates the document filtering portion of web search. BitFunnel relies on fast bulk bitwise AND operations. Bulk bitwise operations are also prevalent in DNA sequence alignment, encrayption algorithms, graph processing, and networking. Thus, accelerating bulk bitwise operations can significantly boost the performance of various applications.</p>
-<h3 id="Interleaved-Memory-System-交错存储系统"><a href="#Interleaved-Memory-System-交错存储系统" class="headerlink" title="Interleaved Memory System (交错存储系统)"></a>Interleaved Memory System (交错存储系统)</h3><blockquote>
-<p>参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/wbcuc/article/details/8183369">https://blog.csdn.net/wbcuc/article/details/8183369</a></p>
-</blockquote>
-<p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-00-47-52.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Non-interleaved Memory Organization"></p>
-<p>非交错存储系统如上图所示，单个bank内地址连续，因此访问连续内存需要串行访问，如下图所示。</p>
-<p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-00-51-32.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Non-interleaved Burst Access Timing"></p>
-<p>不难看出上面这种方式的访问延时比较高，为了降低访存的延时，交错存储系统将地址连续的分布在bank之间，如下图所示。</p>
-<p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-00-53-18.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Interleaved Memory Organization"></p>
-<p>因此bank0和bank1的可以并行访问，从而将地址0和1并行读出，降低了访存的延时，如下图所示。</p>
-<p><img "" class="lazyload placeholder" data-original="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/2021-02-01-00-55-01.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="Intereaved Burst Access Timing"></p>
+<p>图18是在1-bit mismatch下测量，结果表明：</p>
+<ul>
+<li>BCAM操作的$VDD_{min}=0.35V$，此时对应最优的BCAM搜索能效0.13 fJ/bit。</li>
+<li>TCAM和TCAM实现的频率相同，在VDD=0.8V时达到225MHz。</li>
+<li>TCAM的搜索能耗是BCAM的2倍。</li>
+</ul>
+<img "" class="lazyload placeholder" data-original="/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/202197-100412.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class>
+
+<p>图19表明：</p>
+<ul>
+<li>read $VDD_{min}=0.25V$;</li>
+<li>logic operation $VDD_{min}=0.35V$（emploing single-port sensing and half-strength SA）;</li>
+<li>最优读能效为3.96 fJ/bit，对应VDD=0.35V；</li>
+<li>最优逻辑操作能效为6.57 fJ/bit，对应VDD=0.35V；</li>
+<li>最高读频率350 MHz;</li>
+<li>最高逻辑操作频率270 MHz。</li>
+</ul>
+<img "" class="lazyload placeholder" data-original="/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/202197-100427.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class>
+
+<p>与近存计算相比，总延迟降低35%，总能耗降低25%。</p>
+<img "" class="lazyload placeholder" data-original="/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/202197-103838.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class>
+
+<p>实现最低的访问能耗和比较好的$VDD_{min}$</p>
+<img "" class="lazyload placeholder" data-original="/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/202197-103854.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class>
+
+<p>我们以最小的面积开销实现了可比的$VDD_{min}$和最低的读取能量。</p>
+<img "" class="lazyload placeholder" data-original="/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/202197-103908.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" class>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>4 + 2T SRAM方案：</p>
+<ul>
+<li>相比于8T SRAM方案，面积节省15%。</li>
+<li>差分解耦读取路径可实现可靠的多字同时激活以执行布尔逻辑功能。</li>
+<li>与近内存计算相比，IMC 分别节省了 35% 和 25% 的延迟和能源。</li>
+<li>BCAM 在 0.35 V 下达到 0.13 fJ/search/bit。</li>
+<li>工艺角仿真实现0.3V读/写$VDD_{min}$。</li>
+</ul>
 
       </div>
       
@@ -644,7 +580,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/" target="_blank" title="Ambit: In-Memory Accelerator for Bulk Bitwise Operations Using Commodity DRAM Technology">https://zongwuwang.github.io/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/</a>
+    <a href="/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/" target="_blank" title="A 4 + 2T SRAM for Searching and In-Memory Computing With 0.3-V VDDmin">https://zongwuwang.github.io/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -667,14 +603,14 @@
     <div class="post-nav-img lazyload" data-original="/medias/5.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/08/31/chronos-efcient-speculative-parallelismfor-accelerators/" class="post-nav-link">
+    <a href="/2021/09/07/x-sram-enabling-in-memory-boolean-computations-in-cmos-static-random-access-memories/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div>Chronos: Efcient Speculative Parallelism for Accelerators</div>
+        <div>X-SRAM: Enabling In-Memory Boolean Computations in CMOS Static Random Access Memories</div>
       </div>
       
       <!-- <div class="content">
-        ASPLOS-2020Author: Maleen Abeydeera, Daniel SanchezAffiliati
+        
       </div> -->
     </a>
   </div>
@@ -683,16 +619,16 @@
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/3.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/11.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/08/26/compute-caches/" class="post-nav-link">
+    <a href="/2021/09/01/a-survey-of-sram-based-processing-in-memory-techniques-and-applications/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div>Compute Caches</div>
+        <div>A Survey of SRAM-based Processing-in-Memory Techniques and Applications</div>
       </div>
       <!-- <div class="content">
-        Compute CachesIntroduction
+        A Survey of SRAM-based Processing-in-Memory Techniques and A
       </div> -->
     </a>
   </div>
