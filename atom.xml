@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-09-07T18:18:15.935Z</updated>
+  <updated>2021-09-08T13:09:04.381Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FReaC Cache: Folded-logic Reconfigurable Computing in the Last Level Cache</title>
+    <link href="https://zongwuwang.github.io/2021/09/08/freac-cache-folded-logic-reconfigurable-computing-in-the-last-level-cache/"/>
+    <id>https://zongwuwang.github.io/2021/09/08/freac-cache-folded-logic-reconfigurable-computing-in-the-last-level-cache/</id>
+    <published>2021-09-08T13:09:04.000Z</published>
+    <updated>2021-09-08T13:09:04.381Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Recryptor: A Reconfigurable Cryptographic Cortex-M0 Processor With In-Memory and Near-Memory Computing for IoT Security</title>
+    <link href="https://zongwuwang.github.io/2021/09/08/recryptor-a-reconfigurable-cryptographic-cortex-m0-processor-with-in-memory-and-near-memory-computing-for-iot-security/"/>
+    <id>https://zongwuwang.github.io/2021/09/08/recryptor-a-reconfigurable-cryptographic-cortex-m0-processor-with-in-memory-and-near-memory-computing-for-iot-security/</id>
+    <published>2021-09-08T07:54:04.000Z</published>
+    <updated>2021-09-08T09:51:33.230Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Recryptor-A-Reconfigurable-Cryptographic-Cortex-M0-Processor-With-In-Memory-and-Near-Memory-Computing-for-IoT-Security&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>i-SRAM: Interleaved Wordlines for Vector Boolean Operations Using SRAMs</title>
@@ -67,7 +101,7 @@
     <link href="https://zongwuwang.github.io/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/"/>
     <id>https://zongwuwang.github.io/2021/09/07/a-4-2t-sram-for-searching-and-in-memory-computing-with-0-3-v-vddmin/</id>
     <published>2021-09-06T17:37:24.000Z</published>
-    <updated>2021-09-07T06:27:44.621Z</updated>
+    <updated>2021-09-08T08:36:00.254Z</updated>
     
     
       
