@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-09-08T13:15:08.624Z</updated>
+  <updated>2021-09-09T08:09:06.471Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -17,11 +17,55 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>A 65-nm 0.6-fJ/Bit/Search Ternary Content Addressable Memory Using an Adaptive Match-Line Discharge</title>
+    <link href="https://zongwuwang.github.io/2021/09/09/a-65-nm-0-6-fj-bit-search-ternary-content-addressable-memory-using-an-adaptive-match-line-discharge/"/>
+    <id>https://zongwuwang.github.io/2021/09/09/a-65-nm-0-6-fj-bit-search-ternary-content-addressable-memory-using-an-adaptive-match-line-discharge/</id>
+    <published>2021-09-09T08:01:13.000Z</published>
+    <updated>2021-09-09T08:09:06.471Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;A-65-nm-0-6-fJ-Bit-Search-Ternary-Content-Addressable-Memory-Using-an-Adaptive-Match-Line-Discharge&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Memory sizing of a scalable SRAM in-memory computing tile based architecture</title>
+    <link href="https://zongwuwang.github.io/2021/09/09/memory-sizing-of-a-scalable-sram-in-memory-computing-tile-based-architecture/"/>
+    <id>https://zongwuwang.github.io/2021/09/09/memory-sizing-of-a-scalable-sram-in-memory-computing-tile-based-architecture/</id>
+    <published>2021-09-09T06:59:51.000Z</published>
+    <updated>2021-09-09T08:00:45.935Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Memory-sizing-of-a-scalable-SRAM-in-memory-computing-tile-based-architecture&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="未完待续" scheme="https://zongwuwang.github.io/tags/%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD/"/>
+    
+  </entry>
+  
+  <entry>
     <title>FReaC Cache: Folded-logic Reconfigurable Computing in the Last Level Cache</title>
     <link href="https://zongwuwang.github.io/2021/09/08/freac-cache-folded-logic-reconfigurable-computing-in-the-last-level-cache/"/>
     <id>https://zongwuwang.github.io/2021/09/08/freac-cache-folded-logic-reconfigurable-computing-in-the-last-level-cache/</id>
     <published>2021-09-08T13:09:04.000Z</published>
-    <updated>2021-09-08T13:15:08.624Z</updated>
+    <updated>2021-09-10T07:30:39.069Z</updated>
     
     
       
@@ -416,27 +460,6 @@
     
     
     <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux Tools Mannual</title>
-    <link href="https://zongwuwang.github.io/2021/07/22/linux-tools-mannual/"/>
-    <id>https://zongwuwang.github.io/2021/07/22/linux-tools-mannual/</id>
-    <published>2021-07-22T05:47:27.000Z</published>
-    <updated>2021-07-22T06:05:43.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Linux-常用工具使用命令速查表&quot;&gt;&lt;a href=&quot;#Linux-常用工具使用命令速查表&quot; class=&quot;headerlink&quot; title=&quot;Linux 常用工具使用命令速查表&quot;&gt;&lt;/a&gt;Linux 常用工具使用命令速查表&lt;/h1&gt;&lt;h2</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
