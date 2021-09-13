@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-09-09T08:09:06.471Z</updated>
+  <updated>2021-09-13T05:21:03.732Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Leveraging Caches to Accelerate Hash Tables and Memoization</title>
+    <link href="https://zongwuwang.github.io/2021/09/10/leveraging-caches-to-accelerate-hash-tables-and-memoization/"/>
+    <id>https://zongwuwang.github.io/2021/09/10/leveraging-caches-to-accelerate-hash-tables-and-memoization/</id>
+    <published>2021-09-10T11:12:58.000Z</published>
+    <updated>2021-09-13T05:21:03.732Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Leveraging-Caches-to-Accelerate-Hash-Tables-and-Memoization&quot;&gt;&lt;a href=&quot;#Leveraging-Caches-to-Accelerate-Hash-Tables-and-Memoization&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="计算机体系结构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
   
   <entry>
     <title>A 65-nm 0.6-fJ/Bit/Search Ternary Content Addressable Memory Using an Adaptive Match-Line Discharge</title>
@@ -437,29 +460,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>(转)多核处理器的九大关键技术</title>
-    <link href="https://zongwuwang.github.io/2021/07/23/zhuan-duo-he-chu-li-qi-de-jiu-da-guan-jian-ji-zhu/"/>
-    <id>https://zongwuwang.github.io/2021/07/23/zhuan-duo-he-chu-li-qi-de-jiu-da-guan-jian-ji-zhu/</id>
-    <published>2021-07-23T07:06:09.000Z</published>
-    <updated>2021-07-23T07:14:02.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;转-多核处理器的九大关键技术&quot;&gt;&lt;a href=&quot;#转-多核处理器的九大关键技术&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
     
   </entry>
   
