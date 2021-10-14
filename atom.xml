@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-09-13T05:21:03.732Z</updated>
+  <updated>2021-10-14T08:17:51.452Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -17,11 +17,89 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>标准单元库的理解</title>
+    <link href="https://zongwuwang.github.io/2021/10/14/biao-zhun-dan-yuan-ku-de-li-jie/"/>
+    <id>https://zongwuwang.github.io/2021/10/14/biao-zhun-dan-yuan-ku-de-li-jie/</id>
+    <published>2021-10-14T08:07:21.000Z</published>
+    <updated>2021-10-14T08:17:51.452Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;标准单元库的理解&quot;&gt;&lt;a href=&quot;#标准单元库的理解&quot; class=&quot;headerlink&quot; title=&quot;标准单元库的理解&quot;&gt;&lt;/a&gt;标准单元库的理解&lt;/h1&gt;&lt;p&gt;对umc28nm standard cell</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>QEI: Query Acceleration Can be Generic and Efficient in the Cloud</title>
+    <link href="https://zongwuwang.github.io/2021/09/15/qei-query-acceleration-can-be-generic-and-efficient-in-the-cloud/"/>
+    <id>https://zongwuwang.github.io/2021/09/15/qei-query-acceleration-can-be-generic-and-efficient-in-the-cloud/</id>
+    <published>2021-09-15T08:03:12.000Z</published>
+    <updated>2021-09-15T08:03:12.236Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>VIM和shell的切换</title>
+    <link href="https://zongwuwang.github.io/2021/09/14/vim-he-shell-de-qie-huan/"/>
+    <id>https://zongwuwang.github.io/2021/09/14/vim-he-shell-de-qie-huan/</id>
+    <published>2021-09-14T07:56:07.000Z</published>
+    <updated>2021-09-14T08:04:22.005Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;VIM和shell的切换&quot;&gt;&lt;a href=&quot;#VIM和shell的切换&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CAPE: A Content-Addressable Processing Engine</title>
+    <link href="https://zongwuwang.github.io/2021/09/14/cape-a-content-addressable-processing-engine/"/>
+    <id>https://zongwuwang.github.io/2021/09/14/cape-a-content-addressable-processing-engine/</id>
+    <published>2021-09-13T16:47:31.000Z</published>
+    <updated>2021-09-15T08:00:53.411Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;CAPE-A-Content-Addressable-Processing-Engine&quot;&gt;&lt;a href=&quot;#CAPE-A-Content-Addressable-Processing-Engine&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Leveraging Caches to Accelerate Hash Tables and Memoization</title>
     <link href="https://zongwuwang.github.io/2021/09/10/leveraging-caches-to-accelerate-hash-tables-and-memoization/"/>
     <id>https://zongwuwang.github.io/2021/09/10/leveraging-caches-to-accelerate-hash-tables-and-memoization/</id>
     <published>2021-09-10T11:12:58.000Z</published>
-    <updated>2021-09-13T05:21:03.732Z</updated>
+    <updated>2021-09-14T06:17:54.310Z</updated>
     
     
       
@@ -224,7 +302,7 @@
     <link href="https://zongwuwang.github.io/2021/08/31/chronos-efcient-speculative-parallelismfor-accelerators/"/>
     <id>https://zongwuwang.github.io/2021/08/31/chronos-efcient-speculative-parallelismfor-accelerators/</id>
     <published>2021-08-31T13:31:54.000Z</published>
-    <updated>2021-09-07T06:29:18.441Z</updated>
+    <updated>2021-10-03T12:01:13.185Z</updated>
     
     
       
@@ -281,14 +359,14 @@
     <link href="https://zongwuwang.github.io/2021/08/26/compute-caches/"/>
     <id>https://zongwuwang.github.io/2021/08/26/compute-caches/</id>
     <published>2021-08-26T14:39:54.000Z</published>
-    <updated>2021-09-03T09:55:58.456Z</updated>
+    <updated>2021-10-05T05:45:38.055Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Compute-Caches&quot;&gt;&lt;a href=&quot;#Compute-Caches&quot; class=&quot;headerlink&quot; title=&quot;Compute Caches&quot;&gt;&lt;/a&gt;Compute Caches&lt;/h1&gt;&lt;h2 id=&quot;Introduction&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h1 id=&quot;Compute-Caches&quot;&gt;&lt;a href=&quot;#Compute-Caches&quot; class=&quot;headerlink&quot; title=&quot;Compute Caches&quot;&gt;&lt;/a&gt;Compute Caches&lt;/h1&gt;&lt;p&gt;这是密西根大学Reetuparna</summary>
         
       
     
@@ -375,86 +453,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;解决gem5运行时缺少pydot的问题&quot;&gt;&lt;a href=&quot;#解决gem5运行时缺少pydot的问题&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>(转)Types of Memory Interleaving</title>
-    <link href="https://zongwuwang.github.io/2021/07/30/zhuan-types-of-memory-interleaving/"/>
-    <id>https://zongwuwang.github.io/2021/07/30/zhuan-types-of-memory-interleaving/</id>
-    <published>2021-07-30T05:38:47.000Z</published>
-    <updated>2021-07-30T06:55:24.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;转-Types-of-Memory-Interleaving&quot;&gt;&lt;a href=&quot;#转-Types-of-Memory-Interleaving&quot; class=&quot;headerlink&quot; title=&quot;(转)Types of Memory</summary>
-        
-      
-    
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CACTI 7.0介绍</title>
-    <link href="https://zongwuwang.github.io/2021/07/29/cacti-7-0-jie-shao/"/>
-    <id>https://zongwuwang.github.io/2021/07/29/cacti-7-0-jie-shao/</id>
-    <published>2021-07-28T17:13:38.000Z</published>
-    <updated>2021-07-28T17:40:02.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;CACTI-7-0介绍&quot;&gt;&lt;a href=&quot;#CACTI-7-0介绍&quot; class=&quot;headerlink&quot; title=&quot;CACTI 7.0介绍&quot;&gt;&lt;/a&gt;CACTI 7.0介绍&lt;/h1&gt;&lt;h2 id=&quot;1-CACTI发展&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows使用sftp获取服务器运行记录</title>
-    <link href="https://zongwuwang.github.io/2021/07/25/windows-shi-yong-sftp-huo-qu-fu-wu-qi-yun-xing-ji-lu/"/>
-    <id>https://zongwuwang.github.io/2021/07/25/windows-shi-yong-sftp-huo-qu-fu-wu-qi-yun-xing-ji-lu/</id>
-    <published>2021-07-25T09:59:18.000Z</published>
-    <updated>2021-07-25T09:59:18.000Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>函数的副作用</title>
-    <link href="https://zongwuwang.github.io/2021/07/25/han-shu-de-fu-zuo-yong/"/>
-    <id>https://zongwuwang.github.io/2021/07/25/han-shu-de-fu-zuo-yong/</id>
-    <published>2021-07-25T09:56:22.000Z</published>
-    <updated>2021-07-25T10:18:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;转-函数的副作用&quot;&gt;&lt;a href=&quot;#转-函数的副作用&quot; class=&quot;headerlink&quot;</summary>
         
       
     

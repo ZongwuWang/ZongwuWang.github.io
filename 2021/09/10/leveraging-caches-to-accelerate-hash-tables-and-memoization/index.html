@@ -497,15 +497,24 @@
 <h3 id="哈希表性能分析"><a href="#哈希表性能分析" class="headerlink" title="哈希表性能分析"></a>哈希表性能分析</h3><ol>
 <li><p>低核心利用率</p>
 <p> <img "" class="lazyload placeholder" data-original="/2021/09/10/leveraging-caches-to-accelerate-hash-tables-and-memoization/2021911-232837.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
-<p> 图1展示了基于三种不同技术：libstdc++’s C++11 unordered_map，Google’s dense_hash_map以及FLAT-HTA实现哈希表的搜索，更新和插入操作的性能评估。对于搜索和更新，哈希表初始化为一百万条随机生成的键值对，容量为64MB。对于插入操作，哈希表初始化为空，然后插入随机生成的一百万条键值对。<br> 图1使用了一种非常有意思的分析方法，将执行时间划分成核心执行不同活动的周期数。这几部分非别为：</p>
+<p> 图1展示了基于三种不同技术：libstdc++’s C++11 unordered_map，Google’s dense_hash_map以及FLAT-HTA实现哈希表的搜索，更新和插入操作的性能评估。对于搜索和更新，哈希表初始化为一百万条随机生成的键值对，容量为64MB。对于插入操作，哈希表初始化为空，然后插入随机生成的一百万条键值对。<br> 图1使用了一种非常有意思的分析方法，将执行时间划分成核心执行不同活动的周期数。这几部分分别为：</p>
 <ul>
 <li>发射提交指令；</li>
 <li>执行错误路径指令（分支预测错误）；</li>
 <li>前端（取指或译码）导致的流水线暂停；</li>
 <li>后端事件（功能单元，L1缓存，L2缓存或主存）导致的流水线暂停。</li>
 </ul>
-<p> 从图1中可以看出，哈希表存在两大资源开销：难以预测的分支和未充分利用的后端并行性。<br> 第一点难以预测的分支很容易理解，哈希表操作需要执行很多分支来处理hash碰撞。对于第二点，每个哈希表操作都采用一系列指令，包括哈希计算、内存访问、比较和分支。这些指令占用数十到数百个微操作(µop)插槽，与重新排序缓冲区大小相当。如图1所示，这显着限制了内存级并行性：大多数后端停顿都用于等待主内存响应，并且重新排序缓冲区没有足够的资源来重叠多次未命中。</p>
+ <!-- 从图1中可以看出，哈希表存在两大资源开销：难以预测的分支和未充分利用的后端并行性。 -->
+ <!-- 第一点难以预测的分支很容易理解，哈希表操作需要执行很多分支来处理hash碰撞。对于第二点，每个哈希表操作都采用一系列指令，包括哈希计算、内存访问、比较和分支。这些指令占用数十到数百个微操作(µop)插槽，与重新排序缓冲区大小相当。如图1所示，这显着限制了内存级并行性：大多数后端停顿都用于等待主内存响应，并且重新排序缓冲区没有足够的资源来重叠多次未命中。 -->
+<p> 从图一可以看出两点：</p>
+<ul>
+<li>哈希表探测中难以预测的分支会增加许多周期，高达74%的周期花费在错误的路径执行上[^1]；</li>
+<li>哈希表操作没有充分利用指令级并行和存储级并行[^2]。</li>
+</ul>
 </li>
+</ol>
+<p>Flat-HTA有效地减少了这些开销，并将性能提高了2.5倍。首先，它的设计避免了难以预测的分支，减少甚至消除了错误路径的执行。其次，每个哈希表操作占用更少的微操作槽，提高了内存级并行性并将后端停顿减少了多达5.6倍。</p>
+<ol start="2">
 <li><p>空间局部性低</p>
 <p><img "" class="lazyload placeholder" data-original="/2021/09/10/leveraging-caches-to-accelerate-hash-tables-and-memoization/2021911-232908.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
 <p>图2人为的将hash表存储空间分配从64MB增加到256MB，这样hash碰撞的几率大大降低，基本上可以认为每次只需要访问一次就可以获取key对应的value，因此不在存在低核心利用率的问题。从图2中我们可以看出，消除了分支预测的问题，FLAT-HTA只比最好的软件实现性能提升1%，其花费80%的时间用于等待LLC相应。而HIERARCHICAL-HTA将频繁访问的键值对密集地打包在较低级别的缓存中，从而减少未命中，性能相比于FLAT-HTA提升84%。</p>
@@ -613,6 +622,7 @@
 <p><img "" class="lazyload placeholder" data-original="/2021/09/10/leveraging-caches-to-accelerate-hash-tables-and-memoization/2021913-20020.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
 <p><img "" class="lazyload placeholder" data-original="/2021/09/10/leveraging-caches-to-accelerate-hash-tables-and-memoization/2021913-20033.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
 <p><img "" class="lazyload placeholder" data-original="/2021/09/10/leveraging-caches-to-accelerate-hash-tables-and-memoization/2021913-20044.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
+<p>[^1]: 这是因为，在 unordered_map 和dense_hash_map 中，这样的分支将控制流定向到操作结束(key match)或另一次哈希表探测(key mismatch)。这些分支依赖于从内存加载的数据(如使用链表解决碰撞，则需要从内存中得到下一个访存的地址），因此它们需要很长时间来解析并且对分支预测器具有挑战性。<br>[^2]: 每个哈希表操作都采用一系列指令，包括哈希计算、内存访问、比较和分支。 这些指令占用数十到数百个微操作 (µop) slot，与ROB大小相当。 如图 1 所示，这显着限制了内存级并行性：大多数后端停顿都用于等待主内存响应，并且重新排序缓冲区没有足够的资源来重叠多次未命中。</p>
 
       </div>
       
@@ -640,6 +650,26 @@
 <div class="post-nav">
 
 
+
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img lazyload" data-original="/medias/8.jpg" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/2021/09/14/cape-a-content-addressable-processing-engine/" class="post-nav-link">
+      <div class="title">
+        <i class="fa fa-angle-left"></i> 上一篇:
+        <div>CAPE: A Content-Addressable Processing Engine</div>
+      </div>
+      
+      <!-- <div class="content">
+        CAPE: A Content-Addressable Processing Engine
+
+
+CAPE: A Cont
+      </div> -->
+    </a>
+  </div>
 
 
 

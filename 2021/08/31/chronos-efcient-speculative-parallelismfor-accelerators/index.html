@@ -516,9 +516,11 @@
 <!-- /TOC -->
 
 <h2 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h2><p>先前的加速器专注于易于利用并行性的领域，例如深度学习，并依赖于传统的并行化技术，如数据并行或数据流执行。</p>
-<h2 id="Target"><a href="#Target" class="headerlink" title="Target"></a>Target</h2><p>在本文中，作者专注于为需要推测执行来提取并行性的应用程序构建加速器。</p>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>例如，考虑离散事件模拟(des)，它在模拟数字电路、网络系统和物理过程方面具有广泛的适用性。离散事件模拟由动态创建的任务组成，这些任务可以在同一个模拟对象上运行，并且必须以正确的模拟时间顺序运行。非推测地运行这些任务需要过多的同步并限制并行性。推测性地运行任务更有利可图。</p>
+<h2 id="Target"><a href="#Target" class="headerlink" title="Target"></a>Target</h2><p>在本文中，作者专注于为需要推测执行来提取并行性的应用程序构建加速器。这些应用程序由动态创建并对共享数据进行操作的任务组成，其中对共享数据的操作必须按特定顺序发生才能正确执行。</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>之前支持推测的硬件包括TLS (Thread-Level Speculation)和HTM (Hardware Transactional Memory)，这些推测架构依赖于Cache一致性，通过修改一致性协议来检测任务之间的冲突，这在通用处理器中开销不算大，但是对于小型专用加速器来说是大的开销。</p>
+<p>这篇论文的作者提出了一种新的硬件解决方案，不需要使用一致性，共享的数据映射到整个系统中，工作负载被划分成小的task，这些task有一个属性就是最多访存一个共享数据对象。此外，该架构是以数据为中心，task发送到需要操作的数据所在位置。最后，这些task通过时间戳顺序执行。==这一段对于工作的总结是对introduction的翻译，没法充分理解，在理解全文之后再进行凝练。==</p>
 <p><img "" class="lazyload placeholder" data-original="/2021/08/31/chronos-efcient-speculative-parallelismfor-accelerators/2021831-215733.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
+<p>例如，考虑离散事件模拟(des)，它在模拟数字电路、网络系统和物理过程方面具有广泛的适用性。离散事件模拟由动态创建的任务组成，这些任务可以在同一个模拟对象上运行，并且必须以正确的模拟时间顺序运行。非推测地运行这些任务需要过多的同步并限制并行性。推测性地运行任务更有利可图。</p>
 <p>如Listing 1所示，每个des任务在特定时间处理一个门输入切换。如果此输入切换导致门的输出切换，则任务会在适当的时间将所有连接到该输出的输入的事件排入队列。顺序实现以模拟时间顺序一次处理一个任务，并在优先级队列中维护要处理的任务集。</p>
 <p><img "" class="lazyload placeholder" data-original="/2021/08/31/chronos-efcient-speculative-parallelismfor-accelerators/2021831-220352.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
 <p>以数字电路模拟为例，如Figure 1所示。Figure 1(a) 显示了具有输入波形和传播延迟的电路，Figure 1(b) 显示了在该电路上执行 des 的任务图。任务之间的箭头表示父子依赖关系（例如，任务O1创建任务A4和X6）。x轴显示任务顺序，y轴中任务的位置代表它操作的门。</p>
