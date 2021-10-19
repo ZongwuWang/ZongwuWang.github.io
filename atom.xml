@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-10-14T08:17:51.452Z</updated>
+  <updated>2021-10-19T07:58:42.434Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C_C++代码调试——gdb</title>
+    <link href="https://zongwuwang.github.io/2021/10/18/c-c-dai-ma-diao-shi-gdb/"/>
+    <id>https://zongwuwang.github.io/2021/10/18/c-c-dai-ma-diao-shi-gdb/</id>
+    <published>2021-10-18T13:12:28.000Z</published>
+    <updated>2021-10-19T07:58:42.434Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-开发环境&quot;&gt;&lt;a href=&quot;#1-开发环境&quot; class=&quot;headerlink&quot; title=&quot;1. 开发环境&quot;&gt;&lt;/a&gt;1. 开发环境&lt;/h2&gt;&lt;p&gt;gcc: 用于开发纯C语言的程序&lt;br&gt;g++:</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>标准单元库的理解</title>
@@ -437,27 +458,6 @@
     
     
     <category term="挖坑待填" scheme="https://zongwuwang.github.io/tags/%E6%8C%96%E5%9D%91%E5%BE%85%E5%A1%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决gem5运行时缺少pydot的问题</title>
-    <link href="https://zongwuwang.github.io/2021/08/03/jie-jue-gem5-yun-xing-shi-que-shao-pydot-de-wen-ti/"/>
-    <id>https://zongwuwang.github.io/2021/08/03/jie-jue-gem5-yun-xing-shi-que-shao-pydot-de-wen-ti/</id>
-    <published>2021-08-03T06:10:54.000Z</published>
-    <updated>2021-08-03T06:11:52.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;解决gem5运行时缺少pydot的问题&quot;&gt;&lt;a href=&quot;#解决gem5运行时缺少pydot的问题&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
