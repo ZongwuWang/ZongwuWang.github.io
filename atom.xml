@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-10-19T07:58:42.434Z</updated>
+  <updated>2021-10-26T06:27:17.261Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ubuntu系统解决上不去github问题</title>
+    <link href="https://zongwuwang.github.io/2021/10/26/ubuntu-xi-tong-jie-jue-shang-bu-qu-github-wen-ti/"/>
+    <id>https://zongwuwang.github.io/2021/10/26/ubuntu-xi-tong-jie-jue-shang-bu-qu-github-wen-ti/</id>
+    <published>2021-10-26T06:14:39.000Z</published>
+    <updated>2021-10-26T06:27:17.261Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Ubuntu系统解决上不去github问题&quot;&gt;&lt;a href=&quot;#Ubuntu系统解决上不去github问题&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Environment" scheme="https://zongwuwang.github.io/tags/Environment/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Trie树（Prefix Tree）介绍(转)</title>
+    <link href="https://zongwuwang.github.io/2021/10/24/trie-shu-prefix-tree-jie-shao/"/>
+    <id>https://zongwuwang.github.io/2021/10/24/trie-shu-prefix-tree-jie-shao/</id>
+    <published>2021-10-24T07:26:36.000Z</published>
+    <updated>2021-10-24T07:35:28.099Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Trie树（Prefix-Tree）介绍&quot;&gt;&lt;a href=&quot;#Trie树（Prefix-Tree）介绍&quot; class=&quot;headerlink&quot; title=&quot;Trie树（Prefix Tree）介绍&quot;&gt;&lt;/a&gt;Trie树（Prefix</summary>
+        
+      
+    
+    
+    
+    
+    <category term="算法" scheme="https://zongwuwang.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>C_C++代码调试——gdb</title>
@@ -414,50 +460,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://zongwuwang.github.io/2021/08/07/hello-world/"/>
-    <id>https://zongwuwang.github.io/2021/08/07/hello-world/</id>
-    <published>2021-08-07T07:50:28.306Z</published>
-    <updated>2021-07-15T08:43:43.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>A 28 nm Configurable Memory (TCAM/BCAM/SRAM) Using Push-Rule 6T Bit Cell Enabling Logic-in-Memory</title>
-    <link href="https://zongwuwang.github.io/2021/08/04/a-28-nm-configurable-memory-tcam-bcam-sram-using-push-rule-6t-bit-cell-enabling-logic-in-memory/"/>
-    <id>https://zongwuwang.github.io/2021/08/04/a-28-nm-configurable-memory-tcam-bcam-sram-using-push-rule-6t-bit-cell-enabling-logic-in-memory/</id>
-    <published>2021-08-04T13:16:47.000Z</published>
-    <updated>2021-09-07T06:25:09.968Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;今天在阅读“CAPE: A Content-Addressable Processing Engine”这篇论文时，论文中引用的一篇仅使用6T</summary>
-        
-      
-    
-    
-    
-    
-    <category term="挖坑待填" scheme="https://zongwuwang.github.io/tags/%E6%8C%96%E5%9D%91%E5%BE%85%E5%A1%AB/"/>
     
   </entry>
   
