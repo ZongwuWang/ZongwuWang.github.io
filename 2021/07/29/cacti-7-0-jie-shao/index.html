@@ -484,29 +484,18 @@
         
       </div>
       <div class="post-content">
-        <h1 id="CACTI-7-0介绍"><a href="#CACTI-7-0介绍" class="headerlink" title="CACTI 7.0介绍"></a>CACTI 7.0介绍</h1><h2 id="1-CACTI发展"><a href="#1-CACTI发展" class="headerlink" title="1. CACTI发展"></a>1. CACTI发展</h2><p>CACTI是HP公司推出的一款开源开源工具，广泛应用于对cache/DRAM的延时，功耗，cycle time[^1]和面积的评估。</p>
-<p>[^1]: <font color="gray">(暂时不知道如何翻译比较好，感觉前面的延时指的是各个部分的延时信息，这边的cycle time应该指的是访问周期)</font></p>
-<p>CACTI最初由Dr. Jouppi和Dr. Wilton于1993年开发，此后经历了六次版本的迭代。</p>
-<h2 id="2-CACTI支持的特性"><a href="#2-CACTI支持的特性" class="headerlink" title="2. CACTI支持的特性"></a>2. CACTI支持的特性</h2><ul>
-<li>以下memory的功耗、延时、cycle time的建模<ul>
-<li>direct mapped caches</li>
-<li>set-associative caches</li>
-<li>fully associative caches</li>
-<li>Embedded DRAM memories</li>
-<li>Commodity DRAM memories</li>
-</ul>
-</li>
-<li>多端口UCA(uniform cache access)，多端口的NUCA(non-uniform cache access)的建模</li>
-<li>工作温度对泄露功耗的影响</li>
-<li>路由功耗模型</li>
-<li>具有不同延迟、功耗和面积属性的互连模型，包括低摆幅线模型</li>
-<li>用于执行功率、延迟、面积和带宽之间权衡分析的接口</li>
-<li>该工具使用的所有工艺特定值均从 ITRS 获得，目前该工具支持 90nm、65nm、45nm 和 32nm 技术节点</li>
-<li>用于计算DDR总线延迟和能量的芯片IO模型。用户可以模拟不同的负载（扇出）并评估对频率和能量的影响。该模型可用于研究LR-DIMM、R-DIMM等。</li>
-<li>Version 7.0在6.5版本的基础之上还融合了CACTI 3D</li>
-</ul>
-<h2 id="3-CACTI的使用方法"><a href="#3-CACTI的使用方法" class="headerlink" title="3. CACTI的使用方法"></a>3. CACTI的使用方法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/HewlettPackard/cacti</span><br><span class="line"><span class="built_in">cd</span> cacti</span><br><span class="line"><span class="comment"># modify the xxx.cfg for self configuration</span></span><br><span class="line">make</span><br><span class="line">./cacti -infile xxx.cfg</span><br></pre></td></tr></table></figure>
-
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="fb614355c7bc8e4d6fbf82b425426ff520d1260ab14cfdd9cbf8cf1003ea742c">48d53d02cc724fef4e645fe6556ae2fcf6bc6c57d2819ebf0723775af43b5663729692ab3db0037e75d3cfde7e1a98ed1db2b3d5e59d9915b78c64131fc6e2bba555bc3fb61df1804875105dd69f643d1562cc4cbad9436075d21503398b0bf225ecce61a31c94ce0581c3924f4e61d04fe3881f466693bb2e4d2eaf7af57fcf878ea4f3ae49ae0d119e1a3a6e85109721d31ff3c6f04fd00711edbe163b5b236d3edbf84870303d68fe008200cdacf1a708bce07379220c2216e9e349a2f82531309e8e66c4400466795da276a58254023643c401449f9b0dddac1d286689364335e89530ada55bb21f97d4e30403d8c67613d5ce2a67e9166be57cba7401b331495b94d7f0a47261de29180a0e4aa139e220216f45f526e0d6791e950ab128e09c23bb17a84ecf7b509cd044093d180670b169d4b890a24112084690193792cb7266bf638852b3612a53bb6228d73957fddfe0574e4d548d5631ce5e43f7620586eadb7ae3199cd4214f4aa32d106f053aa71b368e2f2a91b3d2543da52a6e2fb42f2890f29cf923bc9765730e3ecd2517c23c52934d462edf439be77d2f2fb5363f582eefb8028b7a497b259fbaca7150a2ca155a8f3daecdf9c79374908582595b4f57246769863cb16955970b96707879740f86b4a4d2e63d23f550804831a5951b300319505c316294a1d9b8723b1b4bbf46bc7ea3b25d4f011f523c27203a4ef22780d9fb22d165b6931b37c8703ee5e6c7f1f2fbc75e5eb1a20b70a76207b92949d86fa9f6dae4bf30192b778b2e0f3651b39853b3922b50a4399b5016bec71e32c9bfb45ac8e3fcb7162ad685cd342b83ce4c273c083248c11cb42154fac4771367fd380332d098179ba0235be8dfbe834364d1299f38a9f58439085186401374c819ba8478f51b43002f11a896ddb93231028b7421aec127ac5e05d5b45ceb3c096092700809f18e08a1cfd8fc51a1172609aeee56e218b3a07f011516a643ef24981c403a68e95b31a0ae4d35f2dbe8a8e6ff201c1e55992dd317b9eef976382ab0d23282818c0f805a9ac55b3b1f47aad9b5e588a2f223109b194a7fc6c15b3aba73683fdf2cc7eaba6828129941f0daff7c000ede272c479cd9fe074f5e800c1e884059c1cd63a98e193588035f56d12b56be08b7b63ee19d413c9db131c630a478b6f2b852034fe77355723050b4e2ac3a74837f57ab4e3ee6ac589007ddccc91863a3b14953c292f5a1188fb0298b0fe7d15bc6880c5bccc4f6e8a6463ff7ee312d4fecfde403d71dc24fabf18b85556792f35637c4f1fca3d3c3694b09c170c8ce4235567a467d64bb44e091979b6cdfb99376732519fa12b0cb65367e74d982233cbfc6623c7201a6f58bf49989264e424a8faf11551dccaca55cadea1265ce7c9abd36d815df1a04a3c68fc64eb4818a34f4ec20852873cc461db03bbeef467476dbee0a88f735c153792a404570ac226eaa36898bd6af04539e632c9dae5cb25f67a4ae4a0dc936597623a1482b56de735988ba11115666249898fcc1a18fe13c5c1dc2c9048e49e11be84d6d0f7b2a9894c07ee95385e1742ca2848c0cad2eaf6504609296fa527a35e3cdc79a645766a9584083c801db730a2420916cb56795ed908f51ddf33831e377eced76c1f17b2cf4802fb4fc68a115285157159b362cf6587c65a84d32bdba77a6001970832762b004eda177eeba1ff860c4c8414ec1b08bd7c8f023197f5bb2ba44d846e6c3615831c03423e6c477d5a09974ffb9103b2f5e07b429d752190dd20b245d84bd0a41e0c6a621982b827610d9c7ab66673b34f6fab77b118865c55a9a7616d124bb175c54f2db994ef50b685ee4791a704b9553ca98c56f7685eb1906d022cfcaadf4865df91d2618976a0f1d6e1df592d7c0e6b0aefbdb771d9cc9de1a174d020f7e6c3da5ebbcc1ec9cee62b0583aeb32fc63965c2f8f9939a73b263c33fda4d92f266be81f30fdda23122f8a4107c175bdb1fec0d355e95d3272454903beb10c8b8a721aa885a3ff3c3ccc09616fa151045479d1c0c5eb120a587462eb2a7ae37bfd3a1f4e98b2d33da808dc557f22dcf0eb7f3e33dd4e954808a64af13826dc5b175c4b831501f8c60e20af3b63ed025d56c6f41937aef90391f549f5ed523681b692e7c2105578f977d2bc16c1628f6937bd5a94e328134110396f24cbde5226d33566941eabd0a1ad89e6deea2e19ab4c3b2037fd2596846aaab9b7fcef50483b576f7c744db601011ded13445e5804bfee2775f1f6533b9952a99ddc236511ea614cad3ef9e214214b40ba9ac16c643976d7d549470b728f7643eea3298363ff6804164be8bff430aefa78488e6d56ae36225070e93a98a889af5452166e8213331dd913b262d8dfbad8161f42dbc2523dfdeb3702ea29a75fd5a78023497e40cd31de40fe294cebe5b9d0359533c2879ec289ccf78cd7c957bf473c005adbd5a207c5a4430024e586e157d9f49225444d5b6e382223b220ea9e4dd1ae97a0e7e1be760fac76e8e83ccc205bd54bef62384f236856601c13b7fc5cc50ec812120ffbdac7664f47d465d688868814fc2dfbd225483db1a1c532e517c4b5bc1e871ca59e881a06554dea9f8c4d20d6ce20385aaf68aca9be3090a0d7043ba4bda3f116608553c2ceb656cd7c78565ddb11f2841e1dc126378b04943c377b7524f26d2c1dc3960cc40c7363b67868415c3814dc5399770aa5e8190ea48ea8175f14ce357f6f30285b29d2804b96ca38f2346a36fdc6db0e42593ffda44c9432e1c21a564dfcb5b686e322b7e1124c74502efb3c1266db00e1b3c54f661581ec59c424eead554520be6a8547e4eb9bf249a687bc4bc3548ee9cedbd329f86c324fbf375803ce43de2dd5648f2aabe13b33106d76ddd5c95e2162ef7f4c2945d81af92637e7ce696595749bc7a455911d9196cb6bb593514da45134362d25c52b92a1ab2ee9b4e80ad8780bd8be2880d8df7c2fa9d4a57135bc0f9b435e3227eae6041e6f57f1604bee41c581cc37ef49c27aeea436dee394204df5403f01171fdef0b9a4eb2bb407e7638410c5ddbe0d90f29d557b4a88944459903c5e333d87da8109fe17168b20d373b56347ed26bb5d6eacd14c3eb1999e755cceb9023f73fe9b55322a76d2327d4d88eaa6235355d01e9f81c624879dd44295c1003c7d5b7fbb7693c22c569c7cd7d4565c74d455c76ef3221ec808df9327d2647e6fc57b81ffbd3f181769058cf22b00236eeb3d5f013acb0458c42b5e5d6785e493e98c18ad5742594ba811f3d56d89208bc402305a34df7c021176c584b421589d09525dc3bb2fb9c4c719046448fb304126e4807c65b29d9e60778b4e836ef10366c149e80585495c258b9c1539d49d7fac0bc77f5860292f9cb344ca99eb165ead1db293bdaecd7824ddd82f9e2d3a78fa120f19a3958fd97a8d46fb83890069ed74ca25d0d54dfd5c8529cdd673aae3f2e3a83ea1c8ba0080c2c2f3f2177638ba627c2306fac920782068a5314bb993a8d4aaccdfecb0fbcfa87146ff8a390cda097f48410dbb875dae091bb6a800f2dd104cee2bd7305301d1bbc9dbd88629598e156e99d28c4e542c226c2d13b55eb682693ed6c64668c8fbc5067fe7cae634dadd47c459253e44babeaa9b7f22d4ff8eeca9971711c1e145ae1c0131c0c6f199328602479a920f03400af1ce13a9f54323ce2ceebb</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Welcome to my blog, enter password to read.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
       </div>
       
         <div class="copyright">
