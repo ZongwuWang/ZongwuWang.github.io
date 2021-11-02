@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>linux下迁移用户home下主目录</title>
+      <link href="/2021/11/02/linux-xia-qian-yi-yong-hu-home-xia-zhu-mu-lu/"/>
+      <url>/2021/11/02/linux-xia-qian-yi-yong-hu-home-xia-zhu-mu-lu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="linux下迁移用户home下主目录"><a href="#linux下迁移用户home下主目录" class="headerlink" title="linux下迁移用户home下主目录"></a>linux下迁移用户home下主目录</h1><p>迁移用户主目录命令： usermod -d /data0/home/mypic -m mypic</p><p>/data0/home/mypic 为目标目录  -m表示移动主目录  mypic为用户名</p><p>移动后用户mypic原本默认 对应/home/mypic的主目录将被移动到/data0/home/mypic。</p><p>查看/etc/passwd文件后发现主目录已经修改成功。</p><p>注意如果要修改创建用户时候默认主目录位置，可以修改/etc/default/useradd文件中Home的路径</p><p>如将#HOME=/home 修改为HOME=/data0/home 则后续创建用户时候默认主目录创建位置即在/data0/home下面</p><p>du -slh /data0/home/mypic 查看mypic目录占用空间</p><p>df -h 查看系统使用空间状况</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 系统环境 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 系统环境 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux查看物理CPU个数、核数、逻辑CPU个数(转)</title>
       <link href="/2021/11/01/linux-cha-kan-wu-li-cpu-ge-shu-he-shu-luo-ji-cpu-ge-shu-zhuan/"/>
       <url>/2021/11/01/linux-cha-kan-wu-li-cpu-ge-shu-he-shu-luo-ji-cpu-ge-shu-zhuan/</url>

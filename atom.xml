@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-11-01T11:49:38.039Z</updated>
+  <updated>2021-11-02T01:34:01.617Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux下迁移用户home下主目录</title>
+    <link href="https://zongwuwang.github.io/2021/11/02/linux-xia-qian-yi-yong-hu-home-xia-zhu-mu-lu/"/>
+    <id>https://zongwuwang.github.io/2021/11/02/linux-xia-qian-yi-yong-hu-home-xia-zhu-mu-lu/</id>
+    <published>2021-11-02T01:28:13.000Z</published>
+    <updated>2021-11-02T01:34:01.617Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;linux下迁移用户home下主目录&quot;&gt;&lt;a href=&quot;#linux下迁移用户home下主目录&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="系统环境" scheme="https://zongwuwang.github.io/categories/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
+    
+    
+    <category term="系统环境" scheme="https://zongwuwang.github.io/tags/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
+    
+    <category term="Linux" scheme="https://zongwuwang.github.io/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux查看物理CPU个数、核数、逻辑CPU个数(转)</title>
@@ -452,27 +479,6 @@
     <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
     
     <category term="IMC" scheme="https://zongwuwang.github.io/tags/IMC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Compute Caches</title>
-    <link href="https://zongwuwang.github.io/2021/08/26/compute-caches/"/>
-    <id>https://zongwuwang.github.io/2021/08/26/compute-caches/</id>
-    <published>2021-08-26T14:39:54.000Z</published>
-    <updated>2021-11-01T11:36:16.323Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    <category term="ICC" scheme="https://zongwuwang.github.io/tags/ICC/"/>
     
   </entry>
   

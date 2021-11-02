@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>Linux查看物理CPU个数、核数、逻辑CPU个数(转) | SJTU-ACA-WZW</title>
+  <title>linux下迁移用户home下主目录 | SJTU-ACA-WZW</title>
 
   
     
@@ -443,14 +443,14 @@
 
 
 
-<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/5.jpg" style="background-repeat: no-repeat; background-size: cover; 
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/11.jpg" style="background-repeat: no-repeat; background-size: cover; 
   background-position: center center;position: relative;">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="title-box">
     <span class="title">
-      Linux查看物理CPU个数、核数、逻辑CPU个数(转)
+      linux下迁移用户home下主目录
     </span>
   </div>
   
@@ -467,7 +467,7 @@
       
       <div class="post-meta">
         <i class="fa fa-clock-o" aria-hidden="true"></i>
-        <span class="post-time">2021-11-01</span>
+        <span class="post-time">2021-11-02</span>
       </div>
       
       <div class="post-tags-categories">
@@ -477,6 +477,10 @@
           
             <a href="/tags/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/" class="">
               系统环境
+            </a>
+          
+            <a href="/tags/Linux/" class="">
+              Linux
             </a>
           
         </div>
@@ -493,34 +497,14 @@
         
       </div>
       <div class="post-content">
-        <h1 id="Linux查看物理CPU个数、核数、逻辑CPU个数-转"><a href="#Linux查看物理CPU个数、核数、逻辑CPU个数-转" class="headerlink" title="Linux查看物理CPU个数、核数、逻辑CPU个数(转)"></a>Linux查看物理CPU个数、核数、逻辑CPU个数(转)</h1><h2 id="基础背景"><a href="#基础背景" class="headerlink" title="基础背景"></a>基础背景</h2><ol>
-<li>总核数 = 物理CPU个数 X 每颗物理CPU的核数 </li>
-<li>总逻辑CPU数 = 物理CPU个数 X 每颗物理CPU的核数 X 超线程数</li>
-</ol>
-<h2 id="相关命令"><a href="#相关命令" class="headerlink" title="相关命令"></a>相关命令</h2><ol>
-<li><p>查看物理CPU个数</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/cpuinfo| grep &quot;physical id&quot;| sort| uniq| wc -l</span><br></pre></td></tr></table></figure></li>
-<li><p>查看每个物理CPU中core的个数(即核数)</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/cpuinfo| grep &quot;cpu cores&quot;| uniq</span><br></pre></td></tr></table></figure></li>
-<li><p>查看逻辑CPU的个数</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/cpuinfo| grep &quot;processor&quot;| wc -l</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h2 id="其他环境命令"><a href="#其他环境命令" class="headerlink" title="其他环境命令"></a>其他环境命令</h2><ol>
-<li><p>查看CPU信息（型号）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c</span><br></pre></td></tr></table></figure></li>
-<li><p>查看内存信息</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/meminfo</span><br></pre></td></tr></table></figure></li>
-<li><p>查看Linux 内核</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">uname -a</span><br><span class="line">cat /proc/version</span><br></pre></td></tr></table></figure></li>
-<li><p>查看机器型号（机器硬件型号，需要sudo权限）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dmidecode | grep &quot;Product Name&quot;</span><br><span class="line">dmidecode</span><br></pre></td></tr></table></figure></li>
-<li><p>查看linux 系统版本</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/redhat-release</span><br><span class="line">lsb_release -a</span><br><span class="line">cat  /etc/issue</span><br></pre></td></tr></table></figure></li>
-<li><p>查看linux系统和CPU型号，类型和大小</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/cpuinfo</span><br></pre></td></tr></table></figure></li>
-<li><p>查看linux 系统内存大小的信息，可以查看总内存，剩余内存，可使用内存等信息</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/meminfo</span><br></pre></td></tr></table></figure></li>
-</ol>
+        <h1 id="linux下迁移用户home下主目录"><a href="#linux下迁移用户home下主目录" class="headerlink" title="linux下迁移用户home下主目录"></a>linux下迁移用户home下主目录</h1><p>迁移用户主目录命令： usermod -d /data0/home/mypic -m mypic</p>
+<p>/data0/home/mypic 为目标目录  -m表示移动主目录  mypic为用户名</p>
+<p>移动后用户mypic原本默认 对应/home/mypic的主目录将被移动到/data0/home/mypic。</p>
+<p>查看/etc/passwd文件后发现主目录已经修改成功。</p>
+<p>注意如果要修改创建用户时候默认主目录位置，可以修改/etc/default/useradd文件中Home的路径</p>
+<p>如将#HOME=/home 修改为HOME=/data0/home 则后续创建用户时候默认主目录创建位置即在/data0/home下面</p>
+<p>du -slh /data0/home/mypic 查看mypic目录占用空间</p>
+<p>df -h 查看系统使用空间状况</p>
 
       </div>
       
@@ -531,7 +515,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2021/11/01/linux-cha-kan-wu-li-cpu-ge-shu-he-shu-luo-ji-cpu-ge-shu-zhuan/" target="_blank" title="Linux查看物理CPU个数、核数、逻辑CPU个数(转)">https://zongwuwang.github.io/2021/11/01/linux-cha-kan-wu-li-cpu-ge-shu-he-shu-luo-ji-cpu-ge-shu-zhuan/</a>
+    <a href="/2021/11/02/linux-xia-qian-yi-yong-hu-home-xia-zhu-mu-lu/" target="_blank" title="linux下迁移用户home下主目录">https://zongwuwang.github.io/2021/11/02/linux-xia-qian-yi-yong-hu-home-xia-zhu-mu-lu/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -549,41 +533,21 @@
 
 
 
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/11.jpg" style="background-size: cover; 
-      background-position: center center;">
-    </div>
-    <a href="/2021/11/02/linux-xia-qian-yi-yong-hu-home-xia-zhu-mu-lu/" class="post-nav-link">
-      <div class="title">
-        <i class="fa fa-angle-left"></i> 上一篇:
-        <div>linux下迁移用户home下主目录</div>
-      </div>
-      
-      <!-- <div class="content">
-        linux下迁移用户home下主目录迁移用户主目录命令： usermod -d /data0/home/mypic -m
-      </div> -->
-    </a>
-  </div>
-
 
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/4.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/5.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/10/26/ubuntu-xi-tong-jie-jue-shang-bu-qu-github-wen-ti/" class="post-nav-link">
+    <a href="/2021/11/01/linux-cha-kan-wu-li-cpu-ge-shu-he-shu-luo-ji-cpu-ge-shu-zhuan/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div>Ubuntu系统解决上不去github问题</div>
+        <div>Linux查看物理CPU个数、核数、逻辑CPU个数(转)</div>
       </div>
       <!-- <div class="content">
-        Ubuntu系统解决上不去github问题环境： Ubuntu系统，Firefox浏览器
-
-找有效的IP地址
-
-登入网站
+        Linux查看物理CPU个数、核数、逻辑CPU个数(转)基础背景
+总核数 = 物理CPU个数 X 每颗物理CPU的核数 
       </div> -->
     </a>
   </div>
