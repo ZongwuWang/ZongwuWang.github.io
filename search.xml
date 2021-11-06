@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>FSB总线、HT总线、QPI总线、DMI总线</title>
+      <link href="/2021/11/06/fsb-zong-xian-ht-zong-xian-qpi-zong-xian-dmi-zong-xian/"/>
+      <url>/2021/11/06/fsb-zong-xian-ht-zong-xian-qpi-zong-xian-dmi-zong-xian/</url>
+      
+        <content type="html"><![CDATA[<h1 id="FSB总线、HT总线、QPI总线、DMI总线"><a href="#FSB总线、HT总线、QPI总线、DMI总线" class="headerlink" title="FSB总线、HT总线、QPI总线、DMI总线"></a>FSB总线、HT总线、QPI总线、DMI总线</h1><h2 id="FSB总线"><a href="#FSB总线" class="headerlink" title="FSB总线"></a>FSB总线</h2><p>Front Side BUS，前端总线，是将CPU连接到北桥芯片的系统总线，是CPU和外界交换数据的通道。</p><p>注：历史上前端总线会被误认为是外频的另一个名称，外频指的是CPU与主板连接的速度，是建立在数字脉冲信号震荡速度基础上。</p><p>前端总线指的是数据传输速度，传输速度的最大带宽=总线频率*数据位宽/8</p><p>前端总线频率越大，代表CPU与内存间的数据传输量越大，但随着不断提高提升的内存频率、CPU性能，前端总线的瓶颈越来越明显。</p><p>如 ： 64位、1333MHz的FSB所提供的内存带宽是1333MHz * 64bit/8 =10667MB/s = 10.67GB/s，与双通道的DDR2-667内存刚好匹配，如果使用双通道的DDR2-800、DDR2-1066的内存，这时FSB的带宽就小于内存的带宽，更不用说更高端的内存了。</p><h2 id="HT总线"><a href="#HT总线" class="headerlink" title="HT总线"></a>HT总线</h2><p> Hyper-Transport，是AMD为K8平台设计的高速串行总线。</p><p>HT本质是是一种为主板上的集成电路互连而设计 的端到端总线技术，目的是加快芯片间的数据传输速度 。</p><p>HT在AMD平台上使用，是指AMD CPU到主板芯片间的连接总线（主板芯片组是南北桥架构，则指CPU到北桥芯片）。</p><p>HT规格有HT1.0/2.0/3.0/4.0。</p><p>HT总线带宽计划公式 ：</p><p>HT总线带宽=处理器外频<em>HT倍频 <em>处理器通道位宽/8（将Bit转换为Byte）</em>2（时钟上下沿均能传输）</em>2（上下行双向全双工）</p><h2 id="QPI总线"><a href="#QPI总线" class="headerlink" title="QPI总线"></a>QPI总线</h2><p>QPI又名CSI（Common System Interface），快速通道互联，是一处可以实现芯片间直接互联的架构，矛头直指AMD的HT总线，无论是速度、带宽、每个针脚的带宽、功耗等一切规格都 要超越HT总线。</p><p>QPI是在处理器中集成内存控制器的体系架构，主要用于处理器之间和系统组件之间的互联通信（诸如I/O）</p><p>QPI是一种基于包传输的串行式高速点对点连接协议，采用差分信号与专门的时钟进行传输。</p><p>在延迟方面，QPI与FSB几乎相同，却可以提高访问带宽。</p><p>一组QPI具有20条数据传输线，以及发送（TX）和接收方（RX）的时钟信号。</p><p>一个QPI数据包包含80位，两个时钟周期或四次传输完成整个数据包的传送。在每次传输的20bit数据中，有16bit是真实有效的数据，其余四位用于循环冗余校验，以提高系统的可靠性。由于QPI是双向的，在发送的同时也可以接收另一个端传输来的数据。这样，每个QPI总线总带宽=每秒传输次数（即QPI频率） * 每次传输的有效数据（即16bit/8=2Byte） * 双向。</p><p>所以频率为4.8GT/s的QPI的总带宽= 4.8GT/s <em>2Byte</em>2=19.2GB/s</p><p>频率为6.4GT/s的QPI的总带宽= 6.4GT/s <em>2Byte</em>2=25.6GB/s</p><p>注：bit-位， Byte-字节， 1Byte=8bit</p><p>QPI另一亮点是支持多条系统总线连接，系统总线将会被我发到你多条连接，并且频率不再是单一固定的，也无需经过FSB进行连接，根据系统各个子系统对数据吞吐量的需求，每条系统总线连接的速度也可不同。</p><p>支持多处理器的平台。</p><h2 id="DMI总线"><a href="#DMI总线" class="headerlink" title="DMI总线"></a>DMI总线</h2><p> Direct Media Interface，直接媒体接口，是Intel公司开发用于连接主板南北桥的总线，取代了Hub-Link总线。</p><p>DMI采用点对点的连接方式，具有PCI-E总线的优势，DMI实现了上行与下行各1GB/s的数据传输率，总带宽达到2GB/s。</p><p>Intel处理器集成了内存控制器、PCIE控制器等，也就是将整个北桥都 集成到了CPU内部。QPI主要用于CPU内部数据传输，而在外部接口设备进行连接的时候，需要一条简洁快速的通道，就是DMI总线。这样，两个总线的传输任务就分工明确了，QPI主管内，DMI主管外。</p><blockquote><p>本文转载自：<a href="https://www.cnblogs.com/ml2018/p/10380672.html">https://www.cnblogs.com/ml2018/p/10380672.html</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机体系架构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机体系架构 </tag>
+            
+            <tag> 总线 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>处理器是如何从单核演化到64核的</title>
       <link href="/2021/11/06/chu-li-qi-shi-ru-he-cong-dan-he-yan-hua-dao-64-he-de/"/>
       <url>/2021/11/06/chu-li-qi-shi-ru-he-cong-dan-he-yan-hua-dao-64-he-de/</url>
