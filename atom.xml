@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-11-02T01:34:01.617Z</updated>
+  <updated>2021-11-06T07:33:52.810Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>处理器是如何从单核演化到64核的</title>
+    <link href="https://zongwuwang.github.io/2021/11/06/chu-li-qi-shi-ru-he-cong-dan-he-yan-hua-dao-64-he-de/"/>
+    <id>https://zongwuwang.github.io/2021/11/06/chu-li-qi-shi-ru-he-cong-dan-he-yan-hua-dao-64-he-de/</id>
+    <published>2021-11-06T06:29:16.000Z</published>
+    <updated>2021-11-06T07:33:52.810Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;处理器是如何从单核演化到64核的&quot;&gt;&lt;a href=&quot;#处理器是如何从单核演化到64核的&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    <category term="多核" scheme="https://zongwuwang.github.io/tags/%E5%A4%9A%E6%A0%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>linux下迁移用户home下主目录</title>
@@ -458,27 +485,6 @@
     <category term="预测执行" scheme="https://zongwuwang.github.io/tags/%E9%A2%84%E6%B5%8B%E6%89%A7%E8%A1%8C/"/>
     
     <category term="Cache一致性" scheme="https://zongwuwang.github.io/tags/Cache%E4%B8%80%E8%87%B4%E6%80%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ambit: In-Memory Accelerator for Bulk Bitwise Operations Using Commodity DRAM Technology</title>
-    <link href="https://zongwuwang.github.io/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/"/>
-    <id>https://zongwuwang.github.io/2021/08/27/ambit-in-memory-accelerator-for-bulk-bitwise-operations-using-commodity-dram-technology/</id>
-    <published>2021-08-27T12:29:15.000Z</published>
-    <updated>2021-11-01T11:34:08.493Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    <category term="IMC" scheme="https://zongwuwang.github.io/tags/IMC/"/>
     
   </entry>
   
