@@ -497,7 +497,28 @@
         
       </div>
       <div class="post-content">
-        <h1 id="处理器是如何从单核演化到64核的"><a href="#处理器是如何从单核演化到64核的" class="headerlink" title="处理器是如何从单核演化到64核的"></a>处理器是如何从单核演化到64核的</h1><p>自Intel在1978年推出第一颗x86处理器8086之后，CPU的发展方向一直都是更宽，整合更多的指令集与外部控制器，以及更高的主频，但这些东西都会受到当时的制程工艺限制，CPU内核架构没个三五年其实是没法弄个全新的出来的，而频率这东西则得同时看CPU架构与制程工艺，当CPU的单核效能与频率都到瓶颈之后，Intel与AMD都得出了一个答案，向多核发展，到了2005年，双核时代到来，就此之后CPU的内核数量越堆越多，直到现在16核能出现在主流平台上，而HEDT平台甚至能达到64核之多。</p>
+        <h1 id="处理器是如何从单核演化到64核的"><a href="#处理器是如何从单核演化到64核的" class="headerlink" title="处理器是如何从单核演化到64核的"></a>处理器是如何从单核演化到64核的</h1><!-- TOC -->
+
+<ul>
+<li><a href="#%E5%A4%84%E7%90%86%E5%99%A8%E6%98%AF%E5%A6%82%E4%BD%95%E4%BB%8E%E5%8D%95%E6%A0%B8%E6%BC%94%E5%8C%96%E5%88%B064%E6%A0%B8%E7%9A%84">处理器是如何从单核演化到64核的</a><ul>
+<li><a href="#%E9%A6%96%E4%B8%AA%E5%8F%8C%E6%A0%B8%E5%A4%84%E7%90%86%E5%99%A8intel-pentium-d">首个双核处理器：Intel Pentium D</a></li>
+<li><a href="#%E9%A6%96%E6%AC%BE%E5%8E%9F%E7%94%9F%E5%8F%8C%E6%A0%B8amd-athlon-64-x2">首款原生双核：AMD Athlon 64 X2</a></li>
+<li><a href="#%E9%A6%96%E6%AC%BE%E5%9B%9B%E6%A0%B8%E5%A4%84%E7%90%86%E5%99%A8core-2-quad">首款四核处理器：Core 2 Quad</a></li>
+<li><a href="#%E9%A6%96%E6%AC%BE%E5%9B%9B%E6%A0%B8%E5%A4%84%E7%90%86%E5%99%A8core-2-quad-1">首款四核处理器：Core 2 Quad</a></li>
+<li><a href="#%E9%A6%96%E6%AC%BE%E4%B8%89%E6%A0%B8%E5%A4%84%E7%90%86%E5%99%A8amd-phenom-x3">首款三核处理器：AMD Phenom X3</a></li>
+<li><a href="#%E9%A6%96%E6%AC%BE%E5%85%AD%E6%A0%B8%E5%A4%84%E7%90%86%E5%99%A8core-i7-980x">首款六核处理器：Core i7-980X</a></li>
+<li><a href="#%E9%A6%96%E6%AC%BE%E5%85%AB%E6%A0%B8%E5%A4%84%E7%90%86%E5%99%A8amd-fx-8100%E7%B3%BB%E5%88%97">首款八核处理器：AMD FX-8100系列</a></li>
+<li><a href="#%E9%A6%96%E6%AC%BE%E5%8D%81%E6%A0%B8%E5%A4%84%E7%90%86%E5%99%A8core-i7-6950x">首款十核处理器：Core i7-6950X</a></li>
+<li><a href="#intel-skylake-x12141618%E6%A0%B8%E4%B8%80%E5%90%8C%E5%88%B0%E6%9D%A5">Intel Skylake-X：12/14/16/18核一同到来</a></li>
+<li><a href="#ryzen-threadripper%E7%B3%BB%E5%88%972432%E7%94%9A%E8%87%B364%E6%A0%B8">Ryzen Threadripper系列：24/32甚至64核</a></li>
+<li><a href="#intel-lakefield%E5%BC%80%E5%90%AF%E6%B7%B7%E5%90%88%E6%9E%B6%E6%9E%84%E6%96%B0%E6%97%B6%E4%BB%A3%E7%9A%84%E4%BA%94%E6%A0%B8%E5%A4%84%E7%90%86%E5%99%A8">Intel Lakefield：开启混合架构新时代的五核处理器</a></li>
+<li><a href="#%E5%B1%95%E6%9C%9B%E6%9C%AA%E6%9D%A5">展望未来</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+
+<p>自Intel在1978年推出第一颗x86处理器8086之后，CPU的发展方向一直都是更宽，整合更多的指令集与外部控制器，以及更高的主频，但这些东西都会受到当时的制程工艺限制，CPU内核架构没个三五年其实是没法弄个全新的出来的，而频率这东西则得同时看CPU架构与制程工艺，当CPU的单核效能与频率都到瓶颈之后，Intel与AMD都得出了一个答案，向多核发展，到了2005年，双核时代到来，就此之后CPU的内核数量越堆越多，直到现在16核能出现在主流平台上，而HEDT平台甚至能达到64核之多。</p>
 <p>今天我们就来回顾一下多核处理器是如何发展到现在这个样子的。</p>
 <h2 id="首个双核处理器：Intel-Pentium-D"><a href="#首个双核处理器：Intel-Pentium-D" class="headerlink" title="首个双核处理器：Intel Pentium D"></a>首个双核处理器：Intel Pentium D</h2><p>其实Intel与AMD的双核处理器发布时间都在2005年5月，但Intel的Pentium D要早一点，所以它就成了第一个双核处理器了，首发的包括Pentium D 820/830/840，采用90nm工艺核心代号Smithfield，每核心拥有1MB L2缓存，均是800MHz的FSB[^1]，随后还推出了带超线程技术的Pentium Extreme Edition 840处理器，双核四线程，FSB也提升到了1066MHz，频率也更高。</p>
 <p><img "" class="lazyload placeholder" data-original="/2021/11/06/chu-li-qi-shi-ru-he-cong-dan-he-yan-hua-dao-64-he-de/PentiumD.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
@@ -560,6 +581,9 @@
 <p>在经过Lakefield的小规模实验后，Intel的混合架构将会在这个月底发布的Alder Lake处理器上开花结果，大家可以期待桌面满血的混合架构x86处理器到底会怎么样的表现，而Foveros 3D堆叠工艺也会用在未来的Xe-HPC服务器计算卡上。</p>
 <h2 id="展望未来"><a href="#展望未来" class="headerlink" title="展望未来"></a>展望未来</h2><p>在可预见的将来，桌面市场的最大核心数量依然会维持在64核，因为Intel和AMD的新一代HEDT处理器完全没有消息，但从两家最新的服务器处理器来看，Intel的最多不会超过40核，而AMD最多也是64核，Intel把双芯Xeon下放到HEDT平台可能性非常小，主要看点还是AMD未来的Zen 4，有消息说Zen 4架构的EPYC处理器最多能到96核，但是否会下放到HEDT平台这就不太确定了。</p>
 <p>主流平台方面，目前的消息是代号为Raphael的Zen 4处理器最高配置依然为16核，Intel方面下一代的Raptor Lake则最多24核，但是由16个E-Core加8个P-Core所组成的，也就是说最多32线程，线程数和Zen 4的16核保持一致，但这些都不是实锤的消息，还有很大不确定性。</p>
+<blockquote>
+<p>本文转载自：<a target="_blank" rel="noopener" href="https://www.expreview.com/80704.html">https://www.expreview.com/80704.html</a></p>
+</blockquote>
 <p>[^1]: FSB: Front Side (前端总线), 指CPU与北桥芯片之间的数据传输总线。<br>[^2]: QPI: Quick Path Interconnect, 是一种基于包传输的串行式高速点对点连接协议，采用差分信号与专门的时钟进行传输。在延迟方面，QPI与 FSB几乎相同，却可以提升更高的访问带宽。一组QPI具有20条数据传输线，以及发送（TX）和接收方（RX）的时钟信号。<br>[^3]: <a target="_blank" rel="noopener" href="https://www.bestcpus.com/what-is-hedt-cpu/">High-End Desktop</a><br>[^4]: MCM: Multichip Module, MCM技术是将多个LSI/VLSI/ASIC裸芯片和其它元器件组装在同一块多层互连基板上，然后进行封装，从而形成高密度和高可靠性的微电子组件。</p>
 
       </div>
