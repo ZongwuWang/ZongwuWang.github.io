@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-11-06T07:48:13.906Z</updated>
+  <updated>2021-11-14T13:44:58.748Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>HOT CHIPS: The Next-Generation of General-Purpose Compute</title>
+    <link href="https://zongwuwang.github.io/2021/11/14/hot-chips-the-next-generation-of-general-purpose-compute/"/>
+    <id>https://zongwuwang.github.io/2021/11/14/hot-chips-the-next-generation-of-general-purpose-compute/</id>
+    <published>2021-11-14T13:07:32.000Z</published>
+    <updated>2021-11-14T13:44:58.748Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>FSB总线、HT总线、QPI总线、DMI总线</title>
     <link href="https://zongwuwang.github.io/2021/11/06/fsb-zong-xian-ht-zong-xian-qpi-zong-xian-dmi-zong-xian/"/>
     <id>https://zongwuwang.github.io/2021/11/06/fsb-zong-xian-ht-zong-xian-qpi-zong-xian-dmi-zong-xian/</id>
     <published>2021-11-06T07:43:58.000Z</published>
-    <updated>2021-11-06T07:48:13.906Z</updated>
+    <updated>2021-11-06T11:26:28.366Z</updated>
     
     
       
@@ -200,7 +219,7 @@
     <link href="https://zongwuwang.github.io/2021/10/14/biao-zhun-dan-yuan-ku-de-li-jie/"/>
     <id>https://zongwuwang.github.io/2021/10/14/biao-zhun-dan-yuan-ku-de-li-jie/</id>
     <published>2021-10-14T08:07:21.000Z</published>
-    <updated>2021-11-01T11:28:37.240Z</updated>
+    <updated>2021-11-06T11:26:46.286Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -466,27 +485,6 @@
     <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
     
     <category term="SRAM" scheme="https://zongwuwang.github.io/tags/SRAM/"/>
-    
-    <category term="ICC" scheme="https://zongwuwang.github.io/tags/ICC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>A Survey of SRAM-based Processing-in-Memory Techniques and Applications</title>
-    <link href="https://zongwuwang.github.io/2021/09/01/a-survey-of-sram-based-processing-in-memory-techniques-and-applications/"/>
-    <id>https://zongwuwang.github.io/2021/09/01/a-survey-of-sram-based-processing-in-memory-techniques-and-applications/</id>
-    <published>2021-09-01T02:09:58.000Z</published>
-    <updated>2021-11-01T11:33:46.305Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
     
     <category term="ICC" scheme="https://zongwuwang.github.io/tags/ICC/"/>
     
