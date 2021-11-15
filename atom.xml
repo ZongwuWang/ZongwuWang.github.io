@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-11-14T17:32:54.524Z</updated>
+  <updated>2021-11-15T13:20:53.727Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -17,23 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CDNLive India: Asynchronous Design</title>
+    <link href="https://zongwuwang.github.io/2021/11/15/cdnlive-india-asynchronous-design/"/>
+    <id>https://zongwuwang.github.io/2021/11/15/cdnlive-india-asynchronous-design/</id>
+    <published>2021-11-15T12:55:43.000Z</published>
+    <updated>2021-11-15T13:20:53.727Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    <category term="存内计算芯片" scheme="https://zongwuwang.github.io/tags/%E5%AD%98%E5%86%85%E8%AE%A1%E7%AE%97%E8%8A%AF%E7%89%87/"/>
+    
+  </entry>
+  
+  <entry>
     <title>HOT CHIPS: Some HOT Deep Learning Processors</title>
     <link href="https://zongwuwang.github.io/2021/11/15/hot-chips-some-hot-deep-learning-processors/"/>
     <id>https://zongwuwang.github.io/2021/11/15/hot-chips-some-hot-deep-learning-processors/</id>
     <published>2021-11-14T17:32:30.000Z</published>
-    <updated>2021-11-14T17:32:54.524Z</updated>
+    <updated>2021-11-15T12:51:01.813Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;HOT-CHIPS-Some-HOT-Deep-Learning-Processors&quot;&gt;&lt;a href=&quot;#HOT-CHIPS-Some-HOT-Deep-Learning-Processors&quot; class=&quot;headerlink&quot; title=&quot;HOT</summary>
-        
-      
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
     
     
     
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    <category term="存内计算芯片" scheme="https://zongwuwang.github.io/tags/%E5%AD%98%E5%86%85%E8%AE%A1%E7%AE%97%E8%8A%AF%E7%89%87/"/>
     
   </entry>
   
@@ -240,7 +261,7 @@
     <link href="https://zongwuwang.github.io/2021/10/18/c-c-dai-ma-diao-shi-gdb/"/>
     <id>https://zongwuwang.github.io/2021/10/18/c-c-dai-ma-diao-shi-gdb/</id>
     <published>2021-10-18T13:12:28.000Z</published>
-    <updated>2021-11-15T08:30:33.311Z</updated>
+    <updated>2021-11-15T09:36:54.753Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -464,27 +485,6 @@
     <category term="NCC" scheme="https://zongwuwang.github.io/tags/NCC/"/>
     
     <category term="Reconfiguration" scheme="https://zongwuwang.github.io/tags/Reconfiguration/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>i-SRAM: Interleaved Wordlines for Vector Boolean Operations Using SRAMs</title>
-    <link href="https://zongwuwang.github.io/2021/09/07/i-sram-interleaved-wordlines-for-vector-boolean-operations-using-srams/"/>
-    <id>https://zongwuwang.github.io/2021/09/07/i-sram-interleaved-wordlines-for-vector-boolean-operations-using-srams/</id>
-    <published>2021-09-07T13:54:47.000Z</published>
-    <updated>2021-11-01T11:37:15.487Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    <category term="ICC" scheme="https://zongwuwang.github.io/tags/ICC/"/>
     
   </entry>
   
