@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-11-15T13:20:53.727Z</updated>
+  <updated>2021-11-18T12:00:40.963Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,70 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RISC-V 编译器的“三驾马车（march、mabi和mtune）</title>
+    <link href="https://zongwuwang.github.io/2021/11/18/risc-v-bian-yi-qi-de-san-jia-ma-che-march-mabi-he-mtune/"/>
+    <id>https://zongwuwang.github.io/2021/11/18/risc-v-bian-yi-qi-de-san-jia-ma-che-march-mabi-he-mtune/</id>
+    <published>2021-11-18T11:49:49.000Z</published>
+    <updated>2021-11-18T12:00:40.963Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;RISC-V-编译器的“三驾马车（march、mabi和mtune）&quot;&gt;&lt;a href=&quot;#RISC-V-编译器的“三驾马车（march、mabi和mtune）&quot; class=&quot;headerlink&quot; title=&quot;RISC-V</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>计算机组成与设计——知识点记录</title>
+    <link href="https://zongwuwang.github.io/2021/11/17/ji-suan-ji-zu-cheng-yu-she-ji-zhi-shi-dian-ji-lu/"/>
+    <id>https://zongwuwang.github.io/2021/11/17/ji-suan-ji-zu-cheng-yu-she-ji-zhi-shi-dian-ji-lu/</id>
+    <published>2021-11-16T17:37:25.000Z</published>
+    <updated>2021-11-16T17:43:31.388Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Chapter-1&quot;&gt;&lt;a href=&quot;#Chapter-1&quot; class=&quot;headerlink&quot; title=&quot;Chapter 1:&quot;&gt;&lt;/a&gt;Chapter 1:&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Eight great ideas in computer</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>The New Tensilica DNA 100 Deep Neural-network Accelerator</title>
+    <link href="https://zongwuwang.github.io/2021/11/15/the-new-tensilica-dna-100-deep-neural-network-accelerator/"/>
+    <id>https://zongwuwang.github.io/2021/11/15/the-new-tensilica-dna-100-deep-neural-network-accelerator/</id>
+    <published>2021-11-15T13:53:48.000Z</published>
+    <updated>2021-11-17T07:25:40.555Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    <category term="存内计算芯片" scheme="https://zongwuwang.github.io/tags/%E5%AD%98%E5%86%85%E8%AE%A1%E7%AE%97%E8%8A%AF%E7%89%87/"/>
+    
+  </entry>
   
   <entry>
     <title>CDNLive India: Asynchronous Design</title>
@@ -422,69 +486,6 @@
     <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
     
     <category term="CAM" scheme="https://zongwuwang.github.io/tags/CAM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Memory sizing of a scalable SRAM in-memory computing tile based architecture</title>
-    <link href="https://zongwuwang.github.io/2021/09/09/memory-sizing-of-a-scalable-sram-in-memory-computing-tile-based-architecture/"/>
-    <id>https://zongwuwang.github.io/2021/09/09/memory-sizing-of-a-scalable-sram-in-memory-computing-tile-based-architecture/</id>
-    <published>2021-09-09T06:59:51.000Z</published>
-    <updated>2021-10-28T10:17:06.702Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    
-    <category term="未完待续" scheme="https://zongwuwang.github.io/tags/%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>FReaC Cache: Folded-logic Reconfigurable Computing in the Last Level Cache</title>
-    <link href="https://zongwuwang.github.io/2021/09/08/freac-cache-folded-logic-reconfigurable-computing-in-the-last-level-cache/"/>
-    <id>https://zongwuwang.github.io/2021/09/08/freac-cache-folded-logic-reconfigurable-computing-in-the-last-level-cache/</id>
-    <published>2021-09-08T13:09:04.000Z</published>
-    <updated>2021-11-01T11:36:48.019Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    <category term="NCC" scheme="https://zongwuwang.github.io/tags/NCC/"/>
-    
-    <category term="Reconfiguration" scheme="https://zongwuwang.github.io/tags/Reconfiguration/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Recryptor: A Reconfigurable Cryptographic Cortex-M0 Processor With In-Memory and Near-Memory Computing for IoT Security</title>
-    <link href="https://zongwuwang.github.io/2021/09/08/recryptor-a-reconfigurable-cryptographic-cortex-m0-processor-with-in-memory-and-near-memory-computing-for-iot-security/"/>
-    <id>https://zongwuwang.github.io/2021/09/08/recryptor-a-reconfigurable-cryptographic-cortex-m0-processor-with-in-memory-and-near-memory-computing-for-iot-security/</id>
-    <published>2021-09-08T07:54:04.000Z</published>
-    <updated>2021-11-01T11:39:44.477Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    <category term="NCC" scheme="https://zongwuwang.github.io/tags/NCC/"/>
-    
-    <category term="Reconfiguration" scheme="https://zongwuwang.github.io/tags/Reconfiguration/"/>
     
   </entry>
   
