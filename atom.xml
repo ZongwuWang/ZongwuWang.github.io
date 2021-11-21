@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-11-19T19:05:54.923Z</updated>
+  <updated>2021-11-21T11:35:00.140Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Introducing the Arm architecture</title>
+    <link href="https://zongwuwang.github.io/2021/11/21/introducing-the-arm-architecture/"/>
+    <id>https://zongwuwang.github.io/2021/11/21/introducing-the-arm-architecture/</id>
+    <published>2021-11-21T07:05:18.000Z</published>
+    <updated>2021-11-21T11:35:00.140Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    <category term="ARM" scheme="https://zongwuwang.github.io/tags/ARM/"/>
+    
+    <category term="Manual" scheme="https://zongwuwang.github.io/tags/Manual/"/>
+    
+  </entry>
   
   <entry>
     <title>Arm Research Starter Kit: System Modeling using gem5</title>
@@ -463,31 +486,6 @@
     
     
     <category term="系统环境" scheme="https://zongwuwang.github.io/tags/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CAPE: A Content-Addressable Processing Engine</title>
-    <link href="https://zongwuwang.github.io/2021/09/14/cape-a-content-addressable-processing-engine/"/>
-    <id>https://zongwuwang.github.io/2021/09/14/cape-a-content-addressable-processing-engine/</id>
-    <published>2021-09-13T16:47:31.000Z</published>
-    <updated>2021-11-01T11:35:41.838Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    <category term="CAM" scheme="https://zongwuwang.github.io/tags/CAM/"/>
-    
-    <category term="ICC" scheme="https://zongwuwang.github.io/tags/ICC/"/>
-    
-    <category term="关联计算引擎" scheme="https://zongwuwang.github.io/tags/%E5%85%B3%E8%81%94%E8%AE%A1%E7%AE%97%E5%BC%95%E6%93%8E/"/>
     
   </entry>
   
