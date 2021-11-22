@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-11-21T11:35:00.140Z</updated>
+  <updated>2021-11-22T17:55:21.632Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Armv8-A Instruction Set Architecture</title>
+    <link href="https://zongwuwang.github.io/2021/11/23/armv8-a-instruction-set-architecture/"/>
+    <id>https://zongwuwang.github.io/2021/11/23/armv8-a-instruction-set-architecture/</id>
+    <published>2021-11-22T17:50:28.000Z</published>
+    <updated>2021-11-22T17:55:21.632Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Armv8-A-Instruction-Set-Architecture&quot;&gt;&lt;a href=&quot;#Armv8-A-Instruction-Set-Architecture&quot; class=&quot;headerlink&quot; title=&quot;Armv8-A Instruction</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Introducing the Arm architecture</title>
@@ -461,31 +482,6 @@
     <category term="List" scheme="https://zongwuwang.github.io/tags/List/"/>
     
     <category term="TLB" scheme="https://zongwuwang.github.io/tags/TLB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VIM和shell的切换</title>
-    <link href="https://zongwuwang.github.io/2021/09/14/vim-he-shell-de-qie-huan/"/>
-    <id>https://zongwuwang.github.io/2021/09/14/vim-he-shell-de-qie-huan/</id>
-    <published>2021-09-14T07:56:07.000Z</published>
-    <updated>2021-11-01T11:40:53.006Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;VIM和shell的切换&quot;&gt;&lt;a href=&quot;#VIM和shell的切换&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="系统环境" scheme="https://zongwuwang.github.io/categories/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
-    
-    
-    <category term="系统环境" scheme="https://zongwuwang.github.io/tags/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
     
   </entry>
   

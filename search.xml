@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Armv8-A Instruction Set Architecture</title>
+      <link href="/2021/11/23/armv8-a-instruction-set-architecture/"/>
+      <url>/2021/11/23/armv8-a-instruction-set-architecture/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Armv8-A-Instruction-Set-Architecture"><a href="#Armv8-A-Instruction-Set-Architecture" class="headerlink" title="Armv8-A Instruction Set Architecture"></a>Armv8-A Instruction Set Architecture</h1><h2 id="1-Overview"><a href="#1-Overview" class="headerlink" title="1 Overview"></a>1 Overview</h2><p>指令集架构 (ISA) 是计算机抽象模型的一部分。 它定义了软件如何控制处理器。</p><p>Arm ISA 允许您编写符合 Arm 规范的软件和固件。 这意味着，如果您的软件或固件符合规范，任何基于 Arm 的处理器都将以相同的方式执行它。</p><p>本指南介绍了 A64 指令集，用于 64 位 Armv8-A 架构，也称为 AArch64。</p><p>我们不会涵盖本指南中的每一条指令。 所有指令在 Arm 架构参考手册 (Arm ARM) 中都有详细说明。 相反，我们将介绍指令的格式、不同类型的指令以及用汇编程序编写的代码如何与编译器生成的代码进行交互。</p><p>在本指南的最后，您可以检查您的知识。 您将了解指令的主要类别、数据处理指令的语法以及 W 和 X 寄存器的使用如何影响指令。 我们希望您从本指南中学到的主要成果是能够解释在给定 C 程序及其编译器输出时生成的汇编代码如何映射到 C 语句。 最后，本指南将向您展示如何在汇编程序中编写可从 C 调用的函数。</p><h2 id="2-Why-you-should-care-about-the-ISA"><a href="#2-Why-you-should-care-about-the-ISA" class="headerlink" title="2 Why you should care about the ISA"></a>2 Why you should care about the ISA</h2><p>作为开发人员，您可能不需要在我们的日常角色中直接在汇编程序中进行编写。 但是，汇编程序在某些领域仍然很重要，例如第一阶段引导软件或一些低级内核活动。</p><p>即使您不直接编写汇编代码，了解指令集可以做什么，以及编译器如何使用这些指令，也可以帮助您编写更高效的代码。 它还可以帮助您理解编译器的输出。 这在调试时很有用。</p><h2 id="3-Instruction-sets-in-the-Armv8-A"><a href="#3-Instruction-sets-in-the-Armv8-A" class="headerlink" title="3 Instruction sets in the Armv8-A"></a>3 Instruction sets in the Armv8-A</h2><p><font color="blue">Armv8-A 支持三种指令集：A32、T32 和 A64。</font></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Introducing the Arm architecture</title>
       <link href="/2021/11/21/introducing-the-arm-architecture/"/>
       <url>/2021/11/21/introducing-the-arm-architecture/</url>
