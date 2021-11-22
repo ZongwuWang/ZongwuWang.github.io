@@ -475,7 +475,63 @@
         
       </div>
       <div class="post-content">
-        <h1 id="Armv8-A-Instruction-Set-Architecture"><a href="#Armv8-A-Instruction-Set-Architecture" class="headerlink" title="Armv8-A Instruction Set Architecture"></a>Armv8-A Instruction Set Architecture</h1><h2 id="1-Overview"><a href="#1-Overview" class="headerlink" title="1 Overview"></a>1 Overview</h2><p>指令集架构 (ISA) 是计算机抽象模型的一部分。 它定义了软件如何控制处理器。</p>
+        <h1 id="Armv8-A-Instruction-Set-Architecture"><a href="#Armv8-A-Instruction-Set-Architecture" class="headerlink" title="Armv8-A Instruction Set Architecture"></a>Armv8-A Instruction Set Architecture</h1><!-- TOC -->
+
+<ul>
+<li><a href="#armv8-a-instruction-set-architecture">Armv8-A Instruction Set Architecture</a><ul>
+<li><a href="#1-overview">1 Overview</a></li>
+<li><a href="#2-why-you-should-care-about-the-isa">2 Why you should care about the ISA</a></li>
+<li><a href="#3-instruction-sets-in-the-armv8-a">3 Instruction sets in the Armv8-A</a></li>
+<li><a href="#4-instruction-set-resources">4 Instruction set resources</a></li>
+<li><a href="#5-simple-sequential-execution">5 Simple sequential execution</a></li>
+<li><a href="#6-registers-in-aarch64">6 Registers in AArch64</a><ul>
+<li><a href="#61-general-purpose-registers">6.1 General-purpose registers</a></li>
+<li><a href="#62-other-registers">6.2 Other registers</a></li>
+<li><a href="#63-system-registers">6.3 System registers</a></li>
+</ul>
+</li>
+<li><a href="#7-data-processing">7 Data processing</a><ul>
+<li><a href="#71-arithmetic-and-logic-operations">7.1 Arithmetic and logic operations</a></li>
+<li><a href="#72-floating-point">7.2 Floating point</a><ul>
+<li><a href="#721-is-floating-point-support-optional">7.2.1 Is floating point support optional?</a></li>
+</ul>
+</li>
+<li><a href="#73-bit-manipulation">7.3 Bit manipulation</a></li>
+<li><a href="#74-extension-and-saturation">7.4 Extension and saturation</a><ul>
+<li><a href="#741-sub-register-sized-integer-data-processing">7.4.1 Sub-register-sized integer data processing</a></li>
+</ul>
+</li>
+<li><a href="#75-format-conversion">7.5 Format conversion</a></li>
+<li><a href="#76-vector-data">7.6 Vector data</a></li>
+</ul>
+</li>
+<li><a href="#8-loads-and-stores">8 Loads and stores</a><ul>
+<li><a href="#81-size">8.1 Size</a></li>
+<li><a href="#82-zero-and-sign-extension">8.2 Zero and sign extension</a></li>
+<li><a href="#83-addressing">8.3 Addressing</a></li>
+<li><a href="#84-load-pair-and-store-pair">8.4 Load pair and store pair</a></li>
+<li><a href="#85-using-floating-point-registers">8.5 Using floating point registers</a></li>
+</ul>
+</li>
+<li><a href="#9-program-flow">9 Program flow</a><ul>
+<li><a href="#91-loops-and-decisions">9.1 Loops and decisions</a><ul>
+<li><a href="#912-unconditional-branch-instructions">9.1.2 Unconditional branch instructions</a></li>
+<li><a href="#913-conditional-branch-instructions">9.1.3 Conditional branch instructions</a></li>
+</ul>
+</li>
+<li><a href="#92-generating-condition-code">9.2 Generating condition code</a></li>
+<li><a href="#93-conditional-select-instructions">9.3 Conditional select instructions</a></li>
+</ul>
+</li>
+<li><a href="#10-function-calls">10 Function calls</a></li>
+<li><a href="#11-procedure-call-standard">11 Procedure Call Standard</a></li>
+<li><a href="#12-system-calls">12 System calls</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+
+<h2 id="1-Overview"><a href="#1-Overview" class="headerlink" title="1 Overview"></a>1 Overview</h2><p>指令集架构 (ISA) 是计算机抽象模型的一部分。 它定义了软件如何控制处理器。</p>
 <p>Arm ISA 允许您编写符合 Arm 规范的软件和固件。 这意味着，如果您的软件或固件符合规范，任何基于 Arm 的处理器都将以相同的方式执行它。</p>
 <p>本指南介绍了 A64 指令集，用于 64 位 Armv8-A 架构，也称为 AArch64。</p>
 <p>我们不会涵盖本指南中的每一条指令。 所有指令在 Arm 架构参考手册 (Arm ARM) 中都有详细说明。 相反，我们将介绍指令的格式、不同类型的指令以及用汇编程序编写的代码如何与编译器生成的代码进行交互。</p>
