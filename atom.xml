@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-11-22T21:38:06.138Z</updated>
+  <updated>2021-11-25T15:04:58.133Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Doxygen代码文档生成</title>
+    <link href="https://zongwuwang.github.io/2021/11/25/doxygen-dai-ma-wen-dang-sheng-cheng/"/>
+    <id>https://zongwuwang.github.io/2021/11/25/doxygen-dai-ma-wen-dang-sheng-cheng/</id>
+    <published>2021-11-25T15:01:58.000Z</published>
+    <updated>2021-11-25T15:04:58.133Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="编程开发" scheme="https://zongwuwang.github.io/tags/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="doxygen" scheme="https://zongwuwang.github.io/tags/doxygen/"/>
+    
+    <category term="代码关系图" scheme="https://zongwuwang.github.io/tags/%E4%BB%A3%E7%A0%81%E5%85%B3%E7%B3%BB%E5%9B%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>Armv8-A Instruction Set Architecture</title>
@@ -449,39 +472,6 @@
     <category term="集成电路" scheme="https://zongwuwang.github.io/tags/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF/"/>
     
     <category term="标准单元库" scheme="https://zongwuwang.github.io/tags/%E6%A0%87%E5%87%86%E5%8D%95%E5%85%83%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>QEI: Query Acceleration Can be Generic and Efficient in the Cloud</title>
-    <link href="https://zongwuwang.github.io/2021/09/15/qei-query-acceleration-can-be-generic-and-efficient-in-the-cloud/"/>
-    <id>https://zongwuwang.github.io/2021/09/15/qei-query-acceleration-can-be-generic-and-efficient-in-the-cloud/</id>
-    <published>2021-09-15T08:03:12.000Z</published>
-    <updated>2021-11-01T11:39:07.981Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    <category term="Query" scheme="https://zongwuwang.github.io/tags/Query/"/>
-    
-    <category term="NCC" scheme="https://zongwuwang.github.io/tags/NCC/"/>
-    
-    <category term="Hash" scheme="https://zongwuwang.github.io/tags/Hash/"/>
-    
-    <category term="Tree" scheme="https://zongwuwang.github.io/tags/Tree/"/>
-    
-    <category term="Graph" scheme="https://zongwuwang.github.io/tags/Graph/"/>
-    
-    <category term="List" scheme="https://zongwuwang.github.io/tags/List/"/>
-    
-    <category term="TLB" scheme="https://zongwuwang.github.io/tags/TLB/"/>
     
   </entry>
   
