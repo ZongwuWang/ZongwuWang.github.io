@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-11-25T15:04:58.133Z</updated>
+  <updated>2021-11-30T13:06:34.413Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,98 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>gem5 debug manual</title>
+    <link href="https://zongwuwang.github.io/2021/11/30/gem5-debug-manual/"/>
+    <id>https://zongwuwang.github.io/2021/11/30/gem5-debug-manual/</id>
+    <published>2021-11-30T12:18:27.000Z</published>
+    <updated>2021-11-30T13:06:34.413Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="gdb" scheme="https://zongwuwang.github.io/tags/gdb/"/>
+    
+    <category term="gem5" scheme="https://zongwuwang.github.io/tags/gem5/"/>
+    
+    <category term="pdb" scheme="https://zongwuwang.github.io/tags/pdb/"/>
+    
+    <category term="调试" scheme="https://zongwuwang.github.io/tags/%E8%B0%83%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>内存一致性和缓存连贯性入门</title>
+    <link href="https://zongwuwang.github.io/2021/11/29/nei-cun-yi-zhi-xing-he-huan-cun-yi-zhi-xing-ru-men/"/>
+    <id>https://zongwuwang.github.io/2021/11/29/nei-cun-yi-zhi-xing-he-huan-cun-yi-zhi-xing-ru-men/</id>
+    <published>2021-11-29T15:44:05.000Z</published>
+    <updated>2021-11-30T13:05:26.593Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    <category term="内存一致性" scheme="https://zongwuwang.github.io/tags/%E5%86%85%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/"/>
+    
+    <category term="缓存连贯性" scheme="https://zongwuwang.github.io/tags/%E7%BC%93%E5%AD%98%E8%BF%9E%E8%B4%AF%E6%80%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>gem5 CPU 模型</title>
+    <link href="https://zongwuwang.github.io/2021/11/29/gem5-cpu-mo-xing/"/>
+    <id>https://zongwuwang.github.io/2021/11/29/gem5-cpu-mo-xing/</id>
+    <published>2021-11-28T16:12:54.000Z</published>
+    <updated>2021-11-30T13:07:23.689Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    <category term="gem5" scheme="https://zongwuwang.github.io/tags/gem5/"/>
+    
+    <category term="CPU模型" scheme="https://zongwuwang.github.io/tags/CPU%E6%A8%A1%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>现代微处理器架构</title>
+    <link href="https://zongwuwang.github.io/2021/11/27/xian-dai-wei-chu-li-qi-jia-gou/"/>
+    <id>https://zongwuwang.github.io/2021/11/27/xian-dai-wei-chu-li-qi-jia-gou/</id>
+    <published>2021-11-27T10:55:52.000Z</published>
+    <updated>2021-11-30T13:07:56.685Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    <category term="微处理器" scheme="https://zongwuwang.github.io/tags/%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>Doxygen代码文档生成</title>
@@ -380,100 +472,6 @@
     
     
     <category term="系统环境" scheme="https://zongwuwang.github.io/tags/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu系统解决上不去github问题</title>
-    <link href="https://zongwuwang.github.io/2021/10/26/ubuntu-xi-tong-jie-jue-shang-bu-qu-github-wen-ti/"/>
-    <id>https://zongwuwang.github.io/2021/10/26/ubuntu-xi-tong-jie-jue-shang-bu-qu-github-wen-ti/</id>
-    <published>2021-10-26T06:14:39.000Z</published>
-    <updated>2021-11-01T11:40:41.502Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Ubuntu系统解决上不去github问题&quot;&gt;&lt;a href=&quot;#Ubuntu系统解决上不去github问题&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="系统环境" scheme="https://zongwuwang.github.io/categories/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
-    
-    
-    <category term="系统环境" scheme="https://zongwuwang.github.io/tags/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Trie树（Prefix Tree）介绍(转)</title>
-    <link href="https://zongwuwang.github.io/2021/10/24/trie-shu-prefix-tree-jie-shao/"/>
-    <id>https://zongwuwang.github.io/2021/10/24/trie-shu-prefix-tree-jie-shao/</id>
-    <published>2021-10-24T07:26:36.000Z</published>
-    <updated>2021-11-01T11:40:30.805Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Trie树（Prefix-Tree）介绍&quot;&gt;&lt;a href=&quot;#Trie树（Prefix-Tree）介绍&quot; class=&quot;headerlink&quot; title=&quot;Trie树（Prefix Tree）介绍&quot;&gt;&lt;/a&gt;Trie树（Prefix</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://zongwuwang.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="算法" scheme="https://zongwuwang.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="树" scheme="https://zongwuwang.github.io/tags/%E6%A0%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C_C++代码调试——gdb</title>
-    <link href="https://zongwuwang.github.io/2021/10/18/c-c-dai-ma-diao-shi-gdb/"/>
-    <id>https://zongwuwang.github.io/2021/10/18/c-c-dai-ma-diao-shi-gdb/</id>
-    <published>2021-10-18T13:12:28.000Z</published>
-    <updated>2021-11-15T09:36:54.753Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="编程开发" scheme="https://zongwuwang.github.io/tags/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="gdb" scheme="https://zongwuwang.github.io/tags/gdb/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>标准单元库的理解</title>
-    <link href="https://zongwuwang.github.io/2021/10/14/biao-zhun-dan-yuan-ku-de-li-jie/"/>
-    <id>https://zongwuwang.github.io/2021/10/14/biao-zhun-dan-yuan-ku-de-li-jie/</id>
-    <published>2021-10-14T08:07:21.000Z</published>
-    <updated>2021-11-06T11:26:46.286Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="集成电路" scheme="https://zongwuwang.github.io/categories/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF/"/>
-    
-    
-    <category term="集成电路" scheme="https://zongwuwang.github.io/tags/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF/"/>
-    
-    <category term="标准单元库" scheme="https://zongwuwang.github.io/tags/%E6%A0%87%E5%87%86%E5%8D%95%E5%85%83%E5%BA%93/"/>
     
   </entry>
   
