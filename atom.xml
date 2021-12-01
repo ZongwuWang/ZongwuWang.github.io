@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-11-30T13:06:34.413Z</updated>
+  <updated>2021-12-01T13:23:00.204Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ssh登录错误ECDSA host key for ip has changed解决方案</title>
+    <link href="https://zongwuwang.github.io/2021/12/01/ssh-deng-lu-cuo-wu-ecdsa-host-key-for-ip-has-changed-jie-jue-fang-an/"/>
+    <id>https://zongwuwang.github.io/2021/12/01/ssh-deng-lu-cuo-wu-ecdsa-host-key-for-ip-has-changed-jie-jue-fang-an/</id>
+    <published>2021-12-01T13:21:33.000Z</published>
+    <updated>2021-12-01T13:23:00.204Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;当我们使用ssh root@ip登录Linux服务器时，服务器报错：&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="系统环境" scheme="https://zongwuwang.github.io/categories/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
+    
+    
+    <category term="系统环境" scheme="https://zongwuwang.github.io/tags/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
+    
+    <category term="VSCode" scheme="https://zongwuwang.github.io/tags/VSCode/"/>
+    
+    <category term="ssh" scheme="https://zongwuwang.github.io/tags/ssh/"/>
+    
+  </entry>
+  
+  <entry>
     <title>gem5 debug manual</title>
     <link href="https://zongwuwang.github.io/2021/11/30/gem5-debug-manual/"/>
     <id>https://zongwuwang.github.io/2021/11/30/gem5-debug-manual/</id>
     <published>2021-11-30T12:18:27.000Z</published>
-    <updated>2021-11-30T13:06:34.413Z</updated>
+    <updated>2021-12-01T05:07:11.911Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -447,31 +477,6 @@
     <category term="系统环境" scheme="https://zongwuwang.github.io/tags/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
     
     <category term="Linux" scheme="https://zongwuwang.github.io/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux查看物理CPU个数、核数、逻辑CPU个数(转)</title>
-    <link href="https://zongwuwang.github.io/2021/11/01/linux-cha-kan-wu-li-cpu-ge-shu-he-shu-luo-ji-cpu-ge-shu-zhuan/"/>
-    <id>https://zongwuwang.github.io/2021/11/01/linux-cha-kan-wu-li-cpu-ge-shu-he-shu-luo-ji-cpu-ge-shu-zhuan/</id>
-    <published>2021-11-01T11:22:41.000Z</published>
-    <updated>2021-11-01T11:49:38.039Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Linux查看物理CPU个数、核数、逻辑CPU个数-转&quot;&gt;&lt;a href=&quot;#Linux查看物理CPU个数、核数、逻辑CPU个数-转&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="系统环境" scheme="https://zongwuwang.github.io/categories/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
-    
-    
-    <category term="系统环境" scheme="https://zongwuwang.github.io/tags/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
     
   </entry>
   
