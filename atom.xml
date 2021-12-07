@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-12-01T13:23:00.204Z</updated>
+  <updated>2021-12-02T05:43:44.659Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>gem5源码解读</title>
+    <link href="https://zongwuwang.github.io/2021/12/02/gem5-yuan-ma-jie-du/"/>
+    <id>https://zongwuwang.github.io/2021/12/02/gem5-yuan-ma-jie-du/</id>
+    <published>2021-12-02T03:52:53.000Z</published>
+    <updated>2021-12-02T05:43:44.659Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;gem5源码解读&quot;&gt;&lt;a href=&quot;#gem5源码解读&quot; class=&quot;headerlink&quot; title=&quot;gem5源码解读&quot;&gt;&lt;/a&gt;gem5源码解读&lt;/h1&gt;&lt;h2 id=&quot;1-Cycles类&quot;&gt;&lt;a href=&quot;#1-Cycles类&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>ssh登录错误ECDSA host key for ip has changed解决方案</title>
@@ -99,7 +120,7 @@
     <link href="https://zongwuwang.github.io/2021/11/29/gem5-cpu-mo-xing/"/>
     <id>https://zongwuwang.github.io/2021/11/29/gem5-cpu-mo-xing/</id>
     <published>2021-11-28T16:12:54.000Z</published>
-    <updated>2021-11-30T13:07:23.689Z</updated>
+    <updated>2021-12-05T07:32:26.841Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -224,9 +245,9 @@
     
     <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
     
-    <category term="gem5" scheme="https://zongwuwang.github.io/tags/gem5/"/>
-    
     <category term="ARM" scheme="https://zongwuwang.github.io/tags/ARM/"/>
+    
+    <category term="gem5" scheme="https://zongwuwang.github.io/tags/gem5/"/>
     
     <category term="仿真器" scheme="https://zongwuwang.github.io/tags/%E4%BB%BF%E7%9C%9F%E5%99%A8/"/>
     
@@ -237,7 +258,7 @@
     <link href="https://zongwuwang.github.io/2021/11/19/hot-chips-31-analysis-in-memory-processing-by-upmem/"/>
     <id>https://zongwuwang.github.io/2021/11/19/hot-chips-31-analysis-in-memory-processing-by-upmem/</id>
     <published>2021-11-18T16:47:56.000Z</published>
-    <updated>2021-11-18T17:38:20.005Z</updated>
+    <updated>2021-11-19T18:58:17.402Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -385,7 +406,7 @@
     <link href="https://zongwuwang.github.io/2021/11/14/hot-chips-the-next-generation-of-general-purpose-compute/"/>
     <id>https://zongwuwang.github.io/2021/11/14/hot-chips-the-next-generation-of-general-purpose-compute/</id>
     <published>2021-11-14T13:07:32.000Z</published>
-    <updated>2021-11-14T13:45:48.180Z</updated>
+    <updated>2021-11-14T13:52:52.803Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -450,33 +471,6 @@
     <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
     
     <category term="多核" scheme="https://zongwuwang.github.io/tags/%E5%A4%9A%E6%A0%B8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux下迁移用户home下主目录</title>
-    <link href="https://zongwuwang.github.io/2021/11/02/linux-xia-qian-yi-yong-hu-home-xia-zhu-mu-lu/"/>
-    <id>https://zongwuwang.github.io/2021/11/02/linux-xia-qian-yi-yong-hu-home-xia-zhu-mu-lu/</id>
-    <published>2021-11-02T01:28:13.000Z</published>
-    <updated>2021-11-02T01:34:01.617Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;linux下迁移用户home下主目录&quot;&gt;&lt;a href=&quot;#linux下迁移用户home下主目录&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="系统环境" scheme="https://zongwuwang.github.io/categories/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
-    
-    
-    <category term="系统环境" scheme="https://zongwuwang.github.io/tags/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
-    
-    <category term="Linux" scheme="https://zongwuwang.github.io/tags/Linux/"/>
     
   </entry>
   
