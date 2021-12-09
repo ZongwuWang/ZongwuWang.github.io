@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-12-02T05:43:44.659Z</updated>
+  <updated>2021-12-09T13:37:23.522Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>cadence导入和导出版图gds文件</title>
+    <link href="https://zongwuwang.github.io/2021/12/09/cadence-dao-ru-he-dao-chu-ban-tu-gds-wen-jian/"/>
+    <id>https://zongwuwang.github.io/2021/12/09/cadence-dao-ru-he-dao-chu-ban-tu-gds-wen-jian/</id>
+    <published>2021-12-09T13:07:03.000Z</published>
+    <updated>2021-12-09T13:37:23.522Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="IC设计" scheme="https://zongwuwang.github.io/categories/IC%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+    <category term="cadence" scheme="https://zongwuwang.github.io/tags/cadence/"/>
+    
+    <category term="layout" scheme="https://zongwuwang.github.io/tags/layout/"/>
+    
+    <category term="gds" scheme="https://zongwuwang.github.io/tags/gds/"/>
+    
+  </entry>
   
   <entry>
     <title>gem5源码解读</title>
@@ -444,33 +467,6 @@
     <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
     
     <category term="总线" scheme="https://zongwuwang.github.io/tags/%E6%80%BB%E7%BA%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>处理器是如何从单核演化到64核的</title>
-    <link href="https://zongwuwang.github.io/2021/11/06/chu-li-qi-shi-ru-he-cong-dan-he-yan-hua-dao-64-he-de/"/>
-    <id>https://zongwuwang.github.io/2021/11/06/chu-li-qi-shi-ru-he-cong-dan-he-yan-hua-dao-64-he-de/</id>
-    <published>2021-11-06T06:29:16.000Z</published>
-    <updated>2021-11-06T07:35:18.715Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;处理器是如何从单核演化到64核的&quot;&gt;&lt;a href=&quot;#处理器是如何从单核演化到64核的&quot; class=&quot;headerlink&quot; title=&quot;处理器是如何从单核演化到64核的&quot;&gt;&lt;/a&gt;处理器是如何从单核演化到64核的&lt;/h1&gt;&lt;!-- TOC</summary>
-        
-      
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    <category term="多核" scheme="https://zongwuwang.github.io/tags/%E5%A4%9A%E6%A0%B8/"/>
     
   </entry>
   
