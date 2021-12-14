@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-12-09T13:37:23.522Z</updated>
+  <updated>2021-12-14T12:03:47.580Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>缓存一致性与MESI协议Snoop操作</title>
+    <link href="https://zongwuwang.github.io/2021/12/14/huan-cun-yi-zhi-xing-yu-mesi-xie-yi-snoop-cao-zuo/"/>
+    <id>https://zongwuwang.github.io/2021/12/14/huan-cun-yi-zhi-xing-yu-mesi-xie-yi-snoop-cao-zuo/</id>
+    <published>2021-12-14T11:52:25.000Z</published>
+    <updated>2021-12-14T12:03:47.580Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="缓存一致性" scheme="https://zongwuwang.github.io/tags/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/"/>
+    
+    <category term="MESI" scheme="https://zongwuwang.github.io/tags/MESI/"/>
+    
+    <category term="Snoop" scheme="https://zongwuwang.github.io/tags/Snoop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iPIM: Programmable In-Memory Image Processing Accelerator Using Near-Bank Architecture</title>
+    <link href="https://zongwuwang.github.io/2021/12/09/ipim-programmable-in-memory-image-processing-accelerator-using-near-bank-architecture/"/>
+    <id>https://zongwuwang.github.io/2021/12/09/ipim-programmable-in-memory-image-processing-accelerator-using-near-bank-architecture/</id>
+    <published>2021-12-09T14:27:31.000Z</published>
+    <updated>2021-12-09T14:28:23.910Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>cadence导入和导出版图gds文件</title>
@@ -120,7 +158,7 @@
     <link href="https://zongwuwang.github.io/2021/11/29/nei-cun-yi-zhi-xing-he-huan-cun-yi-zhi-xing-ru-men/"/>
     <id>https://zongwuwang.github.io/2021/11/29/nei-cun-yi-zhi-xing-he-huan-cun-yi-zhi-xing-ru-men/</id>
     <published>2021-11-29T15:44:05.000Z</published>
-    <updated>2021-11-30T13:05:26.593Z</updated>
+    <updated>2021-12-09T14:24:43.675Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -135,6 +173,8 @@
     <category term="内存一致性" scheme="https://zongwuwang.github.io/tags/%E5%86%85%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/"/>
     
     <category term="缓存连贯性" scheme="https://zongwuwang.github.io/tags/%E7%BC%93%E5%AD%98%E8%BF%9E%E8%B4%AF%E6%80%A7/"/>
+    
+    <category term="待填坑" scheme="https://zongwuwang.github.io/tags/%E5%BE%85%E5%A1%AB%E5%9D%91/"/>
     
   </entry>
   
@@ -421,52 +461,6 @@
     <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
     
     <category term="存内计算芯片" scheme="https://zongwuwang.github.io/tags/%E5%AD%98%E5%86%85%E8%AE%A1%E7%AE%97%E8%8A%AF%E7%89%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HOT CHIPS: The Next-Generation of General-Purpose Compute</title>
-    <link href="https://zongwuwang.github.io/2021/11/14/hot-chips-the-next-generation-of-general-purpose-compute/"/>
-    <id>https://zongwuwang.github.io/2021/11/14/hot-chips-the-next-generation-of-general-purpose-compute/</id>
-    <published>2021-11-14T13:07:32.000Z</published>
-    <updated>2021-11-14T13:52:52.803Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>FSB总线、HT总线、QPI总线、DMI总线</title>
-    <link href="https://zongwuwang.github.io/2021/11/06/fsb-zong-xian-ht-zong-xian-qpi-zong-xian-dmi-zong-xian/"/>
-    <id>https://zongwuwang.github.io/2021/11/06/fsb-zong-xian-ht-zong-xian-qpi-zong-xian-dmi-zong-xian/</id>
-    <published>2021-11-06T07:43:58.000Z</published>
-    <updated>2021-11-06T11:26:28.366Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;FSB总线、HT总线、QPI总线、DMI总线&quot;&gt;&lt;a href=&quot;#FSB总线、HT总线、QPI总线、DMI总线&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    <category term="总线" scheme="https://zongwuwang.github.io/tags/%E6%80%BB%E7%BA%BF/"/>
     
   </entry>
   
