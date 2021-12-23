@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-12-16T12:33:00.850Z</updated>
+  <updated>2021-12-20T05:52:48.233Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CPP Primer Note</title>
+    <link href="https://zongwuwang.github.io/2021/12/20/cpp-primer-note/"/>
+    <id>https://zongwuwang.github.io/2021/12/20/cpp-primer-note/</id>
+    <published>2021-12-20T05:17:36.000Z</published>
+    <updated>2021-12-20T05:52:48.233Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Vscode编辑markdown代码块（snippets）</title>
@@ -426,27 +441,6 @@
     <id>https://zongwuwang.github.io/2021/11/15/the-new-tensilica-dna-100-deep-neural-network-accelerator/</id>
     <published>2021-11-15T13:53:48.000Z</published>
     <updated>2021-11-17T07:25:40.555Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    <category term="存内计算芯片" scheme="https://zongwuwang.github.io/tags/%E5%AD%98%E5%86%85%E8%AE%A1%E7%AE%97%E8%8A%AF%E7%89%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CDNLive India: Asynchronous Design</title>
-    <link href="https://zongwuwang.github.io/2021/11/15/cdnlive-india-asynchronous-design/"/>
-    <id>https://zongwuwang.github.io/2021/11/15/cdnlive-india-asynchronous-design/</id>
-    <published>2021-11-15T12:55:43.000Z</published>
-    <updated>2021-11-15T13:20:53.727Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
