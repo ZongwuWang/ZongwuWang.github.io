@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-12-23T13:32:25.651Z</updated>
+  <updated>2021-12-29T12:58:04.449Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>布隆过滤器</title>
+    <link href="https://zongwuwang.github.io/2021/12/29/bu-long-guo-lu-qi/"/>
+    <id>https://zongwuwang.github.io/2021/12/29/bu-long-guo-lu-qi/</id>
+    <published>2021-12-29T12:42:46.000Z</published>
+    <updated>2021-12-29T12:58:04.449Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>LazyPIM_ An Efficient Cache Coherence Mechanism for Processing-in-Memory</title>
+    <link href="https://zongwuwang.github.io/2021/12/29/lazypim-an-efficient-cache-coherence-mechanism-for-processing-in-memory/"/>
+    <id>https://zongwuwang.github.io/2021/12/29/lazypim-an-efficient-cache-coherence-mechanism-for-processing-in-memory/</id>
+    <published>2021-12-29T07:42:09.000Z</published>
+    <updated>2021-12-29T10:55:14.999Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Approximate cost to access various caches and main memory?</title>
@@ -234,7 +264,7 @@
     <link href="https://zongwuwang.github.io/2021/11/29/nei-cun-yi-zhi-xing-he-huan-cun-lian-guan-xing-ru-men/"/>
     <id>https://zongwuwang.github.io/2021/11/29/nei-cun-yi-zhi-xing-he-huan-cun-lian-guan-xing-ru-men/</id>
     <published>2021-11-29T15:44:05.000Z</published>
-    <updated>2021-12-28T15:04:18.626Z</updated>
+    <updated>2021-12-29T04:08:08.908Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -410,49 +440,6 @@
     <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
     
     <category term="存内计算芯片" scheme="https://zongwuwang.github.io/tags/%E5%AD%98%E5%86%85%E8%AE%A1%E7%AE%97%E8%8A%AF%E7%89%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RISC-V 编译器的“三驾马车（march、mabi和mtune）</title>
-    <link href="https://zongwuwang.github.io/2021/11/18/risc-v-bian-yi-qi-de-san-jia-ma-che-march-mabi-he-mtune/"/>
-    <id>https://zongwuwang.github.io/2021/11/18/risc-v-bian-yi-qi-de-san-jia-ma-che-march-mabi-he-mtune/</id>
-    <published>2021-11-18T11:49:49.000Z</published>
-    <updated>2021-11-26T17:10:34.229Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="编译器" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E8%AF%91%E5%99%A8/"/>
-    
-    
-    <category term="编译器" scheme="https://zongwuwang.github.io/tags/%E7%BC%96%E8%AF%91%E5%99%A8/"/>
-    
-    <category term="RISC-V" scheme="https://zongwuwang.github.io/tags/RISC-V/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机组成与设计——知识点记录</title>
-    <link href="https://zongwuwang.github.io/2021/11/17/ji-suan-ji-zu-cheng-yu-she-ji-zhi-shi-dian-ji-lu/"/>
-    <id>https://zongwuwang.github.io/2021/11/17/ji-suan-ji-zu-cheng-yu-she-ji-zhi-shi-dian-ji-lu/</id>
-    <published>2021-11-16T17:37:25.000Z</published>
-    <updated>2021-11-16T17:43:31.388Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Chapter-1&quot;&gt;&lt;a href=&quot;#Chapter-1&quot; class=&quot;headerlink&quot; title=&quot;Chapter 1:&quot;&gt;&lt;/a&gt;Chapter 1:&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;Eight great ideas in computer</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
