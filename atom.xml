@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2021-12-29T13:11:42.113Z</updated>
+  <updated>2022-01-01T17:42:19.728Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Introduction to Parallel Computing Tutorial</title>
+    <link href="https://zongwuwang.github.io/2022/01/02/introduction-to-parallel-computing-tutorial/"/>
+    <id>https://zongwuwang.github.io/2022/01/02/introduction-to-parallel-computing-tutorial/</id>
+    <published>2022-01-01T17:19:47.000Z</published>
+    <updated>2022-01-01T17:42:19.728Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="并行计算" scheme="https://zongwuwang.github.io/categories/%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97/"/>
+    
+    
+    <category term="并行计算" scheme="https://zongwuwang.github.io/tags/%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Why Domain-Specific Dataflow Processing Is the Only Way Forward</title>
+    <link href="https://zongwuwang.github.io/2022/01/01/why-domain-specific-dataflow-processing-is-the-only-way-forward/"/>
+    <id>https://zongwuwang.github.io/2022/01/01/why-domain-specific-dataflow-processing-is-the-only-way-forward/</id>
+    <published>2021-12-31T18:11:35.000Z</published>
+    <updated>2021-12-31T18:36:52.643Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="DSA" scheme="https://zongwuwang.github.io/tags/DSA/"/>
+    
+    <category term="Dataflow Processing" scheme="https://zongwuwang.github.io/tags/Dataflow-Processing/"/>
+    
+    <category term="Architecture Trend" scheme="https://zongwuwang.github.io/tags/Architecture-Trend/"/>
+    
+  </entry>
   
   <entry>
     <title>Cuckoo Hash布谷鸟哈希</title>
@@ -279,7 +321,7 @@
     <link href="https://zongwuwang.github.io/2021/11/29/nei-cun-yi-zhi-xing-he-huan-cun-lian-guan-xing-ru-men/"/>
     <id>https://zongwuwang.github.io/2021/11/29/nei-cun-yi-zhi-xing-he-huan-cun-lian-guan-xing-ru-men/</id>
     <published>2021-11-29T15:44:05.000Z</published>
-    <updated>2021-12-31T07:14:11.407Z</updated>
+    <updated>2022-01-02T18:37:49.546Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -386,54 +428,6 @@
     <category term="ARM" scheme="https://zongwuwang.github.io/tags/ARM/"/>
     
     <category term="ISA" scheme="https://zongwuwang.github.io/tags/ISA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Introducing the Arm architecture</title>
-    <link href="https://zongwuwang.github.io/2021/11/21/introducing-the-arm-architecture/"/>
-    <id>https://zongwuwang.github.io/2021/11/21/introducing-the-arm-architecture/</id>
-    <published>2021-11-21T07:05:18.000Z</published>
-    <updated>2021-11-21T11:35:00.140Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    <category term="ARM" scheme="https://zongwuwang.github.io/tags/ARM/"/>
-    
-    <category term="Manual" scheme="https://zongwuwang.github.io/tags/Manual/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Arm Research Starter Kit: System Modeling using gem5</title>
-    <link href="https://zongwuwang.github.io/2021/11/19/arm-research-starter-kit-system-modeling-using-gem5/"/>
-    <id>https://zongwuwang.github.io/2021/11/19/arm-research-starter-kit-system-modeling-using-gem5/</id>
-    <published>2021-11-19T15:14:55.000Z</published>
-    <updated>2021-11-19T19:05:54.923Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    <category term="ARM" scheme="https://zongwuwang.github.io/tags/ARM/"/>
-    
-    <category term="gem5" scheme="https://zongwuwang.github.io/tags/gem5/"/>
-    
-    <category term="仿真器" scheme="https://zongwuwang.github.io/tags/%E4%BB%BF%E7%9C%9F%E5%99%A8/"/>
     
   </entry>
   
