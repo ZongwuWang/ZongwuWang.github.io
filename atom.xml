@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2022-01-01T17:42:19.728Z</updated>
+  <updated>2022-01-08T16:21:24.132Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>An Energy Efficient 32-nm 20-MB Shared On-Die L3 Cache for Intel® Xeon® Processor E5 Family</title>
+    <link href="https://zongwuwang.github.io/2022/01/09/an-energy-efficient-32-nm-20-mb-shared-on-die-l3-cache-for-intel-r-xeon-r-processor-e5-family/"/>
+    <id>https://zongwuwang.github.io/2022/01/09/an-energy-efficient-32-nm-20-mb-shared-on-die-l3-cache-for-intel-r-xeon-r-processor-e5-family/</id>
+    <published>2022-01-08T16:18:45.000Z</published>
+    <updated>2022-01-08T16:21:24.132Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>google-profile user guide</title>
+    <link href="https://zongwuwang.github.io/2022/01/07/google-profile-user-guide/"/>
+    <id>https://zongwuwang.github.io/2022/01/07/google-profile-user-guide/</id>
+    <published>2022-01-07T09:47:49.000Z</published>
+    <updated>2022-01-07T10:32:33.924Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Introduction to Parallel Computing Tutorial</title>
@@ -382,52 +412,6 @@
     <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
     
     <category term="微处理器" scheme="https://zongwuwang.github.io/tags/%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Doxygen代码文档生成</title>
-    <link href="https://zongwuwang.github.io/2021/11/25/doxygen-dai-ma-wen-dang-sheng-cheng/"/>
-    <id>https://zongwuwang.github.io/2021/11/25/doxygen-dai-ma-wen-dang-sheng-cheng/</id>
-    <published>2021-11-25T15:01:58.000Z</published>
-    <updated>2021-11-25T15:04:58.133Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="编程开发" scheme="https://zongwuwang.github.io/tags/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="doxygen" scheme="https://zongwuwang.github.io/tags/doxygen/"/>
-    
-    <category term="代码关系图" scheme="https://zongwuwang.github.io/tags/%E4%BB%A3%E7%A0%81%E5%85%B3%E7%B3%BB%E5%9B%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Armv8-A Instruction Set Architecture</title>
-    <link href="https://zongwuwang.github.io/2021/11/23/armv8-a-instruction-set-architecture/"/>
-    <id>https://zongwuwang.github.io/2021/11/23/armv8-a-instruction-set-architecture/</id>
-    <published>2021-11-22T17:50:28.000Z</published>
-    <updated>2021-11-26T17:06:38.949Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    <category term="ARM" scheme="https://zongwuwang.github.io/tags/ARM/"/>
-    
-    <category term="ISA" scheme="https://zongwuwang.github.io/tags/ISA/"/>
     
   </entry>
   
