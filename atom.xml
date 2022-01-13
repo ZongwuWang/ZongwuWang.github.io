@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2022-01-08T16:21:24.132Z</updated>
+  <updated>2022-01-12T12:44:40.320Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>进程地址空间分析</title>
+    <link href="https://zongwuwang.github.io/2022/01/12/jin-cheng-di-zhi-kong-jian-fen-xi/"/>
+    <id>https://zongwuwang.github.io/2022/01/12/jin-cheng-di-zhi-kong-jian-fen-xi/</id>
+    <published>2022-01-12T09:25:07.000Z</published>
+    <updated>2022-01-12T12:44:40.320Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>An Energy Efficient 32-nm 20-MB Shared On-Die L3 Cache for Intel® Xeon® Processor E5 Family</title>
@@ -391,27 +406,6 @@
     <category term="gem5" scheme="https://zongwuwang.github.io/tags/gem5/"/>
     
     <category term="CPU模型" scheme="https://zongwuwang.github.io/tags/CPU%E6%A8%A1%E5%9E%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>现代微处理器架构</title>
-    <link href="https://zongwuwang.github.io/2021/11/27/xian-dai-wei-chu-li-qi-jia-gou/"/>
-    <id>https://zongwuwang.github.io/2021/11/27/xian-dai-wei-chu-li-qi-jia-gou/</id>
-    <published>2021-11-27T10:55:52.000Z</published>
-    <updated>2021-11-30T13:07:56.685Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    <category term="微处理器" scheme="https://zongwuwang.github.io/tags/%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8/"/>
     
   </entry>
   
