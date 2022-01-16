@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2022-01-12T12:44:40.320Z</updated>
+  <updated>2022-01-16T17:29:42.664Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自己动手写CPU</title>
+    <link href="https://zongwuwang.github.io/2022/01/17/zi-ji-dong-shou-xie-cpu/"/>
+    <id>https://zongwuwang.github.io/2022/01/17/zi-ji-dong-shou-xie-cpu/</id>
+    <published>2022-01-16T16:35:14.000Z</published>
+    <updated>2022-01-16T17:29:42.664Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>进程地址空间分析</title>
@@ -383,29 +398,6 @@
     <category term="缓存连贯性" scheme="https://zongwuwang.github.io/tags/%E7%BC%93%E5%AD%98%E8%BF%9E%E8%B4%AF%E6%80%A7/"/>
     
     <category term="待填坑" scheme="https://zongwuwang.github.io/tags/%E5%BE%85%E5%A1%AB%E5%9D%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>gem5 CPU 模型</title>
-    <link href="https://zongwuwang.github.io/2021/11/29/gem5-cpu-mo-xing/"/>
-    <id>https://zongwuwang.github.io/2021/11/29/gem5-cpu-mo-xing/</id>
-    <published>2021-11-28T16:12:54.000Z</published>
-    <updated>2021-12-05T07:32:26.841Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    <category term="gem5" scheme="https://zongwuwang.github.io/tags/gem5/"/>
-    
-    <category term="CPU模型" scheme="https://zongwuwang.github.io/tags/CPU%E6%A8%A1%E5%9E%8B/"/>
     
   </entry>
   
