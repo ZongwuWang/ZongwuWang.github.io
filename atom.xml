@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2022-01-17T01:02:46.484Z</updated>
+  <updated>2022-01-21T18:45:30.991Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VSCode vim keybindings configuration</title>
+    <link href="https://zongwuwang.github.io/2022/01/19/vscode-vim-keybindings-configuration/"/>
+    <id>https://zongwuwang.github.io/2022/01/19/vscode-vim-keybindings-configuration/</id>
+    <published>2022-01-18T17:54:33.000Z</published>
+    <updated>2022-01-21T18:45:30.991Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>自己动手写CPU</title>
@@ -373,31 +388,6 @@
     <category term="pdb" scheme="https://zongwuwang.github.io/tags/pdb/"/>
     
     <category term="调试" scheme="https://zongwuwang.github.io/tags/%E8%B0%83%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>内存一致性和缓存连贯性入门</title>
-    <link href="https://zongwuwang.github.io/2021/11/29/nei-cun-yi-zhi-xing-he-huan-cun-lian-guan-xing-ru-men/"/>
-    <id>https://zongwuwang.github.io/2021/11/29/nei-cun-yi-zhi-xing-he-huan-cun-lian-guan-xing-ru-men/</id>
-    <published>2021-11-29T15:44:05.000Z</published>
-    <updated>2022-01-02T18:44:07.741Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    <category term="内存一致性" scheme="https://zongwuwang.github.io/tags/%E5%86%85%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/"/>
-    
-    <category term="缓存连贯性" scheme="https://zongwuwang.github.io/tags/%E7%BC%93%E5%AD%98%E8%BF%9E%E8%B4%AF%E6%80%A7/"/>
-    
-    <category term="待填坑" scheme="https://zongwuwang.github.io/tags/%E5%BE%85%E5%A1%AB%E5%9D%91/"/>
     
   </entry>
   
