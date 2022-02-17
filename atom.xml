@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2022-02-16T13:14:47.670Z</updated>
+  <updated>2022-02-17T03:30:20.115Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PIMSim</title>
+    <link href="https://zongwuwang.github.io/2022/02/16/pimsim/"/>
+    <id>https://zongwuwang.github.io/2022/02/16/pimsim/</id>
+    <published>2022-02-16T13:57:44.000Z</published>
+    <updated>2022-02-17T03:30:20.115Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Questions about flags and CC registers for x86</title>
+    <link href="https://zongwuwang.github.io/2022/02/16/questions-about-flags-and-cc-registers-for-x86/"/>
+    <id>https://zongwuwang.github.io/2022/02/16/questions-about-flags-and-cc-registers-for-x86/</id>
+    <published>2022-02-16T13:31:50.000Z</published>
+    <updated>2022-02-16T13:32:47.842Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="gem5" scheme="https://zongwuwang.github.io/categories/gem5/"/>
+    
+    
+    <category term="gem5" scheme="https://zongwuwang.github.io/tags/gem5/"/>
+    
+    <category term="register" scheme="https://zongwuwang.github.io/tags/register/"/>
+    
+    <category term="x86" scheme="https://zongwuwang.github.io/tags/x86/"/>
+    
+  </entry>
   
   <entry>
     <title>Intel CPU 地址空间总结</title>
@@ -349,44 +387,6 @@
     <category term="MESI" scheme="https://zongwuwang.github.io/tags/MESI/"/>
     
     <category term="Snoop" scheme="https://zongwuwang.github.io/tags/Snoop/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iPIM: Programmable In-Memory Image Processing Accelerator Using Near-Bank Architecture</title>
-    <link href="https://zongwuwang.github.io/2021/12/09/ipim-programmable-in-memory-image-processing-accelerator-using-near-bank-architecture/"/>
-    <id>https://zongwuwang.github.io/2021/12/09/ipim-programmable-in-memory-image-processing-accelerator-using-near-bank-architecture/</id>
-    <published>2021-12-09T14:27:31.000Z</published>
-    <updated>2021-12-09T14:28:23.910Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>cadence导入和导出版图gds文件</title>
-    <link href="https://zongwuwang.github.io/2021/12/09/cadence-dao-ru-he-dao-chu-ban-tu-gds-wen-jian/"/>
-    <id>https://zongwuwang.github.io/2021/12/09/cadence-dao-ru-he-dao-chu-ban-tu-gds-wen-jian/</id>
-    <published>2021-12-09T13:07:03.000Z</published>
-    <updated>2021-12-09T13:37:23.522Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="IC设计" scheme="https://zongwuwang.github.io/categories/IC%E8%AE%BE%E8%AE%A1/"/>
-    
-    
-    <category term="cadence" scheme="https://zongwuwang.github.io/tags/cadence/"/>
-    
-    <category term="layout" scheme="https://zongwuwang.github.io/tags/layout/"/>
-    
-    <category term="gds" scheme="https://zongwuwang.github.io/tags/gds/"/>
     
   </entry>
   
