@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2022-02-18T01:52:10.445Z</updated>
+  <updated>2022-02-18T09:19:04.454Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Memory Barrier Introduction</title>
+    <link href="https://zongwuwang.github.io/2022/02/18/memory-barrier-introduction/"/>
+    <id>https://zongwuwang.github.io/2022/02/18/memory-barrier-introduction/</id>
+    <published>2022-02-18T09:12:59.000Z</published>
+    <updated>2022-02-18T09:19:04.454Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Ubuntu安装多版本gcc与update-alternatives版本切换命令</title>
@@ -354,31 +369,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>Adding custom instruction to Aarch64 ISA and running it on gem5</title>
-    <link href="https://zongwuwang.github.io/2021/12/16/adding-custom-instruction-to-aarch64-isa-and-running-it-on-gem5/"/>
-    <id>https://zongwuwang.github.io/2021/12/16/adding-custom-instruction-to-aarch64-isa-and-running-it-on-gem5/</id>
-    <published>2021-12-16T08:08:46.000Z</published>
-    <updated>2021-12-16T12:25:42.988Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系结构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
-    
-    
-    <category term="gem5" scheme="https://zongwuwang.github.io/tags/gem5/"/>
-    
-    <category term="指令扩展" scheme="https://zongwuwang.github.io/tags/%E6%8C%87%E4%BB%A4%E6%89%A9%E5%B1%95/"/>
-    
-    <category term="Aarch64" scheme="https://zongwuwang.github.io/tags/Aarch64/"/>
-    
-    <category term="ARM-v8" scheme="https://zongwuwang.github.io/tags/ARM-v8/"/>
     
   </entry>
   

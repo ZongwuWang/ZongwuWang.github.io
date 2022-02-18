@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Memory Barrier Introduction</title>
+      <link href="/2022/02/18/memory-barrier-introduction/"/>
+      <url>/2022/02/18/memory-barrier-introduction/</url>
+      
+        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="7f3404e241eb2cce9be94d301c77398917eb2e65e7a931e3dc37ab63162bcb9d">48d53d02cc724fef4e645fe6556ae2fc56db60206aff9f44dc38f4d950f102763fcd36a5805b369a45e6452896fc80b839dcb40e8a8f7325ad186c5620ee046ccc67eb77cc15e421234460407ba735e3ccac85ae6d2c3676a0f6283cffe4f49e4e984095a3fe16533e1e18fd926f373a19756a76a98e29e1757b7738938f549c10bb74cb6389bb67f348cce6128c48201ba9d3647ee788017f09ed36f9778d94f73a0c5a66c2ec7ef6481c5a4c1be07bd6a697b608a314a7c7ebfe8b6f057b8b33d62dc33898b4433dcddc3f51fde4d3b40d0290edc223446550a3de2961a8937204435a9f7c3e006eae1b6633041be55428bd067fce9eb0f0913aae4fbaa80da8bd590cca7c11faf0aa38ec6cd317015bbf7b845309c71e6f89dae9ec6b77f14f443116aaefc4f1701ef8dafed187d1d6154e7f021d79be3ce5b92fe13d17c8ab3e2ee41599ac8730c20c89d7d72248c854757207482943c6e103f93831c332fd8d4560d64a2c7b27eaefe8e10e6e93036a1868ebe704d3640f4d9b2c7c00394632b03a4d60b66003a292f76a70af0b2b227d6016d5332a8b76397f22d85c0ebadeb57a15602e9d156f19182c7d04b6fe5bb1f5cc719428af1870a915c739a16e6fb5bcc41cc49da33a8f9a0790e87be22c11af942dbf2b4bc7a1abf1050f6458903ad02af064e751fe32da8e64a958e3a1e3c2c9c38369f71d4831db5a23275441c3e4e9e021a77c47a0c87f084f9b650cd36bf3c594d56172f7572db400b345d96a5670cdd13c3af43b49150de75f932c7f2b30ad2a59963cc8f03edde02784c7946e673635c3ff2e968a28d4ab504e3f68c587c6a1f75efd5adfa16cc99c3e3b14105c64b0f790bccf24d3eae52db542001a366b2c860fb2046b861437546c97d70fd6495f8634d8d268100e49a2bebd89ca8eb09bb54e882bc9e0b90d6ed99466f7c91247e24106ed52809179afa9f08cedbbdda623ab3167fe423c0e45a8d8cb680742c36e828a89a550fb93fb598b1ed3a24403b906619ffd3188ea069eafa646a9a38361b439f6221c8b784923d6477f65902b5e1e1f401988d5c567c70232aa0de021322589f1a9ccc721b2b472c0b2e78fdbad45acb5fa7b5cc7a9ddc9b383c51cd365acb9dfd2300807586a37e54e9214ad0c35d5f7358ef65d8efd50e87ea01dfb29257893ba63850357431c2363e6099e41b170324c2fcf51e72a44af8cb2c82454e7c6f251053b22543c7d43dd622bba16aa79d71aa87081dbb34969a601c034f2669ac4b8b7ed3fd975341b20af54bfe4c20a905dc0157e53e4e1d3bbe9d077c792cf05edd6b460c07484bd3858f6fdb63f2a04b7aafa73d137b9d58cb8822266741e00415a14babd87829c1a6d023afb539f0308a737788a</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Welcome to my blog, enter password to read.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Ubuntu安装多版本gcc与update-alternatives版本切换命令</title>
       <link href="/2022/02/18/ubuntu-an-zhuang-duo-ban-ben-gcc-yu-update-alternatives-ban-ben-qie-huan-ming-ling/"/>
       <url>/2022/02/18/ubuntu-an-zhuang-duo-ban-ben-gcc-yu-update-alternatives-ban-ben-qie-huan-ming-ling/</url>
