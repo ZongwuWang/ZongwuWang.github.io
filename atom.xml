@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2022-02-20T06:30:58.247Z</updated>
+  <updated>2022-02-20T07:01:27.761Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,51 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Arm A64 Instruction Set Architecture 解读</title>
+    <link href="https://zongwuwang.github.io/2022/02/20/arm-a64-instruction-set-architecture-jie-du/"/>
+    <id>https://zongwuwang.github.io/2022/02/20/arm-a64-instruction-set-architecture-jie-du/</id>
+    <published>2022-02-20T06:59:30.000Z</published>
+    <updated>2022-02-20T07:01:27.761Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown 语法高亮的常用语言关键字</title>
+    <link href="https://zongwuwang.github.io/2022/02/20/markdown-yu-fa-gao-liang-de-chang-yong-yu-yan-guan-jian-zi/"/>
+    <id>https://zongwuwang.github.io/2022/02/20/markdown-yu-fa-gao-liang-de-chang-yong-yu-yan-guan-jian-zi/</id>
+    <published>2022-02-20T06:52:11.000Z</published>
+    <updated>2022-02-20T06:53:41.844Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ARM中C语言和汇编语言的混合编程</title>
+    <link href="https://zongwuwang.github.io/2022/02/20/arm-zhong-c-yu-yan-he-hui-bian-yu-yan-de-hun-he-bian-cheng/"/>
+    <id>https://zongwuwang.github.io/2022/02/20/arm-zhong-c-yu-yan-he-hui-bian-yu-yan-de-hun-he-bian-cheng/</id>
+    <published>2022-02-20T06:43:18.000Z</published>
+    <updated>2022-02-20T06:59:59.913Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>C++ 中的 volatile，atomic 及 memory barrier</title>
@@ -328,59 +373,6 @@
     
     
     <category term="并行计算" scheme="https://zongwuwang.github.io/tags/%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Why Domain-Specific Dataflow Processing Is the Only Way Forward</title>
-    <link href="https://zongwuwang.github.io/2022/01/01/why-domain-specific-dataflow-processing-is-the-only-way-forward/"/>
-    <id>https://zongwuwang.github.io/2022/01/01/why-domain-specific-dataflow-processing-is-the-only-way-forward/</id>
-    <published>2021-12-31T18:11:35.000Z</published>
-    <updated>2021-12-31T18:36:52.643Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="DSA" scheme="https://zongwuwang.github.io/tags/DSA/"/>
-    
-    <category term="Dataflow Processing" scheme="https://zongwuwang.github.io/tags/Dataflow-Processing/"/>
-    
-    <category term="Architecture Trend" scheme="https://zongwuwang.github.io/tags/Architecture-Trend/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cuckoo Hash布谷鸟哈希</title>
-    <link href="https://zongwuwang.github.io/2021/12/29/cuckoo-hash-bu-gu-niao-ha-xi/"/>
-    <id>https://zongwuwang.github.io/2021/12/29/cuckoo-hash-bu-gu-niao-ha-xi/</id>
-    <published>2021-12-29T13:03:47.000Z</published>
-    <updated>2021-12-29T13:11:42.113Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>布隆过滤器</title>
-    <link href="https://zongwuwang.github.io/2021/12/29/bu-long-guo-lu-qi/"/>
-    <id>https://zongwuwang.github.io/2021/12/29/bu-long-guo-lu-qi/</id>
-    <published>2021-12-29T12:42:46.000Z</published>
-    <updated>2021-12-29T13:11:13.321Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
     
   </entry>
   
