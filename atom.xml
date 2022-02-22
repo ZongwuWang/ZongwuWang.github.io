@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2022-02-22T09:22:07.586Z</updated>
+  <updated>2022-02-22T14:03:33.446Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IRAM</title>
+    <link href="https://zongwuwang.github.io/2022/02/22/iram/"/>
+    <id>https://zongwuwang.github.io/2022/02/22/iram/</id>
+    <published>2022-02-22T12:26:03.000Z</published>
+    <updated>2022-02-22T14:03:33.446Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>git常用命令</title>
@@ -348,21 +363,6 @@
     <id>https://zongwuwang.github.io/2022/01/12/jin-cheng-di-zhi-kong-jian-fen-xi/</id>
     <published>2022-01-12T09:25:07.000Z</published>
     <updated>2022-01-12T12:44:40.320Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>An Energy Efficient 32-nm 20-MB Shared On-Die L3 Cache for Intel® Xeon® Processor E5 Family</title>
-    <link href="https://zongwuwang.github.io/2022/01/09/an-energy-efficient-32-nm-20-mb-shared-on-die-l3-cache-for-intel-r-xeon-r-processor-e5-family/"/>
-    <id>https://zongwuwang.github.io/2022/01/09/an-energy-efficient-32-nm-20-mb-shared-on-die-l3-cache-for-intel-r-xeon-r-processor-e5-family/</id>
-    <published>2022-01-08T16:18:45.000Z</published>
-    <updated>2022-01-08T16:21:24.132Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
