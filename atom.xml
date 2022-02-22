@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2022-02-20T07:01:27.761Z</updated>
+  <updated>2022-02-22T09:22:07.586Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git常用命令</title>
+    <link href="https://zongwuwang.github.io/2022/02/22/git-chang-yong-ming-ling/"/>
+    <id>https://zongwuwang.github.io/2022/02/22/git-chang-yong-ming-ling/</id>
+    <published>2022-02-22T07:35:11.000Z</published>
+    <updated>2022-02-22T09:22:07.586Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Rocket-Chip学习</title>
+    <link href="https://zongwuwang.github.io/2022/02/22/rocket-chip-xue-xi/"/>
+    <id>https://zongwuwang.github.io/2022/02/22/rocket-chip-xue-xi/</id>
+    <published>2022-02-22T04:20:03.000Z</published>
+    <updated>2022-02-22T05:47:47.842Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Arm A64 Instruction Set Architecture 解读</title>
@@ -339,40 +369,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>google-profile user guide</title>
-    <link href="https://zongwuwang.github.io/2022/01/07/google-profile-user-guide/"/>
-    <id>https://zongwuwang.github.io/2022/01/07/google-profile-user-guide/</id>
-    <published>2022-01-07T09:47:49.000Z</published>
-    <updated>2022-01-07T10:32:33.924Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Introduction to Parallel Computing Tutorial</title>
-    <link href="https://zongwuwang.github.io/2022/01/02/introduction-to-parallel-computing-tutorial/"/>
-    <id>https://zongwuwang.github.io/2022/01/02/introduction-to-parallel-computing-tutorial/</id>
-    <published>2022-01-01T17:19:47.000Z</published>
-    <updated>2022-01-01T17:42:19.728Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="并行计算" scheme="https://zongwuwang.github.io/categories/%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97/"/>
-    
-    
-    <category term="并行计算" scheme="https://zongwuwang.github.io/tags/%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97/"/>
     
   </entry>
   
