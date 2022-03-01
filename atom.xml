@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2022-02-26T06:20:16.292Z</updated>
+  <updated>2022-03-01T14:21:31.522Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Intel系统编程指南第八章——8.3 串行化指令</title>
+    <link href="https://zongwuwang.github.io/2022/03/01/intel-xi-tong-bian-cheng-zhi-nan-di-ba-zhang-8-3-chuan-xing-hua-zhi-ling/"/>
+    <id>https://zongwuwang.github.io/2022/03/01/intel-xi-tong-bian-cheng-zhi-nan-di-ba-zhang-8-3-chuan-xing-hua-zhi-ling/</id>
+    <published>2022-03-01T14:17:48.000Z</published>
+    <updated>2022-03-01T14:21:31.522Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>riscv标准指令集和扩展指令集对应的opcode、funct3、funct7等的值（I/M/A/F/D等等）</title>
+    <link href="https://zongwuwang.github.io/2022/03/01/riscv-biao-zhun-zhi-ling-ji-he-kuo-zhan-zhi-ling-ji-dui-ying-de-opcode-funct3-funct7-deng-de-zhi-i-m-a-f-d-deng-deng/"/>
+    <id>https://zongwuwang.github.io/2022/03/01/riscv-biao-zhun-zhi-ling-ji-he-kuo-zhan-zhi-ling-ji-dui-ying-de-opcode-funct3-funct7-deng-de-zhi-i-m-a-f-d-deng-deng/</id>
+    <published>2022-03-01T10:36:49.000Z</published>
+    <updated>2022-03-01T10:55:24.875Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>ARM架构版本及处理器系列详细介绍</title>
@@ -333,36 +363,6 @@
     <id>https://zongwuwang.github.io/2022/02/16/alpha-21264-jie-shao/</id>
     <published>2022-02-16T02:27:57.000Z</published>
     <updated>2022-02-16T02:28:57.229Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>VSCode vim keybindings configuration</title>
-    <link href="https://zongwuwang.github.io/2022/01/19/vscode-vim-keybindings-configuration/"/>
-    <id>https://zongwuwang.github.io/2022/01/19/vscode-vim-keybindings-configuration/</id>
-    <published>2022-01-18T17:54:33.000Z</published>
-    <updated>2022-01-21T18:45:30.991Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>自己动手写CPU</title>
-    <link href="https://zongwuwang.github.io/2022/01/17/zi-ji-dong-shou-xie-cpu/"/>
-    <id>https://zongwuwang.github.io/2022/01/17/zi-ji-dong-shou-xie-cpu/</id>
-    <published>2022-01-16T16:35:14.000Z</published>
-    <updated>2022-01-17T01:02:46.484Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
