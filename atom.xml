@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2022-03-01T14:21:31.522Z</updated>
+  <updated>2022-03-02T06:10:26.034Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Analysis of gem5 Memory System</title>
+    <link href="https://zongwuwang.github.io/2022/03/02/analysis-of-gem5-memory-system/"/>
+    <id>https://zongwuwang.github.io/2022/03/02/analysis-of-gem5-memory-system/</id>
+    <published>2022-03-02T05:18:41.000Z</published>
+    <updated>2022-03-02T06:10:26.034Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="gem5" scheme="https://zongwuwang.github.io/tags/gem5/"/>
+    
+    <category term="Memory" scheme="https://zongwuwang.github.io/tags/Memory/"/>
+    
+    <category term="Simulator" scheme="https://zongwuwang.github.io/tags/Simulator/"/>
+    
+    <category term="Simulation" scheme="https://zongwuwang.github.io/tags/Simulation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Analysis of gem5 O3CPU Compute Instructions</title>
+    <link href="https://zongwuwang.github.io/2022/03/02/analysis-of-gem5-o3cpu-compute-instructions/"/>
+    <id>https://zongwuwang.github.io/2022/03/02/analysis-of-gem5-o3cpu-compute-instructions/</id>
+    <published>2022-03-02T01:34:57.000Z</published>
+    <updated>2022-03-02T01:44:27.565Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Intel系统编程指南第八章——8.3 串行化指令</title>
@@ -323,52 +363,6 @@
     <category term="内存" scheme="https://zongwuwang.github.io/tags/%E5%86%85%E5%AD%98/"/>
     
     <category term="地址空间" scheme="https://zongwuwang.github.io/tags/%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用好你的内存之SPD</title>
-    <link href="https://zongwuwang.github.io/2022/02/16/yong-hao-ni-de-nei-cun-zhi-spd/"/>
-    <id>https://zongwuwang.github.io/2022/02/16/yong-hao-ni-de-nei-cun-zhi-spd/</id>
-    <published>2022-02-16T12:51:07.000Z</published>
-    <updated>2022-02-16T13:01:54.408Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;用好你的内存之SPD&quot;&gt;&lt;a href=&quot;#用好你的内存之SPD&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="计算机硬件" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6/"/>
-    
-    
-    <category term="内存" scheme="https://zongwuwang.github.io/tags/%E5%86%85%E5%AD%98/"/>
-    
-    <category term="BIOS" scheme="https://zongwuwang.github.io/tags/BIOS/"/>
-    
-    <category term="DRAM" scheme="https://zongwuwang.github.io/tags/DRAM/"/>
-    
-    <category term="SPD" scheme="https://zongwuwang.github.io/tags/SPD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Alpha 21264 介绍</title>
-    <link href="https://zongwuwang.github.io/2022/02/16/alpha-21264-jie-shao/"/>
-    <id>https://zongwuwang.github.io/2022/02/16/alpha-21264-jie-shao/</id>
-    <published>2022-02-16T02:27:57.000Z</published>
-    <updated>2022-02-16T02:28:57.229Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
     
   </entry>
   
