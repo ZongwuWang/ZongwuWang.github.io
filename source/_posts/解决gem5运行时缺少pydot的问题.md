@@ -1,7 +1,11 @@
 ---
-title: 解决gem5运行时缺少pydot的问题.md
-date: 2021-08-01 22:50:02
+title: 解决gem5运行时缺少pydot的问题
+date: 2021-08-03 14:10:54
 tags:
+- 系统环境
+- gem5
+- pydot
+categories: 系统环境
 ---
 
 # 解决gem5运行时缺少pydot的问题
@@ -14,11 +18,11 @@ tags:
 
 在网上搜索博客，基本上都是如下的[解决方案](https://blog.csdn.net/mjl960108/article/details/79981794)：
 
-> sudo apt install python-pydot python-pydot-ng graphviz 
+> sudo apt install python-pydot python-pydot-ng graphviz
 
 但是运行时会事与愿违：
 
-> root@9187b8755600:~/gem5/m5out# apt install python-pydot python-pydot-ng graphviz 
+> root@9187b8755600:~/gem5/m5out# apt install python-pydot python-pydot-ng graphviz
 > Reading package lists... Done
 > Building dependency tree
 > Reading state information... Done
@@ -37,3 +41,4 @@ tags:
 > python3 setup.py install (for python3.8)
 
 完美解决！！！
+

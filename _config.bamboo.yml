@@ -68,7 +68,7 @@ swiper:
   defaultVideo: '' # video，min-width:992px show
   defaultVideoLoadingImg: 'https://img14.360buyimg.com/ddimg/jfs/t1/150557/6/19578/249564/60320406Ed5c42418/0d18299f505e4268.gif' # video loading img -- use .gif img, 视频预加载动画，使用gif图片作为loading，为空则视频没有预加载动画
   defaultTile: '青墨书晚风' # 标题
-  defaultDesc: '虚负凌云壮志才，一生襟抱未曾开' #描 述，例如 ['煮酒洗净尘嚣，论知交', '万般付之一笑，共偕老']
+  defaultDesc: ['煮酒洗净尘嚣，论知交', '万般付之一笑，共偕老'] #'虚负凌云壮志才，一生襟抱未曾开' #描 述，例如 ['煮酒洗净尘嚣，论知交', '万般付之一笑，共偕老']
   # defaultLeftBtnText: '阅读文档' # 左边按钮文字, 空字符串则不显示
   defaultLeftBtnText: '' # 左边按钮文字, 空字符串则不显示
   defaultLeftBtnLink: 'https://yuang01.gitee.io/2021/02/08/hexo-theme-bamboo-new/' # 左边按钮链接 

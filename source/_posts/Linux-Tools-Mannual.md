@@ -1,7 +1,8 @@
 ---
 title: Linux Tools Mannual
 date: 2021-07-22 13:47:27
-tags:
+tags: 系统环境
+categories: 系统环境
 ---
 # Linux 常用工具使用命令速查表
 

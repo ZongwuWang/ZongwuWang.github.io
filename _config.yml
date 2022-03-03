@@ -3,17 +3,20 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: SJTU-ACA-WZW
 subtitle: ''
-description: ''
+description: 'Academic life record in SJTU'
 keywords:
-author: John Doe
-language: en
+author: Zongwu Wang
+language: zh-CN
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://zongwuwang.github.io/
+# url: https://github.com/ZongwuWang/ZongwuWang.github.io
+# url: http://example.com
+# root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -42,11 +45,9 @@ filename_case: 0
 render_drafts: false
 #post_asset_folder: false
 post_asset_folder: true
-#filter_image:
-#    log: true
-#marked:
-#    prependRoot: true
-#    postAssert: true
+# marked:
+#     prependRoot: true
+#     postAssert: true
 relative_link: false
 future: true
 highlight:
@@ -103,17 +104,41 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-#theme: landscape
+# theme: landscape
 theme: hexo-theme-bamboo
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/ZongwuWang/ZongwuWang.github.io.git
+  #repo: https://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@github.com/ZongwuWang/ZongwuWang.github.io.git
+  #repo: https://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@github.com/ZongwuWang/ZongwuWang.github.io.git
+  repo: https://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@github.com/ZongwuWang/ZongwuWang.github.io.git
+
   #repo: git@github.com:ZongwuWang/ZongwuWang.github.io.git
   branch: main
 
+# 使用 hexo-generator-search 的 Hexo 插件来做内容搜索
 search:
     path: search.xml
     field: post
+
+# 中文链接转拼音
+permalink_pinyin:
+  enable: true
+  separator: '-' # default: '-'
+
+# 添加 RSS 订阅支持
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+
+# Security
+##
+encrypt:
+    enable: true

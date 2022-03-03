@@ -1,7 +1,10 @@
 ---
 title: (转)Types of Memory Interleaving
 date: 2021-07-30 13:38:47
-tags: 计算机体系架构
+tags: 
+- 计算机体系架构
+- Memory
+categories: 计算机体系架构
 ---
 
 # (转)Types of Memory Interleaving
