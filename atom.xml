@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2022-03-03T10:04:23.071Z</updated>
+  <updated>2022-03-06T07:46:08.861Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -17,14 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Ubuntu 20.04安装gcc-12</title>
+    <link href="https://zongwuwang.github.io/2022/03/06/ubuntu-20-04-an-zhuang-gcc-12/"/>
+    <id>https://zongwuwang.github.io/2022/03/06/ubuntu-20-04-an-zhuang-gcc-12/</id>
+    <published>2022-03-06T07:28:31.000Z</published>
+    <updated>2022-03-06T07:46:08.861Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Ubuntu-20-04安装gcc-12&quot;&gt;&lt;a href=&quot;#Ubuntu-20-04安装gcc-12&quot; class=&quot;headerlink&quot; title=&quot;Ubuntu 20.04安装gcc-12&quot;&gt;&lt;/a&gt;Ubuntu</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Analysis of gem5 Memory System</title>
     <link href="https://zongwuwang.github.io/2022/03/02/analysis-of-gem5-memory-system/"/>
     <id>https://zongwuwang.github.io/2022/03/02/analysis-of-gem5-memory-system/</id>
     <published>2022-03-02T05:18:41.000Z</published>
-    <updated>2022-03-03T10:04:23.071Z</updated>
+    <updated>2022-03-03T12:11:28.576Z</updated>
     
     
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Analysis-of-gem5-Memory-System&quot;&gt;&lt;a href=&quot;#Analysis-of-gem5-Memory-System&quot; class=&quot;headerlink&quot; title=&quot;Analysis of gem5 Memory</summary>
+        
+      
     
     
     
@@ -46,7 +73,7 @@
     <link href="https://zongwuwang.github.io/2022/03/02/analysis-of-gem5-o3cpu-compute-instructions/"/>
     <id>https://zongwuwang.github.io/2022/03/02/analysis-of-gem5-o3cpu-compute-instructions/</id>
     <published>2022-03-02T01:34:57.000Z</published>
-    <updated>2022-03-02T01:44:27.565Z</updated>
+    <updated>2022-03-06T07:53:47.027Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -61,7 +88,7 @@
     <link href="https://zongwuwang.github.io/2022/03/01/intel-xi-tong-bian-cheng-zhi-nan-di-ba-zhang-8-3-chuan-xing-hua-zhi-ling/"/>
     <id>https://zongwuwang.github.io/2022/03/01/intel-xi-tong-bian-cheng-zhi-nan-di-ba-zhang-8-3-chuan-xing-hua-zhi-ling/</id>
     <published>2022-03-01T14:17:48.000Z</published>
-    <updated>2022-03-01T14:21:31.522Z</updated>
+    <updated>2022-03-06T07:53:47.199Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -76,7 +103,7 @@
     <link href="https://zongwuwang.github.io/2022/03/01/riscv-biao-zhun-zhi-ling-ji-he-kuo-zhan-zhi-ling-ji-dui-ying-de-opcode-funct3-funct7-deng-de-zhi-i-m-a-f-d-deng-deng/"/>
     <id>https://zongwuwang.github.io/2022/03/01/riscv-biao-zhun-zhi-ling-ji-he-kuo-zhan-zhi-ling-ji-dui-ying-de-opcode-funct3-funct7-deng-de-zhi-i-m-a-f-d-deng-deng/</id>
     <published>2022-03-01T10:36:49.000Z</published>
-    <updated>2022-03-01T10:55:24.875Z</updated>
+    <updated>2022-03-06T07:53:47.331Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -91,7 +118,7 @@
     <link href="https://zongwuwang.github.io/2022/02/26/arm-jia-gou-ban-ben-ji-chu-li-qi-xi-lie-xiang-xi-jie-shao/"/>
     <id>https://zongwuwang.github.io/2022/02/26/arm-jia-gou-ban-ben-ji-chu-li-qi-xi-lie-xiang-xi-jie-shao/</id>
     <published>2022-02-26T05:58:34.000Z</published>
-    <updated>2022-02-26T06:20:16.292Z</updated>
+    <updated>2022-03-06T07:53:47.003Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -106,7 +133,7 @@
     <link href="https://zongwuwang.github.io/2022/02/22/iram/"/>
     <id>https://zongwuwang.github.io/2022/02/22/iram/</id>
     <published>2022-02-22T12:26:03.000Z</published>
-    <updated>2022-02-22T14:03:33.446Z</updated>
+    <updated>2022-03-06T07:53:47.195Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -121,7 +148,7 @@
     <link href="https://zongwuwang.github.io/2022/02/22/git-chang-yong-ming-ling/"/>
     <id>https://zongwuwang.github.io/2022/02/22/git-chang-yong-ming-ling/</id>
     <published>2022-02-22T07:35:11.000Z</published>
-    <updated>2022-02-22T09:22:07.586Z</updated>
+    <updated>2022-03-06T07:53:47.311Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -136,7 +163,7 @@
     <link href="https://zongwuwang.github.io/2022/02/22/rocket-chip-xue-xi/"/>
     <id>https://zongwuwang.github.io/2022/02/22/rocket-chip-xue-xi/</id>
     <published>2022-02-22T04:20:03.000Z</published>
-    <updated>2022-02-22T05:47:47.842Z</updated>
+    <updated>2022-03-06T07:53:47.275Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -151,7 +178,7 @@
     <link href="https://zongwuwang.github.io/2022/02/20/arm-a64-instruction-set-architecture-jie-du/"/>
     <id>https://zongwuwang.github.io/2022/02/20/arm-a64-instruction-set-architecture-jie-du/</id>
     <published>2022-02-20T06:59:30.000Z</published>
-    <updated>2022-02-20T07:01:27.761Z</updated>
+    <updated>2022-03-06T07:53:47.027Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -166,7 +193,7 @@
     <link href="https://zongwuwang.github.io/2022/02/20/markdown-yu-fa-gao-liang-de-chang-yong-yu-yan-guan-jian-zi/"/>
     <id>https://zongwuwang.github.io/2022/02/20/markdown-yu-fa-gao-liang-de-chang-yong-yu-yan-guan-jian-zi/</id>
     <published>2022-02-20T06:52:11.000Z</published>
-    <updated>2022-02-20T06:53:41.844Z</updated>
+    <updated>2022-03-06T07:53:47.243Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -181,7 +208,7 @@
     <link href="https://zongwuwang.github.io/2022/02/20/arm-zhong-c-yu-yan-he-hui-bian-yu-yan-de-hun-he-bian-cheng/"/>
     <id>https://zongwuwang.github.io/2022/02/20/arm-zhong-c-yu-yan-he-hui-bian-yu-yan-de-hun-he-bian-cheng/</id>
     <published>2022-02-20T06:43:18.000Z</published>
-    <updated>2022-02-20T06:59:59.913Z</updated>
+    <updated>2022-03-06T07:53:46.999Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -196,7 +223,7 @@
     <link href="https://zongwuwang.github.io/2022/02/20/c-zhong-de-volatile-atomic-ji-memory-barrier/"/>
     <id>https://zongwuwang.github.io/2022/02/20/c-zhong-de-volatile-atomic-ji-memory-barrier/</id>
     <published>2022-02-20T06:19:06.000Z</published>
-    <updated>2022-02-20T06:30:58.247Z</updated>
+    <updated>2022-03-06T07:53:47.067Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -221,7 +248,7 @@
     <link href="https://zongwuwang.github.io/2022/02/20/armv8-a-nei-cun-xi-tong/"/>
     <id>https://zongwuwang.github.io/2022/02/20/armv8-a-nei-cun-xi-tong/</id>
     <published>2022-02-20T05:47:32.000Z</published>
-    <updated>2022-02-20T06:20:13.701Z</updated>
+    <updated>2022-03-06T07:53:46.995Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -244,7 +271,7 @@
     <link href="https://zongwuwang.github.io/2022/02/20/pei/"/>
     <id>https://zongwuwang.github.io/2022/02/20/pei/</id>
     <published>2022-02-19T16:44:55.000Z</published>
-    <updated>2022-02-19T16:44:55.300Z</updated>
+    <updated>2022-03-06T07:53:47.247Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -259,7 +286,7 @@
     <link href="https://zongwuwang.github.io/2022/02/19/impica/"/>
     <id>https://zongwuwang.github.io/2022/02/19/impica/</id>
     <published>2022-02-19T01:05:43.000Z</published>
-    <updated>2022-02-19T05:11:51.882Z</updated>
+    <updated>2022-03-06T07:53:47.195Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -274,7 +301,7 @@
     <link href="https://zongwuwang.github.io/2022/02/18/memory-barrier-introduction/"/>
     <id>https://zongwuwang.github.io/2022/02/18/memory-barrier-introduction/</id>
     <published>2022-02-18T09:12:59.000Z</published>
-    <updated>2022-02-18T09:19:04.454Z</updated>
+    <updated>2022-03-06T07:53:47.243Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -289,7 +316,7 @@
     <link href="https://zongwuwang.github.io/2022/02/18/ubuntu-an-zhuang-duo-ban-ben-gcc-yu-update-alternatives-ban-ben-qie-huan-ming-ling/"/>
     <id>https://zongwuwang.github.io/2022/02/18/ubuntu-an-zhuang-duo-ban-ben-gcc-yu-update-alternatives-ban-ben-qie-huan-ming-ling/</id>
     <published>2022-02-18T00:50:27.000Z</published>
-    <updated>2022-02-18T01:52:10.445Z</updated>
+    <updated>2022-03-06T07:53:47.279Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -304,7 +331,7 @@
     <link href="https://zongwuwang.github.io/2022/02/16/pimsim/"/>
     <id>https://zongwuwang.github.io/2022/02/16/pimsim/</id>
     <published>2022-02-16T13:57:44.000Z</published>
-    <updated>2022-02-19T01:23:28.869Z</updated>
+    <updated>2022-03-06T07:53:47.247Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -319,7 +346,7 @@
     <link href="https://zongwuwang.github.io/2022/02/16/questions-about-flags-and-cc-registers-for-x86/"/>
     <id>https://zongwuwang.github.io/2022/02/16/questions-about-flags-and-cc-registers-for-x86/</id>
     <published>2022-02-16T13:31:50.000Z</published>
-    <updated>2022-02-16T13:32:47.842Z</updated>
+    <updated>2022-03-06T07:53:47.251Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -334,35 +361,6 @@
     <category term="register" scheme="https://zongwuwang.github.io/tags/register/"/>
     
     <category term="x86" scheme="https://zongwuwang.github.io/tags/x86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Intel CPU 地址空间总结</title>
-    <link href="https://zongwuwang.github.io/2022/02/16/intel-cpu-di-zhi-kong-jian-zong-jie/"/>
-    <id>https://zongwuwang.github.io/2022/02/16/intel-cpu-di-zhi-kong-jian-zong-jie/</id>
-    <published>2022-02-16T13:02:39.000Z</published>
-    <updated>2022-02-16T13:14:47.670Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Intel-CPU-地址空间总结&quot;&gt;&lt;a href=&quot;#Intel-CPU-地址空间总结&quot; class=&quot;headerlink&quot; title=&quot;Intel CPU 地址空间总结&quot;&gt;&lt;/a&gt;Intel CPU 地址空间总结&lt;/h1&gt;&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="Intel" scheme="https://zongwuwang.github.io/tags/Intel/"/>
-    
-    <category term="内存" scheme="https://zongwuwang.github.io/tags/%E5%86%85%E5%AD%98/"/>
-    
-    <category term="地址空间" scheme="https://zongwuwang.github.io/tags/%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4/"/>
     
   </entry>
   
