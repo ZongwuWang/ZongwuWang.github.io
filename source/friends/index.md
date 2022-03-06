@@ -1,13 +1,3 @@
-<!--
- * @Author: Wang Zongwu
- * @Date: 2021-11-26 14:41:29
- * @LastEditTime: 2022-03-01 13:58:15
- * @LastEditors: Wang Zongwu
- * @Description: 
- * @FilePath: /gem5/root/Blog/source/friends/index.md
- * @Mail: wangzongwu@sjtu.edu.cn
- * Please ask for permission before quote the code.
--->
 ---
 title: friends
 date: 2021-08-27 01:57:22
