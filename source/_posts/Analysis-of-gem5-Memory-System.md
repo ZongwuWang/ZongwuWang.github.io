@@ -12,8 +12,6 @@ tags:
 categories: 计算机体系架构
 ---
 
-# Analysis of gem5 Memory System
-
 ## 1. Memory System
 
 M5 的新内存系统（在第一个 2.0 beta 版本中引入）的设计目标如下：
