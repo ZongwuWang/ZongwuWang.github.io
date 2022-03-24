@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2022-03-21T16:46:08.697Z</updated>
+  <updated>2022-03-24T15:33:10.867Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -17,11 +17,26 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Cache Coherence Overview</title>
+    <link href="https://zongwuwang.github.io/2022/03/24/cache-coherence-overview/"/>
+    <id>https://zongwuwang.github.io/2022/03/24/cache-coherence-overview/</id>
+    <published>2022-03-24T15:10:00.000Z</published>
+    <updated>2022-03-24T15:33:10.867Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Branch Prediction Overview</title>
     <link href="https://zongwuwang.github.io/2022/03/22/branch-prediction-overview/"/>
     <id>https://zongwuwang.github.io/2022/03/22/branch-prediction-overview/</id>
     <published>2022-03-21T16:17:25.000Z</published>
-    <updated>2022-03-21T16:46:08.697Z</updated>
+    <updated>2022-03-22T06:48:57.790Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -372,21 +387,6 @@
     <category term="memory barrier" scheme="https://zongwuwang.github.io/tags/memory-barrier/"/>
     
     <category term="ARM" scheme="https://zongwuwang.github.io/tags/ARM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PEI</title>
-    <link href="https://zongwuwang.github.io/2022/02/20/pei/"/>
-    <id>https://zongwuwang.github.io/2022/02/20/pei/</id>
-    <published>2022-02-19T16:44:55.000Z</published>
-    <updated>2022-03-06T07:53:47.000Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
     
   </entry>
   
