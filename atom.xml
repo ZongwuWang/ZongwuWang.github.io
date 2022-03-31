@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2022-03-25T00:43:25.661Z</updated>
+  <updated>2022-03-31T14:47:45.009Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Makefile中特殊符号</title>
+    <link href="https://zongwuwang.github.io/2022/03/31/makefile-zhong-te-shu-fu-hao/"/>
+    <id>https://zongwuwang.github.io/2022/03/31/makefile-zhong-te-shu-fu-hao/</id>
+    <published>2022-03-31T13:26:03.000Z</published>
+    <updated>2022-03-31T14:47:45.009Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="Makefile" scheme="https://zongwuwang.github.io/tags/Makefile/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Cache Coherence Overview</title>
     <link href="https://zongwuwang.github.io/2022/03/24/cache-coherence-overview/"/>
     <id>https://zongwuwang.github.io/2022/03/24/cache-coherence-overview/</id>
     <published>2022-03-24T15:10:00.000Z</published>
-    <updated>2022-03-25T00:43:25.661Z</updated>
+    <updated>2022-03-25T07:29:01.620Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -364,29 +383,6 @@
     <category term="volatile" scheme="https://zongwuwang.github.io/tags/volatile/"/>
     
     <category term="atomic" scheme="https://zongwuwang.github.io/tags/atomic/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ARMv8-A内存系统</title>
-    <link href="https://zongwuwang.github.io/2022/02/20/armv8-a-nei-cun-xi-tong/"/>
-    <id>https://zongwuwang.github.io/2022/02/20/armv8-a-nei-cun-xi-tong/</id>
-    <published>2022-02-20T05:47:32.000Z</published>
-    <updated>2022-03-06T07:53:46.000Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="内存系统" scheme="https://zongwuwang.github.io/tags/%E5%86%85%E5%AD%98%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="memory barrier" scheme="https://zongwuwang.github.io/tags/memory-barrier/"/>
-    
-    <category term="ARM" scheme="https://zongwuwang.github.io/tags/ARM/"/>
     
   </entry>
   
