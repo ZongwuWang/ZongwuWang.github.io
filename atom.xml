@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2022-05-04T13:23:04.128Z</updated>
+  <updated>2022-05-20T21:25:48.232Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SPEC CPU2006 User Guide</title>
+    <link href="https://zongwuwang.github.io/2022/05/21/spec-cpu2006-user-guide/"/>
+    <id>https://zongwuwang.github.io/2022/05/21/spec-cpu2006-user-guide/</id>
+    <published>2022-05-20T21:18:54.000Z</published>
+    <updated>2022-05-20T21:25:48.232Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="SPEC" scheme="https://zongwuwang.github.io/tags/SPEC/"/>
+    
+    <category term="CPU2006" scheme="https://zongwuwang.github.io/tags/CPU2006/"/>
+    
+    <category term="Benchmark" scheme="https://zongwuwang.github.io/tags/Benchmark/"/>
+    
+  </entry>
   
   <entry>
     <title>Scheduling Techniques for GPU Architectures with Processing-In-Memory Capabilities</title>
@@ -442,25 +465,6 @@
     <category term="ARM" scheme="https://zongwuwang.github.io/tags/ARM/"/>
     
     <category term="ISA" scheme="https://zongwuwang.github.io/tags/ISA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Markdown 语法高亮的常用语言关键字</title>
-    <link href="https://zongwuwang.github.io/2022/02/20/markdown-yu-fa-gao-liang-de-chang-yong-yu-yan-guan-jian-zi/"/>
-    <id>https://zongwuwang.github.io/2022/02/20/markdown-yu-fa-gao-liang-de-chang-yong-yu-yan-guan-jian-zi/</id>
-    <published>2022-02-20T06:52:11.000Z</published>
-    <updated>2022-05-13T17:33:27.555Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="系统环境" scheme="https://zongwuwang.github.io/categories/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
-    
-    
-    <category term="Markdown" scheme="https://zongwuwang.github.io/tags/Markdown/"/>
     
   </entry>
   
