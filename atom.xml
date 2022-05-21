@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2022-05-20T22:43:39.436Z</updated>
+  <updated>2022-05-21T13:09:58.524Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -17,11 +17,55 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>教你如何使用Shell显示脚本使用帮助</title>
+    <link href="https://zongwuwang.github.io/2022/05/21/jiao-ni-ru-he-shi-yong-shell-xian-shi-jiao-ben-shi-yong-bang-zhu/"/>
+    <id>https://zongwuwang.github.io/2022/05/21/jiao-ni-ru-he-shi-yong-shell-xian-shi-jiao-ben-shi-yong-bang-zhu/</id>
+    <published>2022-05-21T13:06:47.000Z</published>
+    <updated>2022-05-21T13:09:58.524Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="Shell" scheme="https://zongwuwang.github.io/tags/Shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>shell exit terminal with exit 1</title>
+    <link href="https://zongwuwang.github.io/2022/05/21/shell-exit-terminal-with-exit-1/"/>
+    <id>https://zongwuwang.github.io/2022/05/21/shell-exit-terminal-with-exit-1/</id>
+    <published>2022-05-21T12:39:27.000Z</published>
+    <updated>2022-05-21T13:07:39.908Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="Linux" scheme="https://zongwuwang.github.io/tags/Linux/"/>
+    
+    <category term="Shell" scheme="https://zongwuwang.github.io/tags/Shell/"/>
+    
+    <category term="Exit" scheme="https://zongwuwang.github.io/tags/Exit/"/>
+    
+    <category term="Terminal" scheme="https://zongwuwang.github.io/tags/Terminal/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SPEC CPU2006 User Guide</title>
     <link href="https://zongwuwang.github.io/2022/05/21/spec-cpu2006-user-guide/"/>
     <id>https://zongwuwang.github.io/2022/05/21/spec-cpu2006-user-guide/</id>
     <published>2022-05-20T21:18:54.000Z</published>
-    <updated>2022-05-20T22:43:39.436Z</updated>
+    <updated>2022-05-21T02:58:33.435Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -423,48 +467,6 @@
     
     
     <category term="git" scheme="https://zongwuwang.github.io/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Rocket-Chip学习</title>
-    <link href="https://zongwuwang.github.io/2022/02/22/rocket-chip-xue-xi/"/>
-    <id>https://zongwuwang.github.io/2022/02/22/rocket-chip-xue-xi/</id>
-    <published>2022-02-22T04:20:03.000Z</published>
-    <updated>2022-05-13T17:35:54.568Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="Rocket" scheme="https://zongwuwang.github.io/tags/Rocket/"/>
-    
-    <category term="RISCV" scheme="https://zongwuwang.github.io/tags/RISCV/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Arm A64 Instruction Set Architecture 解读</title>
-    <link href="https://zongwuwang.github.io/2022/02/20/arm-a64-instruction-set-architecture-jie-du/"/>
-    <id>https://zongwuwang.github.io/2022/02/20/arm-a64-instruction-set-architecture-jie-du/</id>
-    <published>2022-02-20T06:59:30.000Z</published>
-    <updated>2022-05-13T17:24:49.594Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="ARM" scheme="https://zongwuwang.github.io/tags/ARM/"/>
-    
-    <category term="ISA" scheme="https://zongwuwang.github.io/tags/ISA/"/>
     
   </entry>
   
