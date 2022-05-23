@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2022-05-21T13:09:58.524Z</updated>
+  <updated>2022-05-23T13:34:50.156Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Race Logic</title>
+    <link href="https://zongwuwang.github.io/2022/05/23/race-logic/"/>
+    <id>https://zongwuwang.github.io/2022/05/23/race-logic/</id>
+    <published>2022-05-23T03:28:14.000Z</published>
+    <updated>2022-05-23T13:34:50.156Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>教你如何使用Shell显示脚本使用帮助</title>
@@ -448,25 +463,6 @@
     <category term="Paper" scheme="https://zongwuwang.github.io/tags/Paper/"/>
     
     <category term="存算一体" scheme="https://zongwuwang.github.io/tags/%E5%AD%98%E7%AE%97%E4%B8%80%E4%BD%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>git常用命令</title>
-    <link href="https://zongwuwang.github.io/2022/02/22/git-chang-yong-ming-ling/"/>
-    <id>https://zongwuwang.github.io/2022/02/22/git-chang-yong-ming-ling/</id>
-    <published>2022-02-22T07:35:11.000Z</published>
-    <updated>2022-05-13T17:29:07.467Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="系统环境" scheme="https://zongwuwang.github.io/categories/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
-    
-    
-    <category term="git" scheme="https://zongwuwang.github.io/tags/git/"/>
     
   </entry>
   
