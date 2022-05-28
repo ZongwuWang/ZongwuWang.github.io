@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2022-05-23T13:34:50.156Z</updated>
+  <updated>2022-05-28T21:49:36.512Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>lstopo</title>
+    <link href="https://zongwuwang.github.io/2022/05/29/lstopo/"/>
+    <id>https://zongwuwang.github.io/2022/05/29/lstopo/</id>
+    <published>2022-05-28T21:44:27.000Z</published>
+    <updated>2022-05-28T21:49:36.512Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="系统环境" scheme="https://zongwuwang.github.io/categories/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
+    
+    
+    <category term="lstopo" scheme="https://zongwuwang.github.io/tags/lstopo/"/>
+    
+    <category term="cpu信息" scheme="https://zongwuwang.github.io/tags/cpu%E4%BF%A1%E6%81%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>Race Logic</title>
@@ -440,29 +461,6 @@
     <category term="ARM" scheme="https://zongwuwang.github.io/tags/ARM/"/>
     
     <category term="Architecture Trend" scheme="https://zongwuwang.github.io/tags/Architecture-Trend/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IRAM</title>
-    <link href="https://zongwuwang.github.io/2022/02/22/iram/"/>
-    <id>https://zongwuwang.github.io/2022/02/22/iram/</id>
-    <published>2022-02-22T12:26:03.000Z</published>
-    <updated>2022-05-13T17:32:11.903Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="DRAM" scheme="https://zongwuwang.github.io/tags/DRAM/"/>
-    
-    <category term="Paper" scheme="https://zongwuwang.github.io/tags/Paper/"/>
-    
-    <category term="存算一体" scheme="https://zongwuwang.github.io/tags/%E5%AD%98%E7%AE%97%E4%B8%80%E4%BD%93/"/>
     
   </entry>
   
