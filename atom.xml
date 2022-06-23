@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2022-05-28T21:49:36.512Z</updated>
+  <updated>2022-06-21T07:50:49.350Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Tools, Simulators &amp; Benchmarks of Computer Architecture Research</title>
+    <link href="https://zongwuwang.github.io/2022/06/21/tools-simulators-benchmarks-of-computer-architecture-research/"/>
+    <id>https://zongwuwang.github.io/2022/06/21/tools-simulators-benchmarks-of-computer-architecture-research/</id>
+    <published>2022-06-21T07:29:56.000Z</published>
+    <updated>2022-06-21T07:50:49.350Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>lstopo</title>
@@ -440,27 +455,6 @@
     <category term="ISA" scheme="https://zongwuwang.github.io/tags/ISA/"/>
     
     <category term="RISCV" scheme="https://zongwuwang.github.io/tags/RISCV/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ARM架构版本及处理器系列详细介绍</title>
-    <link href="https://zongwuwang.github.io/2022/02/26/arm-jia-gou-ban-ben-ji-chu-li-qi-xi-lie-xiang-xi-jie-shao/"/>
-    <id>https://zongwuwang.github.io/2022/02/26/arm-jia-gou-ban-ben-ji-chu-li-qi-xi-lie-xiang-xi-jie-shao/</id>
-    <published>2022-02-26T05:58:34.000Z</published>
-    <updated>2022-05-13T17:25:34.018Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="ARM" scheme="https://zongwuwang.github.io/tags/ARM/"/>
-    
-    <category term="Architecture Trend" scheme="https://zongwuwang.github.io/tags/Architecture-Trend/"/>
     
   </entry>
   
