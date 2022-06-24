@@ -3405,7 +3405,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   border-color: #42b983 !important;
 }
 .main-content {
-  width: 85%;
+  width: 65%;
   margin-right: 10px;
   margin-left: calc(35% - 355px);
   margin-top: 10px;
