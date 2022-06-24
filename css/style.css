@@ -3404,12 +3404,20 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   color: #42b983 !important;
   border-color: #42b983 !important;
 }
-.main-content {
-  width: 65%;
-  margin-right: 10px;
-  margin-left: calc(35% - 355px);
-  margin-top: 10px;
-  transition: width 0.3s;
+.header {
+  width: 80%;
+tablet()
+mobile()
+}
+.container .main-inner {
+  width: 80%;
+tablet()
+mobile()
+}
+.content-wrap {
+  width: calc(100% - 260px);
+tablet()
+mobile()
 }
 .dark {
   color: #fff;
