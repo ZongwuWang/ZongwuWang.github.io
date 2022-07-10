@@ -14,6 +14,7 @@ toc: false # 不显示文章目录
 - [Scalable Energy-efficient Architecture Lab](https://seal.ece.ucsb.edu/)
 - [EPFL EE](https://infoscience.epfl.ch/collection/Infoscience/Research/STI?ln=en)
 - [Berkeley Architecture Research](https://bar.eecs.berkeley.edu/index.html)
+- [华中大高性能体系结构与系统实验室](https://haslab.org/)
 
 ## Collaborator
 - [蒋力](https://cs.sjtu.edu.cn/~jiangli/)
@@ -35,6 +36,7 @@ toc: false # 不显示文章目录
 - [SweRV EH1](https://github.com/ZongwuWang/Cores-SweRV.git)：WD开发的其中一款RISC-V core，支持RV32IMC，双发射，单线程，9级流水
 - [无剑](https://github.com/T-head-Semi/wujian100_open): 平头哥的RISC-V处理器，学习资料缺乏，代码可读性较差，不是一个理想的学习对象
 - [香山](https://github.com/OpenXiangShan): 中科院计算所开源RISC-V处理器项目
+- [openpiton](https://github.com/PrincetonUniversity/openpiton): 普林斯顿开源 25 核处理器, 目前版本的 Piton 芯片大小 6 毫米 x6 毫米，有超过 4.6 亿个晶体管，使用 IBM 的 32 纳米工艺制造，是至今学术机 构开发的最复杂处理器。
 
 > Reference: 
 > [优秀的 Verilog/FPGA开源项目介绍（二）-RISC-V](https://zhuanlan.zhihu.com/p/423332071)
@@ -52,3 +54,11 @@ toc: false # 不显示文章目录
 - [AI-Chip](https://github.com/basicmi/AI-Chip)
 - [Neural Network Accelerator Comparison](https://nicsefc.ee.tsinghua.edu.cn/project.html)
 - [WikiChip](https://en.wikichip.org/wiki/WikiChip)
+- [Championship Branch Prediction](https://jilp.org)
+- [Instruction Prefetching Championship](https://research.ece.ncsu.edu/ipc/infrastructure/)
+- [Championship Value Prediction](https://www.microarch.org/cvp1/)
+- [real world technologies](https://www.realworldtech.com/)
+- [CPU逆向博客](https://www.stuffedcow.net/)
+- [ANANDTECH](https://www.anandtech.com/)
+- https://uops.info/
+- https://www.agner.org/optimize/

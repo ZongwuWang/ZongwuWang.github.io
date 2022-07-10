@@ -5,7 +5,8 @@ abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2022-02-22 15:35:11
 tags:
-categories:
+- git
+categories: 系统环境
 ---
 
 - git init: 初始化一个Git仓库

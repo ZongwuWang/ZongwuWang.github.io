@@ -2,6 +2,10 @@
 title: Ubuntu 20.04安装gcc-12
 date: 2022-03-06 15:28:31
 tags:
+- gcc
+- Ubuntu
+- 软件安装
+categories: 系统环境
 ---
 
 # Ubuntu 20.04安装gcc-12

@@ -5,7 +5,10 @@ abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2021-12-29 21:03:47
 tags:
-categories:
+- 算法
+- Hash
+- 布谷鸟哈希
+categories: 算法
 ---
 
 # Cuckoo Hash布谷鸟哈希

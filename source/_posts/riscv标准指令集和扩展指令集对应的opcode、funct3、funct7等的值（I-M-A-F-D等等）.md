@@ -5,7 +5,9 @@ abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2022-03-01 18:36:49
 tags:
-categories:
+- RISCV
+- ISA
+categories: 计算机体系架构
 ---
 
 # riscv标准指令集和扩展指令集对应的opcode、funct3、funct7等的值（I/M/A/F/D等等）

@@ -5,7 +5,11 @@ abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2022-02-19 09:05:43
 tags:
-categories:
+- IMPICA
+- Paper
+- 近存加速器
+- DRAM
+categories: 计算机体系架构
 ---
 
 # Accelerating Pointer Chasing in 3D-Stacked Memory: Challenges, Mechanisms, Evaluation

@@ -5,7 +5,10 @@ abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2022-01-17 00:35:14
 tags:
-categories:
+- CPU
+- Verilog
+- MIPS
+categories: 计算机体系架构
 ---
 
 # 自己动手写CPU

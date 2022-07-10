@@ -5,7 +5,10 @@ abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2022-02-22 20:26:03
 tags:
-categories:
+- Paper
+- 存算一体
+- DRAM
+categories: 计算机体系架构
 ---
 
 # Intelligent RAM (IRAM): Chips that Remember and Compute

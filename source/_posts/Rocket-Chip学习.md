@@ -5,7 +5,9 @@ abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2022-02-22 12:20:03
 tags:
-categories:
+- Rocket
+- RISCV
+categories: 计算机体系架构
 ---
 
 

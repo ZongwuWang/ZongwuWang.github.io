@@ -5,7 +5,9 @@ abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2022-02-18 08:50:27
 tags:
-categories:
+- 多版本环境切换
+- update-alternatives
+categories: 系统环境
 ---
 
 ## 一、Ubuntu16.04多个版本GCC编译器的安装和切换

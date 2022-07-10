@@ -7,7 +7,10 @@ abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2022-01-09 00:18:45
 tags:
-categories:
+- Cache
+- SRAM
+- Intel
+categories: 计算机体系架构
 ---
 
 # An Energy Efficient 32-nm 20-MB Shared On-Die L3 Cache for Intel® Xeon® Processor E5 Family

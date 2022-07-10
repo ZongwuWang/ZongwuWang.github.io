@@ -6,8 +6,11 @@ date: 2021-09-07 13:18:10
 tags: 
 - 计算机体系架构
 - ICC
+- SRAM
+- 存算一体
 categories: 计算机体系架构
 password: www
+mathjax: true
 abstract: Welcome to my blog, enter password to read.
 message: Welcome to my blog, enter password to read.
 ---

@@ -5,7 +5,9 @@ abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2022-03-02 09:34:57
 tags:
-categories:
+- gem5
+- Simulator
+categories: 计算机体系架构
 ---
 
 # Analysis of gem5 O3CPU Compute Instructions

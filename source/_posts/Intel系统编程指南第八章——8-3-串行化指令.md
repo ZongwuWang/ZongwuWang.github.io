@@ -5,7 +5,9 @@ abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2022-03-01 22:17:48
 tags:
-categories:
+- 系统编程
+- 串行化指令
+categories: 计算机体系架构
 ---
 
 # Intel系统编程指南第八章——8.3 串行化指令

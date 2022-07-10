@@ -5,7 +5,9 @@ abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2022-02-26 13:58:34
 tags:
-categories:
+- ARM
+- Architecture Trend
+categories: 计算机体系架构
 ---
 
 # ARM架构版本及处理器系列详细介绍

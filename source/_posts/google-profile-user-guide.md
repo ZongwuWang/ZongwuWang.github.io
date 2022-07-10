@@ -5,7 +5,9 @@ abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2022-01-07 17:47:49
 tags:
-categories:
+- Profile
+- 性能分析
+categories: 计算机体系架构
 ---
 
 # Google profile user guide
@@ -61,3 +63,8 @@ github repository: https://github.com/ZongwuWang/google-profiler.git
    AddOption('--gprofile', action='store_true',
           help='Build with google gperftools for profiling')
 2. 
+
+
+## linux perf tool
+
+https://performanceengineeringin.wordpress.com/2020/03/15/performance-profiling-with-linux-perf-command-line-tool/#:~:text=How%20to%20set%20up%20perf%20%3F%201%20perf,version%20on%20your%20system.%20...%20More%20items...%20

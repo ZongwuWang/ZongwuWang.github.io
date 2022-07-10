@@ -5,7 +5,9 @@ abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2022-01-19 01:54:33
 tags:
-categories:
+- VSCode
+- keybindings
+categories: 系统环境
 ---
 
 # VSCode vim keybindings configuration

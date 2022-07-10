@@ -5,7 +5,11 @@ abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2022-02-16 21:57:44
 tags:
-categories:
+- Simulator
+- PIMSim
+- 存算一体
+- Paper
+categories: 计算机体系架构
 ---
 
 # PIMSim: A Flexible and Detailed Processing-in-Memory Simulator

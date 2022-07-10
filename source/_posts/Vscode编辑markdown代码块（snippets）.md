@@ -1,7 +1,9 @@
 ---
 title: Vscode编辑markdown代码块（snippets）
 tags:
-categories:
+- VScode
+- 代码块
+categories: 系统环境
 password: www
 abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'

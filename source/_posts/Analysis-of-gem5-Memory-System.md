@@ -12,6 +12,56 @@ tags:
 categories: 计算机体系架构
 ---
 
+<!-- TOC -->
+
+- [1. Memory System](#1-memory-system)
+  - [1.1 MemObjects](#11-memobjects)
+  - [1.2 Ports](#12-ports)
+  - [1.3 Connections](#13-connections)
+  - [1.4 Request](#14-request)
+  - [1.5 Packet](#15-packet)
+  - [1.6 Access Types](#16-access-types)
+  - [1.7 Packet allocation protocol](#17-packet-allocation-protocol)
+  - [1.8 Timing Flow control](#18-timing-flow-control)
+  - [1.9 Response and Snoop ranges](#19-response-and-snoop-ranges)
+- [2. The gem5 Memory System](#2-the-gem5-memory-system)
+  - [2.1 Model Hierarchy](#21-model-hierarchy)
+  - [2.2 CPU](#22-cpu)
+  - [2.3 Data Cache Object](#23-data-cache-object)
+  - [2.4 Tags & Data Block](#24-tags--data-block)
+  - [2.5 MSHR and Write Buffer Queues](#25-mshr-and-write-buffer-queues)
+  - [2.6 Memory Access Ordering](#26-memory-access-ordering)
+  - [2.7 Coherent Bus Object](#27-coherent-bus-object)
+  - [2.8 Simple Memory Object](#28-simple-memory-object)
+  - [2.9 Message Flow](#29-message-flow)
+    - [2.9.1 Memory Access Ordering (Read)](#291-memory-access-ordering-read)
+    - [2.9.2 Memory Access Ordering (Write)](#292-memory-access-ordering-write)
+- [3. Replacement Policies](#3-replacement-policies)
+  - [3.1 Random](#31-random)
+  - [3.2 Least Recently Used (LRU)](#32-least-recently-used-lru)
+  - [3.3 Tree Pseudo Least Recently Used (TreePLRU)](#33-tree-pseudo-least-recently-used-treeplru)
+  - [3.4 Bimodal Insertion Policy (BIP)](#34-bimodal-insertion-policy-bip)
+  - [3.5 LRU Insertion Policy (LIP)](#35-lru-insertion-policy-lip)
+  - [3.6 Most Recently Used (MRU)](#36-most-recently-used-mru)
+  - [3.7 Least Frequently Used (LFU)](#37-least-frequently-used-lfu)
+  - [3.8 First-In, First-Out (FIFO)](#38-first-in-first-out-fifo)
+  - [3.9 Second-Chance](#39-second-chance)
+  - [3.10 Not Recently Used (NRU)](#310-not-recently-used-nru)
+  - [3.11 Re-Reference Interval Prediction (RRIP)](#311-re-reference-interval-prediction-rrip)
+  - [3.12 Bimodal Re-Reference Interval Prediction (BRRIP)](#312-bimodal-re-reference-interval-prediction-brrip)
+- [4. Indexing Policies](#4-indexing-policies)
+  - [4.1 Set Associative](#41-set-associative)
+  - [4.2 Skewed Associative](#42-skewed-associative)
+- [5. Classic Memory System coherence](#5-classic-memory-system-coherence)
+- [6. Classic Caches](#6-classic-caches)
+  - [6.1 Interconnects](#61-interconnects)
+    - [6.1.1 Crossbars](#611-crossbars)
+    - [6.1.2 Bridges](#612-bridges)
+    - [6.1.3 Others...](#613-others)
+  - [6.2 Debugging](#62-debugging)
+
+<!-- /TOC -->
+
 ## 1. Memory System
 
 M5 的新内存系统（在第一个 2.0 beta 版本中引入）的设计目标如下：

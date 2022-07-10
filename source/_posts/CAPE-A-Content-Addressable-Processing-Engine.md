@@ -8,6 +8,7 @@ tags:
 - ICC
 category: 计算机体系架构
 password: www
+mathjax: true
 abstract: Welcome to my blog, enter password to read.
 message: Welcome to my blog, enter password to read.
 ---

@@ -10,6 +10,7 @@ tags:
 - Graph
 - List
 - TLB
+- Paper
 categories: 计算机体系架构
 password: www
 abstract: Welcome to my blog, enter password to read.

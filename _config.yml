@@ -32,6 +32,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - "source/html/**"
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -106,6 +107,7 @@ ignore:
 ## Themes: https://hexo.io/themes/
 # theme: landscape
 theme: hexo-theme-bamboo
+# theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -116,9 +118,10 @@ deploy:
   #repo: https://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@github.com/ZongwuWang/ZongwuWang.github.io.git
   # repo: https://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@github.com/ZongwuWang/ZongwuWang.github.io.git
   # 20220320
-  repo: https://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@github.com/ZongwuWang/ZongwuWang.github.io.git
+  # repo: https://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@github.com/ZongwuWang/ZongwuWang.github.io.git
+  repo: https://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@github.com/ZongwuWang/ZongwuWang.github.io.git
 
-  #repo: git@github.com:ZongwuWang/ZongwuWang.github.io.git
+  # repo: git@github.com:ZongwuWang/ZongwuWang.github.io.git
   branch: main
 
 # 使用 hexo-generator-search 的 Hexo 插件来做内容搜索
@@ -145,3 +148,25 @@ feed:
 ##
 encrypt:
     enable: true
+
+# Markdown-it config (https://www.jianshu.com/p/588ab3d22eb8)
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-abbr
+    - markdown-it-footnote
+    - markdown-it-ins
+    - markdown-it-sub
+    - markdown-it-sup
+  anchors:
+    level: 2
+    collisionSuffix: 'v'
+    permalink: true
+    permalinkClass: header-anchor
+    permalinkSymbol: ¶

@@ -5,7 +5,10 @@ abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2021-12-29 15:42:09
 tags:
-categories:
+- Cache一致性
+- 存算一体
+- LazyPIM
+categories: 计算机体系架构
 ---
 
 # LazyPIM: An Efficient Cache Coherence Mechanism for Processing-in-Memory

@@ -5,7 +5,8 @@ abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2022-02-20 14:52:11
 tags:
-categories:
+- Markdown
+categories: 系统环境
 ---
 
 # Markdown 语法高亮的常用语言关键字

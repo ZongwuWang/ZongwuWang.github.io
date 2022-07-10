@@ -5,7 +5,8 @@ abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2022-02-18 17:12:59
 tags:
-categories:
+- 内存屏障
+categories: 计算机体系架构
 ---
 
 
