@@ -1,0 +1,2109 @@
+<!DOCTYPE html>
+<html>
+  <!-- meta/link... -->
+  
+
+
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+  <title>Precise Runahead Execution | SJTU-ACA-WZW</title>
+
+  
+    
+<link rel="stylesheet" href="/js/aos/aos.css">
+
+  
+
+  <link rel="icon" type="image/png" href="/medias/sjtu_logo.png">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  
+    <script>
+        var themeModelId = '';
+        if (themeModelId) {
+            localStorage.setItem('modelId', themeModelId);
+        }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/gh/yuang01/live2d-widget@latest/autoload.js"></script>
+    <script>
+        var live2dOpen = eval('true') || false;
+        if (!live2dOpen) {
+            localStorage.setItem('waifu-display', 1609323474481);
+        }
+    </script>
+  
+  
+<link rel="stylesheet" href="/css/animate.min.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/js/fancybox/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/js/shareJs/share.min.css">
+
+  
+  <style>
+        @media (max-width: 992px) {
+            #waifu {
+                display: none;
+            }
+        }
+    </style>
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="SJTU-ACA-WZW" type="application/atom+xml">
+</head>
+
+  
+  <!-- 依赖于jquery和vue -->
+  <script src="/js/jquery3.5.1.js"></script>
+  <script src="/js/vue2.6.11.js"></script>
+  
+  <body>
+    <!-- 预加载动画 -->
+    <!-- 页面预加载动画 -->
+
+    
+    <!-- 判断是否为暗黑风格 -->
+    <!-- 判断是否为黑夜模式 -->
+<script>
+  let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+
+  if (isDark) {
+    $(document.body).addClass('darkModel');
+  }
+</script>
+
+    <!-- 头部导航等 -->
+    
+<header class="header " id="navHeader"
+  style="position: fixed;
+  left: 0; top: 0; z-index: 10;width: 100%;"
+>
+  <div class="header-content">
+    <div class="bars">
+      <div id="appDrawer" class="sidebar-image">
+  <i class="fa fa-bars" aria-hidden="true" @click="showDialogDrawer"></i>
+  <transition name="fade">
+    <div class="drawer-box_mask" v-cloak style="display: none;" v-show="visible" @click.self="cancelDialogDrawer">
+    </div>
+  </transition>
+  <div class="drawer-box" :class="{'active': visible}">
+    <div class="drawer-box-head bg-color">
+      <img class="drawer-box-head_logo" src="/medias/sjtu_logo.png" alt="logo">
+      <h3 class="drawer-box-head_title">SJTU-ACA-WZW</h3>
+      <h5 class="drawer-box-head_desc">Academic life record in SJTU</h5>
+    </div>
+    
+    <div class="drawer-box-content">
+      <ul class="drawer-box-content_menu">
+        
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/" class="drawer-menu-item-link">
+                  
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">首页</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/archives" class="drawer-menu-item-link">
+                  
+                    <i class="fa fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">归档</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/tags" class="drawer-menu-item-link">
+                  
+                    <i class="fa fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">标签</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/categories" class="drawer-menu-item-link">
+                  
+                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">分类</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/about" class="drawer-menu-item-link">
+                  
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">关于</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/friends" class="drawer-menu-item-link">
+                  
+                  <span class="name">友情链接</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                  <span>
+                    
+                      <i class="fa fa-link"></i>
+                    
+                    <span class="name">更多</span>
+                  </span>
+                  <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+                </a>
+                <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                  
+                  <li>
+                    <a href="/gallery">
+                      
+                      <i class="fa fa-music" style="margin-top: -20px;"></i>
+                      
+                      <span>图库</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
+        
+        <li class="drawer-box-content_item">
+          <a target="_blank" rel="noopener" href="https://github.com/ZongwuWang/ZongwuWang.github.io">
+            <i class="fa fa-github" aria-hidden="true"></i>
+            <span>Github</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDrawer',
+    data: {
+      visible: false,
+      top: 0,
+      openArr: [],
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      isOpen(index) {
+        if (this.openArr.includes(index)) {
+          return true;
+        } else {
+          return false;
+        }
+      },
+      openOrCloseMenu(curIndex) {
+        const index = this.openArr.indexOf(curIndex);
+        if (index !== -1) {
+          this.openArr.splice(index, 1);
+        } else {
+          this.openArr.push(curIndex);
+        }
+      },
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'width: 100%; height: 100%;overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      }
+    },
+    created() {}
+  })
+</script>
+
+    </div>
+    <div class="blog-title" id="author-avatar">
+      
+        <div class="avatar">
+          <img src="/medias/sjtu_logo.png" alt="logo">
+        </div>
+      
+      <a href="/" class="logo">SJTU-ACA-WZW</a>
+    </div>
+    <nav class="navbar">
+      <ul class="menu">
+        
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/" class="menu-item-link">
+                  
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">首页</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/archives" class="menu-item-link">
+                  
+                    <i class="fa fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">归档</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/tags" class="menu-item-link">
+                  
+                    <i class="fa fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">标签</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/categories" class="menu-item-link">
+                  
+                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">分类</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/about" class="menu-item-link">
+                  
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">关于</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/friends" class="menu-item-link">
+                  
+                  <span class="name">友情链接</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="javascript:;" class="menu-item-link">
+                  
+                    <i class="fa fa-link"></i>
+                  
+                  <span class="name">更多</span>
+                  <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+                </a>
+                <ul class="sub-menu">
+                  
+                  <li>
+                    <a href="/gallery">
+                      
+                      <i class="fa fa-music" style="margin-top: -20px;"></i>
+                      
+                      <span>图库</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
+        
+      </ul>
+      
+      
+        <div id="appSearch">
+  <div class="search"  @click="showDialog()"><i class="fa fa-search" aria-hidden="true"></i></div>
+  <transition name="fade">
+    <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
+      <div class="message-box animated bounceInDown">
+        <!-- <div class="close" style="overflow: hidden;">
+          <i class="fa fa-close" aria-hidden="true" style="float:right;" @click.self="cancelDialogVisible()"></i>
+        </div> -->
+        <h2>
+          <span>
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <span class="title">本地搜索</span>
+          </span>
+          <i class="fa fa-close close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
+        </h2>
+        <form class="site-search-form">
+          <input type="text"
+            placeholder="请输入关键字"
+            id="local-search-input" 
+            @click="getSearchFile()"
+            class="st-search-input"
+            v-model="searchInput"
+          />
+        </form>
+        <div class="result-wrapper">
+          <div id="local-search-result" class="local-search-result-cls"></div>
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+<script src="/js/local_search.js"></script>
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appSearch',
+    data: {
+      dialogVisible: false,
+      searchInput: '',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialog() {
+        this.dialogVisible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'overflow: hidden;';
+      },
+      getSearchFile() {
+        if (!this.searchInput) {
+          getSearchFile("/search.xml");
+        }
+      },
+      cancelDialogVisible() {
+        this.dialogVisible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+    },
+    created() {}
+  })
+</script>
+<!-- 解决刷新页面闪烁问题，可以在元素上添加display: none, 或者用vue.extend方法，详情：https://blog.csdn.net/qq_31393401/article/details/81017912 -->
+<!-- 下面是搜索基本写法 -->
+<!-- <script type="text/javascript" id="local.search.active">
+  var inputArea = document.querySelector("#local-search-input");
+  inputArea.onclick   = function(){ getSearchFile(); this.onclick = null }
+  inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
+</script> -->
+
+      
+
+    </nav>
+  </div>
+  
+  <a target="_blank" rel="noopener" href="https://github.com/ZongwuWang/ZongwuWang.github.io" class="github-corner color-primary" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+  
+    <div id="he-plugin-simple"></div>
+    <script>
+      WIDGET = {
+        CONFIG: {
+          "modules": "012",
+          "background": 5,
+          "tmpColor": "4A4A4A",
+          "tmpSize": 16,
+          "cityColor": "4A4A4A",
+          "citySize": 16,
+          "aqiSize": 16,
+          "weatherIconSize": 24,
+          "alertIconSize": 18,
+          "padding": "10px 10px 10px 10px",
+          "shadow": "1",
+          "language": "auto",
+          "borderRadius": 5,
+          "fixed": "false",
+          "vertical": "middle",
+          "horizontal": "center",
+          "key": "2784dd3fcb1e4f0f9a9b579bf69641f2"
+        }
+      }
+    </script>
+    <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
+    
+
+    <!-- 当头部导航设置为背景透明的时候  -->
+    
+      <script src="/js/header/index.js"></script>
+    
+</header>
+
+    <!-- 内容区域 -->
+    <main class="main" style="margin-top: 0;">
+      
+ <!-- prismjs 代码高亮 -->
+ 
+
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+
+<!-- 文章详情页顶部图片和标题 -->
+
+
+
+
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/8.jpg" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
+  
+  <div class="title-box">
+    <span class="title">
+      Precise Runahead Execution
+    </span>
+  </div>
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
+  
+</div>
+
+
+
+<div class="row justify-position">
+  <div class="main-content">
+    <article class="post post-detail">
+      
+      <div class="post-meta">
+        <i class="fa fa-clock-o" aria-hidden="true"></i>
+        <span class="post-time">2022-07-08</span>
+      </div>
+      
+      <div class="post-tags-categories">
+        
+        <div class="tags">
+          <i class="iconfont icontag"></i>
+          
+            <a href="/tags/Runahead/" class="">
+              Runahead
+            </a>
+          
+            <a href="/tags/Architecture/" class="">
+              Architecture
+            </a>
+          
+        </div>
+        
+        
+        <div class="categories">
+          <i class="iconfont iconbookmark1"></i>
+          
+            <a href="/categories/PaperReview/" class="">
+              PaperReview
+            </a>
+          
+        </div>
+        
+      </div>
+      <div class="post-content">
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="1d12306d3794b30f7ceb0c3e2f504522d3b66e8ed200c05c9218b89616e2626d">48d53d02cc724fef4e645fe6556ae2fcc767087b4842891021ab53d49366c9c1c30b220162670760a5455904fba31116f93d048f92566b9159b084495dd246de434ed0ce302d6d113cd84db2890568919e50f43f01c6619d3e8ee2d1bc82ff1b8215995868140df06c78d2877f68eb99760c6744ec9def38d2fa0ff9b6648355f26d557ee547403b8e5bab18282d931c15550c27e1da3e7027be13d4578b6b9ddaa9110a6893dd7f304cd3d6b704d1761ed47fbe4d85bb319a974dc4fad87378ee4f060c1902c36657d78bbcaa68f733e5520de951671fa0058a65478af813d5b042436a82e701aa5ecca5a18001fd99dd5d5d6be3f5cf8264b8e90e527132e3d0f995431593f186710b0018aa3270252a90f4d8a870eadfc7262cbcb7b1af3707756ce365596df8d8557bd1dab0162b65e6a80ecbe366052c3ed18f567a172dc543d92b19ed69d52d9f6690c2a64277a03ce6c5998f75261edc93319a1b29f303ce0216f93320de50acda2be19e072a97cb7cbb3a107058c9089d6536af9656cb1bc11f71995b0f48bd27d13f0fb6fda404d4ac80d72a529bd586e7363bd10a021d76ea212b4a162df815eb3c96c51aa8189c633114598955b86a105cb697beca73e139d144680e486fedbd9db4ad5decd32758079e76e6b9917deb8f02aec283b098191704dd96d48df72ce8594a72b857ab5b777876ac5a3be2d358db7fc7b54600e9aa43f8aab16c63b4811e5f8faa22d956790aca0b3889db821286e5dffc4c74f1af28723838db4814a1144683b3bab9a2169e2d0cb8426140f087653d0fa4f4a5552dacb0b95cd5d6d529914c2eb170c93eba897beefc505876ef18b107d0d9f13cb5e0cc0b2fcca3896a4c1d8042a43b819a64869e3c5a30413ed8e629af010a55f0a051165f44cd2c04c4245322e26225c46a5ea299edfbc54d84e89873325763cbcc56a71bcfff224cd4c6f9d3373e0b2fa48b62f3c2a4d909b99cd1b1640a8e97817ceb3bc453fc775592793323a7669941944e6021b3d7731f9a45de281c02ad96efba14074fb3037b9753d362d33412af8ecdaf51eea818ac087a33f162c6487d7b2c4349d0f5a866d7f460860fc35d84cd60b279d07c2ee030bfea48ceac0f98ba368b2e4f08391470b33d764f9f6a7eebfc7d53edbd6db30f05492da190f2ef120c4d040b4e5834fb5b286638ec04d9c2a07968efb6ac617cbfedc6ca7920b7ac42e84909a389d0692589a667a25c9273829994c7f5a11f52f988185054005a8926748190904175dc5686b87f9a3335985505a9c6d85488f0a72fa3821309618088cc522084fbcc04bbc59f332f1abe61f35a5ce7e9fc2463b1d89a08fc3d7d6ece5bf3e10e1115bdafd717e65eff58e4c12675d4f55ee7d863d7000ac9b3a257a60e6998f45e597a632371944bd8f00ad6c8f065707692b3accac15e74eeeb9123e9c76ab625643a2561e9218e9a5988673a56445dd3d28a1332cbd824eec61227688b0ddaa7f808ca6a53dfe7018b695c2e6a0dc0cf7592a016a44aa3372508fe152e97dc205d6af4e59e4007367596eab27c58581b90d6b514e7c6e87cc42c62e07e12c6d99eaaad5aa4ec297ab841d58a8d87fb54067a3e931e02a837b1cea8ca814cbdb557f750b4df08ee8723a45d1454f73775fcf8e6099bcd671f1cdb10c67a94d65facb189e2e157023041c371608c4cb34894011ed3a755b8da2c50b042d98ae0a70485a2fc34e2c771859070fc247348bc0a22bd033e909c0ac87b4102efd7a35692f747b8ea35f394edd2b323bdd085fd1f584d32504c56a304ddfc82cb06642eb0239fe8cdae90eaa938d964b7ed56c963a9e0a3828e6bf9475b35a2e8466bf18b28963a1acae1a74013303976ce56239072bf51b6e568ffc1c3e4d3ac717ba7abcd507ea8b77957e3817faec6621262398b8934254b9827f8e0384812b4cfaee2d3c96d8d2e00fc9ee0f0f3085725dd66aafa5e31cef79d7cf4b984fff2405273f8019a02ac9fbabb8c03ee54054aeebab9aab786a44e8ab8fdec2697720b1a2c0ded6f7e88857be44ea34bce18abe8d8b14786d93fa5bf5a8d7bbd7248fc34e7582c26c42db95b51607179ee28e49bbb73feb9bda2adfe383c0da947d2f42986df68dc1890b9f4cf28e0016da8a2c6e78918c271dc4174bebd69d87c61c785ea6ac4e3d76a0c6e9e6734059a68b4c62537838e26d98137e78ee19a61d8a60c8ca7076b6fbd843ad37043af6daca901f62b698e406efecc13de5b1242ab20884f6097b375723381e83350e8a6d7eb3cc28bb1d03197defc9301f73eb36b13fea06492419d1f38e952e252b91499a0484aabb109dec17c821e19fbd419c7c2eaf02021988ad78ef432b5b0425405ad03fab3f696c334af34bc640003205dbdf1f6644c252e1aacbed28bf36efe5a959fbda8d3cae12f335553cb33f48eff7f062ce611ba59984304603f80d62325484d9649a24ebba14b796ccfe10eeab52511464fe6721a5c2575043ee7794b41c2999aa3dc3b65a06de90eef7e065562460d2da6ee689a3c714b519b31544a8ed95daf72421e70123894947b0564d7307a5929d142e4dd2f98b2a26ca380f2458872cc6bdbcb7e24a72c367e2c7db9036766bbd846939e13fec3b3fb89d8b76a3ec3eadff9555eaf82b8ee3ce97f03c91c0531be35480eb0905a8f8d8e21465f0788dc8573f082a240ee6b7b0d16799022e0717dadc6962333f76af13441ed4666d1f7d32ebb4478036863f99a364edeca64caeaee8d1e7eb4575f77c75e86e17235a5aed9339d6385c492df8d3224ab1308cf4860311fd6b1e6ab9b886400fe4b5424f23d3a7c625a5e6174869af1e4654007fa3255c04d9b78f4fb8ddf787b59e63951ecfa19085e2f5581f0d2a336c635665edbc3378697eac4b88202dbdd7764a112ae2f881a8264ec26d2937181173954ee18ef09ac72cb1cefc4771834fa021ea3eda0e5ea64c6d19c8af8ca9f9a8546d1de13b31aefa11308dd65c16a5f016f522e70e9562ada99c5187c0dc2c3c59484648741db5f554276add1dfec06284f643af1766ae02602db4142e787b88ed9fad342275fe9be7884c993cda4ef66406224a3c8f3df796d250d244bf246a276edc81b674d66fdbe4a5b77184a1b6df9057c74c8477952dde73f4294a960ae1301bf64fa59ceb5b57be894805046a2be03d3a3cd07cc91c006e72ef86a247b42444337d90fdd11edb3f3271b9f80849ed9f9aae0da7cae97d2c8e2ea023cca1440bb1bd79736bba2167136b679f8714047e91a1c3d42afbebdf30172304766ad0787860050d05cbb08b9d666daa3feb6f4a11fb086ad35b48e5545db978c4e22e08a21be50abf0766b5a48fa395526ea4cff4fac02925e375ff6ea0c29d0e60d4580a1ab1d71f218cfd4b0c1afed871644d675dd902ac59bd1370bff1299af1fc7e531dc5afb755caf84b3ea997da5bb3b4be9c5849b607e7de67feb6f8cbd3639217e3bf6506c2de9c7f76009bcf0d68ac57c892c605df140e76cbfc98bd3c7a2c81792ad7259e77624549bb071cff1cf3cd80d635f4c693975dcbbea08c56217a6bc21bb21d07a97b6d712becbb4c254e823d4335704e1c3478ea1becab6145383084f499094c9504e4650643953894cd9111495009647a1885973f8cb04222110981aac3cbdda737c427e1fa6083a0091a9dbf4797c1ba7acecf3ba8152179fef801870504aba5eb1822c27b79c4a4c1fa6e0172c23c090f15b73f37aaabfaa73c62c2cf81e31ddb32779a7640e3bb627e78fcee6ba9273d677e89e73e229074a1afc2fd9cbb6a8e02f12cb8a5e91176113befaf4031fbbfc5a235087c8bbd18e95561cf124cad49afbf19710e0f8d64077d497b1fe39ebf5463ce48bfeebe74772c327c001984aa0d370c36ab50ed193e8fa330a7d1c7c299ac5e8ab2bb8739e561014f47e865fa63635dc5abcb917caa6935d63243845b4d0ebd4c778457952abd19f85eb19412e127cdb0bbbf30ba7adaa23ec3869c6edea581a30763af3481bb58307911f4387401e4b752acf15551cf1c02e2ad4e9c0737c20e67af3340172886fc0e30a53a6ee2ca2482cd33983a2599e5b002ff87ebf5de7574c08277cfd5dca420acf0df2480572be7a8b5d52a441863ec26f89caf0c26f01d61170499e2f84820b7ad5121f7941b9a148d01267289eba0cce700a8082d8cf01c4ca81e8608a950dbcfc282755aba658a2e097dff3738f98b555dc58be6a3bdb7464f9806445b2dd024ff98c5aca5853b97d1fb33db8a6402e5769ee66c9593c9ef092efb2d44876860fc7ec2c8555b307b8fcde7ec1093b90505e016a1b272974e536d8f148c16f723df80339c8859b301596c55d9adf475ffc11325ad7364545b990c2425f57fafd1a57981ea33b824d9f9f4fe808840792e47470ec9c46b6d7be05fba7595e2587ef064ac539a328b28210aa1784894f3ea0376eeba5a99a50898aa02c34a9e120ddf0f440527d5ff4921f3e34807cce67be9151cf75dea7392616d3242e8f8e4bfcde0ed07d7ded80db029a4710159d12a673220d96657afdc25482f2bfec91866d80bea2288bde61d7472b47766d2c2f27bfaf890ded4641e622a6fa761b2fea7102194d6724b6c49c25feb2d4bafeb4ff888c88f9c4149695a4650ae15de369be03f14d1e5f65e6fd02965e44e4318a48ee4796694d7cfafb8a5b558f56fe48d05a77665df2e800742ec43185187ad515373126c2ec777bd5a43f5af087c3047db60c0edff31e9c0afa20a7f9c4bf7e8774730d8d093659d57788701c2d4792c8524a524e2978390559f9055e9c9ca6991efbf975220d591e4fa88636dcb4aadb37f814cd06626e958e1b7af422f7469a47d67722de31519a1fe7775072a9f1cf6e4bbfd17f226664b1fc1ca571589365f6dc2085baf81d3cc9a3782cf8dd5144620ed721551f9514bf73ca61df82596368793e01d633277c6dae57e061687064a9403bc959301c940934f61451b0a61d49033dad2553bfefb41d5457fb610a41054e8750d0cc6c0182a38d5a742e9cb39ea7d5bf2b4ecb8184bb01bf7d8a9adea240b0ce0158710f96f8ef14c611cea2e623d6a34e4c7c469ce24052c6488c62d4190504e5706356294575b1cd429541015a47f01fe5eb2ac23992e2cce9181943ba8b8670b1a92b91e272978da58e4a3c2cdf3996abf345365c90a8e98aba2efc1f0b86ae84c79c9d305141591257efaaeb33a84942148adb03af2f10d42dd5c7a9f5b882f0a989f46540bac83fa268ac1c29d1739b73e09a4f83e3298f8cb27f418b654d062f08c8fe469f95b9d846ceba19e3366d420debcff74c073be0f36ca8a50d49cc116670ee607678ad7186c018048e50af0f8f9fa9dbaf2b0191c2d7786272fa7fa9c229fc599093de17c3d8a1258d71dabe05a33ea507f86ea851a9d4c97aa35560889e121a1fbcceb558a24e22bc7da0181a362c5680fb1ed06daf0ebff737c40b9cfdc7caa28ecac4855c70eb3f6480dc6932f77c3aa3999c0eb1ce2f529ba7f823d469cfb00d846fefb3949986c7ae8ea412184d0ebaf26c1b4bedbbfc3836963a56a54b8cdf29c9b35d8b0b9f81beb56d40948b174b1391aa203e28bf8b597aa2ea2f89e5d6082e98b2b0fe9925c3ce03a25be7982c6fb7115ca8c1ee9bbc4f69fb9771312d78c69620e59b2d16027b20e433f901881f75b1f806060e8e8ac66f000fd518ee7639911681dc652ebd8d4a844aad9bb497a10c0df31fe09c29deb9b5a6256e5439e85b8a587d241620a6ccbf5940724ef57aef474a58462fb76a693487353609edfed4ac38c68a9bfa36b6767ee9aba455a084572eebf1fc73d43e0c81526fca8438791cd333c689d233a616ecd3afd6ecb5a63a305afb987a16228d1c381ec1223795b30398e785f0308d474f8133a716843c192f3ae0aadddeafd1cf979d6b8d0df32c783e53955bd8743309b9133811c831cb013d304414267468e84b10c79cbbdaa7a8786baba46955336d3eedbac32b219dbab1e9c48a703a9e7ad2d2d1a229cf6f5c7c143b5a0889c18058ac938cfc24ae103570ef35ca5466bc0e9abbae79f52e9d19249c8039a9b86c3ae4220d8a5effceda4fae1089bafc9ee5f16c50fa92c8906b5f54bbb7b3ddd9eac4b23c81adb814e2b3e6ae3eac5b0aec587ffa311714c7e61ba9ce547ff268371b2618aaf316a2aadb3344a683fd2d98d17982a9b035a30b80996d406074012bb61b0724d4a871fd52d366f2d31cdbf986262b4eef5f1c4b9882db2b2ce5c46bb5b5c1bb15a04e723c7f2015a137f3e882429a8258f7a50c8dee32a40a928743c590786ec945bcb75dbf5db5f964e025ee845b6dff16a27d1ecf3f36ffc98da40f7b1ab792aa26eef77852e221b63b6ed6bf1e331ed5e7f31bef76d1b08288582b21e608e352b17abda535b4daa394d61f3b1a62b0cc0014e3eded272896b61c5dbbca15931dc32cb376e4665a42f788b40ff87679b5e302f9913bdd8372ccbff79d7215b8ba8f39309356c23c625c03b0c5a11d158e69481d0f30dd9f297cbad75dc5c7bede8e0523e503a636fee9502b08b2355da72088f95f9be8cb916824dcde8dc436cbacecc7f9ad456b8cbea72cb0c44c40ebd2748db6c1263c7f6560191a0e191d422e421daeb00b66f0357b3808ebeac22d6602b787e4438eb5ecece758baa2c0c30635774ef0f1a30e91022f8b9598cd0c5403cab9dae802b58cad1c7c27a160c237208819524869f63d4eda8d419892859c29a52ce77addd51f83a91220e487e6dbbeae4fab76b72024fd243975c29ecbea1e1a5424f8cd0e14ba8138243d59364ac218f52e993c8713880c82be0aa5efc11eb8053f64882af24a5db401cd2a097f365886a1401035bd24704aa757611bf08f1ef0c7930406f96328c6a13333466bb3467969004af98467b2122f99ae5db8fe15fd2adad7cc9339ee5ad734e97c2b858f7c9ec822bb77f4a085cf52c8a20c8cd9e8fb13ab764e335fcabdcb9ad85b28429d6382a9d47c9adfad1a903130586e1929a139125a0768307e7a9084b7a597d099eaa086daaea63923324ea301dec7719f3b500c7b333bd2189a41487c1898a0334df4cc84ca3d40893a18700d23c16bb75077fee5167392e7f8f61eba7894c0bff074a83e0083c5ceb596bc6828b212d596fbf24c2bad1ff2e474c667e2867b1fe17cb159067a8e9206cd68ba0e13f3486692c92ca65e1fe26ff769bcd52484a81ec6fbc49ecc322d9687e3434371f7696588efb30e61649199528f16148efdd23b83a70d1da3c138d6ff2886868f4c8302912547639a1265d09c2b3127968c2b1fac1fdf012a27013f0756d405abe5ddc549000cdc4ba8f442253d29f420efdac9d533950adec76ace37f5bc5be03b616ef593044642d22c6f07e98311977e66862fd60460bf8ded26a973516048e3feeeac7a0e21aa0ec0c45936c30347efedce7a8c6691a964c0447dd7f06f58fff4179074482ed9bcf21dd44b7a6439286a5f3bae50081ef2ec6d8a6dc7ec4bff997735c77de8153b300be15c3c678e43ca9aa8d359ef2b348103d7f73c0a1a8821dcfe07aa6746d5c718c25a27324d9e3105d67a7244719cb6281ec15fe2a20a909e37f7aaeca4720799f22ffacf963ecdf317301b48617322173a20f02a34822744e26465314a3778ba5a9a67aba5317408e5d7429f8f3576adef099406409e38b50cd345b58ff1100947755852ebddfc585d642d022eed3d60b096c2e5e075e5782292a7359e43d83b658640afe42b8943cf5d1490a8aa18cd37b8db922b7ec74bed2df1bfc1fb5a6959fe47478045a76adac172d6e738f8691e541f6d1d98880b713c8264bbe8e228f95bc7e714dfa426ba69a16a9c25eea79cef3f79a6883738def689ad4d7309541a8e3677a716fc11841527cdc39da86145a77c728661229b0e5b9c12c8cd379d948b60d66f7f31adc6bbb951cde0253d727b150a947d34cbd42e6b63707edb10d8e70bc4e5498696bf4021b98eeb3aaafeca41af765872e18a0eb0c4258ac1d14f92f8ddef52187ec41d2a2b7eb6db723b2bb980db6a6379ef23ef6ce31325a1a0938914e437ef5d2d14465c7873927ab9ca7f9df16d3f710e15538830739a6c7bea24d4a4a20c910197b58ca35fe1482a7ca0e4c8239f065f88b3a41fb963566675900655235cf325c3642b3a1bd853defed6642b0ed0f5f18bb051fc177a6b2b1bc3e5bcc5aad5376093d2d96e894af9245fc4b90433d65fba203190f2ba704390ea352a1ab6e163a976cf13737d50735f8e18c9bb0ff624f7bd42bf488f63bc32376e5c48724cbb080e9edadc59df6153432f932d40a9f29721420b4a1d7ed1ff71e3c506f8af2b388982d670462cafb5fcc30605b0620ae8bfb6061d1db7ba6f57ce91cab94858d1dc735decbf0b454f1863bf86b1a640bd268b464cfae858ac00f077fd40bb5ea90f3ddea49943e92395de36c9eb0220b0e475b449672f28d7ab8ade8c9eb2052270c3ea34695916179c0d2c4062f27b4e3a960471183eb163fcbd0b0076790e0029631d478022f4f79881f0099e0851d5a1bdb809bf432299e52e818993a2dc0c8fd765e0ac3334b8f8b86367ba2062c6e88b3e10c368badf1f7a57fd82fc41d43a6d40c4b2ede79aa23975f57e931fa4185ed6d76356a58b1340fe5085136b0ca55ae8569ff412300bb4a006792182a901546d70ecf72aa3240a4edfa245bd272e9dcb502e8cfbfc7e128fc743b62623a0095815a6f22b3453918e3f16ace63d98b3b0024f34051ccb6739d01fbd4f383a72ec4f014564a12b1f0a6d339355d302517ecc582e0a0785015b5f18bfa80bbf7ddc145b0b6cd62f80a387ae09170eba644dce2d786363d50af5cdb3f625eed8a880fa5bc0717cee4470f97c1be4d22f527c79bcda435682df43eb6c2887c32f046a6efd6da9abd1c0648da004919f1ea05c95c9f2ba241f6074acd55628d9ade05e5c76575c845a71decd1ce3cf5b57fa4111354c534509cb75107961bbfb3b9ed7090a47b6e773a13ea4cae6ead18d1aa22d3a623469089d4dcba138a2d21833e6ea2296f9b2bc6f11f97c2c678dda8be03f9a29bc9ca934a0926bfd8aff1f947c7fec0337f0692bbd5c5745bdfb9bd0a703960f3456000411ab0324769a74613bb10543a72db3d57f69c2b35cbfa208a0e02309b6c6f3955dc1187989e6f3b657227652c86c61024826295966c4ba3edfda738d34c735c77eacdd1278db474a25be256ad376e7e85bd0e6ef32436519568ce8b7ccf1dd0e61af86fdff5732cf6cf3118934ccb4071ff1515a17be8c3b8f1da0a9dc8af74c73271c713e0c31b28bf0c12c2683c87f1e6aff19b32635aacb9e365ba5ffa8e23b58f37466d902db70d2d25103c375d5632af75bc12419afccb6190e547d30744e19d82cf460f7a86f9fc9d4cbebd89ee34bf73efdb6614c05310b7dc13b4903e6ad6abf935b90812c72aea1da0b60e0bda5bf6860e35e1b55a7911b90615ca55c2fe800c40b13c1d1eb2917dcf65c955c5505989686dcc85e95c15e6fd79b93b9402ced84c94db232740e598075c04a17c1f69b31b0e3a0d6d5ddc1745e4f0c0994fe6024f7cacf3f778204b05815b396db29c9d772b0fd21d3ba64fa589d3896d626de6aca3b7e15d52c97b58a62e3d3f253e049f69ce1ca511b73b6fbb22747ad599394e728192db38e4709f2128dd566f2502f5012a00ac4b30bd821805ee75a59b1542f614ddb09090ab7743d7c80455ac7d6b3dd72805af79221818745ec4f16940aaee978a3ee8566497d3c64894a7c4e86d66bd941f2a5461f5d218cc65ebb0e35d469832800a24571010f77346c115147f5fd3b0aaa8b263c4cbe34607d007dacbfada6394ca1f3f3470c305724ac1375a214782739614cb16c1e38c7119cd4e71a6f70e1bf225603097f9d08d8641edd024f1906a32c4449bcb8e6649e28bc9cb14306e12e610128bbfacbdf1b4287e6039bb06aba2429525b7f60b17eb4c1684e80b56ce403894e7a10ac8d3b25b473f3853b538f477ce43e9cb0485678a175035410e96d88caae324d422e3a5029d61e0c8db8141f40dd7b48d7efa4bac7f93583bc9c8fc81a1fe41771c8ec0aad7f2486409003b99774f38d46988c7f70285e46aa39b9751c4cffd5e2a16146377f544e34441a14a3c6c437ad3b025fa95976d36882da70c75e524b5eba015c357fe1e23b166db5698a2bc474b8a137095fc18f0165dcbcddf693bd32e264299909d8011633fbed47456fcc8bb47f7cc21c9b4c624b7d9478a195b9b25ba6af213bb1bcc5d623280fbf8399c70cba856a062e437ea483943218a747bdc9066343f971bbb33db50ffffc74546f4f1ecf212cb89c5e9c4bfc15972da25eb09aa1e16b178c7be0b15397e285fa9ac8cd333af0827d866600f96f5ca4df426a33345cc53eafe4420f4ecd82fe8a050ff8f0dea9d9cc76a75a8030ad7253dc6882c8055a2c5354877f283b72781ad4836c08ddcd9ecb183a84907810440daf707e3ba697fc947f376f3c5057cc034803168818b60389d2b46661d78049bfd1f139f3feb3ed5bc95ab9108c918b13a20ddeb6f08dec0f65d2eb759dce6c99c67e52ac8491f8b8b38d885263aeb0ab9d778d3087eb5e95ed3c26e9ac1b5fad11107d599b5126874b48cb0b12d9c88f9e6d16c27e76f10186b359a044b16086b4756ea92d19bcc3c7b381aeda9a83cbd74cfec4d262a98baaa80e07a63c08355183a2290e9b594b10662b93298e1062f63c6d89ab6dc00493aa059131542ccf368c420eae683ed581a938a846cd09c28627686de5830d97033d4e4a98546f31ec6f6001a273b8e54bac8b9516db610c518cc866706ddb3c768beafe8fdccf88d01aca7b7a5fc3c0646782e5446ef5b4b97257d9878c71a2a488c68720170247e6df43352242da71ec160eabc715ce11b5c18e1f01cd0755e62e078fde89051116aeff4c6f5a48c688d9ee922ce9815eeb1ef22a042ffcd94b4995b63e2582650b6b215120d01fa679298b7862aeebd060abc8cf500813b70a560c40a8da404d29da4dd0b7423c964654b8268f305464cd9b9d2c7e76e35cb95d04c31b0cedebdbc658399c3e06c5c4a22fc1854d860fa4b2c132114c6ca67afca43e8578828382eb99b364dd074f9d74bd60cd9f1121070ae3318ae6196da22d0debc1f902878ab92595f2f9076fda8557c0072b17c0d1bc0acb6a32d4085efd2ad4dba17940c2ddde6390ce92e65788a4d185167c9fecbb9e82a6859821ff4b9e86cd05d8752ab2cfcdd894d0f85cf11add99241a088f475527eadf29dfda9b566f744e78ed8f28243d81b92867224cd9e2e20ae5d2c9f610174f8baaf9961c281823a10fedec9577b557fef642e60dde9e9ff550b69b67d1d574b3889fc23c8c2b58d9dae3b2aa3586ebe8f5b348ed5393efe8c4ba799d51b8acba797e48504222a3dd3df35ffdf0e5936453206d98a1fe2f8559845b1649ffadf02e0d39869b261a4cd69806ea5fea0ec31d1c16b3d596132d1b4a4c4d556c7e0f6ef41e4202fddcea6d6998d0fa4794dd0bb2b272e97b3c4d573647a5a044265cf07c4d7d65f6b555a6befc07f29c9b202312d0270ef88ab053bd3b7845ccc1aa5fe8ba9c2c1dbcf0a95044dd3f321245152c1d765f5c2888b2890b5460e9814ab5dae5fc1cfa5ba11a145d82b915d33e909d6199c1e3744488dc52007b9d96efa61aa7d8767a5cc1fa674eedb8c00a4d17804e7bb7c2d60bd2fb7cfd1c1be02c16b7b4b77a1b8617aa84d7f9e9d72493317fa3c7f7c1747a8c1d3eacdb40e2dc54c03d1f96186d2b25fa5f28a76f85330977590941939e80a77b7bca637b23718ac957efe3ad9e681af75768ffe6636d12b2fb847c061ac36ae9bba6b3a476c192973274a8085e24e9539136bc945c2b586be4351cc6ada73d2cf43ed2fa6cd07001bb1612e4ef0261d1ecdc02cf8bba498f01a6a285f819fb07d26d21f8f8d2431d1a93b479b4be440daccd1c61e2c8e05cd32525c32315a6500ceedcd230d0ed5aa98d123e1a7008ca4e5c11108deb5262cf341149618a3814d7e0ef291266e0b09572f1bc2bc7ed62526b0609f6498b726a010e6a5b5174b029376d981ebfd71d619a5b62701e3c3e21aea602e31b245f5b39d512dea4be466335819336da91e064ffc8111161421a53655792e451dd5ef9cdd8ac02ef3e7cf182e459a899360ddb28551868a65b7ca97cb5549517911cd5be655ded9dba21d672458bfac06156dc08357986fa536624cbdc41eeb60dc9a5d2dab4d2888efedc0b23fe0b0cde894dbd7bef2e4cc6454448f4b109501b73d1d8f9e4c165bcbdff97a6f1b66f0bd3700f523239c942c5a7f9362619bee749b67743d376bbe03091a24d4264880b93d4f34be30de6a41cf4e77651f973d3429db2ab5d06c714dd2ae9e2a3c75bea215a8ad9e88e88a1cea27648301c6f47abb7ccfb0ac2c43d6c0989473c2bf5f4b566317cc5f90d64c2acfc9e89aab53a5c21504763cdc4dca0d9dbeee8634c82065e0555a62aba24478328e79b2e90f26756a6f9d2d324dd4e74029dd2de5c62dbb1635eabd7a5687b27857f6e8aabdff00a5534cd09299203c26e762ab0a86708d452e12890fd1956f43534ff934e5a3785be47c837dc494bd363f3481a0581cfe5bdc54a540d96d8f2c125ada2b3693d7febc79bc114dbdb066e5e60ddd90856553a17c594db4026eeb9c79c08a724bb6f017543ebba462ad3233d0ae892cac5cc9201b17bc2a85f23980f200662a4e23c40df58c2a4caa99164f4438cfdd99a1ad17d8a1c5bec7d44b6e689dc8d41507f00765622d6f150abb224b0384d1cef9f9aa9b2bac1d746f9013e67796d52ad3f3af04c49ee2d2314391d705cd65aaac2cf81297b3b4d742e69bd3dc03f9487f9347cd1c4b829e60b3cdd3e634a39dca3ec38dfbacf57504bfb51a9d07b64b9ec2de86f440dc846bb36a4e2fc84ca5753aa940b12f4a9cf79f17f4033aaf245430dcf14b338638e11ecfa1073ce8b10290935ae58d40f3826e968d0d923c26e1d20a437dc00aaf22be92f576cd939c74840a19af1269016f3dd294231004d0d804e7c14aa95a1972d146eb004164351e7bb228560e3396da645f16cd3d5eaca7c9d6691757d15b1fa46e0436bd0df0c60c385394e07db97b83397b46176ad20bc80df0d74c83102f4a3cdcaaa5395b34a96de14e06db502bdf572a5b35478c6e5e1649e2c6adb28900d9d23cfcd77a813c6b27ac69fb95cc182ed931cdf2a36390f31dabd8888cfc2e2ae47de7913233b9300c9ca085f5bc3ea7e65005e33608d777502b864be1c697631240f8af9bc9b027f1dfc5c1388ceee8fe8d856bc4d88eb2f530363f843404e829df956c19ce44ed68860124608192b57373040f6e9e5f2ae6d2bf9300e161ab778b4e088ebbe5a8e15abc0010eae121a8c89f2177d94236217cb90d184f9aef588569d632ba0e0e5d173feacd80ad1ff616cf7ceda9a363619a6af5e5517db22ab32a5c52d4d956c60a16b925ef7f28fb3b5a70061b3313102f8b363c904189616237301f00eb51fe790ddc951c05562abd2ac2f526f2c110c0bbe8fe6d12109d08c44c4ae07540ff95af085ebe43545de4ef90eb41e4afcda7fbd55dd377cf4bdb6d1fa63d2416439caa4ae7d4ae75543ce36b59937147c044228fccee37ac49ca063e78868611aac79c88c63be1935974e61cc7f97c5cc10e3df9d189589693d163ecd30c1e8474a1150eb3f595347e2e6755607d6496197de38e133fbb34b217acddb5ac912cbcb55b0ddac3785aab9bea5bc815cb513775520c7dcca22d1a3b69602f52e71c3fd2863dcdd1c78abd2b202ddf115e2cf0b26bb488425131f0f9a998ab82cc0b008fcb3388ef7fe23fb04fc06ed25eb86618fa0e830d16e42e99b33d9ee0b249a2439ccb6cfae3de191d22193fd6703ffc23b07a95a080550571513081f4ccbf78058667e84b95ff6f1b8e273c4fb733e6a7e1fbeb40f5cc02b556eb9b0a24527b9efb785becc648cc09eeaac6f11331e34c2aded19c84396a1b9a0ae8b3bb86101c4f8819a313ee3f91d4802da86095e70837cd82e9c388a60a8860695d879bda58ccb7b070baaadb519b4a04c815ed458c30a1ab948429286250187412568542a9a205e248336acaa6ae0c36f03c326d85c315c12bfcb7f416aad132e729a1ea77185fc313b181980d3f0dbe9030fe3d5e880edc58a66125c9f219c4ac465ea77e14638e55833d15351b7a1c2bcdfa1780411b224bcab1012446d7a06d0681ba8121a153c4febcefbe042e8ecfa519d866bc7a7e72a5e703cd02fcc39e780463469a33473e8856f6be3c963f0f3a207fa95c377b25aa7e41aba4db7a55012ab977cc0851d7f0e3b7878a1d0d473591f3c6076de553544063dfcc932d1f8372628339026a11a4a26fc9a95e92d8f0ca682600aa56527f95c0fd6a81e16104c75a185a82488067ca3b2d1568ff90df20fe814ae229fc6e25e0c21517a1679e20f1ad0cee53efd2288824cfcedc84afae8776ef0909602940f82a3f0033a7624a104cb2d9954b3b75ace44bccf794399f7c19acc8680ebb383d6eec71fdb7f4b566261b5d71c26c78bb7e630e0b8b3d705d27550a09ee35be7af5de2c12c54ca80da7035fc7d625799bae2221451e987c24629a7936aa7a7e803cf5d04b09af0d71618b11124e7cd629eb3f6111c02d55c23c8b9fe2f923b84a320cfcbe1128ebcc9e88f1f5ccb5f0c83a9fd5cdc6d21625aeee87a46c56b80cf219a9889bb1f14fbb2ee60034a946c88f0e8bcb6264fa62ae0993fb9033bdc2ce0595c67df6f718c646b3e2586ba7aa529a8d9e78d3bcc5b560d4eb2fe4d724d0a66e182b18f573b3bebd35e74d6f182e05a78f43932dfed9168a8831cf0d8c3efc3f1cff87df4b36605f38a708681d87906cf1c44660b2eaa7aaa3511d79516873a7545c0000ea8be268bb33f8c7bf0ad6ac4781756ef55bd75e2c79d7b5b0edbccca16352e42a2c7b5b8c069acdc5f2592f230513a7af60d132f58595a6d391e17a2928a46c63af15a348e781945aae42798be3fa73420b1b1a3a4ae61baf9751dc8953424f42b10c4e0ff845b1501d643b1be981f432ab7b215d5f03839a8fb86a5bb30e26331c481655060790fcbd766e1db8e20e8e0661b5ab803ae014418e5377be19bcecbeb394a8f39fb525dfa0cd9d90666d350ecdc9c0cc23134396844e0422f015750861cf86d290c6b204fd6c2729746b54722bee4957c1343a3beeb8c65919f846f8b9c420d24d1b6aad9dda85a3f41919b7eb71350dac8de95cc830e5a30c31d99a00d5dbada81ebd5d64a8e3f1963ec678ab4de29871c5f327b5f27a9bac9fd89d8d5415d99c9c1c60ff84a386e6114c88e63ae29e5568a442704ebe77eca2413f216dab367c1846daac1bd4af6e22bc592a604f816fac1de9e053e21c6eeafd1ca79f754a8b218f3a5f262d2981f30755c1f7f5f811e2fc8df4969e07ecf48bfb9ab2a823303a570013a875d9d73a74508c3c16545ae4c3ea61134e73d757084f6beb56b1ff4b2175ca39efecf51c1019d02edc1cc7090f6aba53d696109a30d80295c94ab24fc89e4378b21360e1ab8b67769fc2d927bdc41b0f46e36476080301e549eec3c7c5b057a64cd9889c96e85799432081aaeb2137a0027ac6a77be085aaf47bd74938135603d12ae7a9831aaace0b5b303d6297270da07590cb1f8e7a17e8b255e06050b2202ca3917c8d31fccc9366741d30defab32b6588dcba94b6ba43e49ce4220467e7c183f855122a6e55f9ab00dd9b938cc63a4dcfaeffed2e373d97d2e2f407a61b647f32f5e8a96216c77e2e081e07fd408e432f5ada54d1d4d0862a051fd20cf9f2b319fba6ae95bbb0ac67b2de71e70450b258c4bf9f3f38fb85cdb3d7677362bee485e33fb01825d292e1b0741ffe4fc55632eefd9a87d8c161856a8319a7538ce3d09912c960faaa660e4df833ba8baba6cc2eeedd31d703414c8e6d8d20cd6a1682a5dd97145114deafdf7dd24bafdc841a44c9663be8fcd7a41f4d3c4b600313f383700775527445d2b43f552167ec9b7256b22c15b171da533f81596118edb09124a9f855eb1c76530fcf4a5570528ee82990acb71c8c127422b24aa85d3d737057413a37e08eecfbc0f5b4af40cb16a50c704e95f0fc2d61f15d3e89b4b46f120fc386a4eeae025b18a3abd23ddf06ad25cc3a03169fa30e036ee6159d651da7deb465c562f0b16c118f4f242f8d439cf018e2a19af2c835d43ae915411afdb457219b94112874aa08ef01de2a323f3513d8e135329296b8e16b1e6d9638f402471ffc7ea620fa7e37f8774f13c5f69c1c2f0eb3e4b91bcf3e03be9e3a70ce4b4db5b30ede4df83eb62c4c436495210412785bd49e7bd2fd6c7a5c554043af6924ac156e2453a1de7103d4af0620b10d8afd57de8cadc1215b7ac50b2160e6fe21096ad025a3ca402464793b1fb05c8f6833eda344a002071e41a1ed54baca51f1f8b834104d76338dfea83b40e35b083b7e6fe62d180c0e7b46816e6c45494dd6582452a2c75155c361db11abb5f113f896db4a4d9c8cd2c2ce7259370cc5af6c48b1ea90047ecc402b09aae3db8e1e521daf003f40bcc9372adf50c573e7166d6e099c3293432846ac41aa9162cf0c455787a08106d88bcf9dcc6c5828876f07d5ab51e90cd709f49575dbac0a28e6d074d55bcc61f36eb18cb6c096faa6d92fbb22c5ad78f605ddf45afb42a6ff19fa2cf203163f8f51670665feb2100bf604fd690034309263943c124da39e5fcfe86e4d754d507f726abf3fe6efe26014c8f74ed136f9e257d43b42a9a28add70954529a36b50c057d46f6cc4ee5bd915c4c2c9fad6ae38e285b005ab43fe64a3f45943a2a985d8508bbca94de5ab52c4b130d4e0cbc7e7f58ffaa5c02850fba8368230f32f6602fd4df005eb00d33f7b98191ea4a3e890c1f47026169a51865b68f7cbb5954c69e5c7d26d92d466d932cd831ed09dc1ef752d3ea8fca3d8aa1a23897d027fd2642fd7e13f1ebb32647d9a6ec71f6e49f75bf2a61886c35c266c5877ecc1bd79d56bf480070e700df10c9e4edc162e7f20ea554d7f1f69efb302c48308df713e4876ce85594b05396049ef98ce69716c889e77460ce5f73accf65d1f71e8113aa2c7bc664718c4debe3496322a10a0ebfe81d32f420d9c82992a078de6979e9b653861c870f8673fe62fe863bff84180da3c0993b06cd73b0472422c2306991afdf8f3fed5bce73de3c9a3b67960f6210c539857e0c11d86ffc9da55510c14d8d93f1aac0942c769cdb4e4c8c17e8e590e8478ae9e92cc27292995d2bbcc6889432c5403c4d5f77f118273714fe1706d441c302449dcf02f00b5aba8bb214da8032bf08140086c531f55e169108c144475e1211210d61eed1f864c52f4290b1a70db9d95e4738b247f55d4e0767ce3353d3d3cb6a3409eaad5fe047bd104f804f954f86c44e3eb0d5a92a4d3b49dc65204d22a46f37c23e67305c12f86799d6f4d5915b7b40128d1561c484582dddaaf579ccadb98d3f91a052e59f9485d3b9b242bc605a40f21bfb6ffb615ada36ebfba54fa7ec3e3591102b913f6c9fdb8e792c35912962c4690139d1be79d01d91beec425858a6859445b0ca6739ff9c9371d71298fc71b932280d1d088a90859b0f64457cbcb5e387116df424bf96249f817f8c7ee41dcd6353b30a804cdcd1f28f5841d682e5277522362ada6ef52e30bf7865cdd566337327f326f078ec7f4bb934dc10d68e8f5965a847c777aff32538ca580edf798ab00279d468367a82cfeb66ba4da52cfdf55f55a1072969feff7b5be0b04809f1b038e805688e228cd28332e03dbe301938469760362984ff25565bc47c013aba2957a2cd679ae4139411ea2a797eef18c72a523c78e515b761d02a3b9357667366f106641973411ba2acdad60b7a5b41552bc98f89da58341716e9ebc6c4fdc28b816a9fce26eb6b1deed1ddce3408807b287137d195a27b84c03a5446e15a90ee1d8e64e1fa10c3cbfe3d0c7ede2e5980fe05959ed081f55fa1b110a51e1fee9e56d44f6daab14dccf7b642e63b5f63e0fd0697bcd9212bd872a05c86b0956d6c0573990be298c51eb2733e64910e2785c61443c4df91527ea81a0a859683e2ef5dfb59b0207ffdeb94fa05a5fb0b5d9b632ee2fd22a08448ff5674e20a2889964f2dfef8b3cd2876826c55c107e141316e40f28b47b7e02ab1473a97e7c7e66d4b4fe61dada89e3d16dad4e1952bd6751d6d45ab93eaf5418b5422ed8ac9a811517333c567cbb8c4d02c1794b8e37a8991bd3aa94d8382932c98c64a07bf224f441d0b337df9854defb70ddb1dc443d689aa25b054c081716f3a6dfde9884557898bef62cf44268c14d4bd7c1f453d2e26c80c4b71e17bb9e076a9cb8aad8172d10d2981a2a342489971e23544291e9ea85650a22aa3e81551e310a66d7a331dc6d1264db37361b472b84b7c6a786eeb99910b27d8146cfb71c63d9d37532b96fd8feaf1567d74846c4e18bcbbd518b98c3aa9965a81d5ef2b85947e9e047036043bff141a776b1aa77281cebe34fd36503961f434d18d878fbf3d02c47c6e96f136036827453d24ea75ae6c410fa7322b6b123eca4ff682ff272c2a9b0448927b6ed7eb414c31a329c26509f259e579187db2c98073acdb66e2481d3aefccafa715de6ad43c42322bdd4ea8ed6b4d2324b4bca8b1a0ca2706d329295e46ef60da26cf18b171f40ea8a2bf74cf5b29d4eb06bd13cf7369ac303dc50b7b03b39ce00c5289bbc5de36fd0a71d20f08bcb8760919e4d06dc014eba63e1f43ee1eac31197c13b2c843194c8e4d962280b17a47a8f5a44bfdddcd69f8f830935f851842a5659de72941aaf9b68c8f9cd83984c6c7898a8dbe125bbcc08298b0125c78eb1bd9dc4842cfe777f9fd0a2de298e987e74216de94e9479d1c4dbc418a3a84220709633f30fc9315d718d8e515308b658e8e899eed1d11b76623058b3b74f9bf645d426379753286033c801a5245e92b4e5afe429f1c2751870b39e05392c932a5c91d611ab3588f3a2ceb871bb8568c37e06c80f62811dfe2c7446ed1d10cc0ab25cb6d954adca343c983b6b83b557c97c8cc1add3f586f78649a17ae65d5df46963303cf6958b8a58ed657f72b0841171e484bff67b06e4f2d9d097403ce195ea256ffa40897a78f6bd2cd078dadfb9ec5259ee06cf69ee081e5a57ac767f706bfaca46c1a0ed74f4c355432714c0eec5d8c11f4d44c2b503bf47dd84e5022bf894f30916eab3c37be62717cf861933c6d6d18389e812e828a66a230d22c33a9a19ac6295c6ca52dff4728bcd850f4aad6d94181a0ae328f8ed695fa736b382b17dbcfb5f96402600b90ff9cd6e966300fa4255a778841fae861b8461f92bae9e6a3c193f102548b4f4edfbdd4f1bca4ef279d0e8edf3d33200ef917056b6ded6b5eceae52f11b060dc1477d78a247c96f88ab5a224c0b77cb06bfd71bcda942726a97f6d29ed489ae4a478c9e7b7e9bdee8a847c2514e8f172abe2af8604f6fea987e5a8d8535329b9b7183219bb43ac1d20b66a9a2173c7bf72480085bdf917173601cc39f25aca15924a403fcd31bc3476631b9d53a7c403cd2958edeb311b295119367717343dbc2b57d9b4f0d08fd4f6ed0daa2d3a074caf2af4b5f73f154a478bf14fc3cd29679812cf51f7d1cc49cb3963833789a164e4c3a0c3544bb9d9802d64c1368f4333d37701712fcb748996b37d894f998460573cc453a9fafb21a33b166f281ce28056cf5ecef32e2de9cb7933dd26a2dcdbb5ce56f58b0628c8e704c2e1330dc9ab738bb2475be4e286d839a1499f811699719edede5d0f019e8bc22d26a1413e4d6310d34b7b36226466aec834a6128fad8272d66382f5ecc51e663b8de84789c2399756311b9e508dd9565f3908bbb8ceec4c71093605b0678b9ea438a795426b2f8864ae930c2237c29e6308ecda4e84df78d9078dfddcc3c88356cdb231aa1c4c16c7c1eb30139f56ae796f028a298e782f6bbb262aa74b4bd329fd5578193de7e40815f022e55ed97ca8c17d66b39e1e1d960ee308eb981e2b111418e81667b49bdb821fa5b639ad3993f7bea92cbb631b0ae6e8ff4a03e113d78f60dea0c75e328b7a168925db3116d08d502c25c12e031ebae49ea7c91027873708e4447cfb0d3f28be941bb8ae8b7efaaee38ecac9555087ef747a646655c082340c846bd32ce56b932b9ba380355e9decb6c1b33c87c5c2caf3d2770ef18839e8957b4d5d4f6b7a1da70d66205fa3377dc6cad7f467b0843dccaf34a029dae94b0e18cbf7058c9ad0d04422b8a0b1c880827dd78829cb4f226c24a46a5a08e89224a138c4cde531871f1b50a0e3e6597f8a74c3e20c54c7c50c27ced30555b4aae8de0016f5b21914414f7f3f828fa8bb4a3e7304ca7141b432f0b11cd98fe683c5727971f08abd100c76f095cd61c37f9759ddd05bdc4ec9e360b84199aed4d8a0cfcc5a1e50fb8679c7e5d1f2ac640a081c0e8f0e4cd345e7faa784eabbf79db0d0b0ffdb65cedc96e10e54e56ad8ff0c6db1a56011d0789233e66cfbedb495c3370e1dab7490a60cd11e0f4c7666d22f0c8437f119893bd48dc33966d3543157cd352ba6a3d3c3b53a6cc229386211391f6585bed0a3de901ecae75f0d26a0ec80adfce70391992409edc1f3a88f84ab0665cd4ca4c5c477ede6cc87e7f682e61370ee75f75b140f8ee54e83f2f64666efa5cffe9f0b02e2aadd201ea796123470060a2f42a51301cb3c9f9c428d070881c1a0ea2d6f5cff0039da58ee2a105d5a2675fbaf50b4c0b0035d3d8c87b9cbe4206db6beb42d269c18e8e5d1148c6908cd9ce2aed65654e5401b5c238cef528ee836ee947fabbb4eb2d94a3d72ad32107579fcd83479fc974629fa59b8cc1f60151711da0b6536691f44c41699003f14586a38fbb0a94d201c522bdb88f109c828016511877aa10869284357459875221d8dcea499d775da01dff02f6c38337802d99d1fd4e79dc1cdb75836352604caf573703157cc40791ba0a37cf0f6f27f1ec4d3abc0cdf5e9663ffac6398be6dca86182826f2459d2d8869860c1cf17fb706a0371d4584b87fc3cd39020babfd9e967f3afbbf2249228cb7affc32017e4aa9c17290c864d5af559b859016b7add5aa254336f2ae15cbae877065e0372303ba86bc129866c5857a6178194b42395bde9f8c364f57bf68bb7b793ad78b90cb2a2599c45aa76fdc31eb87ee71ded27b8b239c4d0dbcd3ce1bc38c0606ebd2b1ade3a5e519dc4eb2de2b8cfc6a8cf7496e4c3bcf795128ee8dec0846c6bd9bc3f37faf0a13dc859d1d6f65ca2f15dbf686386ff7587d90b3c4a819135476ec53ee45bff57145a0198da27ef0b716076b0016dd81a18ed90637db066527738088ce6bd70cc584b73c8687544ec85fc5474968f623ef97f7b11143d5e09877dc5b4ecb4fa3376cf816934f852bf27d6dd13926904fdd9542602818a8ff5c586ce1bdc96ade6cf82424821a5adbde28a3254d9691848ca36e1bbe07393aebc4d3a0d41526341d56d1bd06ef14b9f934f8e8a074e259dd3191ac9d85c42348b5254cba8ec2038f5b3c3beb3c0f23a71d7a94c9155b215f256712e60e9abef2e890e0aff55c23cb86c3a926ef8ca202315bb8950bd41592c7b80b9e5ad91e502796f20e1cfb4a1cf4d201ba9599f1a4ac194162fd5a5c22e3baabc601342aebb16389b21c95791c1704d6d5b147eef786e372594a2d09d2e29ceee0502670781cb6b6cc5924d80c4a9d821d4601c1f9435030dfec46842ae79c428539193b36e9c54257107a9d42520723002e3f43ddece6da5f2f252c4b0bac2c46870ba82c417265433dcf0a038d0b6bb0fdce3a354a249682e7dedc5d3cc22888e1bbc6962f1ce33d64828966fb399e7325b203ebf70786e9b96e17b9d1618b06bf91257847d2a0a8916e0cf67d412dd6adf2bfc26cc6e26e0875da9e6795754b89a1f077edca1bdd29cdec15c5fbf3ad7d54665fe862aee4cb32d372ea67a403352f375035e11b64599d1926dfe3415ef2d33f9136016dee8b635ecf80c07e41d75050e5e07237ff4c149f54fac54de82d1d224cb67b2d5b3ab5fc4f2c347ee3f41fd08aefff616c30f3d4ce6c41413b0f63c3bc85002fc54efb3c6d78f478db88ad3b94f6e0ded9f4d4d7cd7d56efb8f128ca4c9cf05160fc22ac01db02489b0f1cd2f71786cb938728c83d570ca46db2f69ebe223a0e8f68a04ec8b75185dd5274ef2f7f721e0f9e029aca41dc82aaa4c88042607728bbf0faf8bc823e3129147173339899c400201cdd9f2713b7b0fc80732b0e12680e5b28123c8027d9aa965274556544f664b16defe0ff9e25de3e96da27629589f2585d346cadeb4b336277fb177146764608aef608b2da19e1cea097c36dd325ee4ce8c3d82aa2cd999b170ba132d0130777cbeac1bffea7318fc0177a602c7118f8bb355413e48fa5a30fad88877c9add2734ca941fc1efbbc810212101fb3cb380731d86c48cf895be88c70f99aa5757d518e297d78db49a74344a7512ccbdc5fcde2fe7f3e96b5b947f693ae9911ecbaa35274023b1b5a981eb3318b29a525438a0e4e92871b391822696334f9d2a017092a0006349aa04a6fbb3412b57fabf2dd2d4f554292b62b349684a7fbcc300db77a091914c5a014cd5fa147f4333b76fcb6c7c35326c68157365b244cff345baf29927486e9c53de10ced39ee607c2ef44c081c4b00e1b05fc0135cbeab26870e984c5ead26c47698a7f8d685528bc3bedf23906ca997406ff45bc56c926292825a193448d8e617e48306754d1592516e5689c71fe6135dac5993ffc21e2453bb2ccdc2a6b7dfc6a7b87b9943543f7794aa4d74aa3f309d58c5714f81817be4f3c6768f09babddf89e05aab1969597e83e16ee034b3179b810299c9d9b615850457cbdde281efcfe2f968f7e946ef896bfe1e872cda972c54136ee8b2631dfd47203b624c38f05306c86b4a0f3277cfce687029f5019393575a467294fff06dc074f29bcbbea5ca1fd7af3ce0514c61fafda2e61f33183ec090390a81f3fd7e118e4a0fb046f35c45e4e91a3d30e955b3783772ad34bfd4ab779629c2bfca4cd0114f22b4628a1693835d5246ef2a470136a66abd7dea6d03a37d6aadf57871efb4c21e2b9658ba005bc5ddbbc38ea03a6c7cd5ee927ac6f187bf5e6bb6404829fe5276241856fcec171b41e6c1bf785892c044c20977ac6000ab83df08beebf9d7769bbff34940a8f19cb1e0cde31616235143cc2eb1b56088cbc1622b063c76bbbf60f5154efb85926f84ac646c4d1fcb2ae4e66c8c2f54df8991544a3b41ee2f59b6ccabe0a7dbd6e1bfe46c47d227b20ee6a811704043dcec2669e07519af2c85d2d4e87035e28878b2bd67a0beab13b6de3760f43224745da99d570a185b19f5164bf33d26bf0ccd04011c28e9a60361e0c325b6a90d7e522de27a5f51cec2cc859e443bb6daccccd211ca469c495bbbc279233c37c9b31c77d52c705b3c75ca44e8563660aa3e57875974cff88cf704ba82ba4b60c9f94f890c3bd03156819d2211f1d3c59999195d5979fa9b6961c119a14f9657123862b948e40ff524b1069e341d7ee6cc9e2a6476b398e4ad44416125426567bf1f9feee6e9d0d0af82b0e011340ccd92b0745f620579817230534fbec7d462d9b91a850bcd9415948b1be3b56667359daeef1143a4cfa4aee387248d95f50d9b8f777442a84a3a0c296d9555205b97be6666a298cff113e906b7de1fcce258c4a06824ed532befbae2541d7da7a82d260d1945afe77afe351f4a7e34577c0e30b2f9238bb6e76767c1f33198ba266e608e3ec48963d75a2d201958f0ef12927ae8d902e3e38eca82ce44dafb62da6f47726bb7c474d9a09d20df06722cbdbe23d00ea88b33bdaf6a24be9c19ef9ceb3dda267ebd5ecebf214521c656fc5eba92bd1e2af9a39f790bcf9ebbbdf31725d7a385270f26595e2469d30e7e85c2bd320b4e45840e2ead55b236dd547212eef38fe47254ff2028b6cfc23ebc148b1bc90b466b07eaa8b7d129907d69122ee7b2579814ec026fd09fda0d73efc002b85a4e25d62530aef6dc74b299b01fe8104d2957dba85d7c5e717d97d5b356df552d77d7a789b6f1e486434c169abd2342edaaed21a3e2aba033f375d5b77f6c5009dea222acf10f8930dd8870b9d2baa455400a4088560176e58fcf8db7e6a84da474802d1d7162f33ee1cd192961b7089e9503fad23c6785b74986a919953c1d7e1e92a05bca42d713dfd92210eef23aa328878a7b64cf1f42d8b29d27a76a111c4f5c027851bf6618146d8c1c5022faff819a5dbd7a77c2d2ed9154cefeb88094124e3c65c5d32b89bc55a7c98174e03b5557c6882f270a58687ae68df94f24ab1b323c351ae1212a6512436593f7aeb784615d691d2ca1bb84af57a5ff60525b2f2349a5a7dcaad199dcde25b799da0e0101454ce90952f07f2c6fead1959c43400f683dfa1977a8ce9198bd91607b8eb5045982176ab32af7666dddeaf70e3c59a860ec4539482890cf1a66f4c8ebbc82ca04cf9d47d0a7c42173e40daf5ddfbd106d674ed878e70d0490e419c6e462bcba48120f3789319ef2b0340268cf1e1dfea6b6f7826e8366877c1fd3b543e299e96c70b7c8a7f3acdc6fa4d6864e6958b49dc5367d0faef411bad4b80e2b2f5164537d0a3eedd47225457950df734e78694af835a512464f7d58f3f7de1a333ad4198aeed7b04669369e40a85f74c15088baad305e2284ac8e12a8dde284b4d6be5b8e33ec2c5a66c5f49179294ee0adddf92e7bb504cde606d3b86d28d43a6d88311d6b2b5ef7c71e7fce5121d9ab8adae16b6736ce46554f8a2496af10803078efff0898f25599e9228e75b37e574e0f0335badb8e69e3018746d748edd6ef0fe74bd16ea77dce5c076e68039ae44d12a813babd757d89665f2e49be2644a417726cf42b4a89feb8f4a1db6c9652040b18729149b92e2bf3c5e0f28be93e8ed82a9c295121b11e72d51887fcd68e55d24b8420f11d122e735b008968deead072a1eb0304ee6eb4272555f00a095d0ec3c8b847069f81b137060b9edbd515633c8b9d2f3ca8332680aef0e0f56ab184314a0c7778db8f4f57bbb57e280738fcbaf27eed8451a98ae2106ba8d41a2881ba6a380e2e04ced7a590bd85a8885b277f9724b5bce54c649ea651d7c5fa9d852110b288ef532683d8116f584d6f52c192714609957778a379b63a85e8b8f6ec35b4f1c1f2d2b11458a26ac48b7de82f2c35801eb085159e0bc976b06baf68c8489dac30f7d9ac06a99a8a16646f67e55b93bd26c46ef5eb7e54cd183b3007415e99fded45643f33aa9b317769bec7c8d04385e44fd1115bbe40203472177b7ea1907e7ec827ec7498998b06570dfd0faadc8d4c4ed4ba08025160d9a37cc7f19b6dfb4bb095a727a382227f83bf378324ec291015c76a3817a96f481861fb9d18889e92f66d4804ea2f0ab97d4933fc146e5fb4db82ee12b9e36c83f4beafe8d29cb0c2f17c692044641d6b3a1da1d50bd3267a0a65f94d1c640ae201f9ab8070c1c0866d45f84f65a3a101deb948af4a2a39c18d2a1ce79f6c0be72a047a76e857818cca7c22971dde387371835def76eac63407f58ef42e265dc3c567263e6903fd67e2ff0ee3cce64410122fa5eaf95a4137ae0e830d1e80cd2dc5b6f9cbb2e0288868c5ca389f4263ba10447a3eb6cb1e2a78cd2ebfca27b50a4027caa61e47dc7e22d1a7d9a1593c26b5509841e1f110ce8785d05f3a24ccf5781c406659ed81cd16aacd6a128f1bab1000b7129611a59fdcd1cf71fa08d406c0e14ca2c528566bba08c6d122a24d9ade4dc14cc4e3d74b41fcf858cd0666030738bd41a2ba94369e8299aecb5ea6cfbe283a0893c8663b853a3e10190349f0fa11d1c792c666832b74789b6ec8ffbffe7880707365195fc57d4614e78931bfa0f0ebde02a5f2c4ec5d6a5d22191362dad39bafed0be28f3ad7f94d2e5ca36fd262a15adeb36c58030189e6c213ffb069c8f4b9d799c6edd026f396c77e29052be6eb6d30f4493ef022120d04843dcb4e3bef55fde190ee797f32eb4a9db285362b7bcc9ffd1e700f3713b0978d0bfb461c8315bb4b94d1427900a6da7f93e1cb4c83de774e89304d9321797811612cf73e85fa2e75e84156c653c97fb60054556323824d56fcad7daa88576fb8e585eb02b72576c32813351cdef473f71a4e73deb26496692c24f4ebc664033637da80e90e297c7405703e3e5d212ac2a263d38c149890a80360897975bafbd1265b91e5151306de047552add2159209e292d7c12aecdaf7a552b9bde6ac5b4f4a9e955c8febeb23587e145c33e20349ee9855c92b2dd0cb528402bdf7463c6eae125d7060e8f8273da6768410153d87ac75d3b897c7a14d42ececd3d4a322e174ab9d24a1be21b876d68112c04dafa5fc9d2ab5496ce4ee20d4522c0b4f1d8916774293b8f2d9f0101e47aa82baa35a3ff2d524619f588bab51770f890006cdf99d1f384e96ce1615aeb035e02ff188be626075aa99a470aad3852faffcba07ca2ca43b8302f5a1e55b89d236b7f927cb8aac86b2d57765f91c7dcf6362908ecfe5874712466d2112e9aed351dee7bda6e2c6130db635afa96a6bdbe3fffac92cd3fa54e3d504d7cca21622675e1f35672bc86094bfc32e48e357f7ebe2b404320fa74b48eb658ac2bc954377287d4ec11ff27be9f58298d3db1c68b4ed27ad0506c6bd7e6e0863ffd62bcda40a3e67c2ee0ec08e7e096d199f312af69884e7146cc6e0cab1adb6c0f4c4b3c8e11f5714eb3c105640c240d55d400dbdc75a683d136111e2647179351829608250aeccd63131f870d3b77ee983460d2c76980dc64d74e8c62fa632e9520b351829d476d582e59c724517e8e91f44e46541a382135ae619b3b4bbc3bf5d7eff79f35ef0c3485c72462c800312defa23ea7882ae2aa66ac4d40176e5233a4f76033ea6f98db9b5559f9902380f8ee415e8767894d40fa8b9f1bb955da86a3c33a01a50104bb735c129e536042d777affc27f876aad10b7c2e73a32ed2d5102b88b1e7ae65772296456848b8e82cacfd136b3670c95f9b3e54f15d5cb212d0b7f790d5f379757dde4c198eaf26fb043c9830d389a91b3374b4283f887862c8a79f8f9fc62b029f230e80717e4925c1647b12c452b127c77f5dabc090dd824320e1396745924b8396050478114478d0776c953caafb35068d4ed7cc76fb271271ffa0de1b1b1a3a5f539c0229d35a71e6e1e0a62d03369f17ab36a6630b43cd946f364873748345572400160bf6bf13768c15194b68e376a86f40ae7bbbe51d522ba5abcc10cdaf830b002e05cbbcaa073d9cbe3d6b93e8fdba264b8a0c64ff0888c678c979f56c90b9477c4601a2f7d43f499cdbcab404bfacec11ec7a46358e2da2978ab4d98e49b847bdbf81e7c9f9c54ab09b6397d4a3401c0a99528e310813903bc98421fe612c29ff6f9b00c602663280d61ad83f5f701ae68ca63f7e2a4303c65984a05cb9dbea91126106a6b1da3ad36b24cc8d6e46e3b71c77a78310a6f37628a5bd498fe39f28e8e09f299d4a375eebc81b1e0f2c8bc381ba4ceebf9faaf440b5b80907dce51e5e5e713ee5e5a8b51561f25a9795b243377df1b1675cf91690bd9e9939a66575b626dd6641787e24a183c325db5832be828954322ff31e20931cacb2d4bfc837ac5c4acc8de46c86d7efdc8c2195ec18c9752294613d2948c6eba219d615cc7ba3063196a3203300704eff9a4e2a27db2ff4115a36312b993e1457735f8a891f150d7fa18776da87ed5211518a7a438fc3549bc85b261f37754027ec30cd6fb41e356146054acedecdd11fc9b02491a90fd442d88d5f579b5ac8e0eacefb7934c468881420d2f0ad6bf44f253a162d2024a3c78e7b476e2a4c93b27d8a4a38bfc9cdc711f3036e383320d46c0c23ea05f5fc42f5a9d8b3e5b8e5bff46475ae9fcfa31260e2adb2b098fe7d3b285d902e70e08e4a588f90d3b1357ddf192c2d408e05b2554eebb3f918e3d636ed0046303b34487cda39139395a93d40f68dd66bdc8dbec8021536ffe65db2491e4d8e1d609bceea962f149d563e96065ba47a8ad7dd721bedf38f55445a56175eb6e63aba4ac26ba028e1cc017322a573c132d26087f0b60adef5e9b3c93d5351b902c3ee7eb94852f585079f7248c3d5b4bc327ccf3906eef496c15b449989765b43386fc52fbd08bdd11bd4ae0b7cb9a1c2dc3a0f28086c790ad4e785c831c322d39d8fbacb95572667fccf8aef8cf910d367587f5e4c7a9c86f506c31b8d27f82bb66d8ddd36c35d75bc9b442dc9a422d80131a1106302d6824770684bf6be238e7e3816405114c28a489953615384d4f2fa772e458a94596e48009ffb1d1fdc00e3e6c776099636a960a05924216815eecac40c43d69ade038a77505e07fdf2c86e78255ced462b37f5193372d4347cecef869d8c059e998d582e6915a01d47e7ccc26e7eb209e5ca67e101f8e8f7317fd66f2d16c0f5a9bab4eac715b8cdd5d47b8f7410cd9cb97797320941c8a0775be9238a98ca0fde771d89a49bcfc113e9a207f13d4070b4934e6a8255a311adfdae3404240c4909990d6e5f7681d8563dd48d92f938e2e33e9290ef7d86aeb538fbb6a950d671e14f43e8ca93d4332becf127f121cfe3d07b085e29148e3f61fa7e8b3c99a9228be4bb9686699916991ce30f20221fcd041ce909a1dfd9f8cd1ee7b094a6a374774355e9b42b49f8b6c8d8e9a1b54cc4a2e27409a8a74f5e4d833a425221e97934f6e5ed9a0b9ab8c0bbb6304276adbcdf166796ebea35e973308fff737a1665820459c3a050f99a8cab299881ff605d2da4ff54255ee017d74c7f7a78e29c783bb43a0bbf3a46bdd155349689fd401beedc9f8a17926b5832c7e6674fb8acc783ce2ee5a16f6bdfffba987a25dee81136cb2fb2537d7d6a372614532abd2da109434589c89df091eaed1fdd26674f62c5f3d2c20b88d19ebe2db2adeea93d87729c5a1bf1b2131bc145af390c1080117ea3da406ccecfda64dacc6bb2029abc7d2c861eb7ee5f7312d1e4b40095b3537e888cb121dcf7846cef1d67e7283b704804d1767986671fcf0ff1c6739ee6bfec317765119ae1a5f64b421577ef6abc01f1e724572da06320a96f6f02b691c2d1b1af794a7e730336b5a4071b2299e5717e9dad03ff9adfeb5ffe5d229d45fcf298089a8e2220c1924ba37c37924d953492a4bf1b3202af0f96d074287df1d94fa61a0b0b5ea358d845481e9b3f271fd988c03d343b619d6d7ea27ac99a989c40658918b20d63658dfc0bd525f953db2a5f851803b1898a31076e4918dfc5b5630c4695751da278c3611e4d03335386eed07da14b1a2788a956f363e901e21d167cd06008834f466ebcbd3ee3437f0f8076ba1d8e762b3ea1b1655acb001a995b688f09782bcf4ec381b01c4df12c7714c93c5ff5c296627fdf0c6dfd3ae969eff5f504f8e335ef8873994593810c649b5dc7c17f14ec05a81f3b69b06c3a26e02a36afd939350bef00ece43e4728454cf7ec4a25fb8dce904d6fe09f30e4444fa2d645ed582e304c17edf05e8c40dc2fba72e8ecb726127e7ec7611e6d84e36f860b27559c5bf168fec7b840e5726121678c7b39f760173a1ffb6d144b94bf77177c71e25cbc998c33e0e3f6a8725b31cf34a7662989a03d24a6e7d04a616679151c6df5f63b9946318ed21b9a8a53a0dd8e1f6814f239519c467081dd3c08f70d67520087792f92a9590525d6cc51aab836ff63e832104acc82328d47d562c23f94083a4c5a43a6d204a0300b8df2fa2c830d8c3a784376609a48a39f75f358e67dfd9ada94b816c08d4f57f5059e7aaaa69fa57da4ccd151fb437f0b3d104d34b0bfdec43eea9ef7620214d1e0fe2747316b10f075636e511eb4702970ddefd5cade0fe7cbec9e0bc9e8e89669e52ebeb3c227cdea22d736ed70922fe05f73bd4526550467d61b60c42a531e71ed9fe2c7be4ef4929a33ef4a0bdb295a266d171516439a03580d80e2f7e1d610a136b020019242c65eaf71b490c38a5d2304a93854</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Welcome to my blog, enter password to read.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>作者:  </strong>Zongwu Wang</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>文章链接:  </strong>
+    <a href="/2022/07/08/precise-runahead-execution/" target="_blank" title="Precise Runahead Execution">https://zongwuwang.github.io/2022/07/08/precise-runahead-execution/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <!-- 文章详情页的上一页和下一页 -->
+<div class="post-nav">
+
+
+
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img lazyload" data-original="/medias/11.jpg" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/2022/07/11/criticality-driven-fetch/" class="post-nav-link">
+      <div class="title">
+        <i class="fa fa-angle-left"></i> 上一篇:
+        <div>Criticality Driven Fetch</div>
+      </div>
+      
+      <!-- <div class="content">
+        
+  48d53d02cc724fef4e645fe6556ae2fc56db60206aff9f44dc38f4d95
+      </div> -->
+    </a>
+  </div>
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/2022/07/05/arm-hui-bian-wei-zhi-ling/" class="post-nav-link">
+      <div class="title">
+        下一篇: <i class="fa fa-angle-right"></i>
+        <div>ARM汇编伪指令</div>
+      </div>
+      <!-- <div class="content">
+        
+  48d53d02cc724fef4e645fe6556ae2fc7a4bf6c85f2410edaeea5df5c
+      </div> -->
+    </a>
+  </div>
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+<!-- 文章详情页的分享 -->
+<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/js/shareJs/social-share.min.js"></script>
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+    
+    <!-- 评论 -->
+    <!-- 评论 -->
+
+  <div id="myComment">
+    
+      <!-- 弹幕所需的css和js -->
+
+<!-- 具体js，请前往valine.ejs查看 -->
+
+
+<section id="comments" style="padding: 1em; margin: 15px auto;"
+	class="animated bounceInUp">
+	<div id="vcomment" class="comment"></div>
+	<script src="/js/valine/av-min@3.0.4.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
+	<script>
+
+		var requiredFields = '';
+  		requiredFields  = requiredFields.split(',');
+
+		var valine = new Valine({
+			el: '#vcomment',
+			notify: false,
+			verify: false,
+			app_id: "",
+			app_key: "",
+			placeholder: "客官，说点什么吧",
+			avatar: "",
+			master: "",   //博主邮箱md5
+			tagMeta: ["博主","小伙伴","访客"],     //标识字段名
+			friends: "",
+			metaPlaceholder: { "nick": "昵称/QQ号", "mail": "邮箱" },
+			requiredFields: requiredFields,
+			enableQQ: true,
+			// 设置Bilibili表情包地址
+			emojiCDN: '//i0.hdslb.com/bfs/emote/',
+			// 表情title和图片映射	
+			emojiMaps: {
+				"口罩": "https://i0.hdslb.com/bfs/emote/3ad2f66b151496d2a5fb0a8ea75f32265d778dd3.png",
+				"微笑": "https://i0.hdslb.com/bfs/emote/685612eadc33f6bc233776c6241813385844f182.png",
+				"笑": "https://i0.hdslb.com/bfs/emote/81edf17314cea3b48674312b4364df44d5c01f17.png",
+				"呲牙": "https://i0.hdslb.com/bfs/emote/b5a5898491944a4268360f2e7a84623149672eb6.png",
+				"OK": "https://i0.hdslb.com/bfs/emote/4683fd9ffc925fa6423110979d7dcac5eda297f4.png",
+				"星星眼": "https://i0.hdslb.com/bfs/emote/63c9d1a31c0da745b61cdb35e0ecb28635675db2.png",
+				"哦呼": "https://i0.hdslb.com/bfs/emote/362bded07ea5434886271d23fa25f5d85d8af06c.png",
+				"歪嘴": "https://i0.hdslb.com/bfs/emote/4384050fbab0586259acdd170b510fe262f08a17.png",
+				"嫌弃": "https://i0.hdslb.com/bfs/emote/de4c0783aaa60ec03de0a2b90858927bfad7154b.png",
+				"喜欢": "https://i0.hdslb.com/bfs/emote/8a10a4d73a89f665feff3d46ca56e83dc68f9eb8.png",
+				"酸了": "https://i0.hdslb.com/bfs/emote/92b1c8cbceea3ae0e8e32253ea414783e8ba7806.png",
+				"大哭": "https://i0.hdslb.com/bfs/emote/2caafee2e5db4db72104650d87810cc2c123fc86.png",
+				"害羞": "https://i0.hdslb.com/bfs/emote/9d2ec4e1fbd6cb1b4d12d2bbbdd124ccb83ddfda.png",
+				"无语": "https://i0.hdslb.com/bfs/emote/44667b7d9349957e903b1b62cb91fb9b13720f04.png",
+				"疑惑": "https://i0.hdslb.com/bfs/emote/b7840db4b1f9f4726b7cb23c0972720c1698d661.png",
+				"辣眼睛": "https://i0.hdslb.com/bfs/emote/35d62c496d1e4ea9e091243fa812866f5fecc101.png",
+				"调皮": "https://i0.hdslb.com/bfs/emote/8290b7308325e3179d2154327c85640af1528617.png",
+				"喜极而泣": "https://i0.hdslb.com/bfs/emote/485a7e0c01c2d70707daae53bee4a9e2e31ef1ed.png",
+				"奸笑": "https://i0.hdslb.com/bfs/emote/bb84906573472f0a84cebad1e9000eb6164a6f5a.png",
+				"偷笑": "https://i0.hdslb.com/bfs/emote/6c49d226e76c42cd8002abc47b3112bc5a92f66a.png",
+				"大笑": "https://i0.hdslb.com/bfs/emote/ca94ad1c7e6dac895eb5b33b7836b634c614d1c0.png",
+				"阴险": "https://i0.hdslb.com/bfs/emote/ba8d5f8e7d136d59aab52c40fd3b8a43419eb03c.png",
+				"捂脸": "https://i0.hdslb.com/bfs/emote/6921bb43f0c634870b92f4a8ad41dada94a5296d.png",
+				"囧": "https://i0.hdslb.com/bfs/emote/12e41d357a9807cc80ef1e1ed258127fcc791424.png",
+				"呆": "https://i0.hdslb.com/bfs/emote/33ad6000d9f9f168a0976bc60937786f239e5d8c.png",
+				"抠鼻": "https://i0.hdslb.com/bfs/emote/cb89184c97e3f6d50acfd7961c313ce50360d70f.png",
+				"惊喜": "https://i0.hdslb.com/bfs/emote/0afecaf3a3499479af946f29749e1a6c285b6f65.png",
+				"惊讶": "https://i0.hdslb.com/bfs/emote/f8e9a59cad52ae1a19622805696a35f0a0d853f3.png",
+				"笑哭": "https://i0.hdslb.com/bfs/emote/c3043ba94babf824dea03ce500d0e73763bf4f40.png",
+				"妙啊": "https://i0.hdslb.com/bfs/emote/b4cb77159d58614a9b787b91b1cd22a81f383535.png",
+				"doge": "https://i0.hdslb.com/bfs/emote/bba7c12aa51fed0199c241465560dfc2714c593e.png",
+				"滑稽": "https://i0.hdslb.com/bfs/emote/d15121545a99ac46774f1f4465b895fe2d1411c3.png",
+				"吃瓜": "https://i0.hdslb.com/bfs/emote/4191ce3c44c2b3df8fd97c33f85d3ab15f4f3c84.png",
+				"打call": "https://i0.hdslb.com/bfs/emote/431432c43da3ee5aab5b0e4f8931953e649e9975.png",
+				"点赞": "https://i0.hdslb.com/bfs/emote/1a67265993913f4c35d15a6028a30724e83e7d35.png",
+				"鼓掌": "https://i0.hdslb.com/bfs/emote/895d1fc616b4b6c830cf96012880818c0e1de00d.png",
+				"尴尬": "https://i0.hdslb.com/bfs/emote/cb321684ed5ce6eacdc2699092ab8fe7679e4fda.png",
+				"冷": "https://i0.hdslb.com/bfs/emote/cb0ebbd0668640f07ebfc0e03f7a18a8cd00b4ed.png",
+				"灵魂出窍": "https://i0.hdslb.com/bfs/emote/43d3db7d97343c01b47e22cfabeca84b4251f35a.png",
+				"委屈": "https://i0.hdslb.com/bfs/emote/d2f26cbdd6c96960320af03f5514c5b524990840.png",
+				"傲娇": "https://i0.hdslb.com/bfs/emote/010540d0f61220a0db4922e4a679a1d8eca94f4e.png",
+				"疼": "https://i0.hdslb.com/bfs/emote/905fd9a99ec316e353b9bd4ecd49a5f0a301eabf.png",
+				"吓": "https://i0.hdslb.com/bfs/emote/9c10c5ebc7bef27ec641b8a1877674e0c65fea5d.png",
+				"生病": "https://i0.hdslb.com/bfs/emote/0f25ce04ae1d7baf98650986454c634f6612cb76.png",
+				"吐": "https://i0.hdslb.com/bfs/emote/06946bfe71ac48a6078a0b662181bb5cad09decc.png",
+				"嘘声": "https://i0.hdslb.com/bfs/emote/e64af664d20716e090f10411496998095f62f844.png",
+				"捂眼": "https://i0.hdslb.com/bfs/emote/c5c6d6982e1e53e478daae554b239f2b227b172b.png",
+				"思考": "https://i0.hdslb.com/bfs/emote/cfa9b7e89e4bfe04bbcd34ccb1b0df37f4fa905c.png",
+				"再见": "https://i0.hdslb.com/bfs/emote/fc510306bae26c9aec7e287cdf201ded27b065b9.png",
+				"翻白眼": "https://i0.hdslb.com/bfs/emote/eba54707c7168925b18f6f8b1f48d532fe08c2b1.png",
+				"哈欠": "https://i0.hdslb.com/bfs/emote/888d877729cbec444ddbd1cf4c9af155a7a06086.png",
+				"奋斗": "https://i0.hdslb.com/bfs/emote/bb2060c15dba7d3fd731c35079d1617f1afe3376.png",
+				"墨镜": "https://i0.hdslb.com/bfs/emote/3a03aebfc06339d86a68c2d893303b46f4b85771.png",
+				"撇嘴": "https://i0.hdslb.com/bfs/emote/531863568e5668c5ac181d395508a0eeb1f0cda4.png",
+				"难过": "https://i0.hdslb.com/bfs/emote/a651db36701610aa70a781fa98c07c9789b11543.png",
+				"抓狂": "https://i0.hdslb.com/bfs/emote/4c87afff88c22439c45b79e9d2035d21d5622eba.png",
+				"生气": "https://i0.hdslb.com/bfs/emote/3195714219c4b582a4fb02033dd1519913d0246d.png",
+				"视频卫星": "https://i0.hdslb.com/bfs/emote/dce6fc7d6dfeafff01241924db60f8251cca5307.png",
+				"十周年": "https://i0.hdslb.com/bfs/emote/1eacd3f7816e70aff9c1b1a2e9605240466f599b.png",
+				"11周年": "https://i0.hdslb.com/bfs/emote/d3b2d5dc028c75ae4df379f4c3afbe186d0f6f9b.png",
+				"鸡腿": "https://i0.hdslb.com/bfs/emote/c7860392815d345fa69c4f00ef18d67dccfbd574.png",
+				"干杯": "https://i0.hdslb.com/bfs/emote/8da12d5f55a2c7e9778dcc05b40571979fe208e6.png",
+				"爱心": "https://i0.hdslb.com/bfs/emote/ed04066ea7124106d17ffcaf75600700e5442f5c.png",
+				"锦鲤": "https://i0.hdslb.com/bfs/emote/643d6c19c8164ffd89e3e9cdf093cf5d773d979c.png",
+				"胜利": "https://i0.hdslb.com/bfs/emote/b49fa9f4b1e7c3477918153b82c60b114d87347c.png",
+				"加油": "https://i0.hdslb.com/bfs/emote/c7aaeacb21e107292d3bb053e5abde4a4459ed30.png",
+				"保佑": "https://i0.hdslb.com/bfs/emote/fafe8d3de0dc139ebe995491d2dac458a865fb30.png",
+				"抱拳": "https://i0.hdslb.com/bfs/emote/89516218158dbea18ab78e8873060bf95d33bbbe.png",
+				"响指": "https://i0.hdslb.com/bfs/emote/1b5c53cf14336903e1d2ae3527ca380a1256a077.png",
+				"支持": "https://i0.hdslb.com/bfs/emote/3c210366a5585706c09d4c686a9d942b39feeb50.png",
+				"拥抱": "https://i0.hdslb.com/bfs/emote/41780a4254750cdaaccb20735730a36044e98ef3.png",
+				"怪我咯": "https://i0.hdslb.com/bfs/emote/07cc6077f7f7d75b8d2c722dd9d9828a9fb9e46d.png",
+				"跪了": "https://i0.hdslb.com/bfs/emote/f2b3aee7e521de7799d4e3aa379b01be032698ac.png",
+				"黑洞": "https://i0.hdslb.com/bfs/emote/e90ec4c799010f25391179118ccd9f66b3b279ba.png",
+				"老鼠": "https://i0.hdslb.com/bfs/emote/8e6fb491eb1bb0d5862e7ec8ccf9a3da12b6c155.png",
+				"2020": "https://i0.hdslb.com/bfs/emote/dc709fac0d361370bcf0d36d32adb97df7c95824.png",
+				"福到了": "https://i0.hdslb.com/bfs/emote/5de5373d354c373cf1617b6b836f3a8d53c5a655.png",
+				"加油武汉": "https://i0.hdslb.com/bfs/emote/eb966aaa5b690d3f9308a9f936f5b5a72a7f956b.png",
+				"粽子": "https://i0.hdslb.com/bfs/emote/177999fb7d70d891fbf63b161f26b272e08dc1de.png",
+				"月饼": "https://i0.hdslb.com/bfs/emote/89b19c5730e08d6f12fadf6996de5bc2e52f81fe.png",
+				"高兴": "https://i0.hdslb.com/bfs/emote/416570a8aca7be12fb2c36e4b846906653f6d294.png",
+				"气愤": "https://i0.hdslb.com/bfs/emote/069b029d17a086ab475fd331697a649e234850bb.png",
+				"耍帅": "https://i0.hdslb.com/bfs/emote/d7a38b08d1f1cc35b19c35041f29ffcc48808e87.png",
+				"酷仔": "https://i0.hdslb.com/bfs/emote/390100ada4659b4516984d386499fb22c0025084.png",
+				"画风突变": "https://i0.hdslb.com/bfs/emote/ba4de7a3f97644038b15195bdc9f82a8fd118e77.png",
+				"福": "https://i0.hdslb.com/bfs/emote/802429a301ac5b35a0480d9526a070ce67cd8097.png",
+				"赞了": "https://i0.hdslb.com/bfs/emote/40ded585bbd6328fc390076b5de224fd38b46793.png",
+				"暗中观察": "https://i0.hdslb.com/bfs/emote/80a752e0718db211e4135b4ba821813f4c151e2c.png",
+				"么么哒": "https://i0.hdslb.com/bfs/emote/2f418440776e88605ddc426eac898202c1f5fa4d.png",
+				"哭哭": "https://i0.hdslb.com/bfs/emote/cbf36e518f1d50618f6d054aa69993ecc339fe8f.png",
+				"饿了": "https://i0.hdslb.com/bfs/emote/ff91ea94adf7c5b04db305c18d17b444f7360059.png",
+				"问号": "https://i0.hdslb.com/bfs/emote/a905b58b32016a1f0ff7d9193b62749f0d491707.png",
+				"嘿嘿": "https://i0.hdslb.com/bfs/emote/8a15a45e228179f912ce11dbd5478f6ad54e9854.png",
+				"卖萌": "https://i0.hdslb.com/bfs/emote/a0d37b43d1e786ba811d9b0ae590c479dcce6c44.png",
+				"喵": "https://i0.hdslb.com/bfs/emote/eb46e78c9d86ccbe9842f0235c7cb4f4e0e80a57.png",
+				"tv-白眼": "https://i0.hdslb.com/bfs/emote/c1d59f439e379ee50eef488bcb5e5378e5044ea4.png",
+				"tv-doge": "https://i0.hdslb.com/bfs/emote/6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
+				"tv-坏笑": "https://i0.hdslb.com/bfs/emote/1f0b87f731a671079842116e0991c91c2c88645a.png",
+				"tv-难过": "https://i0.hdslb.com/bfs/emote/87f46748d3f142ebc6586ff58860d0e2fc8263ba.png",
+				"tv-生气": "https://i0.hdslb.com/bfs/emote/26702dcafdab5e8225b43ffd23c94ac1ff932654.png",
+				"tv-委屈": "https://i0.hdslb.com/bfs/emote/d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png",
+				"tv-斜眼笑": "https://i0.hdslb.com/bfs/emote/911f987aa8bc1bee12d52aafe62bc41ef4474e6c.png",
+				"tv-呆": "https://i0.hdslb.com/bfs/emote/fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png",
+				"tv-发怒": "https://i0.hdslb.com/bfs/emote/34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png",
+				"tv-惊吓": "https://i0.hdslb.com/bfs/emote/0d15c7e2ee58e935adc6a7193ee042388adc22af.png",
+				"tv-呕吐": "https://i0.hdslb.com/bfs/emote/9f996894a39e282ccf5e66856af49483f81870f3.png",
+				"tv-思考": "https://i0.hdslb.com/bfs/emote/90cf159733e558137ed20aa04d09964436f618a1.png",
+				"tv-微笑": "https://i0.hdslb.com/bfs/emote/70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png",
+				"tv-疑问": "https://i0.hdslb.com/bfs/emote/0793d949b18d7be716078349c202c15ff166f314.png",
+				"tv-大哭": "https://i0.hdslb.com/bfs/emote/23269aeb35f99daee28dda129676f6e9ea87934f.png",
+				"tv-鼓掌": "https://i0.hdslb.com/bfs/emote/1d21793f96ef4e6f48b23e53e3b9e42da833a0f6.png",
+				"tv-抠鼻": "https://i0.hdslb.com/bfs/emote/c666f55e88d471e51bbd9fab9bb308110824a6eb.png",
+				"tv-亲亲": "https://i0.hdslb.com/bfs/emote/a8111ad55953ef5e3be3327ef94eb4a39d535d06.png",
+				"tv-调皮": "https://i0.hdslb.com/bfs/emote/b9c41de8e82dd7a8515ae5e3cb63e898bf245186.png",
+				"tv-笑哭": "https://i0.hdslb.com/bfs/emote/1abc628f6d4f4caf9d0e7800878f4697abbc8273.png",
+				"tv-晕": "https://i0.hdslb.com/bfs/emote/5443c22b4d07fb1907ccc610c8e6db254f2461b7.png",
+				"tv-点赞": "https://i0.hdslb.com/bfs/emote/f85c354995bd99e28fc76c869bfe42ba6438eff4.png",
+				"tv-害羞": "https://i0.hdslb.com/bfs/emote/a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png",
+				"tv-睡着": "https://i0.hdslb.com/bfs/emote/8b196675b53af58264f383c50ad0945048290b33.png",
+				"tv-色": "https://i0.hdslb.com/bfs/emote/61822c7e9aae5da76475e7892534545336b23a6f.png",
+				"tv-吐血": "https://i0.hdslb.com/bfs/emote/09dd16a7aa59b77baa1155d47484409624470c77.png",
+				"tv-无奈": "https://i0.hdslb.com/bfs/emote/ea8ed89ee9878f2fece2dda0ea8a5dbfe21b5751.png",
+				"tv-再见": "https://i0.hdslb.com/bfs/emote/180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png",
+				"tv-流汗": "https://i0.hdslb.com/bfs/emote/cead1c351ab8d79e9f369605beb90148db0fbed3.png",
+				"tv-偷笑": "https://i0.hdslb.com/bfs/emote/bb690d4107620f1c15cff29509db529a73aee261.png",
+				"tv-抓狂": "https://i0.hdslb.com/bfs/emote/fe31c08edad661d63762b04e17b8d5ae3c71a757.png",
+				"tv-黑人问号": "https://i0.hdslb.com/bfs/emote/45821a01f51bc867da9edbaa2e070410819a95b2.png",
+				"tv-困": "https://i0.hdslb.com/bfs/emote/241ee304e44c0af029adceb294399391e4737ef2.png",
+				"tv-打脸": "https://i0.hdslb.com/bfs/emote/56ab10b624063e966bfcb76ea5dc4794d87dfd47.png",
+				"tv-闭嘴": "https://i0.hdslb.com/bfs/emote/c9e990da7f6e93975e25fd8b70e2e290aa4086ef.png",
+				"tv-鄙视": "https://i0.hdslb.com/bfs/emote/6e72339f346a692a495b123174b49e4e8e781303.png",
+				"tv-腼腆": "https://i0.hdslb.com/bfs/emote/89712c0d4af73e67f89e35cbc518420380a7f6f4.png",
+				"tv-馋": "https://i0.hdslb.com/bfs/emote/fc7e829b845c43c623c8b490ee3602b7f0e76a31.png",
+				"tv-可爱": "https://i0.hdslb.com/bfs/emote/9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png",
+				"tv-发财": "https://i0.hdslb.com/bfs/emote/34db290afd2963723c6eb3c4560667db7253a21a.png",
+				"tv-生病": "https://i0.hdslb.com/bfs/emote/8b0ec90e6b86771092a498c54f09fc94621c1900.png",
+				"tv-流鼻血": "https://i0.hdslb.com/bfs/emote/c32d39db2737f89b904ca32700d140a9241b0767.png",
+				"tv-尴尬": "https://i0.hdslb.com/bfs/emote/7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png",
+				"tv-大佬": "https://i0.hdslb.com/bfs/emote/093c1e2c490161aca397afc45573c877cdead616.png",
+				"tv-流泪": "https://i0.hdslb.com/bfs/emote/7e71cde7858f0cd50d74b0264aa26db612a8a167.png",
+				"tv-冷漠": "https://i0.hdslb.com/bfs/emote/b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png",
+				"tv-皱眉": "https://i0.hdslb.com/bfs/emote/72ccad6679fea0d14cce648b4d818e09b8ffea2d.png",
+				"tv-鬼脸": "https://i0.hdslb.com/bfs/emote/0ffbbddf8a94d124ca2f54b360bbc04feb6bbfea.png",
+				"tv-调侃": "https://i0.hdslb.com/bfs/emote/4bc022533ef31544ca0d72c12c808cf4a1cce3e3.png",
+				"tv-目瞪口呆": "https://i0.hdslb.com/bfs/emote/0b8cb81a68de5d5365212c99375e7ace3e7891b7.png",
+				"热词系列-知识增加": "https://i0.hdslb.com/bfs/emote/142409b595982b8210b2958f3d340f3b47942645.png",
+				"热词系列-好家伙": "https://i0.hdslb.com/bfs/emote/63ec80dea3066bd9f449ba999ba531fa61f7b4eb.png",
+				"热词系列-芜湖起飞": "https://i0.hdslb.com/bfs/emote/78d04c6ce78a613c90d510cd45fe7e25c57ba00b.png",
+				"热词系列-爷青回": "https://i0.hdslb.com/bfs/emote/a26189ff1e681bddef7f6533f9aabe7604731a3e.png",
+				"热词系列-梦幻联动": "https://i0.hdslb.com/bfs/emote/4809416be5ca787c2ec3e897e4fd022a58da6e0e.png",
+				"热词系列-泪目": "https://i0.hdslb.com/bfs/emote/bba3703ab90b7d16fe9dbcb85ed949db687f8331.png",
+				"热词系列-保护": "https://i0.hdslb.com/bfs/emote/55f8f6445ca7c3170cdfc5b16036abf639ce9b57.png",
+				"热词系列-害怕": "https://i0.hdslb.com/bfs/emote/d77e2de26da143249f0c0ad7a608c27152c985bf.png",
+				"热词系列-爱了爱了": "https://i0.hdslb.com/bfs/emote/2a165b555ba20391316366c664ed7891883dc5aa.png",
+				"热词系列-吹爆": "https://i0.hdslb.com/bfs/emote/b528220f9c37256ed6a37f05bf118e44b08b81e5.png",
+				"热词系列-三连": "https://i0.hdslb.com/bfs/emote/21f15fe11b7a84d2f2121c16dec50a4e4556f865.png",
+				"热词系列-可以": "https://i0.hdslb.com/bfs/emote/e08543c71202b36c590094417fcfbb80c3506cd8.png",
+				"热词系列-希望没事": "https://i0.hdslb.com/bfs/emote/6c0d2e6c486d1ba5afd6204a96e102652464a01d.png",
+				"热词系列-打卡": "https://i0.hdslb.com/bfs/emote/a9cf77c78e1b9b40aa3ed4862402fba008ee2f51.png",
+				"热词系列-skr": "https://i0.hdslb.com/bfs/emote/bd285ff94db16ad52557c3effe930d64663e8375.png",
+				"热词系列-battle": "https://i0.hdslb.com/bfs/emote/f2f81c8e47db6252becd633a5d1ee14e15df2ea8.png",
+				"热词系列-DNA": "https://i0.hdslb.com/bfs/emote/f6eb74f8230588f61a298af89061a7d75c5762e5.png",
+				"热词系列-妙啊": "https://i0.hdslb.com/bfs/emote/0e98299d7decf5eaffad854977946075c3e91cb8.png",
+				"热词系列-这次一定": "https://i0.hdslb.com/bfs/emote/a01ca28923daa7cc896c42f27deb4914e20dd572.png",
+				"热词系列-AWSL": "https://i0.hdslb.com/bfs/emote/c37f88cf799f9badf9d84b7671dc3dd98c0fc0c2.png",
+				"热词系列-递话筒": "https://i0.hdslb.com/bfs/emote/98e6950e39fbb4dd1c576042063ca632074070ba.png",
+				"热词系列-你细品": "https://i0.hdslb.com/bfs/emote/535e00658e7e47966f154d3a167fa2365ebc4321.png",
+				"热词系列-咕咕": "https://i0.hdslb.com/bfs/emote/d8065c2e7ce48c929317a94553499a46fecc262a.png",
+				"热词系列-标准结局": "https://i0.hdslb.com/bfs/emote/3de98174b510cf7dc5fd1bd08c5d881065e79137.png",
+				"热词系列-危": "https://i0.hdslb.com/bfs/emote/5cc6c3357c4df544dd8de9d5c5c0cec97c7c9a56.png",
+				"热词系列-张三": "https://i0.hdslb.com/bfs/emote/255a938f39cea625032b6650036b31aa26c50a3c.png",
+				"热词系列-害": "https://i0.hdslb.com/bfs/emote/cbe798a194612958537c5282fcca7c3bcd2aa15c.png",
+				"热词系列-我裂开了": "https://i0.hdslb.com/bfs/emote/29bd57ec4e8952880fea6c9e47aee924e91f10c4.png",
+				"热词系列-有内味了": "https://i0.hdslb.com/bfs/emote/7ca61680a905b5b6e2e335c630e725b648b03b4d.png",
+				"热词系列-猛男必看": "https://i0.hdslb.com/bfs/emote/c97064450528a0e45c7e7c365a15fbb13fd61d8c.png",
+				"热词系列-奥力给": "https://i0.hdslb.com/bfs/emote/c9b8683827ec6c00fea5327c9bec14f581cef2aa.png",
+				"热词系列-问号": "https://i0.hdslb.com/bfs/emote/c1d1e76c12180adc8558f47006fe0e7ded4154bb.png",
+				"热词系列-我哭了": "https://i0.hdslb.com/bfs/emote/9e0b3877d649aaf6538fbdd3f937e240a9d808e4.png",
+				"热词系列-高产": "https://i0.hdslb.com/bfs/emote/9db817cba4a7f4a42398f3b2ec7c0a8e0c247c42.png",
+				"热词系列-我酸了": "https://i0.hdslb.com/bfs/emote/a8cbf3f6b8cd9377eeb15b9172f3cd683b2e4650.png",
+				"热词系列-真香": "https://i0.hdslb.com/bfs/emote/e68497c775feaac1c3b1a6cd63a50cfb11b767c4.png",
+				"热词系列-我全都要": "https://i0.hdslb.com/bfs/emote/d424d1ad8d14c1c9b8367842bc68c658b9229bc1.png",
+				"热词系列-神仙UP": "https://i0.hdslb.com/bfs/emote/a49e0d0db1e7d35a0f7411be13208951ab448f03.png",
+				"热词系列-你币有了": "https://i0.hdslb.com/bfs/emote/84820c2b147a8ca02f3c4006b63f76c6313cbfa0.png",
+				"热词系列-不愧是你": "https://i0.hdslb.com/bfs/emote/9ff2e356797c57ee3b1675ade0883d2d2247be9b.png",
+				"热词系列-锤": "https://i0.hdslb.com/bfs/emote/35668cc12ae25b9545420e4a85bf21a0bfc03e5d.png",
+				"热词系列-秀": "https://i0.hdslb.com/bfs/emote/50782fbf5d9b7f48f9467b5c53932981e321eedc.png",
+				"热词系列-爷关更": "https://i0.hdslb.com/bfs/emote/faad40c56447f1f8abcb4045c17ce159d113d1fd.png",
+				"热词系列-有生之年": "https://i0.hdslb.com/bfs/emote/f41fdafe2d0fbb8e8bc1598d2cf37e355560103a.png",
+				"热词系列-镇站之宝": "https://i0.hdslb.com/bfs/emote/24e7a6a6e6383c987215fb905e3ee070aca259b5.png",
+				"热词系列-我太南了": "https://i0.hdslb.com/bfs/emote/a523f3e4c63e4db1232365765d0ec452f83be97e.png",
+				"热词系列-完结撒花": "https://i0.hdslb.com/bfs/emote/ea9db62ff5bca8e069cd70c4233353a802835422.png",
+				"热词系列-大师球": "https://i0.hdslb.com/bfs/emote/f30089248dd137c568edabcb07cf67e0f6e98cf3.png",
+				"热词系列-知识盲区": "https://i0.hdslb.com/bfs/emote/ccc94600b321a28116081e49ecedaa4ee8728312.png",
+				"热词系列-“狼火”": "https://i0.hdslb.com/bfs/emote/33ccd3617bfa89e9d1498b13b7542b63f163e5de.png",
+				"热词系列-你可真星": "https://i0.hdslb.com/bfs/emote/54c8ddff400abfe388060cabfbb579280fdea1be.png",
+				"2233娘-大笑": "https://i0.hdslb.com/bfs/emote/16b8794be990cefa6caeba4d901b934a227ee3b8.png",
+				"2233娘-吃惊": "https://i0.hdslb.com/bfs/emote/d1628c43d35b1530c0504a643ff80b6189fa0a43.png",
+				"2233娘-大哭": "https://i0.hdslb.com/bfs/emote/476a2a60f6e337b8c0697a592e0aa82781f6b33b.png",
+				"2233娘-耶": "https://i0.hdslb.com/bfs/emote/d7178e258a0efc969b65ccc2b1322fb235f5dff4.png",
+				"2233娘-卖萌": "https://i0.hdslb.com/bfs/emote/ea893aa25355de95ab4f03c2dad3f0c58d0c159e.png",
+				"2233娘-疑问": "https://i0.hdslb.com/bfs/emote/0b41f509351958dbb63d472fec0132d1bd03bd14.png",
+				"2233娘-汗": "https://i0.hdslb.com/bfs/emote/247cd9df8cdf84b18368c21e3b2dd374e84c0927.png",
+				"2233娘-困惑": "https://i0.hdslb.com/bfs/emote/714eeb4eae0d0933b4ff08b7df788b1982f6b940.png",
+				"2233娘-怒": "https://i0.hdslb.com/bfs/emote/f31953119c51b9748016440ac0b632f779929b37.png",
+				"2233娘-委屈": "https://i0.hdslb.com/bfs/emote/d9d0bf9d358af8d5761093ec66d4e3f60d963a63.png",
+				"2233娘-郁闷": "https://i0.hdslb.com/bfs/emote/485203fe7100f2c8fc40b2800a18fe20b35f2f1a.png",
+				"2233娘-第一": "https://i0.hdslb.com/bfs/emote/3754ee6e5985bd0bd7dfb668981f2a8733398ebd.png",
+				"2233娘-喝水": "https://i0.hdslb.com/bfs/emote/695bf5429472049b52c1e0de586f8a2511195a23.png",
+				"2233娘-吐魂": "https://i0.hdslb.com/bfs/emote/e999af499edf38a91ca68b1a9d2f97042c1d6734.png",
+				"2233娘-无言": "https://i0.hdslb.com/bfs/emote/fdb5870f32cfaf7949e0f88a13f6feba4a48b719.png",
+				"小电视-笑": "https://i0.hdslb.com/bfs/emote/f80d384875183dfe2e24be13011c595c0210d273.png",
+				"小电视-发愁": "https://i0.hdslb.com/bfs/emote/05e279abbf3f72d5cc45548504a4220c5514b8b9.png",
+				"小电视-赞": "https://i0.hdslb.com/bfs/emote/86ccf6d0b5480169bf80f3582fae09d7ed455c06.png",
+				"小电视-差评": "https://i0.hdslb.com/bfs/emote/38456e3bde2839b00b536a8be13934fa57c8e298.png",
+				"小电视-嘟嘴": "https://i0.hdslb.com/bfs/emote/6fd437f547ef1e4f231ff475d02f58bb94cef5a5.png",
+				"小电视-汗": "https://i0.hdslb.com/bfs/emote/5c150cec77eae1b05d5ca46526450ff3beeb44d2.png",
+				"小电视-害羞": "https://i0.hdslb.com/bfs/emote/de3aee88f7b6cc20ba9480c96c02f83a844381a9.png",
+				"小电视-吃惊": "https://i0.hdslb.com/bfs/emote/05188008ea84c70d94e0076e28de15bf56f4c441.png",
+				"小电视-哭泣": "https://i0.hdslb.com/bfs/emote/938bdf98df945576ae88e2a22931db07ded9e663.png",
+				"小电视-太太喜欢": "https://i0.hdslb.com/bfs/emote/eb41a8c04840e4f77e76a4bff7a29ac89c432f4e.png",
+				"小电视-好怒啊": "https://i0.hdslb.com/bfs/emote/68d524b7e515396b6563d320fb710c64abfb1063.png",
+				"小电视-困惑": "https://i0.hdslb.com/bfs/emote/6853161f0eab3332b874ab7c6c0311035b7538f3.png",
+				"小电视-我好兴奋": "https://i0.hdslb.com/bfs/emote/a695fe1301aab2675ab6f6e34757c25a863a8617.png",
+				"小电视-思索": "https://i0.hdslb.com/bfs/emote/f8219e484d5a55787c3f1722dc3112d0eba03a69.png",
+				"小电视-无语": "https://i0.hdslb.com/bfs/emote/fbd12affebfdaadd3d721bffdb685a6b1ee71219.png",
+				"罗小黑-鼓掌": "https://i0.hdslb.com/bfs/emote/622ce9f5ec001269203aaaf8339dffdc7d67d2a3.png",
+				"罗小黑-你好呀": "https://i0.hdslb.com/bfs/emote/65728d4bedb13fd75c1555c9c4c9de67d276b153.png",
+				"罗小黑-加油": "https://i0.hdslb.com/bfs/emote/50d9d9e5f57c202be83cdfdba812a15524d02406.png",
+				"罗小黑-可可爱爱": "https://i0.hdslb.com/bfs/emote/bcdfa28cd019333cdb243c3a8d73374236924585.png",
+				"罗小黑-吃瓜": "https://i0.hdslb.com/bfs/emote/57d8965331c9fb87afa1756416b622a22e406c43.png",
+				"罗小黑-嗨": "https://i0.hdslb.com/bfs/emote/7f5e00355af3331964884f27611cc9a0c64e5ce7.png",
+				"罗小黑-大麦": "https://i0.hdslb.com/bfs/emote/0f5a51e0272c5fcc2c318e078e92e0f8fea77980.png",
+				"罗小黑-干杯": "https://i0.hdslb.com/bfs/emote/04cf6b7a2f0f24909e1894694daa5c6c668e1f17.png",
+				"罗小黑-找彩蛋": "https://i0.hdslb.com/bfs/emote/59e34db87c0cb601a5e100c2db0ccfb2894aa02f.png",
+				"罗小黑-撒花": "https://i0.hdslb.com/bfs/emote/bbaaaa40328f32f3e3e41ffc77a70c057d0a13ad.png",
+				"罗小黑-来了": "https://i0.hdslb.com/bfs/emote/fd1950da6509171ba144d138c4d0a81f0840794e.png",
+				"罗小黑-歪在吗": "https://i0.hdslb.com/bfs/emote/0caf23cc530b0e021c32c623dee045160a2449fa.png",
+				"罗小黑-求包养": "https://i0.hdslb.com/bfs/emote/2277c2b72646cf22a7217897f3cd62c5c80a6451.png",
+				"罗小黑-看电影": "https://i0.hdslb.com/bfs/emote/eedd49d8d1d6c5b0eafc3e0a10966f508a7ab6f1.png",
+				"罗小黑-真棒": "https://i0.hdslb.com/bfs/emote/f03fbb80a7939eafa4819388df80e9c777e8ab7d.png",
+				"罗小黑-自来水": "https://i0.hdslb.com/bfs/emote/4a0c602ed9d4f1e5550c0595ea63653a9cbf88bd.png",
+				"蛆音娘-卖萌": "https://i0.hdslb.com/bfs/emote/4cd1024d0c2ecee93224477946656d32c1705ccf.png",
+				"蛆音娘-吃瓜群众": "https://i0.hdslb.com/bfs/emote/5d0d6cc54b508d30b4f50b6b5f7b7e1e259d84ea.png",
+				"蛆音娘-吃惊": "https://i0.hdslb.com/bfs/emote/7a4cb0b644214d476ce198ddf6a7a0aa31311199.png",
+				"蛆音娘-害怕": "https://i0.hdslb.com/bfs/emote/7407634bf67bfe9d7806f15d57608a1b18c2b4c2.png",
+				"蛆音娘-扶额": "https://i0.hdslb.com/bfs/emote/a4d8f95baaa24821fd591a7dbeee1b869e760f59.png",
+				"蛆音娘-滑稽": "https://i0.hdslb.com/bfs/emote/d3717f10ffe9787336bc39a09214270988521a67.png",
+				"蛆音娘-哼": "https://i0.hdslb.com/bfs/emote/8854f1b8a82126e3b87f3a1563da5feb55b23e71.png",
+				"蛆音娘-机智": "https://i0.hdslb.com/bfs/emote/e543c0a823ca915df9362283f4ae950e9e9cc2e9.png",
+				"蛆音娘-哭泣": "https://i0.hdslb.com/bfs/emote/a23055546c19eba663b16370b8e072394d87ff53.png",
+				"蛆音娘-睡觉觉": "https://i0.hdslb.com/bfs/emote/40ef7e6d931acb37e5514b70d13663e86dc3698b.png",
+				"蛆音娘-生气": "https://i0.hdslb.com/bfs/emote/bf398cbbcfaae107d1b59aaf03895f38422e3d87.png",
+				"蛆音娘-偷看": "https://i0.hdslb.com/bfs/emote/52463ded4f23649db10ba3ced662ed946c5edf0b.png",
+				"蛆音娘-吐血": "https://i0.hdslb.com/bfs/emote/5772d22015e5b2b40a9fe302b5967ec7282ac848.png",
+				"蛆音娘-无语": "https://i0.hdslb.com/bfs/emote/b6c763c6484ce2e48299ceb21861e46318868871.png",
+				"蛆音娘-摇头": "https://i0.hdslb.com/bfs/emote/b7278f750c6f2235f41f37056d727f25d3bf781f.png",
+				"蛆音娘-疑问": "https://i0.hdslb.com/bfs/emote/7750b698d15a1b8e83c0f59106e8e9cd5cb57897.png",
+				"蛆音娘-die": "https://i0.hdslb.com/bfs/emote/52543025a070fde5c01a10320c9636ec3173ac99.png",
+				"蛆音娘-OK": "https://i0.hdslb.com/bfs/emote/52a0dcee66c91bf123bf53bd48a269b1317d17f9.png",
+				"蛆音娘-肥皂": "https://i0.hdslb.com/bfs/emote/7f1a857e9430dcf3050ce0ef5fa19aefebea6dc4.png",
+				"蛆音娘-大笑": "https://i0.hdslb.com/bfs/emote/1d3355fb89c24ab3c50e5c152d8b990a290dc63e.png",
+				"洛天依-傲娇": "https://i0.hdslb.com/bfs/emote/5d7c8307af10540909fce6121066249df3935a24.png",
+				"洛天依-吃包群众": "https://i0.hdslb.com/bfs/emote/f8cdabfc1b81fd25b85b8457ee49a20a4fc5d91b.png",
+				"洛天依-吃药": "https://i0.hdslb.com/bfs/emote/883e6654176ebcecafd3e52efa8ee842357e18a0.png",
+				"洛天依-滑稽": "https://i0.hdslb.com/bfs/emote/692cef7ca51f935aaa499de7e4d6048c53f42324.png",
+				"洛天依-哈哈哈": "https://i0.hdslb.com/bfs/emote/677c2f5555c1e79fc336a6283fdbbdc7ea88fec4.png",
+				"洛天依-看透一切": "https://i0.hdslb.com/bfs/emote/4fac414b5002c3739b1ae24f2fc27b5f150ade24.png",
+				"洛天依-打尻": "https://i0.hdslb.com/bfs/emote/2ab983b2519dc241666254de8e5352fbeedc96bb.png",
+				"洛天依-前排": "https://i0.hdslb.com/bfs/emote/fbbc45e7aee2f256f691df539db0cfcc35b3be7d.png",
+				"洛天依-去吧": "https://i0.hdslb.com/bfs/emote/0edeeb0d10d44302854e636c47f5dc3aa96a9206.png",
+				"洛天依-冷漠": "https://i0.hdslb.com/bfs/emote/5f4385db3c9806b08ea15bd9ff444af9d9fe0c3a.png",
+				"洛天依-可以": "https://i0.hdslb.com/bfs/emote/967377b83e37a0d5dd13bc0f4e4323abf10e4cbf.png",
+				"洛天依-掀桌": "https://i0.hdslb.com/bfs/emote/803129b7a1143faabc63c2648335b7d506229e7a.png",
+				"洛天依-消灭你": "https://i0.hdslb.com/bfs/emote/d96dccf8fa248ee34c7e4aba94e813bec28d2dd8.png",
+				"洛天依-阴阳先生": "https://i0.hdslb.com/bfs/emote/65e195a8ac54bb678dd1c1e6ce6c5d4ba02761b3.png",
+				"洛天依-无言以对": "https://i0.hdslb.com/bfs/emote/9cfd368b370acd40c1b8f933cec3fb24883356a5.png",
+				"洛天依-？？？": "https://i0.hdslb.com/bfs/emote/f5f1ebe50c26d5f6d4e17cb983bd5ae59f103dda.png",
+				"洛天依-爱你哦": "https://i0.hdslb.com/bfs/emote/7102c9e25359af8348489ff8529b3bb2c5bd05d0.png",
+				"小A和小B-喝茶": "https://i0.hdslb.com/bfs/emote/d2acc1227312dd64284d809ab66d3c7f7d8ec020.png",
+				"小A和小B-报警": "https://i0.hdslb.com/bfs/emote/7f482b82a3de44ae14537cbafcbc40cf65f7113e.png",
+				"小A和小B-大哭": "https://i0.hdslb.com/bfs/emote/77545a5e420e2c43e0e4a7996a71769638ae3f90.png",
+				"小A和小B-低头": "https://i0.hdslb.com/bfs/emote/0d23b726b084280f941f14919ce63c43f8bc724c.png",
+				"小A和小B-哈哈哈哈": "https://i0.hdslb.com/bfs/emote/6f5210b7d0a6b14f586df1f91f5c3a46c1296b43.png",
+				"小A和小B-司令": "https://i0.hdslb.com/bfs/emote/a594a91717e28bdcab82821086a41160a1345c45.png",
+				"小A和小B-撒花": "https://i0.hdslb.com/bfs/emote/874d2c39a0ca891abce5e65fafc287e0c2d3bbea.png",
+				"小A和小B-摊手": "https://i0.hdslb.com/bfs/emote/6f058f78bce5d1c9b370c3807c891e685bb68a17.png",
+				"小A和小B-问号": "https://i0.hdslb.com/bfs/emote/f077d5ecf0e86f24991a104f995b3a652091d529.png",
+				"小A和小B-躺": "https://i0.hdslb.com/bfs/emote/9038d450dbadaf132847d67cb26931aa5bf76d4c.png",
+				"小A和小B-无语": "https://i0.hdslb.com/bfs/emote/1a805b885a1691e9bf4425164a9400e2457f4d1b.png",
+				"小A和小B-应援": "https://i0.hdslb.com/bfs/emote/af8f017e383a1999e26a7f91c3ec3c83fbb7ba77.png",
+				"小A和小B-NO": "https://i0.hdslb.com/bfs/emote/ee0de8296b20d295b79ea9b70ca4f126eb4aff1d.png",
+				"小A和小B-OK": "https://i0.hdslb.com/bfs/emote/5ae25cc388c59192133f08345e461098fad4e63b.png",
+				"小A和小B-吃瓜": "https://i0.hdslb.com/bfs/emote/70776b579d2952580249ac6a52e724850d037591.png",
+				"小A和小B-捕捉": "https://i0.hdslb.com/bfs/emote/8bf33ff2f9699286102fb1a256a2523695c17d35.png",
+				"芮小凸小凹-嗯？": "https://i0.hdslb.com/bfs/emote/f3c72e045ebd2487a381f50291be15b053767a80.png",
+				"芮小凸小凹-超棒": "https://i0.hdslb.com/bfs/emote/987947c1bdac0bc10b684f28baaec78176023b83.png",
+				"芮小凸小凹-哎": "https://i0.hdslb.com/bfs/emote/38bcf3a53b34551e5efa0cd0ee84fc7faa477a49.png",
+				"芮小凸小凹-666": "https://i0.hdslb.com/bfs/emote/3e505cef421024a650b971c1f2db7f8ef1ad1840.png",
+				"芮小凸小凹-哼": "https://i0.hdslb.com/bfs/emote/92e4a9d422f1604f2b1b3ea3f6057636273db56e.png",
+				"芮小凸小凹-怀疑": "https://i0.hdslb.com/bfs/emote/587f22aa1cfaa4b2d91928998e023be29d8c3975.png",
+				"芮小凸小凹-发现": "https://i0.hdslb.com/bfs/emote/147b6ba27d5cbb90d155f34c41cb45f1f00b6007.png",
+				"芮小凸小凹-绝望": "https://i0.hdslb.com/bfs/emote/22ad072a785604f3bd8c1aae4ea1ceb1e4694cec.png",
+				"芮小凸小凹-可爱": "https://i0.hdslb.com/bfs/emote/8bddb47b5877fd79e937aafeb7f4d69f58a8b6e4.png",
+				"芮小凸小凹-警告": "https://i0.hdslb.com/bfs/emote/54607206c814409a99fac65fb3b780c6bbd1e60d.png",
+				"芮小凸小凹-呵呵": "https://i0.hdslb.com/bfs/emote/811aa3ba5809a8d5936f988f953e5af7fd7c5351.png",
+				"芮小凸小凹-膜拜": "https://i0.hdslb.com/bfs/emote/038c86c0e616f7ead667c6f7af32e54feac32965.png",
+				"芮小凸小凹-哭": "https://i0.hdslb.com/bfs/emote/000c0dddd08950133740487a57873b389a3af457.png",
+				"芮小凸小凹-无聊": "https://i0.hdslb.com/bfs/emote/62527ee5c4e80aad9b42069778c91f905c90d986.png",
+				"芮小凸小凹-围观": "https://i0.hdslb.com/bfs/emote/c9b4fe6161f4a3cc884a5b03e9674c8a58ee228f.png",
+				"芮小凸小凹-失落": "https://i0.hdslb.com/bfs/emote/813f98c0632587286c6e809a49eda15a2edfa447.png",
+				"芮小凸小凹-是吗": "https://i0.hdslb.com/bfs/emote/05b7153fb606e526ce8d102febd25889828ce425.png",
+				"芮小凸小凹-心动": "https://i0.hdslb.com/bfs/emote/24afe39fbf8755a28673bdf51bdf8ce72bc62d51.png",
+				"芮小凸小凹-喜欢": "https://i0.hdslb.com/bfs/emote/b389e30a3c7924ca2b59a5333412b8d92cad07df.png",
+				"芮小凸小凹-嘻嘻": "https://i0.hdslb.com/bfs/emote/b7a4a07a7c24f5fa23a99ca6749708fadfedf765.png",
+				"芮小凸小凹-震撼": "https://i0.hdslb.com/bfs/emote/79c8b68509a9d316618d61aedaae93097669dae6.png",
+				"芮小凸小凹-有见解": "https://i0.hdslb.com/bfs/emote/7f842228b9a2c36851cecab0527fca55a1f01b58.png",
+				"芮小凸小凹-震惊": "https://i0.hdslb.com/bfs/emote/be4b48350b817af496bdccba2ab85c77b711cec3.png",
+				"芮小凸小凹-心痛": "https://i0.hdslb.com/bfs/emote/b2217e8b81f122949f3960d99c08ac72eac5923b.png",
+				"灵笼-鄙视": "https://i0.hdslb.com/bfs/emote/20eda4b6b0074c6fb568e11698eb8dfc57011ac1.png",
+				"灵笼-不用了": "https://i0.hdslb.com/bfs/emote/a7a027228e024d13f743ee42d9be107d53464134.png",
+				"灵笼-吃瓜": "https://i0.hdslb.com/bfs/emote/2e0cab7ca9bedcb00830b483725fcc9c314faaf8.png",
+				"灵笼-吃糖": "https://i0.hdslb.com/bfs/emote/c65e3e8dd67a7a7ce438649d5d1544e4eba0c3a6.png",
+				"灵笼-机智": "https://i0.hdslb.com/bfs/emote/4e0e67f242b29c39bd9f8bbc03ab31e1ce232d37.png",
+				"灵笼-惊吓": "https://i0.hdslb.com/bfs/emote/7b7fd1cdaccb0a69c2cdfe2a5fe8b97524ebf1d8.png",
+				"灵笼-生闷气": "https://i0.hdslb.com/bfs/emote/9fe2340ff00fa447cac6ffd64650fc0842a2a4de.png",
+				"灵笼-玩手机": "https://i0.hdslb.com/bfs/emote/c40b4dc357514724eeabbc94b26e89a9850466b6.png",
+				"灵笼-问号": "https://i0.hdslb.com/bfs/emote/5b1a7af13e40057a9f48c802241e230bd0f3bcf4.png",
+				"灵笼-嫌弃": "https://i0.hdslb.com/bfs/emote/8386721ed1e19c7b1e268a6457bbd3463ab220c0.png",
+				"灵笼-笑哭": "https://i0.hdslb.com/bfs/emote/bfa87db44e8758701b7452f5b0aa2f107f69ec0f.png",
+				"灵笼-兴奋": "https://i0.hdslb.com/bfs/emote/b211b575c45d1f0ebb347e06999b3dbe7c256c64.png",
+				"灵笼-阴暗": "https://i0.hdslb.com/bfs/emote/92cd50cd6a4fd863751be57ef2b82e4d965955aa.png",
+				"灵笼-约吗": "https://i0.hdslb.com/bfs/emote/275c161b17c3a4bdda2833720989a67b2e5b264d.png",
+				"灵笼-boom": "https://i0.hdslb.com/bfs/emote/e27fbd34d8232f9c69b53a2b7013a3b597086444.png",
+				"灵笼-偷窥": "https://i0.hdslb.com/bfs/emote/4c1f0ba96b2baa6d44f33553d0298d63ec47bfbd.png",
+				"正经人-欢呼": "https://i0.hdslb.com/bfs/emote/3cd297676b2a08a896deab91ed7f139a8bc7c46c.png",
+				"正经人-火": "https://i0.hdslb.com/bfs/emote/78579a24b156501c0b5583121beb42a72e9229b5.png",
+				"正经人-挤": "https://i0.hdslb.com/bfs/emote/7a3e753fcb876753800424edd2fa3563005abf4a.png",
+				"正经人-惊": "https://i0.hdslb.com/bfs/emote/233b14fd3803a5078f79d31fecd5d7a60524e330.png",
+				"正经人-放屁": "https://i0.hdslb.com/bfs/emote/b590df4714084b012e9a5dfab03a3a13936dff48.png",
+				"正经人-ok": "https://i0.hdslb.com/bfs/emote/21e069065373be45b227a4ffdbe9570d309e3d05.png",
+				"正经人-趴": "https://i0.hdslb.com/bfs/emote/39156acb0afcbde9cf73ac1657adff62d3a84af7.png",
+				"正经人-开始": "https://i0.hdslb.com/bfs/emote/4f745fad9a77f2f41ea63c2214af0739ab7ea8f1.png",
+				"正经人-揉脸": "https://i0.hdslb.com/bfs/emote/a9d5376d6d79482c4447eb5a169385fa91f39ddd.png",
+				"正经人-躺": "https://i0.hdslb.com/bfs/emote/c135f76ad7ec50a7414095cf7c633eb5551c9fe3.png",
+				"正经人-拉": "https://i0.hdslb.com/bfs/emote/03e7319b34763e9c82c2ae93b1fd8f613335d90a.png",
+				"正经人-心": "https://i0.hdslb.com/bfs/emote/536561d0806f8b181473fd89bba15e71cb8d585e.png",
+				"正经人-悠闲": "https://i0.hdslb.com/bfs/emote/17542aaef102f28508e30fed8895cc1afeaf70f0.png",
+				"正经人-赞": "https://i0.hdslb.com/bfs/emote/589816d36c5b7c2f2bc78cb162d6ac90fda948f2.png",
+				"正经人-哭": "https://i0.hdslb.com/bfs/emote/b9882f0679b4ae24624660412464f1f88bda48fe.png",
+				"请吃红小豆吧！-wow": "https://i0.hdslb.com/bfs/emote/3392ba98d2bbdc4c1932952bf63796f7ac1b1f41.png",
+				"请吃红小豆吧！-吃包": "https://i0.hdslb.com/bfs/emote/f6cbadf8ff006c246c7bd583288587a6e20e6069.png",
+				"请吃红小豆吧！-倒地": "https://i0.hdslb.com/bfs/emote/5b7ede3d668a82ae9ef50d380bb41274757c7780.png",
+				"请吃红小豆吧！-盯": "https://i0.hdslb.com/bfs/emote/5c1cad1724fff3597913fe9a09bcb4b41b712ecf.png",
+				"请吃红小豆吧！-翻白眼": "https://i0.hdslb.com/bfs/emote/633249bc889384ab3f1e2bd45d578fb7dbe2e109.png",
+				"请吃红小豆吧！-好难": "https://i0.hdslb.com/bfs/emote/116cf8aff996554df096b9a1bdc59dd182fa8b22.png",
+				"请吃红小豆吧！-喝水": "https://i0.hdslb.com/bfs/emote/c227ab352460cab6af9e543811a3451d6aa63908.png",
+				"请吃红小豆吧！-嘿嘿嘿": "https://i0.hdslb.com/bfs/emote/b24f7db309a7ab96a00f81a1f26d1d4e06761c2d.png",
+				"请吃红小豆吧！-开心": "https://i0.hdslb.com/bfs/emote/0903bb143efa6ec71ce5eb91e1bcd9815028eace.png",
+				"请吃红小豆吧！-哭唧唧": "https://i0.hdslb.com/bfs/emote/516bc179c7312b7087573b5e2d7fc7b1ababa8e2.png",
+				"请吃红小豆吧！-略略略": "https://i0.hdslb.com/bfs/emote/8bd5c57cb9ef5f511b3cb8119072182e3029fddc.png",
+				"请吃红小豆吧！-么么": "https://i0.hdslb.com/bfs/emote/7a59397394b007fef659fc240bb2c3348930efb6.png",
+				"请吃红小豆吧！-哦": "https://i0.hdslb.com/bfs/emote/20bcbc681d217027f605c1d667332ecc45744569.png",
+				"请吃红小豆吧！-撒娇": "https://i0.hdslb.com/bfs/emote/74e611ffcd6702fce6e75bea435eb01744c503f8.png",
+				"请吃红小豆吧！-受到惊吓": "https://i0.hdslb.com/bfs/emote/ffe8b5af6c2e3baa13e8ba9bb5685896311cab84.png",
+				"请吃红小豆吧！-睡觉": "https://i0.hdslb.com/bfs/emote/f6098a8f9a77eb0753064aea2d17e9093d4ef8e0.png",
+				"请吃红小豆吧！-问号脸": "https://i0.hdslb.com/bfs/emote/c6fe095df24f3fbf27f2e0fbb4b6eb983cbd430f.png",
+				"请吃红小豆吧！-耶耶耶": "https://i0.hdslb.com/bfs/emote/973dd2de70275ec9f325ac8f64957f2e763c6ea3.png",
+				"请吃红小豆吧！-一脸懵逼": "https://i0.hdslb.com/bfs/emote/8f6e7d3128bbc070116617cf840ceccbf2412187.png",
+				"请吃红小豆吧！-眨眼": "https://i0.hdslb.com/bfs/emote/b2106dbba47b42276ea39a8d7d39b8cd21297485.png",
+				"异常生物见闻录-good": "https://i0.hdslb.com/bfs/emote/5ca4eda998ed16a5826e7f92ca2e3f3969889e63.png",
+				"异常生物见闻录-不信任": "https://i0.hdslb.com/bfs/emote/edb38ebc3b3be3583df4fd4c57e1b29347516d74.png",
+				"异常生物见闻录-财迷": "https://i0.hdslb.com/bfs/emote/c67bbb41136823e7a2847ce72480df0e870b4d88.png",
+				"异常生物见闻录-嘲讽": "https://i0.hdslb.com/bfs/emote/a061406fa8f03f619aa28d456f5a8fcf683b3fb7.png",
+				"异常生物见闻录-痴呆": "https://i0.hdslb.com/bfs/emote/1b3dba852ac79d76d8e8ff26d0b2839daf26adb9.png",
+				"异常生物见闻录-憧憬": "https://i0.hdslb.com/bfs/emote/1e932e3f290f5374a251b7d87af215e63e007c80.png",
+				"异常生物见闻录-道德标兵": "https://i0.hdslb.com/bfs/emote/eca679781792c534bfb7f918c35eb3c43153f5d1.png",
+				"异常生物见闻录-抵死不从": "https://i0.hdslb.com/bfs/emote/2f237e931a437308568ba7ca181320fc8ea800ce.png",
+				"异常生物见闻录-发现食物": "https://i0.hdslb.com/bfs/emote/5bc67e4826ba7e10cba116bd2c2ececd21cb1c42.png",
+				"异常生物见闻录-奸笑": "https://i0.hdslb.com/bfs/emote/038f3bda1084fa6908698697bb0fc2f059ff4b32.png",
+				"异常生物见闻录-绝望": "https://i0.hdslb.com/bfs/emote/2b4ba4af99f37b973d84f92fa7a27197812fa605.png",
+				"异常生物见闻录-开心": "https://i0.hdslb.com/bfs/emote/1942ee8a4df95e2f1f58202c92cda1dd06cc4816.png",
+				"异常生物见闻录-困倦": "https://i0.hdslb.com/bfs/emote/009cdfcf48cf227a2cc8da24958a8a5238053dc7.png",
+				"异常生物见闻录-冷汗": "https://i0.hdslb.com/bfs/emote/2dc15a9724034c1061fb0c884db17c2d45028ad8.png",
+				"异常生物见闻录-凉凉": "https://i0.hdslb.com/bfs/emote/8b2ec7e8bbcbfc5f752dbb4e4f3c1b5ce6681d86.png",
+				"异常生物见闻录-萌": "https://i0.hdslb.com/bfs/emote/cd7465b0bb19bdf89f057ba8c3f5c279375936aa.png",
+				"异常生物见闻录-请闭嘴": "https://i0.hdslb.com/bfs/emote/a8ab9e926321c865b9cb66e64668dbddb87a6b7b.png",
+				"异常生物见闻录-帅醒": "https://i0.hdslb.com/bfs/emote/93b1ff2409f733079ca1145e7add98fe6540a07c.png",
+				"异常生物见闻录-无语": "https://i0.hdslb.com/bfs/emote/d3d02774b35dcc6ef3483b1655d08e472e4ca3c7.png",
+				"异常生物见闻录-装傻": "https://i0.hdslb.com/bfs/emote/d81eba4cf9800a72a9b72a11ca00c4ad458a8bc8.png",
+				"异常生物见闻录-装文静": "https://i0.hdslb.com/bfs/emote/748ce4b0c5da67489f2ed070ccf9233293fedcd4.png",
+				"星梦手记-吃瓜": "https://i0.hdslb.com/bfs/emote/9227318a903c96e0e4a61f06ef208150ce470f66.png",
+				"星梦手记-薇薇惊吓": "https://i0.hdslb.com/bfs/emote/093634e9099f40f40886a83133de5a67ca148bce.png",
+				"星梦手记-惺梛认真": "https://i0.hdslb.com/bfs/emote/16fcbf1de40cb19d26a13552a3740150e45aa89f.png",
+				"星梦手记-石化": "https://i0.hdslb.com/bfs/emote/f6a6d33835a48e4141fb433bbd0215b1130cf681.png",
+				"星梦手记-问号": "https://i0.hdslb.com/bfs/emote/4ced3d8866f502487ec2e93b326f592f4c358fbf.png",
+				"星梦手记-卖萌": "https://i0.hdslb.com/bfs/emote/375e4296c26f65be888e86bea4af4f858642a7bb.png",
+				"星梦手记-尴尬": "https://i0.hdslb.com/bfs/emote/423347d687184c14d9ce8b47a8342fd8d23e99b9.png",
+				"星梦手记-要抱": "https://i0.hdslb.com/bfs/emote/c125f4fc66ac8587fe4dd264254aad5dc4b31bef.png",
+				"星梦手记-未来认真": "https://i0.hdslb.com/bfs/emote/330306ba001db1bd9f78bc99b8b6ec9341acbbcb.png",
+				"星梦手记-摊手": "https://i0.hdslb.com/bfs/emote/acd565a268f66fa27e0ccea409b3ff57c814b360.png",
+				"星梦手记-委屈": "https://i0.hdslb.com/bfs/emote/55f3974a6dded58365ef21e0a61d91725c3db431.png",
+				"星梦手记-轮胎": "https://i0.hdslb.com/bfs/emote/bc13e24a1a0b58d9ef826b38e45960bfb4a3e11c.png",
+				"星梦手记-没钱": "https://i0.hdslb.com/bfs/emote/e7d3feef58bf65441cbca1b8cd3c4b79cb923d15.png",
+				"星梦手记-无辜": "https://i0.hdslb.com/bfs/emote/0be73bd600367f162a2a14d48c11ad72b3527858.png",
+				"星梦手记-弃疗": "https://i0.hdslb.com/bfs/emote/fee923c0e57d1f1e3426b397edcfeac93d770b76.png",
+				"星梦手记-雨照惊吓": "https://i0.hdslb.com/bfs/emote/4b1316f5bfd5c1745f8c721d845a6917d663c715.png",
+				"冷兔-吃瓜": "https://i0.hdslb.com/bfs/emote/eed6831c5e3ceb1b23cb2ef0446b9c3c4d30f067.png",
+				"冷兔-233": "https://i0.hdslb.com/bfs/emote/a7375691637b59ccbf75059fca01d9f95727a98a.png",
+				"冷兔-这不科学": "https://i0.hdslb.com/bfs/emote/c9b24ea4f2e17d2faf88c0a2f1df367b135f45e7.png",
+				"冷兔-？？？": "https://i0.hdslb.com/bfs/emote/8871cfa274a50f913cae368aa2ae428fbefe42da.png",
+				"冷兔-等更": "https://i0.hdslb.com/bfs/emote/eb2763a2d48734d77327de5f57af43e155414b13.png",
+				"冷兔-丢你雷姆": "https://i0.hdslb.com/bfs/emote/7ff16758d617cd1455c5f717f9c5b6863105abc1.png",
+				"冷兔-耶": "https://i0.hdslb.com/bfs/emote/58b11a31381162761b3ebfb2e3e78bedf740cf17.png",
+				"冷兔-无语": "https://i0.hdslb.com/bfs/emote/a22b1afafdfbee8b60b918cefce27ebd0c5dc915.png",
+				"冷兔-额": "https://i0.hdslb.com/bfs/emote/805a33cfd96009f474ec2a7b6d0923e1a743aa29.png",
+				"冷兔-呵呵": "https://i0.hdslb.com/bfs/emote/f6a80eda4c0401c523fe9931297a132d2c5c41a6.png",
+				"冷兔-一无所知": "https://i0.hdslb.com/bfs/emote/d300fae68fa32dd918196e05f1d274e500a10087.png",
+				"冷兔-体前屈": "https://i0.hdslb.com/bfs/emote/0f04dc139d9dd38e7b2f8db72c71f5ce89f60ac7.png",
+				"冷兔-喜欢": "https://i0.hdslb.com/bfs/emote/4eda384b1e97430e48cd2faa28454f08f6daa70a.png",
+				"冷兔-哭": "https://i0.hdslb.com/bfs/emote/bec3a906385324a4b472f0ed3b5323f905ae0f6b.png",
+				"冷兔-赞": "https://i0.hdslb.com/bfs/emote/b001a8210f1c2166f436c8de080a76c33637036e.png",
+				"冷兔-低头": "https://i0.hdslb.com/bfs/emote/ebe445da276339c0506267b0bb59a0b5ea3300d3.png",
+				"冷兔-卖萌": "https://i0.hdslb.com/bfs/emote/4d9f8b35f0789afa40a48b0ce06769e5b4e60cb0.png",
+				"冷兔-扶额": "https://i0.hdslb.com/bfs/emote/ff5c34e9072a83b56c2f2648cfe6ecf11b92f7be.png",
+				"冷兔-掀桌": "https://i0.hdslb.com/bfs/emote/50d837346517f128442702eb7df04a82d20dbe89.png",
+				"冷兔-吸欧气": "https://i0.hdslb.com/bfs/emote/16e696a795186a7ca2a4aeaa1dafcf225246add4.png",
+				"那兔-合个影": "https://i0.hdslb.com/bfs/emote/0c12e40154dd0c73e2dd5e02ab8315bbaf905aec.png",
+				"那兔-囧": "https://i0.hdslb.com/bfs/emote/0a6519dc3f8b4b58fea10e3b8a26d700728f95bf.png",
+				"那兔-。。。": "https://i0.hdslb.com/bfs/emote/f5968dc3f8342019f4777d85c56fdda9df460ad4.png",
+				"那兔-好滴": "https://i0.hdslb.com/bfs/emote/6d292369dc9d578da241b3e5680d4e2fa95b9aeb.png",
+				"那兔-讲道理": "https://i0.hdslb.com/bfs/emote/29643a9f37d2b8981c50741fe6943947f9f31661.png",
+				"那兔-懒得理你": "https://i0.hdslb.com/bfs/emote/3e1c2e302a52f7b03e9fda5ed37cc00844ba62bb.png",
+				"那兔-奈我何": "https://i0.hdslb.com/bfs/emote/a6e38393214099abe9d402070d67d7747150cbbd.png",
+				"那兔-你丫试试": "https://i0.hdslb.com/bfs/emote/0802020cec4543e96256d7dfadfd3cef9662aae0.png",
+				"那兔-深思": "https://i0.hdslb.com/bfs/emote/44bde865b0954e1230caaa545ea91a5b6d90e424.png",
+				"那兔-恶代官": "https://i0.hdslb.com/bfs/emote/91bcc90beb6f9cd1c7b3da4011f68d1ee7ab7132.png",
+				"那兔-说什么喵": "https://i0.hdslb.com/bfs/emote/adca5e0ea594bcfd1d6480a6755f1bec3984811e.png",
+				"那兔-心碎": "https://i0.hdslb.com/bfs/emote/f016a83fcdb0dbb5738e2f9fb62efd1f0971d17f.png",
+				"那兔-一见钟情": "https://i0.hdslb.com/bfs/emote/cd6ae74fe5dd1b1252a1603af0a34c94b9ba931e.png",
+				"那兔-痴呆": "https://i0.hdslb.com/bfs/emote/6a7020931d20380be2fb50a8d8c2e582f6d8ff89.png",
+				"那兔-找事儿": "https://i0.hdslb.com/bfs/emote/55022a863de195f355394296647a8cea2ad69d57.png",
+				"那兔-呃": "https://i0.hdslb.com/bfs/emote/06105d9eafe0316d69453da63b05ae76fdfa9a8a.png",
+				"那兔-擦": "https://i0.hdslb.com/bfs/emote/db5d5e113501e2ec8ea51dee1c716a932d929949.png",
+				"我家大师兄脑子有坑-比心": "https://i0.hdslb.com/bfs/emote/d675489bfcfdbac9734cc0760fd25b1cb1b57ba2.png",
+				"我家大师兄脑子有坑-吃瓜": "https://i0.hdslb.com/bfs/emote/816198d849984d510a1713c3d6426754475f8ddd.png",
+				"我家大师兄脑子有坑-大笑": "https://i0.hdslb.com/bfs/emote/1af457c164e174376c558e62f26b86ca18d67844.png",
+				"我家大师兄脑子有坑-汗": "https://i0.hdslb.com/bfs/emote/834905aff2a69e52eed7d8f48cb0344b600829b0.png",
+				"我家大师兄脑子有坑-机智": "https://i0.hdslb.com/bfs/emote/a56e6a8d21498abac50f886559767172934262da.png",
+				"我家大师兄脑子有坑-哭": "https://i0.hdslb.com/bfs/emote/d7d9809e3118b2a57bcf28a4605abfef12359a73.png",
+				"我家大师兄脑子有坑-期待": "https://i0.hdslb.com/bfs/emote/ef74493b15b9029ac73dddcb6fe1fcc265058fb5.png",
+				"我家大师兄脑子有坑-撒花": "https://i0.hdslb.com/bfs/emote/e0755e2432241f9ea5e9b5594a0a59f0ba68455d.png",
+				"我家大师兄脑子有坑-吐魂": "https://i0.hdslb.com/bfs/emote/5e6482f392ee60e1b0bfbf3bb0abf8afe32fb7f6.png",
+				"我家大师兄脑子有坑-晕": "https://i0.hdslb.com/bfs/emote/2f10c278536711e836ec9a3ba77c19c6433b3608.png",
+				"喂，看见耳朵啦！-懵": "https://i0.hdslb.com/bfs/emote/51725a9abd80ce5dca5a31b7d752c61bdc063a44.png",
+				"喂，看见耳朵啦！-嗷": "https://i0.hdslb.com/bfs/emote/203d29bcc8e2ab7ce4a12bc07140403390f4b2e6.png",
+				"喂，看见耳朵啦！-抱大腿": "https://i0.hdslb.com/bfs/emote/d5eebcecad919c86d68ae495f39743fc80b20ad9.png",
+				"喂，看见耳朵啦！-抱走": "https://i0.hdslb.com/bfs/emote/0576f4f1463f6757101a236c10049ed40ba748cb.png",
+				"喂，看见耳朵啦！-壁咚": "https://i0.hdslb.com/bfs/emote/759a8a54f10767bdc40fd014b70a783ae0e568ef.png",
+				"喂，看见耳朵啦！-冷漠": "https://i0.hdslb.com/bfs/emote/edb3d7e86fd768b55c50588110a765e3d9cafd4b.png",
+				"喂，看见耳朵啦！-嘤嘤嘤": "https://i0.hdslb.com/bfs/emote/d061ef8b91ca866fc6ce3ac0eaaf831457e08c52.png",
+				"喂，看见耳朵啦！-吓": "https://i0.hdslb.com/bfs/emote/9ed824796f9494f8ef4adadb68f271cbf1790dcf.png",
+				"喂，看见耳朵啦！-chu": "https://i0.hdslb.com/bfs/emote/912c436fee4d16f94cc5f794abc6a6edf3beda4d.png",
+				"喂，看见耳朵啦！-爱你": "https://i0.hdslb.com/bfs/emote/68fb8141a242cdcde94ba12e91dee1ad6b37978e.png",
+				"喂，看见耳朵啦！-舔": "https://i0.hdslb.com/bfs/emote/c57b984be871913cd502e9bb6b971ce311229d99.png",
+				"喂，看见耳朵啦！-睡觉觉": "https://i0.hdslb.com/bfs/emote/9adec4fb28034e50dde7a2ca5de234c80f95dc04.png",
+				"喂，看见耳朵啦！-举高高": "https://i0.hdslb.com/bfs/emote/a413e5eeeec632074b6c01274bf8fcb510991e0e.png",
+				"喂，看见耳朵啦！-不可描述": "https://i0.hdslb.com/bfs/emote/fda54b79413faa735b1c96eb9acd497e3207ba4d.png",
+				"喂，看见耳朵啦！-摔倒啦": "https://i0.hdslb.com/bfs/emote/cb626004cd67af4a48fd48f15a9f36f564052082.png",
+				"喂，看见耳朵啦！-说什么都对": "https://i0.hdslb.com/bfs/emote/4bddfe880ce46bd46b39b3f7a3f45300cbd330f9.png",
+				"小绿和小蓝-不想说话": "https://i0.hdslb.com/bfs/emote/eb0e4730ecb42c342e1507330ce495deef0128bd.png",
+				"小绿和小蓝-吵架": "https://i0.hdslb.com/bfs/emote/420d20935484170ac24c67872f29458bc0c79f5a.png",
+				"小绿和小蓝-得意脸": "https://i0.hdslb.com/bfs/emote/ef7c7605c4975f89896f3ed37c4e097c4e1713d7.png",
+				"小绿和小蓝-高兴": "https://i0.hdslb.com/bfs/emote/614798a8c875540d417b7200b9ea1ac3e1a934a3.png",
+				"小绿和小蓝-哦": "https://i0.hdslb.com/bfs/emote/dab5061b6f299a5f38b85a115da8eab8024426e8.png",
+				"小绿和小蓝-捂脸": "https://i0.hdslb.com/bfs/emote/7108030a92e01945817e2e73cc9206cfed4069a3.png",
+				"小绿和小蓝-邪恶脸": "https://i0.hdslb.com/bfs/emote/da35ac592ab48d23d299034315eb3b4efe15015b.png",
+				"小绿和小蓝-要哭了": "https://i0.hdslb.com/bfs/emote/f1c4d2b6cfcf43b985af38da8dc5a4fcdfbcc600.png",
+				"小绿和小蓝-疑问": "https://i0.hdslb.com/bfs/emote/80d7b4f10cd51dee05c0e307169aab9e9c2ea37e.png",
+				"小绿和小蓝-打滚": "https://i0.hdslb.com/bfs/emote/a0523e55635cf3e09dc286e2042fbbac6b50409c.png",
+				"小绿和小蓝-诶": "https://i0.hdslb.com/bfs/emote/302e36652f710d0e7a8260090eaf63eac3bd28bf.png",
+				"小绿和小蓝-机智一比": "https://i0.hdslb.com/bfs/emote/54816a3dd363e620e5d999f1bdf75290645bd35e.png",
+				"小绿和小蓝-喵喵喵": "https://i0.hdslb.com/bfs/emote/a2019a775d69b7888d663e82b3c29bd0c2281188.png",
+				"小绿和小蓝-跑": "https://i0.hdslb.com/bfs/emote/a73a2d7b884e735ab26ee1f871dd38c499f7b84a.png",
+				"小绿和小蓝-喂": "https://i0.hdslb.com/bfs/emote/707e9e784b745fad291ab15d9a31a24c7efa6c1f.png",
+				"小绿和小蓝-已关机": "https://i0.hdslb.com/bfs/emote/ea0769dadca17598873306ab8500aab1dd8994bd.png",
+				"小绿和小蓝-直接躺平": "https://i0.hdslb.com/bfs/emote/92a77c53d7a66763d2bd9dab80ddd2afa6cf6387.png",
+				"小绿和小蓝-呆住": "https://i0.hdslb.com/bfs/emote/978ab4d7ea39f7428fc945ba68c96b2291d26751.png",
+				"小绿和小蓝-哈哈": "https://i0.hdslb.com/bfs/emote/22144e5e3ea83b587483ea473c2e191284d64b44.png",
+				"小绿和小蓝-喝水": "https://i0.hdslb.com/bfs/emote/1e5592c8200419164f5730a0de6c30281a5c5a57.png",
+				"小绿和小蓝-生气": "https://i0.hdslb.com/bfs/emote/a9cc35254663a736cbd0e020634765b5f147fcdd.png",
+				"小绿和小蓝-哇啊啊啊": "https://i0.hdslb.com/bfs/emote/d67db235a945fdbd0b537aebddb4abc5ffc01184.png",
+				"小绿和小蓝-一本正经": "https://i0.hdslb.com/bfs/emote/822a803bf5b340090c9c7053a74aa43c1b527c27.png",
+				"小绿和小蓝-惊呆": "https://i0.hdslb.com/bfs/emote/15091032588cf3ccf2a7969460fe7705ec00e9c7.png",
+				"小绿和小蓝-开心": "https://i0.hdslb.com/bfs/emote/08dab1d9250043f97273b211253d0341f92fb0f8.png",
+				"小绿和小蓝-苦恼": "https://i0.hdslb.com/bfs/emote/14a0716224369f5211d5c69c249354f11f5026cb.png",
+				"小绿和小蓝-灵光乍现": "https://i0.hdslb.com/bfs/emote/dc3fae4b42056970f5aa407e8297e96cd2ede2b2.png",
+				"小绿和小蓝-思考": "https://i0.hdslb.com/bfs/emote/aecd0b1b0a5848765f002c857b73092677dec31f.png",
+				"一人之下-机智": "https://i0.hdslb.com/bfs/emote/afdcd367d011fbe5b78032daf519689c0bbcdc5e.png",
+				"一人之下-刀": "https://i0.hdslb.com/bfs/emote/68036be8868b42a6cbdb61327cfdb50bedde1a38.png",
+				"一人之下-埋了": "https://i0.hdslb.com/bfs/emote/2784a335e41ac4cdf2ec94bf430a906f933f11f4.png",
+				"一人之下-蟑螂": "https://i0.hdslb.com/bfs/emote/a95014fff53b7921b5f1850781ccf5af5ef73234.png",
+				"一人之下-抽打": "https://i0.hdslb.com/bfs/emote/a6a0a0a20019de939232bdaf3f1882e6d8ffd75e.png",
+				"一人之下-燃": "https://i0.hdslb.com/bfs/emote/f2a78e0e05bb90b38b550f57355173f8e9e32a7f.png",
+				"一人之下-超凶": "https://i0.hdslb.com/bfs/emote/aea3aa73a14350613628a0dac83e77c6c8fa9d68.png",
+				"一人之下-干翻苍穹": "https://i0.hdslb.com/bfs/emote/e5de003a4eb9fef32fe722cd06ad2abc9a3d4ec3.png",
+				"一人之下-糟了": "https://i0.hdslb.com/bfs/emote/45ad7c1b87cf95743a2ad000b8dd2eedfcf73107.png",
+				"一人之下-孙贼": "https://i0.hdslb.com/bfs/emote/a689c37d5779cda0774d6f4be65cd587c4d0e27f.png",
+				"一人之下-养生": "https://i0.hdslb.com/bfs/emote/32adfeb34ecc2e4ab9702813ab547fc0bb09aac7.png",
+				"一人之下-瘫": "https://i0.hdslb.com/bfs/emote/721c2b271d9edbb937c6dec61ba25568797b27aa.png",
+				"一人之下-打call": "https://i0.hdslb.com/bfs/emote/7f979ab31d61e09acb3da46b52c52376e1131abe.png",
+				"一人之下-比心": "https://i0.hdslb.com/bfs/emote/fafec3459f631f0ba76adde9faf8aa112469e9c4.png",
+				"一人之下-摸头": "https://i0.hdslb.com/bfs/emote/500171557765a27c500a7024888c698680c73653.png",
+				"一人之下-八卦": "https://i0.hdslb.com/bfs/emote/5be05cddd588d7b635cd55501b9b7a47af5dc5bc.png",
+				"一人之下-狐狸": "https://i0.hdslb.com/bfs/emote/022b95f086cd4469aec2a44045729bfda6fd8c95.png",
+				"一人之下-承让": "https://i0.hdslb.com/bfs/emote/6a21366ea70b7369b1d3c867f04bf8932e7c9be4.png",
+				"一人之下-哎？": "https://i0.hdslb.com/bfs/emote/ece804d0f852c6c6c9ae280dca523de672d5631d.png",
+				"一人之下-叹气": "https://i0.hdslb.com/bfs/emote/f5c79a00613d3e1f71d18332d474c7c0af31e4b2.png",
+				"一人之下-雷": "https://i0.hdslb.com/bfs/emote/75bbf0f391e8136d79109ff1d6904b688555b49b.png",
+				"狐妖-不服憋着": "https://i0.hdslb.com/bfs/emote/d3633ea35afac42d46679a3d31775a9860e63c2d.png",
+				"狐妖-吃瓜": "https://i0.hdslb.com/bfs/emote/8c5ad49f83b29262e2e785124bec6651670ae36b.png",
+				"狐妖-不明嚼栗": "https://i0.hdslb.com/bfs/emote/71601899fe445454c3593e7d82e4ea01f980b230.png",
+				"狐妖-抽打": "https://i0.hdslb.com/bfs/emote/43bb8e363f6c94c97a396a68852c8f2182651fc0.png",
+				"狐妖-吃我安利": "https://i0.hdslb.com/bfs/emote/3a0bf7d0320a84002ea8b4907e6c3baa97ec0dd0.png",
+				"狐妖-伐开心": "https://i0.hdslb.com/bfs/emote/01f6b69d1f69e8ea879569827e7363f4da630cba.png",
+				"狐妖-惊": "https://i0.hdslb.com/bfs/emote/e1c6e6aca03b634f32bc71762015c44431dafd74.png",
+				"狐妖-大笑": "https://i0.hdslb.com/bfs/emote/38bc9f4e39c2ec9d7442f2d67e13092fd535846b.png",
+				"狐妖-震惊": "https://i0.hdslb.com/bfs/emote/83361a40f6fd010e6da88825aa27320189ad2df5.png",
+				"狐妖-脸红": "https://i0.hdslb.com/bfs/emote/79175b3bc469061020d15114e22ac261b0668819.png",
+				"狐妖-冷漠": "https://i0.hdslb.com/bfs/emote/842b69b5c3e98d11292edd4f4cf6abb8504c18bc.png",
+				"狐妖-哭": "https://i0.hdslb.com/bfs/emote/29de352176c8ead5b301212aa61facb5e3abcd55.png",
+				"狐妖-目瞪口呆": "https://i0.hdslb.com/bfs/emote/c75e6841c81a5c020971debe394334d8b2700151.png",
+				"狐妖-前排": "https://i0.hdslb.com/bfs/emote/4d2702f9383dec00c7c77ff026768c3ddaaf6d60.png",
+				"狐妖-沙发": "https://i0.hdslb.com/bfs/emote/5ff883da9618dfd9740256e569279244bbff03b1.png",
+				"狐妖-掀桌": "https://i0.hdslb.com/bfs/emote/f0917c6d982a86c2ab02c979359226f761581c37.png",
+				"狐妖-心": "https://i0.hdslb.com/bfs/emote/77123fd85c11478b46d762a1c8553328013637ef.png",
+				"狐妖-晕": "https://i0.hdslb.com/bfs/emote/64702d1fc92c44e8aaa39ffdacdc87aaa6d38d3d.png",
+				"狐妖-吃药": "https://i0.hdslb.com/bfs/emote/059d810cbc5ad4df4f9bbf08e44643b022a2354f.png",
+				"狐妖-mdzz": "https://i0.hdslb.com/bfs/emote/e68fd21a5bcfa50b6d45f2a8f5926f992f484ae3.png",
+				"战双帕弥什-吃瓜": "https://i0.hdslb.com/bfs/emote/8541c44effd3f69a71b1e96a586ac0fe5b765c45.png",
+				"战双帕弥什-哼": "https://i0.hdslb.com/bfs/emote/59748ef499690a7931c198cd4e0343d5a05d63da.png",
+				"战双帕弥什-抱抱": "https://i0.hdslb.com/bfs/emote/83a6ae3a34c54e6ebef7d0ca5ad540f61c1df678.png",
+				"战双帕弥什-画圈圈": "https://i0.hdslb.com/bfs/emote/167a9b59900ef721dd3fd19e6216a71d4eb85dfb.png",
+				"战双帕弥什-痴汉": "https://i0.hdslb.com/bfs/emote/9987980413cc6f550ea7e5f071fe1166cef729b7.png",
+				"战双帕弥什-挠头": "https://i0.hdslb.com/bfs/emote/b1930eefe111a6e140f17669368aed831aeab5f4.png",
+				"战双帕弥什-肥宅": "https://i0.hdslb.com/bfs/emote/3ac9e30424ff0122d4ca274cac3ed236d2853e46.png",
+				"战双帕弥什-柠檬茶": "https://i0.hdslb.com/bfs/emote/02180f96d9b38797873286035dcfe738ad382cbb.png",
+				"战双帕弥什-诶嘿": "https://i0.hdslb.com/bfs/emote/98c27f2281019fa5ef0872da88401d03313463b2.png",
+				"战双帕弥什-拍桌": "https://i0.hdslb.com/bfs/emote/2bd9551d81a1edf8013dc75ca18b875050db9dd3.png",
+				"战双帕弥什-哭哭": "https://i0.hdslb.com/bfs/emote/71e7feb027f42ec299a440c3031534d6bdc4e604.png",
+				"战双帕弥什-吐血": "https://i0.hdslb.com/bfs/emote/3b53c31e32cf8806770f760a74b167b14610df8c.png",
+				"战双帕弥什-凉了": "https://i0.hdslb.com/bfs/emote/142bcb77a9564db8ab5f429ad1e623c9fa446abd.png",
+				"战双帕弥什-托腮": "https://i0.hdslb.com/bfs/emote/e196eeadb34eb7238206d606b801ef8e0516d00a.png",
+				"战双帕弥什-喷了": "https://i0.hdslb.com/bfs/emote/5424a9d241653492c296d8c8b4c889f2202fac8a.png",
+				"战双帕弥什-星星眼": "https://i0.hdslb.com/bfs/emote/1595f4072f90b756f15834f70bb188872c107a37.png",
+				"战双帕弥什-我即天命": "https://i0.hdslb.com/bfs/emote/2dd6a60bcdce44e54f07c090b1b8849ee76ae4a0.png",
+				"战双帕弥什-作战预备": "https://i0.hdslb.com/bfs/emote/82d3b0c747cff3e8523cfd10e0e58c03dac885a3.png",
+				"大王不高兴-开心": "https://i0.hdslb.com/bfs/emote/cb17a1a0b113c1b2c4a42c273d0e9a434289a95c.png",
+				"大王不高兴-生气": "https://i0.hdslb.com/bfs/emote/5c3aa8d501c1a1a3c3e627edfc98703c1066e91b.png",
+				"大王不高兴-哭": "https://i0.hdslb.com/bfs/emote/f0677bb46861c5b03137e356d06a51a562fd0a59.png",
+				"大王不高兴-比心": "https://i0.hdslb.com/bfs/emote/0ce7501326cdf4be8c81a106054680458d4fa247.png",
+				"大王不高兴-疑问": "https://i0.hdslb.com/bfs/emote/3e0ebc9bd1cb54a2ceed82a90a3fdd2586a517ae.png",
+				"大王不高兴-我好了": "https://i0.hdslb.com/bfs/emote/997095a106b2fb7319f07c6f9260468410734a56.png",
+				"大王不高兴-汗": "https://i0.hdslb.com/bfs/emote/7b02c3d608f3ca9cdc6b46d64f06f8909017f164.png",
+				"大王不高兴-点赞": "https://i0.hdslb.com/bfs/emote/f85e02492f0f87ee94f274f1684787170ceefcdb.png",
+				"大王不高兴-害怕": "https://i0.hdslb.com/bfs/emote/461eff396cde49246614731caacef13200730709.png",
+				"大王不高兴-滑稽": "https://i0.hdslb.com/bfs/emote/0004ca2d9be95b769d8a9778aaee3a07482550ba.png",
+				"大王不高兴-目瞪口呆": "https://i0.hdslb.com/bfs/emote/83d687d404ce04c68cf5f968a74a2d936097486e.png",
+				"大王不高兴-前排": "https://i0.hdslb.com/bfs/emote/8b02d412a194f8c424c12c0c9f22159f3a1895f8.png",
+				"崩坏3-点赞": "https://i0.hdslb.com/bfs/emote/055a130541fe95e20aa541db5a5a48d0cbc728b6.png",
+				"崩坏3-入欧": "https://i0.hdslb.com/bfs/emote/5d532eab104881e7dd63be1083a78ab36878c3b4.png",
+				"崩坏3-脱非": "https://i0.hdslb.com/bfs/emote/ac31b7219032b6e714c189d65a669ca3ca2d3e77.png",
+				"崩坏3-快乐": "https://i0.hdslb.com/bfs/emote/a3ec46f1255dbf96d413231862399b939dc2110e.png",
+				"崩坏3-注入灵魂": "https://i0.hdslb.com/bfs/emote/5bf261f6fb91463e1ff1c80dd0fefd6bcd31aedf.png",
+				"崩坏3-危险": "https://i0.hdslb.com/bfs/emote/3a6af29282b6e09ce7881c9aebc187d03268b25f.png",
+				"崩坏3-吃瓜": "https://i0.hdslb.com/bfs/emote/9ecead2805adf05a308e1093fb8d4941d0366189.png",
+				"崩坏3-糖葫芦": "https://i0.hdslb.com/bfs/emote/f54e160beaf3f7b55a87d0da9a6eccefc7bd70d6.png",
+				"崩坏3-路过": "https://i0.hdslb.com/bfs/emote/13a7f9e81f4005c29466e8d65eabbf3167902f9d.png",
+				"崩坏3-魔法少女": "https://i0.hdslb.com/bfs/emote/da063804b5b8d44c288dd2c45f472741c00c8625.png",
+				"崩坏3-特效": "https://i0.hdslb.com/bfs/emote/a1bb1caf129b5e28f2c331667f9e38808050e8a8.png",
+				"崩坏3-唢呐": "https://i0.hdslb.com/bfs/emote/032301ad0e61395a266e7f9b4ebcf83bd2acca03.png",
+				"崩坏3-琵琶": "https://i0.hdslb.com/bfs/emote/13c3e61eec3a61a3e0ae2883a488ce9b45cddecc.png",
+				"崩坏3-二胡": "https://i0.hdslb.com/bfs/emote/b2e3acfba545c61c334eacf5a5b7694e071d834f.png",
+				"崩坏3-笛子": "https://i0.hdslb.com/bfs/emote/3dae79d5ce1d826d6d16404dff7bf22474c7015b.png",
+				"崩坏3-镲": "https://i0.hdslb.com/bfs/emote/dcce1ad4d53a25c52946821c0d3a4b7dd80e5a42.png",
+				"崩坏3-红包": "https://i0.hdslb.com/bfs/emote/4bd80539d828ad6894ccb099b5b04769820d49d6.png",
+				"崩坏3-谈话": "https://i0.hdslb.com/bfs/emote/4794f82d166b1f8bfae7783859913e03fe42ae81.png",
+				"崩坏3-无辜": "https://i0.hdslb.com/bfs/emote/4e1f4e9a375beaa4e93d057a4e285c924635235f.png",
+				"崩坏3-星星眼": "https://i0.hdslb.com/bfs/emote/b5fffeead2dc05c7f902f1c7136178c6a63e508a.png",
+				"崩坏3-微笑": "https://i0.hdslb.com/bfs/emote/c2c6c0604af985b745322954814863e47f6fb6d5.png",
+				"崩坏3-开心": "https://i0.hdslb.com/bfs/emote/3657a825b87ec063d6e2a3c201da2056e45db938.png",
+				"崩坏3-幸福": "https://i0.hdslb.com/bfs/emote/714cc90d3485a003f53eecec336bea8a0b2dc12d.png",
+				"崩坏3-吃": "https://i0.hdslb.com/bfs/emote/c26ae762270b756b68a7f5c63d43078e874fbead.png",
+				"崩坏3-口水": "https://i0.hdslb.com/bfs/emote/7a66d7e1902b766a2b930009687be5171018f1ff.png",
+				"崩坏3-惊": "https://i0.hdslb.com/bfs/emote/672ab0cac8e29270a0ea1788df5711ce716b6942.png",
+				"崩坏3-哭哭": "https://i0.hdslb.com/bfs/emote/f432d349d44aad9873da18b27a6367c3ea7cfebc.png",
+				"崩坏3-纠结": "https://i0.hdslb.com/bfs/emote/864ff2ef1546534f5b53b279332e3950a86cf008.png",
+				"崩坏3-疑问": "https://i0.hdslb.com/bfs/emote/bdda506f56f5a42e365b6f2f8d2128f799f8310e.png",
+				"崩坏3-有主意了": "https://i0.hdslb.com/bfs/emote/38676ebb4c51fdda6302a5cb131ae94d35be4f8b.png",
+				"阴阳师缘结神-你高尚": "https://i0.hdslb.com/bfs/emote/f88abffb5a8d570b1efc68cd5440d9515b8a45e6.png",
+				"阴阳师缘结神-菜哭": "https://i0.hdslb.com/bfs/emote/5c9907d23378704942227aa5a2834ff35f2e425d.png",
+				"阴阳师缘结神-姐妹！": "https://i0.hdslb.com/bfs/emote/972913308e0633454e382e6e1c01b810c24cd574.png",
+				"阴阳师缘结神-我身体好": "https://i0.hdslb.com/bfs/emote/1852865c39b446a63ecb07da68a196dc4dd2c96e.png",
+				"阴阳师缘结神-我磕到了": "https://i0.hdslb.com/bfs/emote/5f59b958267f9441d82956071586fa25c9ee5e7c.png",
+				"阴阳师缘结神-爱心发射": "https://i0.hdslb.com/bfs/emote/25cdfac5b23e5cb007d1fa643b82751c9b07d31a.png",
+				"阴阳师缘结神-快去结婚": "https://i0.hdslb.com/bfs/emote/90402b80a3fd1ab81c9d78a31354f00f0a0cb1ba.png",
+				"阴阳师缘结神-亲一个": "https://i0.hdslb.com/bfs/emote/611591c16d0e621b21e035045c026e2039e52c29.png",
+				"阴阳师缘结神-KWSL": "https://i0.hdslb.com/bfs/emote/8bddeede5426262701d09a9bdffd3cc7a89bee69.png",
+				"阴阳师缘结神-缘结神哒": "https://i0.hdslb.com/bfs/emote/f7a03dfd13018213d210d4de8467e51f8b9d91e3.png",
+				"阴阳师缘结神-该结婚了": "https://i0.hdslb.com/bfs/emote/c7b591beb0e613e0a9f95fc5becf42d7896a5869.png",
+				"阴阳师缘结神-兄弟情？": "https://i0.hdslb.com/bfs/emote/2606e0614cd56d7d9c3a5c8e4ed6d96ef9eea888.png",
+				"阴阳师缘结神-别骚了": "https://i0.hdslb.com/bfs/emote/fb58e9683265087ad8bdbe3e834f7813cf72f990.png",
+				"阴阳师缘结神-开心": "https://i0.hdslb.com/bfs/emote/f1a2a63ef7a89eae87da511f5de5b04d0e9ae06c.png",
+				"阴阳师缘结神-在一起": "https://i0.hdslb.com/bfs/emote/4ccc36204a64787b0fb67d47edcffaf3c45acc42.png",
+				"阴阳师缘结神-期待": "https://i0.hdslb.com/bfs/emote/b80475b53b481f3d11ec05b07c55ad390f091b35.png",
+				"阴阳师缘结神-多喝热水": "https://i0.hdslb.com/bfs/emote/b6f923ac40cf7faf24d3bc8ca6ebcdf6425a876f.png",
+				"阴阳师缘结神-有粮不": "https://i0.hdslb.com/bfs/emote/6fdd3e5e15dc307c3c6990a621df860634527f47.png",
+				"阴阳师缘结神-等粮中": "https://i0.hdslb.com/bfs/emote/0126cb6e58fa39fbd0f2e5242461ae0e101ea904.png",
+				"阴阳师缘结神-求你产粮": "https://i0.hdslb.com/bfs/emote/95011ad80649de14a966c827db305579a8311b63.png",
+				"阴阳师缘结神-我不活啦": "https://i0.hdslb.com/bfs/emote/48de67de9c96dc5340af62ccc76200e07ceaffda.png",
+				"公主连结-不错": "https://i0.hdslb.com/bfs/emote/e0ac5fff71fd2aabd8c20505a548f5bca36bc7a5.png",
+				"公主连结-鼓气": "https://i0.hdslb.com/bfs/emote/a3fb7d3a867ba3523e6a0faa2ca42af797328d6d.png",
+				"公主连结-害怕": "https://i0.hdslb.com/bfs/emote/c305b2bd36063b700fd9fac093c21639c0806138.png",
+				"公主连结-惊吓": "https://i0.hdslb.com/bfs/emote/57ad87c4e597a366dac713ad4800cecbd520175e.png",
+				"公主连结-来啊": "https://i0.hdslb.com/bfs/emote/a82ab04d1a10c742b5eadafb2a0e04d77daa84d4.png",
+				"公主连结-累死了": "https://i0.hdslb.com/bfs/emote/8c68c16f8f4c79f14bb16c6ea64378d77abdf0d0.png",
+				"公主连结-冷漠": "https://i0.hdslb.com/bfs/emote/04a257a00ae097d61498db6118f6da393d4c85b7.png",
+				"公主连结-厉害了": "https://i0.hdslb.com/bfs/emote/066c5c59e39f163345d2a41123d53596b39a2ce3.png",
+				"公主连结-你干嘛": "https://i0.hdslb.com/bfs/emote/422897481963e6efdd93dce8581c112e7af80a1e.png",
+				"公主连结-扭扭捏捏": "https://i0.hdslb.com/bfs/emote/4c20cd2aed2598dd18507fdd03c7d39b6eb7842c.png",
+				"公主连结-祈祷": "https://i0.hdslb.com/bfs/emote/a63b3da12e46314470413fea6975579b0871d1f8.png",
+				"公主连结-思索": "https://i0.hdslb.com/bfs/emote/3c6741be302ec54f152093ab00f950b00a083d6d.png",
+				"公主连结-投币": "https://i0.hdslb.com/bfs/emote/6bd0c47917f94d510990db020ce3a7c07ed698e9.png",
+				"公主连结-无奈": "https://i0.hdslb.com/bfs/emote/7f78404ee98cc8738b9b738f7e4446a6fdbaff00.png",
+				"公主连结-邪恶": "https://i0.hdslb.com/bfs/emote/97d25106924c7f3db1fe26ed7d67db943ffcc92e.png",
+				"公主连结-阴谋": "https://i0.hdslb.com/bfs/emote/705f87da382b4c46d6bf19579b62c88bf4aa702c.png",
+				"公主连结-怎么这样": "https://i0.hdslb.com/bfs/emote/7461756bf9c49c4b48d1c26083695044b468ad7c.png",
+				"公主连结-emmm": "https://i0.hdslb.com/bfs/emote/99ca73b1f486042cd8ab6b17fd5ad638ed777899.png",
+				"2020拜年祭-哈气": "https://i0.hdslb.com/bfs/emote/464fb79ad8dc0b8ba192bef47e03c044fc8ec8ac.png",
+				"2020拜年祭-期待": "https://i0.hdslb.com/bfs/emote/34d9883978304d61b0a6bfe4dc5ed3cce849a954.png",
+				"2020拜年祭-吸欧气": "https://i0.hdslb.com/bfs/emote/d7d2033c871fbe06747c6ca93a7856f27765d9e7.png",
+				"2020拜年祭-领红包": "https://i0.hdslb.com/bfs/emote/d8425bcf66fe383d0c693c41678202bb2167f476.png",
+				"2020拜年祭-谢谢老板": "https://i0.hdslb.com/bfs/emote/2aa0fef536c594d29b8936c2e7be0e68decd44a8.png",
+				"2020拜年祭-灯笼": "https://i0.hdslb.com/bfs/emote/814b999e584f93769a5c6a0285c91ab3c2f57002.png",
+				"2020拜年祭-火锅": "https://i0.hdslb.com/bfs/emote/2bfbeb3a1502187b0c505e49a460be1dbffd3df0.png",
+				"2020拜年祭-2020": "https://i0.hdslb.com/bfs/emote/5f28eb21ed39a86e369d5316579573b285ccf34f.png",
+				"2020拜年祭-红包": "https://i0.hdslb.com/bfs/emote/cebc5603f3ff1df7f9f2e67c8c7e6309da0b506c.png",
+				"2020拜年祭-新年好": "https://i0.hdslb.com/bfs/emote/9da7e2f2fd6187c506423398dc22f7bf5ba814f4.png",
+				"Cat-escort": "https://i0.hdslb.com/bfs/emote/81784f53f5ca7004a90d316c81889d8161dc05a6.png",
+				"Cat-coffeebath": "https://i0.hdslb.com/bfs/emote/f80cfd44e0f216f4171a549e869aab32d80d4c39.png",
+				"Cat-stealth": "https://i0.hdslb.com/bfs/emote/21f7d24b1e8de29f2c61f64e70af9f6aec14e394.png",
+				"Cat-hightouch": "https://i0.hdslb.com/bfs/emote/3d7264b8349bc1be6d45beebbcfab69e7b9895fc.png",
+				"Cat-lonely": "https://i0.hdslb.com/bfs/emote/72a9d2f20fb79883bbed3cac914187545ac3a0cc.png",
+				"Cat-heart": "https://i0.hdslb.com/bfs/emote/3f98c4debfe792a1969b99ae71f7f5d4bf00c3d5.png",
+				"Cat-slip": "https://i0.hdslb.com/bfs/emote/a6e45e065ed17e2af03f7263784bc36d94b25e74.png",
+				"Cat-chips": "https://i0.hdslb.com/bfs/emote/12d2d3ce0e72749c45706444cca580dc22148876.png",
+				"Cat-study": "https://i0.hdslb.com/bfs/emote/9f6d28ecd7e33c3f5e7cd74cc36f4feedb42e995.png",
+				"Cat-dash": "https://i0.hdslb.com/bfs/emote/0f2d1f99efd5df816c694da76e91a173fa643589.png",
+				"Cat-pressure": "https://i0.hdslb.com/bfs/emote/c6c270e9989e7152457b907595a6e34064d0c1b2.png",
+				"Cat-hibye": "https://i0.hdslb.com/bfs/emote/9e4955f479a1211d401fbaa71ceaf5186b9e57bd.png",
+				"Cat-confuse": "https://i0.hdslb.com/bfs/emote/107ebcbd4dd5895f4595ea6db963dc4566809c6e.png",
+				"Cat-ignore": "https://i0.hdslb.com/bfs/emote/94de4f63a5f965ee8312a88e4c57c07c0174acce.png",
+				"Cat-agree": "https://i0.hdslb.com/bfs/emote/48b00f75518a727d64c385fe8ca2fa49aeb08c77.png",
+				"Cat-fight": "https://i0.hdslb.com/bfs/emote/e39c491906d0fcd0176eede702305655d44044c5.png",
+				"Cat-splash": "https://i0.hdslb.com/bfs/emote/9513157fed2425ed2caa4eb9bc84a0bca80df9bc.png",
+				"Cat-calledme": "https://i0.hdslb.com/bfs/emote/aacb6fb852f6acbbc8386ecef76c98b77178e23e.png",
+				"Cat-sleep": "https://i0.hdslb.com/bfs/emote/39b964d10bde1634f136b662f5b624fcb3bcedb8.png",
+				"Cat-congrats": "https://i0.hdslb.com/bfs/emote/98f6e73340d9ed43403242fc842e42508d38bba6.png",
+				"最强蜗牛西能-Hi": "https://i0.hdslb.com/bfs/emote/cacd7cd54a1d210cfacd79f5b1f061708c3dba4e.png",
+			}
+		});
+		
+		function debounce(fn) {
+			var timerID = null
+			return function(){
+				var arg = arguments[0]   //获取事件
+				if(timerID) {
+					clearTimeout (timerID)
+				}
+				timerID = setTimeout( function(){
+					fn(arg)              //事件传入函数
+				},200)
+			}
+		}
+		//查询评论 valine.Q('*').limit(7) -- 查询所有，限制7条, 下面的的代码是查询当前页面
+		let themeDanmu = eval('false');
+		let themeLoop = eval('false');
+		let themeLooperTime = '5000' || 5000;
+		let speed = '20' || 20;
+		let isBarrager = true;
+		if (themeDanmu == true) {
+			do_barrager();
+			$('.navbar').append('<div class="danmuBox"><div class="danmuBtn open"><span class="danmuCircle"></span><span class="danmuText">弹幕</span></div></div>');
+			$('.danmuBtn').on('click', debounce(
+				function () {
+					if ($('.danmuBtn').hasClass('open')) {
+						$('.danmuBtn').removeClass('open')
+						clearInterval(looper);
+						$.fn.barrager.removeAll();
+					} else {
+						$('.danmuBtn').addClass("open");
+						do_barrager();
+					}
+				}
+			))
+		}
+		function do_barrager() {
+			isBarrager && valine.Q(window.location.pathname).find().then(function (comments) {
+				// let num = 0; // 可以记录条数，循环调用的时候只取最新的评论放入弹幕中
+				let run_once = true;
+				let looper_time = themeLooperTime;
+				let total = comments.length;
+				let index = 0;
+				if (total > 0) {
+					barrager();
+				} else {
+					// 当评论数为0的时候，自动关闭弹幕
+					// $('.danmuBtn').removeClass('open');
+				}
+				function barrager() {
+					if(run_once) {
+						//如果是首次执行,则设置一个定时器,并且把首次执行置为false
+						looper = setInterval(barrager,looper_time);                
+						run_once = false;
+					}
+					let content = comments[index]._serverData.comment;
+					let email = comments[index]._serverData.mail;
+					let link = comments[index]._serverData.link;
+					let newcontent = content.substring(0, 50).replace(/<[^>]+>/g,"");
+					//发布一个弹幕
+					const item = {
+						img: `https://q1.qlogo.cn/g?b=qq&nk=${email}&s=640`, //图片 
+						info: newcontent, //文字 
+						href: link, //链接 
+						close:true, //显示关闭按钮 
+						speed: speed, //延迟,单位秒,默认6 
+						color:'#fff', //颜色,默认白色 
+						old_ie_color:'#000000', //ie低版兼容色,不能与网页背景相同,默认黑色
+					}
+					$('body').barrager(item);
+					//索引自增
+					index++;
+					//所有弹幕发布完毕，清除计时器。
+					if(index == total) {
+						clearInterval(looper);
+						if (themeLoop === true) {
+							setTimeout(function(){ 
+								do_barrager();
+							}, 5000);
+						} else {
+							$('.danmuBtn').removeClass('open');
+						}
+						return false;
+					}
+
+				}
+			})
+		}
+	</script>
+</section>
+<style>
+	#comments {
+		background: rgba(255,255,255,0.9);
+	}
+	#veditor {
+		background-image: url('/medias/comment-bg.gif');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: right;
+		background-color: rgba(255, 255, 255, 0);
+		resize: vertical;
+	}
+	#veditor:focus{
+		background-position-y: 200px;
+		transition: all 0.2s ease-in-out 0s;
+	}
+	#vcomment .vcards .vcard .vh .vhead .vtag.vvisitor {
+		background-color: #42b983;
+	}
+	.v[data-class=v] .vbtn:active, .v[data-class=v] .vbtn:hover {
+		color: #42b983;
+		border-color: #42b983;
+	}
+	#vcomment .vcards .vcard .vhead .vsys i {
+		display: none;
+	}
+	/* 底部valine链接 */
+	#vcomment .vpower {
+		display: none;
+	}
+	
+	/* 底下注释是修改 名称和邮箱和网址输入框的样式 */
+	/* #vcomment .vheader {
+		display: flex;
+		justify-content: space-around;
+	}
+	
+	#vcomment .vheader .vnick {
+		width: 31%;
+		border: 2px solid #dedede;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 5px
+	}
+
+	#vcomment .vheader .vmail {
+		width: 31%;
+		border: 2px solid #dedede;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 5px
+	}
+
+	#vcomment .vheader .vlink {
+		width: 31%;
+		border: 2px solid #dedede;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 5px
+	} */
+
+	img.vimg {
+		transition: all 1s;
+		/* 头像旋转时间为 1s */
+	}
+
+	img.vimg:hover {
+		transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+	}
+
+	#vcomment .vcards .vcard {
+		padding: 15px 20px 0 20px;
+		border-radius: 10px;
+		margin-bottom: 15px;
+		box-shadow: 0 0 4px 1px rgba(0, 0, 0, .12);
+		transition: all .3s
+	}
+
+	#vcomment .vcards .vcard:hover {
+		box-shadow: 0 0 8px 3px rgba(0, 0, 0, .12)
+	}
+
+	#vcomment .vcards .vcard .vh .vcard {
+		border: none;
+		box-shadow: none;
+	}
+</style>
+    
+  </div>
+
+
+  </div>
+
+  <!-- 目录 -->
+  <!-- 文章详情页右侧目录 -->
+
+  <div class="toc-aside">
+    <div class="toc-main">
+      <div class="toc-aside-title">
+        <i class="fa fa-list-ul" aria-hidden="true"></i><span>本文目录</span>
+        <div class="toc-open-close">本文目录</div>
+      </div>
+      <div class="toc-content">
+        <link href="/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/js/tocbot/tocbot.min.js"></script>
+<div class="toc"></div>
+
+<script>
+  if ($('.toc').length > 0) {
+    var headerEl = 'h2, h3, h4',  //headers 
+      content = '.post-detail',//文章容器
+      idArr = {};  //标题数组以确定是否增加索引id
+      //add #id
+
+    $(content).children(headerEl).each(function () {
+      //去除空格以及多余标点
+      var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
+
+      headerId = headerId.toLowerCase();
+      if (idArr[headerId]) {
+        //id已经存在
+        $(this).attr('id', headerId + '-' + idArr[headerId]);
+        idArr[headerId]++;
+      }
+      else {
+        //id未存在
+        idArr[headerId] = 1;
+        $(this).attr('id', headerId);
+      }
+    });
+
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: '.toc',
+      // Where to grab the headings to build the table of contents.
+      contentSelector: content,
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: headerEl,
+      scrollSmooth: true,
+      scrollSmoothOffset: -80,
+      headingsOffset: -($(window).height() * 0.4 - 45),
+      positionFixedSelector: '.toc-main',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  }
+
+</script>
+
+<style>
+.is-position-fixed {
+  position:sticky !important;
+  top: 74px;
+}
+.toc-main ul {
+  counter-reset: show-list;
+}
+.toc-main ul li::before {
+  content: counter(item)".";
+  display: block;
+  position: absolute;
+  left: 12px;
+  top:0;
+}
+.toc > .toc-list {
+  padding-left: 35px;
+}
+.toc>.toc-list li {
+  list-style: decimal;
+}
+.toc-list {
+  padding-left: 25px;
+}
+</style>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <script>
+    let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+    let open = eval('' || 'true');
+    openOrCloseBtn.click(function() {
+      if (open === true) {
+        $(".toc-aside").css({'width': 0, 'padding': 0});
+        $(".toc-content").css({'width': 0});
+        $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+        $(".main-content").css({'width': '75%', 'margin': '10px auto'});
+        open = false;
+      } else {
+        $(".toc-aside").css({'width': '300px', 'padding': '0 10px'});
+        $(".toc-content").css({'width': '300px'});
+        $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
+        $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
+        open = true;
+      }
+    });
+  </script>
+
+
+  <!-- 渲染issues标签里的内容 -->
+  <script>
+  function loadIssuesJS() {
+    if ($(".post-detail").find(".issues-api").length == 0) return;
+    document.write('<script type="text/javascript" src="/js/issues/index.js"><\/script>');
+  };
+  loadIssuesJS();
+</script>
+
+  <!-- 图片放大 Wrap images with fancybox support -->
+  <script src="/js/wrapImage.js"></script>
+</div>
+
+<!-- 文章详情页背景图 -->
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;" :style="{'background-color': bgColor ? bgColor : 'transparent'}">
+    <transition-group tag="ul" :name="names">
+        <li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+            <img :src="image" class="bg-swiper-img">
+        </li>
+    </transition-group>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#appBgSwiper',
+        data: {
+            names: '' || 'fade' || 'fade', // translate-fade fade
+            mark: 0,
+            img: [],
+            bgColor: '',
+            time: null
+        },
+        methods: {   //添加方法
+            change(i, m) {
+                if (i > m) {
+                    // this.names = 'fade';
+                } else if (i < m) {
+                    // this.names = 'fade';
+                } else {
+                    return;
+                }
+                this.mark = i;
+            },
+            prev() {
+                // this.names = 'fade';
+                this.mark--;
+                if (this.mark === -1) {
+                    this.mark = 3;
+                    return
+                }
+            },
+            next() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            autoPlay() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            play() {
+                let bgImgDelay = '' || '180000'
+                let delay = parseInt(bgImgDelay) || 180000;
+                this.time = setInterval(this.autoPlay, delay);
+            },
+            enter() {
+                clearInterval(this.time);
+            },
+            leave() {
+                this.play();
+            }
+        },
+        created() {
+            this.play()
+        },
+        beforeDestroy() {
+            clearInterval(this.time);
+        },
+        mounted() {
+            let prop = ''|| '';
+            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
+            if (isImg) {
+                let img = prop.split(',');
+                let configRoot = '/'
+                let arrImg = [];
+                img.forEach(el => {
+                    var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+			        var objExp = new RegExp(Expression);
+
+                    if(objExp.test(el)) {
+                        // http or https
+                        arrImg.push(el);
+                    } else {
+                        // 非http or https开头
+                        // 本地文件
+                        let firstStr = el.charAt(0);
+                        if (firstStr == '/') {
+                            el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+                        }
+                        el = configRoot + el;
+                        arrImg.push(el);
+                    }
+                })
+                this.img = arrImg;
+            } else {
+                this.bgColor = prop;
+            }
+        }
+    })
+</script>
+
+<style>
+    .bg-swiper-box {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .bg-swiper-img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+    </main>
+
+    <!-- 页脚 -->
+    <div class="footer bg-color">
+  <div class="footer-main">
+    <div class="link">
+      
+    </div>
+    <div class="footer-copyright">
+      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a></p>
+
+    </div>
+    <div class="footer-custom">
+      
+    </div>
+    <!-- 不蒜子统计 -->
+    
+      
+  <!-- 不蒜子统计 -->
+  <span id="busuanzi_container_site_pv">
+        <i class="fa fa-book" aria-hidden="true"></i>本站总阅读量：<span id="busuanzi_value_page_pv"></span> 次
+  </span>
+  <span id="busuanzi_container_site_pv">
+        <i class="fa fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
+  </span>
+  <span class="post-meta-divider">|</span>
+  <span id="busuanzi_container_site_uv" style='display:none'>
+        <i class="fa fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
+  </span>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    
+  </div>
+</div>
+
+
+    <!-- 渲染暗黑按钮 -->
+    
+      <div class="dark">
+  <div class="dark-content">
+    <i class="fa fa-moon-o" aria-hidden="true"></i>
+    <!-- <span>关灯</span> -->
+  </div>
+  
+</div>
+
+<script>
+  $(function() {
+    let isDark = JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
+    if (isDark) {
+      $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+    }
+    $('.dark').click(function() {
+      if ($(document.body).is('.darkModel')) {
+        $(document.body).removeClass('darkModel');
+        localStorage.setItem('dark', false);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-moon-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      } else {
+        $(document.body).addClass('darkModel');
+        localStorage.setItem('dark', true);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      }
+    })
+  })
+</script>
+    
+    <!-- 渲染回到顶部按钮 -->
+    
+      <div class="goTop top-btn-color border-color">
+  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+</div>
+<script src="/js/goTop.js"></script>
+    
+    <!-- 渲染左下角音乐播放器 -->
+    
+      <link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
+<style>
+.aplayer .aplayer-lrc p {
+  
+  display: none;
+  
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px !important;
+}
+
+.aplayer .aplayer-lrc p.aplayer-lrc-current {
+  
+  display: none;
+  
+  font-size: 15px;
+  color: #42b983;
+}
+
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+  left: -66px !important;
+}
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+  left: 0px !important;
+}
+
+
+</style>
+<meting-js  
+  class=""
+  server="tencent"
+  type="song"
+  id="0014xbQc1w6RTJ"
+  fixed='true'
+  autoplay='false'
+  theme='#42b983'
+  loop='all'
+  order='random'
+  preload='auto'
+  volume='0.7'
+  list-folded='true'
+>
+</meting-js>
+
+<!-- <style>
+  #aplayer {
+    position: fixed;
+    left: 0;
+    bottom: 300px;
+  }
+</style> -->
+<script src="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    
+
+    <!-- 图片放大 -->
+    
+      <script src="/js/fancybox/jquery.fancybox.min.js"></script>
+    
+    
+    <!-- 鼠标点击特效 -->
+    <!-- 爱心点击 -->
+
+	
+		<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 999; pointer-events: none;" ></canvas>
+		<script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+		<script src="/js/cursor/explosion.min.js"></script>
+	
+
+
+
+    <!-- 百度解析 -->
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+    
+    <!-- 背景彩带 -->
+    <script type="text/javascript" size="100" alpha='0.4' zIndex="-1" src="/js/ribbon.min.js"></script>
+    
+    <!-- div滚动到显示区域的动画 -->
+    
+  <script src="/js/aos/aos.js"></script>
+  <script>
+    // https://github.com/michalsnik/aos
+    const themeOffset = parseInt('120') || 120;
+    const themeDelay = parseInt('0') || 0;
+    const themeDuration = parseInt('400') || 400;
+    const themeEasing = 'ease' || 'ease';
+    const themeOnce = eval('true') || false;
+    const themeMirror = eval('false') || false;
+    const themeAnchorPlacement = 'top-bottom' || 'top-bottom';
+    AOS.init({
+      // Global settings:
+      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+      initClassName: 'aos-init', // class applied after initialization
+      animatedClassName: 'aos-animate', // class applied on animation
+      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+      offset: themeOffset, // offset (in px) from the original trigger point
+      delay: themeDelay, // values from 0 to 3000, with step 50ms
+      duration: themeDuration, // values from 0 to 3000, with step 50ms
+      easing: themeEasing, // default easing for AOS animations
+      once: themeOnce, // whether animation should happen only once - while scrolling down
+      mirror: themeMirror, // whether elements should animate out while scrolling past them
+      anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
+
+    });
+  </script>
+
+    
+    <!-- 复制提示 -->
+    
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
+  <script src="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.umd.min.js"></script>
+  <div id="appCopy">
+  </div>
+  <script>
+    var vm = new Vue({
+      el: '#appCopy',
+      data: {
+      },
+      computed: {
+      },
+      mounted() {
+        const that = this;
+        //  监听 ctrl + c事件  
+        $(document).unbind('keypress').bind('keypress', function (e) {
+          if (e.ctrlKey && e.keyCode == 67) {
+            doSomething();
+            // 返回false, 防止重复触发copy事件  
+            return false;
+          }
+        })
+
+        // 鼠标右键的复制事件  
+        $(document).unbind('copy').bind('copy', function (e) {
+          doSomething();
+          // console.log('右键复制 监听成功');
+        });
+
+        function doSomething() {
+          that.$notify({
+            title: "成功",
+            content: "代码已复制，请遵守相关授权协议。",
+            type: 'success'
+          })
+          // console.log('ctrl + c 监听成功');  
+        }
+      },
+      methods: {
+      },
+      created() { }
+    })
+  </script>
+
+
+    <!-- 输入框打字特效 -->
+    <!-- 输入框打字特效 -->
+
+  <script src="/js/activate-power-mode.js"></script>
+  <script>
+    POWERMODE.colorful = true;  // 打开随机颜色特效
+    POWERMODE.shake = false;    // 关闭输入框抖动
+    document.body.addEventListener('input', POWERMODE);//监听打字事件
+  </script>
+
+
+    <!-- markdown代码一键复制功能 -->
+    <!-- markdown代码一键复制功能 -->
+<script src="/js/clipboard/clipboard.min.js"></script>
+<script>
+  !function (e, t, a) {
+    var copy = '复制';
+    /* code */
+    var initCopyCode = function () {
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
+      copyHtml += '<i class="fa fa-copy"></i><span>' + copy + '</span>';
+      copyHtml += '</button>';
+      $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
+      $(".post-detail pre").not('.gutter pre').before(copyHtml);
+      new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+    
+    <!-- 图片懒加载 -->
+    <script src="/js/lazyload/lazyload@1.9.1.js"></script>
+<script>
+  $(function () {
+    $("div.lazyload, img.lazyload, a.lazyload").lazyload(
+      {
+        effect: "fadeIn",
+        placeholder: "https://img10.360buyimg.com/ddimg/jfs/t1/159345/8/2271/222193/5ff7b36fEe49f5663/a95287c20385127f.gif"    //图片未加载出来时显示的占位图
+      }
+    );
+  });
+</script>
+    
+    <script src="/js/app.js"></script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

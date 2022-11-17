@@ -698,6 +698,7 @@
 
 
 FSB总线、HT总线、QPI总线、DMI总线
+
 FSB总线
 HT总线
 QPI总线
@@ -705,9 +706,8 @@ DMI总线
 
 
 
-
-
-FSB总线Front Side BUS，前端总线，是将CPU连接到北桥芯片的系统总线，是
+FSB总线
+Front Side BUS，前端总线，是将CPU连
           </div>
         </div>
         <div class="post-more">
@@ -768,10 +768,11 @@ FSB总线Front Side BUS，前端总线，是将CPU连接到北桥芯片的系统
 
 
 处理器是如何从单核演化到64核的
+
 首个双核处理器：Intel Pentium D
 首款原生双核：AMD Athlon 64 X2
 首款四核处理器：Core 2 Quad
-首款四核处理器：Core 2 Q
+首款四核处理器
           </div>
         </div>
         <div class="post-more">
@@ -1164,7 +1165,7 @@ FSB总线Front Side BUS，前端总线，是将CPU连接到北桥芯片的系统
       
     </div>
     <div class="footer-copyright">
-      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
+      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a></p>
 
     </div>
     <div class="footer-custom">
@@ -1462,5 +1463,20 @@ FSB总线Front Side BUS，前端总线，是将CPU连接到北桥芯片的系统
     
     <script src="/js/app.js"></script>
 
-  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

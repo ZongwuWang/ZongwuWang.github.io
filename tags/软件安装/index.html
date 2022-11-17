@@ -580,12 +580,17 @@
             
           </div>
           <div class="post-content">
-            Ubuntu 20.04安装gcc-12在^1中可以看到存在的可安装文件为：
+            Ubuntu 20.04安装gcc-12
+在1中可以看到存在的可安装文件为：
 
-关于eabi和eabihf的区别，参考^2。此处建议安装eabi版本，否则会在指定–march&#x3D;armv9-a时报fpu错误。
 
 
-参考^3中加入安装
+
+关于eabi和eabihf的区别，参考2。此处建议安装eabi版本，否则会在指定--march=armv9-a时报fpu错误。
+
+
+
+
           </div>
         </div>
         <div class="post-more">
@@ -615,7 +620,7 @@
       
     </div>
     <div class="footer-copyright">
-      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
+      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a></p>
 
     </div>
     <div class="footer-custom">
@@ -913,5 +918,20 @@
     
     <script src="/js/app.js"></script>
 
-  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

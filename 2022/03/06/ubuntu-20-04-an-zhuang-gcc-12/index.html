@@ -551,18 +551,39 @@
         
       </div>
       <div class="post-content">
-        <h1 id="Ubuntu-20-04安装gcc-12"><a href="#Ubuntu-20-04安装gcc-12" class="headerlink" title="Ubuntu 20.04安装gcc-12"></a>Ubuntu 20.04安装gcc-12</h1><p>在<a target="_blank" rel="noopener" href="https://pkgs.org/search/?q=Gcc-12-arm">^1</a>中可以看到存在的可安装文件为：</p>
-<p><img "" class="lazyload placeholder" data-original="/2022/03/06/ubuntu-20-04-an-zhuang-gcc-12/2022-03-06-15-33-21.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
-<p>关于eabi和eabihf的区别，参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39328406/article/details/117202335">^2</a>。此处建议安装eabi版本，否则会在指定–march&#x3D;armv9-a时报fpu错误。</p>
-<p><img "" class="lazyload placeholder" data-original="/2022/03/06/ubuntu-20-04-an-zhuang-gcc-12/2022-03-06-15-40-15.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
-<p><img "" class="lazyload placeholder" data-original="/2022/03/06/ubuntu-20-04-an-zhuang-gcc-12/2022-03-06-15-40-47.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
-<p>参考<a target="_blank" rel="noopener" href="http://deb.debian.org/">^3</a>中加入安装源，在&#x2F;etc&#x2F;apt&#x2F;sources.list中加入：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">deb http://deb.debian.org/debian unstable main</span><br><span class="line">deb http://deb.debian.org/debian-debug unstable-debug main</span><br><span class="line">deb http://deb.debian.org/debian-ports unstable main</span><br></pre></td></tr></table></figure>
+        <h1 id="ubuntu-20.04安装gcc-12">Ubuntu 20.04安装gcc-12</h1>
+<p>在<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>中可以看到存在的可安装文件为：</p>
+<div class="figure">
+<img "" class="lazyload placeholder" data-original="/2022/03/06/ubuntu-20-04-an-zhuang-gcc-12/2022-03-06-15-33-21.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif">
 
-<p>此时，apt-get ungrade时可能会遇到NO_PUBKEY的问题，参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/yjk13703623757/article/details/78998443">^4</a>安装所有显示的key。</p>
+</div>
+<p>关于eabi和eabihf的区别，参考<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>。此处建议安装eabi版本，否则会在指定--march=armv9-a时报fpu错误。</p>
+<div class="figure">
+<img "" class="lazyload placeholder" data-original="/2022/03/06/ubuntu-20-04-an-zhuang-gcc-12/2022-03-06-15-40-15.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif">
+
+</div>
+<div class="figure">
+<img "" class="lazyload placeholder" data-original="/2022/03/06/ubuntu-20-04-an-zhuang-gcc-12/2022-03-06-15-40-47.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif">
+
+</div>
+<p>参考<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>中加入安装源，在/etc/apt/sources.list中加入：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">deb http://deb.debian.org/debian unstable main</span><br><span class="line">deb http://deb.debian.org/debian-debug unstable-debug main</span><br><span class="line">deb http://deb.debian.org/debian-ports unstable main</span><br></pre></td></tr></table></figure>
+<p>此时，apt-get ungrade时可能会遇到NO_PUBKEY的问题，参考<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>安装所有显示的key。</p>
 <p>此后，进行apt-get安装对应软件包即可。</p>
 <p>本来想体验ARMv8.8中的FEAT_MOPS指令，可惜编译结果表明，并不支持。虽然支持armv9，但是还没有支持armv8.8。</p>
-<p><img "" class="lazyload placeholder" data-original="/2022/03/06/ubuntu-20-04-an-zhuang-gcc-12/2022-03-06-15-45-46.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
+<div class="figure">
+<img "" class="lazyload placeholder" data-original="/2022/03/06/ubuntu-20-04-an-zhuang-gcc-12/2022-03-06-15-45-46.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif">
+
+</div>
+<div class="footnotes">
+<hr>
+<ol>
+<li id="fn1"><p>https://pkgs.org/search/?q=Gcc-12-arm<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>https://blog.csdn.net/weixin_39328406/article/details/117202335<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>http://deb.debian.org/<a href="#fnref3">↩</a></p></li>
+<li id="fn4"><p>https://blog.csdn.net/yjk13703623757/article/details/78998443<a href="#fnref4">↩</a></p></li>
+</ol>
+</div>
 
       </div>
       
@@ -1797,7 +1818,7 @@
       
     </div>
     <div class="footer-copyright">
-      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
+      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a></p>
 
     </div>
     <div class="footer-custom">
@@ -2095,5 +2116,20 @@
     
     <script src="/js/app.js"></script>
 
-  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

@@ -581,7 +581,7 @@
           </div>
           <div class="post-content">
             当我们使用ssh root@ip登录Linux服务器时，服务器报错：
-123456789101112@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ WARNING: 
+123456789101112@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ WARNING:
           </div>
         </div>
         <div class="post-more">
@@ -638,8 +638,10 @@
             
           </div>
           <div class="post-content">
-            linux下迁移用户home下主目录迁移用户主目录命令： usermod -d &#x2F;data0&#x2F;home&#x2F;mypic -m mypic
-&#x2F;data0&#x2F;home&#x2F;mypic 为目标目录
+            linux下迁移用户home下主目录
+迁移用户主目录命令： usermod -d /data0/home/mypic -m mypic
+/data0/home/mypic 为目标目录 -m表示移动主目录 mypic为用户名
+移动后用户
           </div>
         </div>
         <div class="post-more">
@@ -696,11 +698,14 @@
             
           </div>
           <div class="post-content">
-            Linux查看物理CPU个数、核数、逻辑CPU个数(转)基础背景
-总核数 &#x3D; 物理CPU个数 X 每颗物理CPU的核数 
-总逻辑CPU数 &#x3D; 物理CPU个数 X 每颗物理CPU的核数 X 超线程数
+            Linux查看物理CPU个数、核数、逻辑CPU个数(转)
+基础背景
+
+总核数 = 物理CPU个数 X 每颗物理CPU的核数
+总逻辑CPU数 = 物理CPU个数 X 每颗物理CPU的核数 X 超线程数
 
 相关命令
+
 查看物理C
           </div>
         </div>
@@ -758,15 +763,14 @@
             
           </div>
           <div class="post-content">
-            Ubuntu系统解决上不去github问题环境： Ubuntu系统，Firefox浏览器
+            Ubuntu系统解决上不去github问题
+环境： Ubuntu系统，Firefox浏览器
 
 找有效的IP地址
 
 登入网站https://github.com.ipaddress.com, 复制IP地址备用。
 
-修改hosts文件
-
-1sud
+修改hosts
           </div>
         </div>
         <div class="post-more">
@@ -823,9 +827,10 @@
             
           </div>
           <div class="post-content">
-            VIM和shell的切换解决vim编辑文件时需要执行系统命令的问题，存在三种方式：
+            VIM和shell的切换
+解决vim编辑文件时需要执行系统命令的问题，存在三种方式：
 
-ctrl+Z将vim挂起，执行完shell命令之后使用fg将vim返回前台执行。多任务挂起时，先使用jobs参看vim id，然后使用fg %id恢复任务
+ctrl+Z将vim挂起，执行完shell命令之后使用fg将vim返回前台执行。多任务挂起时，先使用jobs参看vim id，然后使用fg %id
           </div>
         </div>
         <div class="post-more">
@@ -882,11 +887,10 @@ ctrl+Z将vim挂起，执行完shell命令之后使用fg将vim返回前台执行�
             
           </div>
           <div class="post-content">
-            解决gem5运行时缺少pydot的问题在运行gem5时，会显示：
+            解决gem5运行时缺少pydot的问题
+在运行gem5时，会显示：
 
-warn: No dot file generated. Please install pydot to generate the dot file and pdf.
-
-作
+warn: No dot file generated. Please install pydot to generate the dot file and pdf
           </div>
         </div>
         <div class="post-more">
@@ -944,6 +948,7 @@ warn: No dot file generated. Please install pydot to generate the dot file and p
           </div>
           <div class="post-content">
             
+
           </div>
         </div>
         <div class="post-more">
@@ -1000,10 +1005,13 @@ warn: No dot file generated. Please install pydot to generate the dot file and p
             
           </div>
           <div class="post-content">
-            Linux 常用工具使用命令速查表tmuxtmu常用操作指令及快捷键
-查看有所有tmux会话指令：tmux ls快捷键：Ctrl+b s
-新建tmux窗口指令：tmux new -s 
-重命名会话指令：tmux rename-session
+            Linux 常用工具使用命令速查表
+tmux
+tmu常用操作指令及快捷键
+
+查看有所有tmux会话 指令：tmux ls 快捷键：Ctrl+b s
+新建tmux窗口 指令：tmux new -s 
+重命名会话 指令：tmux r
           </div>
         </div>
         <div class="post-more">
@@ -1033,7 +1041,7 @@ warn: No dot file generated. Please install pydot to generate the dot file and p
       
     </div>
     <div class="footer-copyright">
-      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
+      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a></p>
 
     </div>
     <div class="footer-custom">
@@ -1331,5 +1339,20 @@ warn: No dot file generated. Please install pydot to generate the dot file and p
     
     <script src="/js/app.js"></script>
 
-  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

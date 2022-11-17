@@ -580,8 +580,9 @@
             
           </div>
           <div class="post-content">
-            用好你的内存之SPD说起内存，相信大家都不陌生。不过，大家的目光除了更多地投放在内存芯片颗粒上之外，很少会注意到内存PCB（印刷电路板）边上还有一颗体积较小（大约为3mm×4mm×1.5mm）的芯片，这就是SPD芯片。
-一、什么是SPDSP
+            用好你的内存之SPD
+说起内存，相信大家都不陌生。不过，大家的目光除了更多地投放在内存芯片颗粒上之外，很少会注意到内存PCB（印刷电路板）边上还有一颗体积较小（大约为3mm×4mm×1.5mm）的芯片，这就是SPD芯片。
+一、什么是SP
           </div>
         </div>
         <div class="post-more">
@@ -611,7 +612,7 @@
       
     </div>
     <div class="footer-copyright">
-      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
+      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a></p>
 
     </div>
     <div class="footer-custom">
@@ -909,5 +910,20 @@
     
     <script src="/js/app.js"></script>
 
-  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

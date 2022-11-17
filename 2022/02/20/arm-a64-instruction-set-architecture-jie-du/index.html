@@ -548,7 +548,7 @@
       </div>
       <div class="post-content">
         <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="03b9ceef6d1654c50788a0b00d5f9759f4bdb31ce06993dd5b6914881b8ab228">48d53d02cc724fef4e645fe6556ae2fc56db60206aff9f44dc38f4d950f102763fcd36a5805b369a45e6452896fc80b839dcb40e8a8f7325ad186c5620ee046ccc67eb77cc15e421234460407ba735e3ccac85ae6d2c3676a0f6283cffe4f49e4e984095a3fe16533e1e18fd926f373ac82c9f09c33180463320a9d7e5185e458b8cc0f8c5027b2250221b7d47a687f38d2e074d22697577929dcbc545f111bc2653cae29307ccd7a6928975996508c782fe8a0291edf9e3ec039bccad34d4e990b85bdc6020b54f2a27f6499b2c5f066f64d43c3f696dd20d2f7bc28211a95f7a78fcedd13e3a6e116a22d43cfb2827a959efff50bacff54cf014b62c7834ba</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="8f1d76aef463b890c546cc7a12d319f050b5100558906ea66f4562554069e93f">48d53d02cc724fef4e645fe6556ae2fc56db60206aff9f44dc38f4d950f102766cdc887a937e6ee8908364145478522d37116e91c9d8e012d934e2b4d89802e62e26cbb79269ffe17779b19fd8dc9f9a3c4080003e2734b2f3d348481605d9211be9c0ae183bebe3570bf3486ab19f76f991e38cda5752ae8b02f1d88520ae0ccf1d73763cfa763761910d73b770068b5abae892df4c087f68daad76fbdc9a103a120a2339c937197bb28ef8ae313f793fd9ca59159d26c50c44d93f140131c288108f8bed25a0d9027b8171cbabb448</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -1792,7 +1792,7 @@
       
     </div>
     <div class="footer-copyright">
-      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
+      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a></p>
 
     </div>
     <div class="footer-custom">
@@ -2090,5 +2090,20 @@
     
     <script src="/js/app.js"></script>
 
-  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

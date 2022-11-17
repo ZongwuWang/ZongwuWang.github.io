@@ -553,12 +553,11 @@
       <div class="post-content">
         <p>当我们使用ssh root@ip登录Linux服务器时，服务器报错：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span><br><span class="line">@ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @</span><br><span class="line">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span><br><span class="line">IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!</span><br><span class="line">Someone could be eavesdropping on you right now (man-in-the-middle attack)!</span><br><span class="line">It is also possible that a host key has just been changed.</span><br><span class="line">The fingerprint for the ECDSA key sent by the remote host is</span><br><span class="line">SHA256:Ms+BRn93GbOO1fwP6g1O+UwSRFv9KIUMGeoHDt70OfQ.</span><br><span class="line">Please contact your system administrator.</span><br><span class="line">Add correct host key in /Users/aliyunbaike/.ssh/known_hosts to get rid of this message.</span><br><span class="line">Offending ECDSA key in /Users/aliyunbaike/.ssh/known_hosts:6</span><br><span class="line">ECDSA host key for 47.74.190.156 has changed and you have requested strict checking.</span><br></pre></td></tr></table></figure>
-
 <p>这是由于，ssh连接服务器时，如果之前连接过，ssh会默认保存该ip的连接协议信息，当我们再次访问此ip服务器时，ssh会自动匹配之前ssh保存的信息，由于我们的服务器做了更改，例如重装系统等操作，会导致本地保存的ssh信息失效，于是再次连接时就会出现上述错误。</p>
 <p>另外，远程服务器的ssh服务被卸载重装或ssh相关数据（协议信息）被删除也会导致这个错误。</p>
 <p>解决方案：</p>
-<p>删除本地known_hosts里面的缓存信息即可。命令：ssh-keygen -R “你的远程服务器ip地址”<br>注意：R是大写！</p>
-<p>作者：哆啦A梦_ca52<br>链接：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/e30486c20cf5">https://www.jianshu.com/p/e30486c20cf5</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>删除本地known_hosts里面的缓存信息即可。命令：ssh-keygen -R &quot;你的远程服务器ip地址&quot; 注意：R是大写！</p>
+<p>作者：哆啦A梦_ca52 链接：https://www.jianshu.com/p/e30486c20cf5 来源：简书 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 
       </div>
       
@@ -599,7 +598,9 @@
       </div>
       
       <!-- <div class="content">
-        gem5源码解读1. Cycles类123456789101112131415161718192021222324252
+        gem5源码解读
+1. Cycles类
+12345678910111213141516171819202122232
       </div> -->
     </a>
   </div>
@@ -1792,7 +1793,7 @@
       
     </div>
     <div class="footer-copyright">
-      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
+      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a></p>
 
     </div>
     <div class="footer-custom">
@@ -2090,5 +2091,20 @@
     
     <script src="/js/app.js"></script>
 
-  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

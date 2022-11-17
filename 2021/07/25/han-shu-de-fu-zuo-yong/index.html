@@ -547,37 +547,32 @@
         
       </div>
       <div class="post-content">
-        <h1 id="转-函数的副作用"><a href="#转-函数的副作用" class="headerlink" title="(转)函数的副作用"></a>(转)函数的副作用</h1><p><strong>函数的副作用</strong>指当调用函数时，除了返回函数值之外，还对主调用函数产生附加的影响。例如修改全局变量（函数外的变量）或修改参数。</p>
+        <h1 id="转函数的副作用">(转)函数的副作用</h1>
+<p><strong>函数的副作用</strong>指当调用函数时，除了返回函数值之外，还对主调用函数产生附加的影响。例如修改全局变量（函数外的变量）或修改参数。</p>
 <p>函数副作用会给程序设计带来不必要的麻烦，给程序带来十分难以查找的错误，并且降低程序的可读性。严格的函数式语言要求函数必须无副作用。</p>
 <p>函数的副作用相关的几个概念， Pure Function、 Impure Function、 Referential Transparent。</p>
 <ul>
-<li><p><strong>纯函数 (Pure Function)</strong><br>输入输出数据流全是显式（Explicit）的。 显式（Explicit）的意思是，函数与外界交换数据只有一个唯一渠道——参数和返回值。函数从函数外部接受的所有输入信息都通过参数传递到该函数内部。函数输出到函数外部的所有信息都通过返回值传递到该函数外部。</p>
-</li>
-<li><p><strong>非纯函数 (Impure Function)</strong></p>
-<p>与之相反。 隐式（Implicit）的意思是，函数通过参数和返回值以外的渠道，和外界进行数据交换。比如读取&#x2F;修改全局变量，都叫作以隐式的方式和外界进行数据交换。</p>
-</li>
-<li><p><strong>引用透明 (Referential Transparent)</strong></p>
-<p>引用透明的概念与函数的副作用相关，且受其影响。 如果程序中两个相同值得表达式能在该程序的任何地方互相替换，而不影响程序的动作，那么该程序就具有引用透明性。它的优点是比非引用透明的语言的语义更容易理解，不那么晦涩。纯函数式语言没有变量，所以它们都具有引用透明性。</p>
-</li>
+<li><p><strong>纯函数 (Pure Function)</strong> 输入输出数据流全是显式（Explicit）的。 显式（Explicit）的意思是，函数与外界交换数据只有一个唯一渠道——参数和返回值。函数从函数外部接受的所有输入信息都通过参数传递到该函数内部。函数输出到函数外部的所有信息都通过返回值传递到该函数外部。</p></li>
+<li><p><strong>非纯函数 (Impure Function)</strong></p></li>
 </ul>
+<p>与之相反。 隐式（Implicit）的意思是，函数通过参数和返回值以外的渠道，和外界进行数据交换。比如读取/修改全局变量，都叫作以隐式的方式和外界进行数据交换。</p>
+<ul>
+<li><strong>引用透明 (Referential Transparent)</strong></li>
+</ul>
+<p>引用透明的概念与函数的副作用相关，且受其影响。 如果程序中两个相同值得表达式能在该程序的任何地方互相替换，而不影响程序的动作，那么该程序就具有引用透明性。它的优点是比非引用透明的语言的语义更容易理解，不那么晦涩。纯函数式语言没有变量，所以它们都具有引用透明性。</p>
 <p>以下示例说明了引用透明与函数副作用的结合</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">result1 = (fun(a) + b) / (fun(a) - c);</span><br><span class="line">temp = func(a);</span><br><span class="line">result2 = (temp + b) / (temp - c);</span><br></pre></td></tr></table></figure>
-
 <p>如果函数没有副作用，那么result1和result2将是等价的。然而如果fun有副作用，比如让b或c加1，那么result1和result2将不相等。因此，副作用违背了引用透明性。</p>
 <p>在JavaScript中，引入了函数。但显然JS中的函数可以访问、修改全局变量（或定义在函数外的变量），如下</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">5</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	a = <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line">fun();		<span class="comment">// a变成了10</span></span><br></pre></td></tr></table></figure>
-
 <p>JS中要想保证函数无副作用这项特性，只能依靠编程人员的习惯，即</p>
-<ol>
-<li><p>函数入口使用参数运算，而不修改它</p>
-</li>
-<li><p>函数内不修改函数外的变量，如全局变量</p>
-</li>
-<li><p>运算结果通过函数返回给外部（出口）</p>
-</li>
+<ol style="list-style-type: decimal">
+<li><p>函数入口使用参数运算，而不修改它</p></li>
+<li><p>函数内不修改函数外的变量，如全局变量</p></li>
+<li><p>运算结果通过函数返回给外部（出口）</p></li>
 </ol>
 <blockquote>
-<p>转载自：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/snandy/archive/2011/08/14/2137898.html">https://www.cnblogs.com/snandy/archive/2011/08/14/2137898.html</a></p>
+<p>转载自：https://www.cnblogs.com/snandy/archive/2011/08/14/2137898.html</p>
 </blockquote>
 
       </div>
@@ -620,6 +615,7 @@
       
       <!-- <div class="content">
         
+
       </div> -->
     </a>
   </div>
@@ -637,7 +633,8 @@
         <div>(转)多核处理器的九大关键技术</div>
       </div>
       <!-- <div class="content">
-        (转)多核处理器的九大关键技术与单核处理器相比，多核处理器在体系结构、软件、功耗和安全性设计等方面面临着巨大的挑战，但也
+        (转)多核处理器的九大关键技术
+与单核处理器相比，多核处理器在体系结构、软件、功耗和安全性设计等方面面临着巨大的挑战，
       </div> -->
     </a>
   </div>
@@ -1811,7 +1808,7 @@
       
     </div>
     <div class="footer-copyright">
-      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
+      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a></p>
 
     </div>
     <div class="footer-custom">
@@ -2109,5 +2106,20 @@
     
     <script src="/js/app.js"></script>
 
-  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

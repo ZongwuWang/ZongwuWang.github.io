@@ -543,28 +543,26 @@
         
       </div>
       <div class="post-content">
-        <h1 id="Ubuntu系统解决上不去github问题"><a href="#Ubuntu系统解决上不去github问题" class="headerlink" title="Ubuntu系统解决上不去github问题"></a>Ubuntu系统解决上不去github问题</h1><p>环境： Ubuntu系统，Firefox浏览器</p>
-<ol>
+        <h1 id="ubuntu系统解决上不去github问题">Ubuntu系统解决上不去github问题</h1>
+<p>环境： Ubuntu系统，Firefox浏览器</p>
+<ol style="list-style-type: decimal">
 <li>找有效的IP地址</li>
 </ol>
-<p>登入网站<a target="_blank" rel="noopener" href="https://github.com.ipaddress.com/">https://github.com.ipaddress.com</a>, 复制IP地址备用。</p>
-<ol start="2">
+<p>登入网站<a target="_blank" rel="noopener" href="https://github.com.ipaddress.com" class="uri">https://github.com.ipaddress.com</a>, 复制IP地址备用。</p>
+<ol start="2" style="list-style-type: decimal">
 <li>修改hosts文件</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/hosts</span><br></pre></td></tr></table></figure>
-
 <p>打开hosts文件后写入备用的“IP地址+域名”后保存。</p>
 <blockquote>
 <p>140.82.112.3 github.com</p>
 </blockquote>
-<ol start="3">
+<ol start="3" style="list-style-type: decimal">
 <li>重启DNS</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/nscd restart</span><br></pre></td></tr></table></figure>
-<p>如果出现nscd命令找不到：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nscd</span><br></pre></td></tr></table></figure>
-<p>成功安装后再重启DNS。</p>
-<p>本文转载自：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_38638559/article/details/115005658">https://blog.csdn.net/weixin_38638559/article/details/115005658</a></p>
+<p>如果出现nscd命令找不到： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nscd</span><br></pre></td></tr></table></figure> 成功安装后再重启DNS。</p>
+<p>本文转载自：https://blog.csdn.net/weixin_38638559/article/details/115005658</p>
 
       </div>
       
@@ -605,8 +603,10 @@
       </div>
       
       <!-- <div class="content">
-        Linux查看物理CPU个数、核数、逻辑CPU个数(转)基础背景
-总核数 &#x3D; 物理CPU个数 X 每颗物理CP
+        Linux查看物理CPU个数、核数、逻辑CPU个数(转)
+基础背景
+
+总核数 = 物理CPU个数 X 每颗物理CP
       </div> -->
     </a>
   </div>
@@ -624,8 +624,9 @@
         <div>Trie树（Prefix Tree）介绍(转)</div>
       </div>
       <!-- <div class="content">
-        Trie树（Prefix Tree）介绍本文用尽量简洁的语言介绍一种树形数据结构 —— Trie树。
-一、什么是Trie
+        Trie树（Prefix Tree）介绍
+本文用尽量简洁的语言介绍一种树形数据结构 —— Trie树。
+一、什么是T
       </div> -->
     </a>
   </div>
@@ -1799,7 +1800,7 @@
       
     </div>
     <div class="footer-copyright">
-      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
+      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a></p>
 
     </div>
     <div class="footer-custom">
@@ -2097,5 +2098,20 @@
     
     <script src="/js/app.js"></script>
 
-  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

@@ -526,7 +526,7 @@
       </div>
       <div class="post-content">
         <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="8713bb833adac6a63b215f90e8899021ccb5cf40bb110fee6dd5009bd3a29579">48d53d02cc724fef4e645fe6556ae2fcf6bc6c57d2819ebf0723775af43b566393cc46c1084c68a1fe61bb439d1ba845146ebdbc11c1cd6b6945a98167b7ce757d46bad7673e6d416e3962d579899fc04416fbda9e5d42d33c5ec9de4d29cb94a52d6c7eb3e6babd9a858ca7c950d5ef971834e8d80bde841528e86ab9645ea57c1abca55d941975f9772e3e7796f1108c7effb21255ec0c7a3de5a655066919f9bb089134f7c5dbd52bb4c2ebc451fee4831c334460221625a5aa11b80a97469e926d27e0bd11025b263c1e090db02e3af5cb173856921efb113fef05d5b7cf65eb17c238334ec4b5eba8e8f7d2663bd7a2042c4bc2140e4f1a01c99b14085d466410dc9343bbc261b5c743eb45ffcfb1c7df826fb7ae719b331c6b25ca44bc8c566377d148a92d5033d233baf6c4c2b463e9acd021fa185c47aa889639cb6a15bead6c01771fc5ead480cc0ca0f4f28d0bec8b8d9b3d523c183a7301765afb8b034321f5baaa6239e32058a0ea351ad5965245cd17b4f2aebd2f7e1373f901a4e30f1e4bda13171ed81a565ce57c5b627e19711a3c07d3ebb6c317f0599e5ecec4a220968b15616725f0a5bbd9f52200f330cb339b9c1bdf6c0bd190624f6a</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="d6387310b0d07e08f6b717af3bf8a9d4f37cadc49197d0089ecd9f7d52bafbe8">48d53d02cc724fef4e645fe6556ae2fcf6bc6c57d2819ebf0723775af43b56637f9f425a48d0b365c477c5d106fabbd12a6fed184d5398919b8f0c4250d5412dfdc36ac73f3cefc09f942546e870af5cedc26c1a554a6b258a266f10ca127e62c3d9e737255a84254fbaac193e8af8e05a3f3710f501e6f71513e20008bcd393f81edbd013c4ff11176a01a75ef61db86bd5b760e6090a431e32f3645f4e4c8546a3803382aab74b534682bfc0e0ffec12108fc103d7af67cc5b8b448b6847c5e9c4d6b56002fd63f8f724cf8e585188a81a69e105217b128c0851a13765cde015fc60e054b87fb0fd4c07dd7fb40045</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -1770,7 +1770,7 @@
       
     </div>
     <div class="footer-copyright">
-      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
+      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a></p>
 
     </div>
     <div class="footer-custom">
@@ -2068,5 +2068,20 @@
     
     <script src="/js/app.js"></script>
 
-  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

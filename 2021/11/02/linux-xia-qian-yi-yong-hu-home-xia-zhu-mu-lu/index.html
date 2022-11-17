@@ -547,13 +547,14 @@
         
       </div>
       <div class="post-content">
-        <h1 id="linux下迁移用户home下主目录"><a href="#linux下迁移用户home下主目录" class="headerlink" title="linux下迁移用户home下主目录"></a>linux下迁移用户home下主目录</h1><p>迁移用户主目录命令： usermod -d &#x2F;data0&#x2F;home&#x2F;mypic -m mypic</p>
-<p>&#x2F;data0&#x2F;home&#x2F;mypic 为目标目录  -m表示移动主目录  mypic为用户名</p>
-<p>移动后用户mypic原本默认 对应&#x2F;home&#x2F;mypic的主目录将被移动到&#x2F;data0&#x2F;home&#x2F;mypic。</p>
-<p>查看&#x2F;etc&#x2F;passwd文件后发现主目录已经修改成功。</p>
-<p>注意如果要修改创建用户时候默认主目录位置，可以修改&#x2F;etc&#x2F;default&#x2F;useradd文件中Home的路径</p>
-<p>如将#HOME&#x3D;&#x2F;home 修改为HOME&#x3D;&#x2F;data0&#x2F;home 则后续创建用户时候默认主目录创建位置即在&#x2F;data0&#x2F;home下面</p>
-<p>du -slh &#x2F;data0&#x2F;home&#x2F;mypic 查看mypic目录占用空间</p>
+        <h1 id="linux下迁移用户home下主目录">linux下迁移用户home下主目录</h1>
+<p>迁移用户主目录命令： usermod -d /data0/home/mypic -m mypic</p>
+<p>/data0/home/mypic 为目标目录 -m表示移动主目录 mypic为用户名</p>
+<p>移动后用户mypic原本默认 对应/home/mypic的主目录将被移动到/data0/home/mypic。</p>
+<p>查看/etc/passwd文件后发现主目录已经修改成功。</p>
+<p>注意如果要修改创建用户时候默认主目录位置，可以修改/etc/default/useradd文件中Home的路径</p>
+<p>如将#HOME=/home 修改为HOME=/data0/home 则后续创建用户时候默认主目录创建位置即在/data0/home下面</p>
+<p>du -slh /data0/home/mypic 查看mypic目录占用空间</p>
 <p>df -h 查看系统使用空间状况</p>
 
       </div>
@@ -599,8 +600,8 @@
 
 
 处理器是如何从单核演化到64核的
-首个双核处理器：Intel Pentium D
 
+首个双核处理器：Intel Pent
       </div> -->
     </a>
   </div>
@@ -618,8 +619,10 @@
         <div>Linux查看物理CPU个数、核数、逻辑CPU个数(转)</div>
       </div>
       <!-- <div class="content">
-        Linux查看物理CPU个数、核数、逻辑CPU个数(转)基础背景
-总核数 &#x3D; 物理CPU个数 X 每颗物理CP
+        Linux查看物理CPU个数、核数、逻辑CPU个数(转)
+基础背景
+
+总核数 = 物理CPU个数 X 每颗物理CP
       </div> -->
     </a>
   </div>
@@ -1793,7 +1796,7 @@
       
     </div>
     <div class="footer-copyright">
-      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
+      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a></p>
 
     </div>
     <div class="footer-custom">
@@ -2091,5 +2094,20 @@
     
     <script src="/js/app.js"></script>
 
-  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

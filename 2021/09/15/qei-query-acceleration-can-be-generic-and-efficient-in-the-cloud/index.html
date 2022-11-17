@@ -533,16 +533,16 @@
               Hash
             </a>
           
+            <a href="/tags/NCC/" class="">
+              NCC
+            </a>
+          
             <a href="/tags/Paper/" class="">
               Paper
             </a>
           
             <a href="/tags/Query/" class="">
               Query
-            </a>
-          
-            <a href="/tags/NCC/" class="">
-              NCC
             </a>
           
             <a href="/tags/Tree/" class="">
@@ -645,9 +645,10 @@
         <div>VIM和shell的切换</div>
       </div>
       <!-- <div class="content">
-        VIM和shell的切换解决vim编辑文件时需要执行系统命令的问题，存在三种方式：
+        VIM和shell的切换
+解决vim编辑文件时需要执行系统命令的问题，存在三种方式：
 
-ctrl+Z将vim挂起，执行完s
+ctrl+Z将vim挂起，
       </div> -->
     </a>
   </div>
@@ -1821,7 +1822,7 @@ ctrl+Z将vim挂起，执行完s
       
     </div>
     <div class="footer-copyright">
-      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
+      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a></p>
 
     </div>
     <div class="footer-custom">
@@ -2119,5 +2120,20 @@ ctrl+Z将vim挂起，执行完s
     
     <script src="/js/app.js"></script>
 
-  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

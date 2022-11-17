@@ -543,19 +543,22 @@
         
       </div>
       <div class="post-content">
-        <h1 id="VIM和shell的切换"><a href="#VIM和shell的切换" class="headerlink" title="VIM和shell的切换"></a>VIM和shell的切换</h1><p>解决vim编辑文件时需要执行系统命令的问题，存在三种方式：</p>
-<ol>
+        <h1 id="vim和shell的切换">VIM和shell的切换</h1>
+<p>解决vim编辑文件时需要执行系统命令的问题，存在三种方式：</p>
+<ol style="list-style-type: decimal">
 <li>ctrl+Z将vim挂起，执行完shell命令之后使用fg将vim返回前台执行。多任务挂起时，先使用jobs参看vim id，然后使用fg %id恢复任务；</li>
 <li>在vim normal模式下使用！{shell cmd}执行shell命令，不需要输入{}；</li>
 <li>在vim normal模式下使用:shell命令重启一个新的shell，执行完命令后关闭shell返回vim。</li>
 </ol>
-<h2 id="保存vim会话"><a href="#保存vim会话" class="headerlink" title="保存vim会话"></a>保存vim会话</h2><p>保存当前vim编辑状态，以便下次编辑时恢复文件列表、窗口布局、全局变量、选项以及其他信息。</p>
-<ol>
+<h2 id="保存vim会话">保存vim会话</h2>
+<p>保存当前vim编辑状态，以便下次编辑时恢复文件列表、窗口布局、全局变量、选项以及其他信息。</p>
+<ol style="list-style-type: decimal">
 <li>创建一个会话文件，在vim normal模式下输入:mksession vimbook.vim</li>
 <li>在vim normal模式下还原保存的会话输入:source vimbook.vim</li>
 <li>在启动vim时直接恢复会话：vim -S vimbook.vim</li>
 </ol>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] <a target="_blank" rel="noopener" href="https://blog.csdn.net/u014703817/article/details/45741397">https://blog.csdn.net/u014703817/article/details/45741397</a></p>
+<h2 id="reference">Reference</h2>
+<p>[1] https://blog.csdn.net/u014703817/article/details/45741397</p>
 
       </div>
       
@@ -1790,7 +1793,7 @@
       
     </div>
     <div class="footer-copyright">
-      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
+      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/zongwuwang">wangzongwu</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a></p>
 
     </div>
     <div class="footer-custom">
@@ -2088,5 +2091,20 @@
     
     <script src="/js/app.js"></script>
 
-  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
