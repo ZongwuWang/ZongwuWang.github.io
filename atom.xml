@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2022-12-05T11:41:34.481Z</updated>
+  <updated>2022-12-07T18:51:55.527Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>G1GC代码解读</title>
+    <link href="https://zongwuwang.github.io/2022/12/07/g1gc-dai-ma-jie-du/"/>
+    <id>https://zongwuwang.github.io/2022/12/07/g1gc-dai-ma-jie-du/</id>
+    <published>2022-12-07T09:17:57.000Z</published>
+    <updated>2022-12-07T18:51:55.527Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="JVM" scheme="https://zongwuwang.github.io/tags/JVM/"/>
+    
+    <category term="垃圾回收" scheme="https://zongwuwang.github.io/tags/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/"/>
+    
+    <category term="G1GC" scheme="https://zongwuwang.github.io/tags/G1GC/"/>
+    
+  </entry>
   
   <entry>
     <title>The most complete list of -XX options for Java JVM</title>
@@ -451,23 +474,6 @@
       
     
     
-    
-    
-  </entry>
-  
-  <entry>
-    <title>ssh远程连接qemu虚拟系统</title>
-    <link href="https://zongwuwang.github.io/2022/08/03/ssh-yuan-cheng-lian-jie-qemu-xu-ni-xi-tong/"/>
-    <id>https://zongwuwang.github.io/2022/08/03/ssh-yuan-cheng-lian-jie-qemu-xu-ni-xi-tong/</id>
-    <published>2022-08-02T17:29:44.000Z</published>
-    <updated>2022-08-02T17:38:56.966Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="挖坑待填" scheme="https://zongwuwang.github.io/categories/%E6%8C%96%E5%9D%91%E5%BE%85%E5%A1%AB/"/>
     
     
   </entry>
