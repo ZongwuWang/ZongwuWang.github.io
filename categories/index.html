@@ -567,6 +567,14 @@
                 </a>
                 
                 
+                <a href="/categories/%E7%BC%96%E8%AF%91%E5%99%A8/" title="编译器: 2">
+                    <span class="category-content"
+                        title="编译器" style="background-color: #82E0AA;">编译器
+                        <span class="category-length">2</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/categories/%E6%8C%96%E5%9D%91%E5%BE%85%E5%A1%AB/" title="挖坑待填: 6">
                     <span class="category-content"
                         title="挖坑待填" style="background-color: #D7BDE2;">挖坑待填
@@ -619,14 +627,6 @@
                     <span class="category-content"
                         title="gem5" style="background-color: #A3E4D7;">gem5
                         <span class="category-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E7%BC%96%E8%AF%91%E5%99%A8/" title="编译器: 2">
-                    <span class="category-content"
-                        title="编译器" style="background-color: #82E0AA;">编译器
-                        <span class="category-length">2</span>
                     </span>
                 </a>
                 
@@ -974,5 +974,20 @@
     
     <script src="/js/app.js"></script>
 
-  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

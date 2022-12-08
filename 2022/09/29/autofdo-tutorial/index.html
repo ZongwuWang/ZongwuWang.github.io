@@ -525,12 +525,12 @@
         <div class="tags">
           <i class="iconfont icontag"></i>
           
-            <a href="/tags/gcc/" class="">
-              gcc
-            </a>
-          
             <a href="/tags/%E7%BC%96%E8%AF%91/" class="">
               编译
+            </a>
+          
+            <a href="/tags/gcc/" class="">
+              gcc
             </a>
           
             <a href="/tags/FDO/" class="">
@@ -2102,5 +2102,20 @@
     
     <script src="/js/app.js"></script>
 
-  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

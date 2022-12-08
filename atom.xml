@@ -31,11 +31,11 @@
     <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
     
     
+    <category term="G1GC" scheme="https://zongwuwang.github.io/tags/G1GC/"/>
+    
     <category term="JVM" scheme="https://zongwuwang.github.io/tags/JVM/"/>
     
     <category term="垃圾回收" scheme="https://zongwuwang.github.io/tags/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/"/>
-    
-    <category term="G1GC" scheme="https://zongwuwang.github.io/tags/G1GC/"/>
     
   </entry>
   
@@ -226,9 +226,9 @@
     <category term="编译器" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E8%AF%91%E5%99%A8/"/>
     
     
-    <category term="gcc" scheme="https://zongwuwang.github.io/tags/gcc/"/>
-    
     <category term="编译" scheme="https://zongwuwang.github.io/tags/%E7%BC%96%E8%AF%91/"/>
+    
+    <category term="gcc" scheme="https://zongwuwang.github.io/tags/gcc/"/>
     
     <category term="FDO" scheme="https://zongwuwang.github.io/tags/FDO/"/>
     
@@ -301,13 +301,13 @@
     <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
     
     
-    <category term="GC" scheme="https://zongwuwang.github.io/tags/GC/"/>
-    
     <category term="JVM" scheme="https://zongwuwang.github.io/tags/JVM/"/>
+    
+    <category term="垃圾回收" scheme="https://zongwuwang.github.io/tags/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/"/>
     
     <category term="Java" scheme="https://zongwuwang.github.io/tags/Java/"/>
     
-    <category term="垃圾回收" scheme="https://zongwuwang.github.io/tags/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/"/>
+    <category term="GC" scheme="https://zongwuwang.github.io/tags/GC/"/>
     
   </entry>
   
