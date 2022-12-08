@@ -3404,21 +3404,6 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   color: #42b983 !important;
   border-color: #42b983 !important;
 }
-.header {
-  width: 80%;
-tablet()
-mobile()
-}
-.container .main-inner {
-  width: 80%;
-tablet()
-mobile()
-}
-.content-wrap {
-  width: calc(100% - 260px);
-tablet()
-mobile()
-}
 .dark {
   color: #fff;
   background-color: #222;
