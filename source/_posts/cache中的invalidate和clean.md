@@ -4,6 +4,9 @@ date: 2022-07-12 20:08:50
 tags:
 - Cache
 categories: 计算机体系架构
+password: www
+abstract: 'Welcome to my blog, enter password to read.'
+message: 'Welcome to my blog, enter password to read.'
 ---
 
 当cache外部的存储器内容发生改变时，需要清除掉相应位置的cache状态。如果cache采用的写策略是write-back时，还需要将cache中的旧数据刷到外部主存。

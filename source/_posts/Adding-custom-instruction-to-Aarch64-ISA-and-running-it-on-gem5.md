@@ -5,7 +5,7 @@ tags:
 - 指令扩展
 - Aarch64
 - ARM-v8
-categories: 计算机体系结构
+categories: 计算机体系架构
 password: www
 abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'

@@ -1,12 +1,13 @@
 ---
 title: Criticality Driven Fetch
+password: www
 abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2022-07-11 03:03:52
 tags:
 - Runahead
 - Architecture
-categories: 挖坑待填
+categories: 计算机体系架构
 ---
 
 ## Introduction
@@ -53,6 +54,8 @@ CDF提升性能的重要因素之一为提升MLP。
 
 <font color=red>这边有一个疑问：Fetch不是通过PC控制的吗？如何控制每一条指令的PC跳转呢？毕竟不像PRE这样取所有指令，在译码之后放弃执行非关键指令。</font>
 
+Ans: 从原文"If no branch is encountered (or the branch is predicted not-taken), the next fetch address is obtained from the critical uop trace that was previously read out."中可以推测出，Critical uop Cache中记录critical instruction slice时，每一条uop entry不仅保存当前指令信息，而且会保存下一条关键uop的地址。从Fig. 7中也可以直接看出这一点。
+
 ### Comparison Against Runahead and Compiler Based Techniques
 
 与Runahead execution相比：
@@ -62,7 +65,7 @@ CDF提升性能的重要因素之一为提升MLP。
 - 具有间隔很远的全窗口停顿的应用程序不会从Runahead中受益，因为它无法在全窗口停顿期间获取足够远的指令以达到下一个关键Load。虽然CDF无法从这些Load中提取并行性，但它会更快地启动下一个关键Load，从而提高性能。
 - Runahead链可能不正确并产生大量额外的内存访问。此外，Runahead指令是在核心上执行两次的重复指令。CDF没有这种开销，因为关键指令是主指令流的一部分。
 
-与编译器的优势主要是可以获取动态runtime信息，就不再详述。
+与编译器的优势主要是可以获取动态runtime信息，此外，通过编译器调整指令顺序窗口受限于架构寄存器的个数，而CDF则是受限于物理寄存器个数，后者相对更有优势。
 
 ## Implementation
 
@@ -116,12 +119,20 @@ CDF模式从Critical Uop Cache中读取关键指令，并根据分值计算结�
 
 **Fetching Non-Critical Instruction**
 
+从ICache中Fetch非关键指令现有CPU方案中相同，流水线前端存在两点不同：
+（1）分支预测来源于Delayed Branch Queue
+（2）关键指令在Rename repaly之后丢弃
+
 **Assigning Timestamps**
 
-本文通过timestamp只是关键指令和非关键指令之间的relative ordering.
+本文通过timestamp指示关键指令和非关键指令之间的relative ordering，这一点如何实现呢？感觉开销会很大。
 
 ### Renaming Instruction OoO
 
-**Renaming the Critical Instruction Stream**
+![](./Criticality-Driven-Fetch/2022-08-27-03-16-39.png)
 
-**Renaming the Non-critical Instruction Stream**
+如图9所示，在第一条关键指令重命名之前，会将RAT中内容复制到Crit-RAT中。随后，关键指令按照常规模式在Crit-RAT中进行重命名，并且将重命名的结果记录到Critical Map Queue中，后续的normal instruction stream重命名时，Critical instruction直接从Critical Map Queue head中读取Rename结果，非关键指令从Free Physical Register List中取出空闲寄存器进行重命名。此处，Critical Map Queue需要保证不会溢出，本文设计为256-entry FIFO。
+
+![](./Criticality-Driven-Fetch/2022-08-27-03-22-51.png)
+
+### Allocating Instructions and Partitioning Window Resources

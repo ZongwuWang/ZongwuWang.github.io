@@ -1,6 +1,9 @@
 ---
 title: Enhance performance analysis with Intel Processor Trace
 categories: CPU性能分析
+password: www
+abstract: 'Welcome to my blog, enter password to read.'
+message: 'Welcome to my blog, enter password to read.'
 date: 2022-07-19 14:21:13
 tags:
 - perf

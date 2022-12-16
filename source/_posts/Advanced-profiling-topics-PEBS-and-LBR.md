@@ -1,6 +1,9 @@
 ---
 title: Advanced profiling topics. PEBS and LBR
 categories: CPU性能分析
+password: www
+abstract: 'Welcome to my blog, enter password to read.'
+message: 'Welcome to my blog, enter password to read.'
 date: 2022-07-18 14:39:08
 tags:
 - perf

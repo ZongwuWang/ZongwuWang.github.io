@@ -34,9 +34,15 @@ toc: false # 不显示文章目录
 - [Ibex](https://github.com/ZongwuWang/ibex.git): 脱胎于zero-riscy的core，支持RV32IMC及一些Z系列指令
 - [VexRiscv](https://github.com/ZongwuWang/VexRiscv.git): SpinalHDL代表作，VexRiscv可配置，可支持RV32IMCA，可配置为经典5级流水
 - [SweRV EH1](https://github.com/ZongwuWang/Cores-SweRV.git)：WD开发的其中一款RISC-V core，支持RV32IMC，双发射，单线程，9级流水
+  - https://github.com/chipsalliance/Cores-SweRV
+  - https://github.com/chipsalliance/Cores-SweRV-EH2
+  - https://github.com/chipsalliance/Cores-SweRV-EL2
+  - https://www.westerndigital.com/company/innovation/open-source/risc-v
 - [无剑](https://github.com/T-head-Semi/wujian100_open): 平头哥的RISC-V处理器，学习资料缺乏，代码可读性较差，不是一个理想的学习对象
 - [香山](https://github.com/OpenXiangShan): 中科院计算所开源RISC-V处理器项目
 - [openpiton](https://github.com/PrincetonUniversity/openpiton): 普林斯顿开源 25 核处理器, 目前版本的 Piton 芯片大小 6 毫米 x6 毫米，有超过 4.6 亿个晶体管，使用 IBM 的 32 纳米工艺制造，是至今学术机 构开发的最复杂处理器。
+> [darkriscv](https://github.com/darklife/darkriscv)：opensouce RISC-V cpu core implemented in Verilog from scratch in one night!
+> [CVA6 RISC-V CPU](https://github.com/openhwgroup/cva6)：CVA6 是一个 6 级、单期、有序 CPU，它实现了 64 位 RISC-V 指令集。
 
 > Reference: 
 > [优秀的 Verilog/FPGA开源项目介绍（二）-RISC-V](https://zhuanlan.zhihu.com/p/423332071)
@@ -62,3 +68,6 @@ toc: false # 不显示文章目录
 - [ANANDTECH](https://www.anandtech.com/)
 - https://uops.info/
 - https://www.agner.org/optimize/
+- [Brendan Gregg's Blog](https://www.brendangregg.com/blog/index.html)
+- [gem5 Bootcamp 2022](https://gem5bootcamp.github.io/gem5-bootcamp-env/)
+- [7-Zip LZMA Benchmark](https://www.7-cpu.com/)

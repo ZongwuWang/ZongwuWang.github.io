@@ -1,6 +1,9 @@
 ---
 title: DynamoRIO使用说明
 categories: 计算机体系架构
+password: www
+abstract: 'Welcome to my blog, enter password to read.'
+message: 'Welcome to my blog, enter password to read.'
 date: 2022-07-15 20:41:52
 tags:
 - DynamoRIO

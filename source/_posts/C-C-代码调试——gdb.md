@@ -14,10 +14,12 @@ message: Welcome to my blog, enter password to read.
 
 <!-- TOC -->
 
-- [C_C++代码调试——gdb](#c_c代码调试gdb)
+- [C\_C++代码调试——gdb](#c_c代码调试gdb)
 	- [1. 开发环境](#1-开发环境)
 	- [2. gdb简介](#2-gdb简介)
 		- [gdb常用功能概览](#gdb常用功能概览)
+	- [3. 配置gdb init文件](#3-配置gdb-init文件)
+	- [4. 多线程调试](#4-多线程调试)
 	- [Reference](#reference)
 
 <!-- /TOC -->
@@ -274,6 +276,7 @@ catch 事件
 - 刷新屏幕：refresh
 - 更新源代码窗口：update
 - 关闭除命令窗口之外的窗口：tui disable
+- 在开启split窗口之后需要切换窗口：fs next
 
 
 调用shell命令：shell 命令；!命令
@@ -282,7 +285,33 @@ assert宏使用（暂略）
 
 内容来源于《C/C++代码调试的艺术》，此处只涉及gdb基本功能。此书还涉及多线程死锁调试、调试动态库、内存检查、远程调试、转储文件调试分析、发行版调试、调试高级话题等章节。
 
+## 3. 配置gdb init文件
+
+当gdb启动时，会读取HOME目录和当前目录下的的配置文件，执行里面的命令。这个文件通常为“.gdbinit”。
+
+在windows下使用习惯了intel汇编，在Linux下看的难受，在gdb下使用"set disassembly-flavor intel"可以显示intel格式汇编，通过"set disassembly-flavor att"可以转换回默认att显示格式，这可以直接在.gdbinit中配置自己喜欢的默认格式。
+
+此外，在使用objdump反汇编和gcc汇编时，都可以选择汇编显示方式：
+
+```shell {.line-numbers}
+gcc -masm=intel ...
+objdump -M intel-mnemonic ...
+```
+
+## 4. 多线程调试
+
+- info threads 显示当前可调试的所有线程，每个线程会有一个GDB为其分配的ID，后面操作线程的时候会用到这个ID。 前面有*的是当前调试的线程
+- thread ID(1,2,3…) 切换当前调试的线程为指定ID的线程
+- break thread_test.c:123 thread all（例：在相应函数的位置设置断点break pthread_run1） 在所有线程中相应的行上设置断点
+- thread apply ID1 ID2 command 让一个或者多个线程执行GDB命令command
+- thread apply all command 让所有被调试线程执行GDB命令command
+- set scheduler-locking 选项 command 设置线程是以什么方式来执行命令
+- set scheduler-locking off 不锁定任何线程，也就是所有线程都执行，这是默认值
+- set scheduler-locking on 只有当前被调试程序会执行
+- set scheduler-locking on step 在单步的时候，除了next过一个函数的情况(熟悉情况的人可能知道，这其实是一个设置断点然后continue的行为)以外，只有当前线程会执行
+
 ## Reference
 
 - 《C/C++代码调试的艺术》
 - [gdb调试断点的保存](https://blog.csdn.net/yang15225094594/article/details/29599117)
+- [配置gdb init文件](https://wizardforcel.gitbooks.io/100-gdb-tips/content/config-gdbinit.html)

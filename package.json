@@ -24,6 +24,7 @@
     "hexo-generator-feed": "^3.0.0",
     "hexo-generator-index": "^2.0.0",
     "hexo-generator-search": "^2.4.3",
+    "hexo-generator-slidehtml": "^0.0.62",
     "hexo-generator-tag": "^1.0.0",
     "hexo-image-link": "^0.0.3",
     "hexo-permalink-pinyin": "^1.1.0",
@@ -34,6 +35,7 @@
     "hexo-renderer-stylus": "^2.0.0",
     "hexo-server": "^2.0.0",
     "hexo-theme-landscape": "^0.0.3",
+    "markdown": "^0.5.0",
     "utf-8-validate": "^5.0.5"
   }
 }

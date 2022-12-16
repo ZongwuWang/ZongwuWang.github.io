@@ -4,6 +4,9 @@ date: 2022-07-14 16:28:38
 tags:
 - NUMA
 categories: 计算机体系架构
+password: www
+abstract: 'Welcome to my blog, enter password to read.'
+message: 'Welcome to my blog, enter password to read.'
 ---
 
 <font color=blue>相关杂思：今天与实验室师兄讨论起PIM开启内存交织的方式，主要是以UPMEM为例，每64MB的DRAM die上都有一个DPU，只可以访问local 64MB的数据，访问其他DPU的数据则需要通过CPU或者DPU之间的数据总线，这需要设计实现相当复杂的NUMA架构。然后我提出了一个想法，将128个DPU绑定为一个Group，同一个group内部的DPU具有全局视野，可以直接访问这一个Group内部的1GB数据，这就与现在CPU中的NUMA方案很相似，如参考博客中的第三张图的方案，同理现在共享LLC也是充当这种角色。第二种方案与现有UPMEM方案相同，只是使用CPU当作QPI的通信功能。这样做有一个弊端就是任意两个核心之间的访问速度都等于NUMA架构中最大跳的延迟，并且QPI上带宽会称为系统瓶颈。</font>

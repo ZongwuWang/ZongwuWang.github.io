@@ -1,6 +1,9 @@
 ---
 title: perf使用手册
 categories: CPU性能分析
+password: www
+abstract: 'Welcome to my blog, enter password to read.'
+message: 'Welcome to my blog, enter password to read.'
 date: 2022-07-16 10:20:35
 tags:
 - perf
@@ -904,10 +907,8 @@ Showing cycles for noploop
 - [How to monitor the full range of CPU performance events](http://www.bnikolic.co.uk/blog/hpc-prof-events.html)
 - [perf Examples](https://www.brendangregg.com/perf.html)
 - [PERF tutorial: Finding execution hot spots](http://sandsoftwaresound.net/perf/perf-tutorial-hot-spots/)
-- [perf Examples](https://www.brendangregg.com/perf.html)
 - [Application performance analysis Using Perf with PMU event, PEBS, LBR and Intel PT technologies](http://bos.itdks.com/4d8aac644c2140e7ae259c14fae8e36f.pdf)
 - [4. PEBS(Precise Event Based Sampling)机制](https://www.it610.com/article/1274692411129348096.htm)
-- [Linux perf_events status update](http://www.paradyn.org/petascale2013/slides/eranian13.pdf)
 - [Linux perf_events status update](http://www.paradyn.org/petascale2013/slides/eranian13.pdf)
 - [Gooda project](https://github.com/David-Levinthal/gooda)
 - [Intel PEBS 那些事](https://zhuanlan.zhihu.com/p/377074185)

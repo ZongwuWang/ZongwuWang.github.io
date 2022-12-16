@@ -12,7 +12,7 @@ tags:
 - Branch Prediction
 - 预取
 - Prefetch
-categories: 计算机体系结构
+categories: 计算机体系架构
 ---
 
 ## 1. ChampSim仿真器介绍

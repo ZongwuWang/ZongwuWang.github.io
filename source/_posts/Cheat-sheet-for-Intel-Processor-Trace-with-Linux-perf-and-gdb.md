@@ -1,6 +1,9 @@
 ---
 title: Cheat sheet for Intel Processor Trace with Linux perf and gdb
 categories: CPU性能分析
+password: www
+abstract: 'Welcome to my blog, enter password to read.'
+message: 'Welcome to my blog, enter password to read.'
 date: 2022-07-19 13:57:10
 tags:
 - perf

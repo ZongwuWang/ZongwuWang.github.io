@@ -2,7 +2,11 @@
 title: CPU访问各个部件的延时时长
 date: 2022-07-15 08:24:16
 tags:
-categories: 挖坑待填
+- latency
+categories: 计算机体系架构
+password: www
+abstract: 'Welcome to my blog, enter password to read.'
+message: 'Welcome to my blog, enter password to read.'
 ---
 
 被普遍引用得比较多的数据如下：

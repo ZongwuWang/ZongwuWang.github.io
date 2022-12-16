@@ -1,6 +1,6 @@
 ---
 title: Precise Runahead Execution
-# password: www
+password: www
 abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2022-07-08 07:28:00

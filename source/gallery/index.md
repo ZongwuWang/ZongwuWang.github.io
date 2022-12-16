@@ -7,5 +7,5 @@ onlyTitle: true
 ---
 
 <div class="gallery-group-main">
-    {% galleryGroup '校园生活' 'ACA-Lab磕盐生活' '/campus' https://pic1.zhimg.com/80/v2-23c3820e8abfb1cef689531af2dc6d09_1440w.jpg?source=1940ef5c %}
+{% galleryGroup '校园生活' 'ACA-Lab磕盐生活' '/campus' https://pic1.zhimg.com/80/v2-23c3820e8abfb1cef689531af2dc6d09_1440w.jpg?source=1940ef5c %}
 </div>

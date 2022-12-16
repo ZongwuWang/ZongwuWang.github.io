@@ -6,6 +6,9 @@ tags:
 - 性能监视
 - PMU
 categories: 计算机体系架构
+password: www
+abstract: 'Welcome to my blog, enter password to read.'
+message: 'Welcome to my blog, enter password to read.'
 ---
 
 全文来自Intel开发者手册：Intel? 64 and IA-32 Architectures Software Developer’s Manual Volume 3B System Programming Guide.pdf

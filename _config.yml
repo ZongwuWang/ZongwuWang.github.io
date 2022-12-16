@@ -170,3 +170,10 @@ markdown:
     permalink: true
     permalinkClass: header-anchor
     permalinkSymbol: ¶
+
+slidehtml: 
+  # Merge title as first slide page.
+  titleMerge: true
+  # For reveal.js's page separator, remember escape special character like '\' .
+  horizontalSeparator: '^\n---\n'
+  verticalSeparator: '^\n--\n'

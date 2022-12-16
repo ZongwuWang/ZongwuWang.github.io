@@ -7,7 +7,7 @@ date: 2021-12-23 17:52:14
 tags:
 - Latency
 - CPU
-categories: 计算机体系结构
+categories: 计算机体系架构
 ---
 
 关于计算机访问延迟，存在以下几组统计数据：

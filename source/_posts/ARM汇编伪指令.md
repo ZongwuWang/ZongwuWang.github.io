@@ -1,5 +1,6 @@
 ---
 title: ARM汇编伪指令
+password: www
 abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2022-07-05 15:49:19
