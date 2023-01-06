@@ -546,6 +546,24 @@
             </div>
           
           <li class="post-item" data-aos="fade-left">
+            <span class="post-date">07-19</span>
+            <a class="post-title" href="/2022/07/19/enhance-performance-analysis-with-intel-processor-trace/">Enhance performance analysis with Intel Processor Trace</a>
+          </li>
+        
+          
+          <li class="post-item" data-aos="fade-left">
+            <span class="post-date">07-19</span>
+            <a class="post-title" href="/2022/07/19/cheat-sheet-for-intel-processor-trace-with-linux-perf-and-gdb/">Cheat sheet for Intel Processor Trace with Linux perf and gdb</a>
+          </li>
+        
+          
+          <li class="post-item" data-aos="fade-left">
+            <span class="post-date">07-18</span>
+            <a class="post-title" href="/2022/07/18/advanced-profiling-topics-pebs-and-lbr/">Advanced profiling topics. PEBS and LBR</a>
+          </li>
+        
+          
+          <li class="post-item" data-aos="fade-left">
             <span class="post-date">07-16</span>
             <a class="post-title" href="/2022/07/16/perf-shi-yong-shou-ce/">perf使用手册</a>
           </li>
@@ -584,24 +602,6 @@
           <li class="post-item" data-aos="fade-left">
             <span class="post-date">07-14</span>
             <a class="post-title" href="/2022/07/14/shen-wa-numa/">深挖NUMA</a>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            <span class="post-date">07-12</span>
-            <a class="post-title" href="/2022/07/12/cache-zhong-de-invalidate-he-clean/">cache中的invalidate和clean</a>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            <span class="post-date">07-11</span>
-            <a class="post-title" href="/2022/07/11/criticality-driven-fetch/">Criticality Driven Fetch</a>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            <span class="post-date">07-08</span>
-            <a class="post-title" href="/2022/07/08/precise-runahead-execution/">Precise Runahead Execution</a>
           </li>
         
       </ul>
@@ -937,5 +937,20 @@
     
     <script src="/js/app.js"></script>
 
-  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
