@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2023-01-06T08:06:58.023Z</updated>
+  <updated>2023-01-30T06:45:47.719Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何在 shell 中实现并行执行</title>
+    <link href="https://zongwuwang.github.io/2023/01/30/ru-he-zai-shell-zhong-shi-xian-bing-xing-zhi-xing/"/>
+    <id>https://zongwuwang.github.io/2023/01/30/ru-he-zai-shell-zhong-shi-xian-bing-xing-zhi-xing/</id>
+    <published>2023-01-30T06:29:25.000Z</published>
+    <updated>2023-01-30T06:45:47.719Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天，有个同事问我，他的 shell</summary>
+        
+      
+    
+    
+    
+    <category term="系统环境" scheme="https://zongwuwang.github.io/categories/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
+    
+    
+    <category term="并行" scheme="https://zongwuwang.github.io/tags/%E5%B9%B6%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在Linux下如何限制命令执行的时间？</title>
+    <link href="https://zongwuwang.github.io/2023/01/30/zai-linux-xia-ru-he-xian-zhi-ming-ling-zhi-xing-de-shi-jian/"/>
+    <id>https://zongwuwang.github.io/2023/01/30/zai-linux-xia-ru-he-xian-zhi-ming-ling-zhi-xing-de-shi-jian/</id>
+    <published>2023-01-30T06:08:47.000Z</published>
+    <updated>2023-01-30T06:10:48.147Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在Linux下如何限制命令执行的时间？两种解决方法，如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="系统环境" scheme="https://zongwuwang.github.io/categories/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
+    
+    
+    <category term="命令行" scheme="https://zongwuwang.github.io/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>docker容器中添加perf的支持</title>
@@ -61,7 +113,7 @@
     <link href="https://zongwuwang.github.io/2023/01/06/dramsim3-dai-ma-jie-du/"/>
     <id>https://zongwuwang.github.io/2023/01/06/dramsim3-dai-ma-jie-du/</id>
     <published>2023-01-06T07:17:15.000Z</published>
-    <updated>2023-01-06T08:01:56.624Z</updated>
+    <updated>2023-01-06T16:19:21.722Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
@@ -412,48 +464,6 @@
     <category term="Java" scheme="https://zongwuwang.github.io/tags/Java/"/>
     
     <category term="JDK" scheme="https://zongwuwang.github.io/tags/JDK/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++ Coroutines: Understanding operator co_await</title>
-    <link href="https://zongwuwang.github.io/2022/11/28/c-coroutines-understanding-operator-co-await/"/>
-    <id>https://zongwuwang.github.io/2022/11/28/c-coroutines-understanding-operator-co-await/</id>
-    <published>2022-11-28T11:22:48.000Z</published>
-    <updated>2022-11-28T12:01:30.579Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="Coroutine" scheme="https://zongwuwang.github.io/tags/Coroutine/"/>
-    
-    <category term="协程" scheme="https://zongwuwang.github.io/tags/%E5%8D%8F%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Coroutine Theory</title>
-    <link href="https://zongwuwang.github.io/2022/11/28/coroutine-theory/"/>
-    <id>https://zongwuwang.github.io/2022/11/28/coroutine-theory/</id>
-    <published>2022-11-28T00:53:29.000Z</published>
-    <updated>2022-11-28T11:23:49.704Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="Coroutine" scheme="https://zongwuwang.github.io/tags/Coroutine/"/>
-    
-    <category term="协程" scheme="https://zongwuwang.github.io/tags/%E5%8D%8F%E7%A8%8B/"/>
     
   </entry>
   
