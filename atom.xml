@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2023-01-30T06:45:47.719Z</updated>
+  <updated>2023-02-12T12:47:09.134Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,169 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自旋锁和互斥锁源码分析</title>
+    <link href="https://zongwuwang.github.io/2023/02/11/zi-xuan-suo-he-hu-chi-suo-yuan-ma-fen-xi/"/>
+    <id>https://zongwuwang.github.io/2023/02/11/zi-xuan-suo-he-hu-chi-suo-yuan-ma-fen-xi/</id>
+    <published>2023-02-11T08:34:19.000Z</published>
+    <updated>2023-02-12T12:47:09.134Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="atomic" scheme="https://zongwuwang.github.io/tags/atomic/"/>
+    
+    <category term="glibc" scheme="https://zongwuwang.github.io/tags/glibc/"/>
+    
+    <category term="lock" scheme="https://zongwuwang.github.io/tags/lock/"/>
+    
+    <category term="spin_lock" scheme="https://zongwuwang.github.io/tags/spin-lock/"/>
+    
+    <category term="mutex_lock" scheme="https://zongwuwang.github.io/tags/mutex-lock/"/>
+    
+    <category term="自旋锁" scheme="https://zongwuwang.github.io/tags/%E8%87%AA%E6%97%8B%E9%94%81/"/>
+    
+    <category term="互斥锁" scheme="https://zongwuwang.github.io/tags/%E4%BA%92%E6%96%A5%E9%94%81/"/>
+    
+    <category term="原子操作" scheme="https://zongwuwang.github.io/tags/%E5%8E%9F%E5%AD%90%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>gdb 调试glibc源码</title>
+    <link href="https://zongwuwang.github.io/2023/02/11/gdb-diao-shi-glibc-yuan-ma/"/>
+    <id>https://zongwuwang.github.io/2023/02/11/gdb-diao-shi-glibc-yuan-ma/</id>
+    <published>2023-02-11T08:21:51.000Z</published>
+    <updated>2023-02-11T08:33:26.639Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="gdb" scheme="https://zongwuwang.github.io/tags/gdb/"/>
+    
+    <category term="glibc" scheme="https://zongwuwang.github.io/tags/glibc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Serializing Instructions</title>
+    <link href="https://zongwuwang.github.io/2023/02/04/serializing-instructions/"/>
+    <id>https://zongwuwang.github.io/2023/02/04/serializing-instructions/</id>
+    <published>2023-02-04T13:15:35.000Z</published>
+    <updated>2023-02-04T13:57:43.216Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="Serialization" scheme="https://zongwuwang.github.io/tags/Serialization/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Database Transaction Isolation Level (4 Part Series)</title>
+    <link href="https://zongwuwang.github.io/2023/02/04/database-transaction-isolation-level-4-part-series/"/>
+    <id>https://zongwuwang.github.io/2023/02/04/database-transaction-isolation-level-4-part-series/</id>
+    <published>2023-02-04T11:47:57.000Z</published>
+    <updated>2023-02-04T13:03:07.142Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="Database" scheme="https://zongwuwang.github.io/tags/Database/"/>
+    
+    <category term="数据库" scheme="https://zongwuwang.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浅谈Intel QPI的MESIF协议和Home，Source Snoop</title>
+    <link href="https://zongwuwang.github.io/2023/02/04/qian-tan-intel-qpi-de-mesif-xie-yi-he-home-source-snoop/"/>
+    <id>https://zongwuwang.github.io/2023/02/04/qian-tan-intel-qpi-de-mesif-xie-yi-he-home-source-snoop/</id>
+    <published>2023-02-04T03:18:09.000Z</published>
+    <updated>2023-02-04T03:29:58.497Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="Snoop" scheme="https://zongwuwang.github.io/tags/Snoop/"/>
+    
+    <category term="QPI" scheme="https://zongwuwang.github.io/tags/QPI/"/>
+    
+    <category term="MESIF" scheme="https://zongwuwang.github.io/tags/MESIF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java的对象模型——Oop-Klass模型（二）</title>
+    <link href="https://zongwuwang.github.io/2023/02/03/java-de-dui-xiang-mo-xing-oop-klass-mo-xing-er/"/>
+    <id>https://zongwuwang.github.io/2023/02/03/java-de-dui-xiang-mo-xing-oop-klass-mo-xing-er/</id>
+    <published>2023-02-03T06:15:06.000Z</published>
+    <updated>2023-02-03T06:28:53.846Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="JVM" scheme="https://zongwuwang.github.io/tags/JVM/"/>
+    
+    <category term="Oop" scheme="https://zongwuwang.github.io/tags/Oop/"/>
+    
+    <category term="Klass" scheme="https://zongwuwang.github.io/tags/Klass/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java的对象模型——Oop-Klass模型（一）</title>
+    <link href="https://zongwuwang.github.io/2023/02/03/java-de-dui-xiang-mo-xing-oop-klass-mo-xing-yi/"/>
+    <id>https://zongwuwang.github.io/2023/02/03/java-de-dui-xiang-mo-xing-oop-klass-mo-xing-yi/</id>
+    <published>2023-02-03T06:01:11.000Z</published>
+    <updated>2023-02-03T06:14:54.933Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="JVM" scheme="https://zongwuwang.github.io/tags/JVM/"/>
+    
+    <category term="Oop" scheme="https://zongwuwang.github.io/tags/Oop/"/>
+    
+    <category term="Klass" scheme="https://zongwuwang.github.io/tags/Klass/"/>
+    
+  </entry>
   
   <entry>
     <title>如何在 shell 中实现并行执行</title>
@@ -302,168 +465,6 @@
     <category term="JVM" scheme="https://zongwuwang.github.io/tags/JVM/"/>
     
     <category term="GC" scheme="https://zongwuwang.github.io/tags/GC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>What is a Memory Controller?</title>
-    <link href="https://zongwuwang.github.io/2022/12/14/what-is-a-memory-controller/"/>
-    <id>https://zongwuwang.github.io/2022/12/14/what-is-a-memory-controller/</id>
-    <published>2022-12-14T07:09:43.000Z</published>
-    <updated>2022-12-14T07:31:14.770Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="内存控制器" scheme="https://zongwuwang.github.io/tags/%E5%86%85%E5%AD%98%E6%8E%A7%E5%88%B6%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux动态加载驱动模块</title>
-    <link href="https://zongwuwang.github.io/2022/12/14/linux-dong-tai-jia-zai-qu-dong-mo-kuai/"/>
-    <id>https://zongwuwang.github.io/2022/12/14/linux-dong-tai-jia-zai-qu-dong-mo-kuai/</id>
-    <published>2022-12-14T01:56:39.000Z</published>
-    <updated>2022-12-14T02:28:53.592Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="操作系统" scheme="https://zongwuwang.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-    <category term="操作系统" scheme="https://zongwuwang.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="OS" scheme="https://zongwuwang.github.io/tags/OS/"/>
-    
-    <category term="驱动" scheme="https://zongwuwang.github.io/tags/%E9%A9%B1%E5%8A%A8/"/>
-    
-    <category term="Driver" scheme="https://zongwuwang.github.io/tags/Driver/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JDK8默认垃圾回收器详解</title>
-    <link href="https://zongwuwang.github.io/2022/12/14/jdk8-mo-ren-la-ji-hui-shou-qi-xiang-jie/"/>
-    <id>https://zongwuwang.github.io/2022/12/14/jdk8-mo-ren-la-ji-hui-shou-qi-xiang-jie/</id>
-    <published>2022-12-13T18:16:47.000Z</published>
-    <updated>2022-12-13T18:26:49.822Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;查询JDK8默认使用的垃圾收集器命令：&lt;/p&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;figcaption&gt;&lt;span&gt;&amp;#123;.line-numbers&amp;#125;&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
-        
-      
-    
-    
-    
-    <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="GC" scheme="https://zongwuwang.github.io/tags/GC/"/>
-    
-    <category term="jdk" scheme="https://zongwuwang.github.io/tags/jdk/"/>
-    
-    <category term="java" scheme="https://zongwuwang.github.io/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>编译最新版perf</title>
-    <link href="https://zongwuwang.github.io/2022/12/13/bian-yi-zui-xin-ban-perf/"/>
-    <id>https://zongwuwang.github.io/2022/12/13/bian-yi-zui-xin-ban-perf/</id>
-    <published>2022-12-13T06:29:17.000Z</published>
-    <updated>2022-12-13T06:33:54.565Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="系统环境" scheme="https://zongwuwang.github.io/categories/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
-    
-    
-    <category term="perf" scheme="https://zongwuwang.github.io/tags/perf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphChi基准测试使用</title>
-    <link href="https://zongwuwang.github.io/2022/12/13/graphchi-ji-zhun-ce-shi-shi-yong/"/>
-    <id>https://zongwuwang.github.io/2022/12/13/graphchi-ji-zhun-ce-shi-shi-yong/</id>
-    <published>2022-12-13T03:46:31.000Z</published>
-    <updated>2022-12-13T05:25:06.285Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="Benchmark" scheme="https://zongwuwang.github.io/categories/Benchmark/"/>
-    
-    
-    <category term="Benchmark" scheme="https://zongwuwang.github.io/tags/Benchmark/"/>
-    
-    <category term="Java" scheme="https://zongwuwang.github.io/tags/Java/"/>
-    
-    <category term="GraphChi" scheme="https://zongwuwang.github.io/tags/GraphChi/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>G1GC代码解读</title>
-    <link href="https://zongwuwang.github.io/2022/12/07/g1gc-dai-ma-jie-du/"/>
-    <id>https://zongwuwang.github.io/2022/12/07/g1gc-dai-ma-jie-du/</id>
-    <published>2022-12-07T09:17:57.000Z</published>
-    <updated>2022-12-21T09:03:48.322Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="G1GC" scheme="https://zongwuwang.github.io/tags/G1GC/"/>
-    
-    <category term="JVM" scheme="https://zongwuwang.github.io/tags/JVM/"/>
-    
-    <category term="垃圾回收" scheme="https://zongwuwang.github.io/tags/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>The most complete list of -XX options for Java JVM</title>
-    <link href="https://zongwuwang.github.io/2022/12/05/the-most-complete-list-of-xx-options-for-java-jvm/"/>
-    <id>https://zongwuwang.github.io/2022/12/05/the-most-complete-list-of-xx-options-for-java-jvm/</id>
-    <published>2022-12-05T08:39:56.000Z</published>
-    <updated>2022-12-05T11:41:34.481Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="JVM" scheme="https://zongwuwang.github.io/tags/JVM/"/>
-    
-    <category term="Java" scheme="https://zongwuwang.github.io/tags/Java/"/>
-    
-    <category term="JDK" scheme="https://zongwuwang.github.io/tags/JDK/"/>
     
   </entry>
   
