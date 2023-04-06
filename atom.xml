@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2023-03-10T05:42:47.605Z</updated>
+  <updated>2023-04-04T17:33:26.496Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>INTEL MLC(Memory Latency Checker)介绍</title>
+    <link href="https://zongwuwang.github.io/2023/04/05/intel-mlc-memory-latency-checker-jie-shao/"/>
+    <id>https://zongwuwang.github.io/2023/04/05/intel-mlc-memory-latency-checker-jie-shao/</id>
+    <published>2023-04-04T17:28:19.000Z</published>
+    <updated>2023-04-04T17:33:26.496Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="CPU性能分析" scheme="https://zongwuwang.github.io/categories/CPU%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="Intel" scheme="https://zongwuwang.github.io/tags/Intel/"/>
+    
+    <category term="Memory" scheme="https://zongwuwang.github.io/tags/Memory/"/>
+    
+    <category term="Latency" scheme="https://zongwuwang.github.io/tags/Latency/"/>
+    
+    <category term="MLC" scheme="https://zongwuwang.github.io/tags/MLC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cadence设置</title>
+    <link href="https://zongwuwang.github.io/2023/04/02/cadence-she-zhi/"/>
+    <id>https://zongwuwang.github.io/2023/04/02/cadence-she-zhi/</id>
+    <published>2023-04-02T12:34:33.000Z</published>
+    <updated>2023-04-02T12:36:50.928Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="系统环境" scheme="https://zongwuwang.github.io/categories/%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83/"/>
+    
+    
+    <category term="Cadence" scheme="https://zongwuwang.github.io/tags/Cadence/"/>
+    
+  </entry>
   
   <entry>
     <title>pintools实现insmix分析</title>
@@ -421,50 +465,6 @@
     <category term="GC" scheme="https://zongwuwang.github.io/tags/GC/"/>
     
     <category term="java" scheme="https://zongwuwang.github.io/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>底层原理：垃圾回收算法是如何设计的？</title>
-    <link href="https://zongwuwang.github.io/2022/12/15/di-ceng-yuan-li-la-ji-hui-shou-suan-fa-shi-ru-he-she-ji-de/"/>
-    <id>https://zongwuwang.github.io/2022/12/15/di-ceng-yuan-li-la-ji-hui-shou-suan-fa-shi-ru-he-she-ji-de/</id>
-    <published>2022-12-15T15:03:52.000Z</published>
-    <updated>2022-12-15T18:51:09.915Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="JVM" scheme="https://zongwuwang.github.io/tags/JVM/"/>
-    
-    <category term="GC" scheme="https://zongwuwang.github.io/tags/GC/"/>
-    
-    <category term="java" scheme="https://zongwuwang.github.io/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>强悍的Azul公司和他们的C4垃圾回收器</title>
-    <link href="https://zongwuwang.github.io/2022/12/15/qiang-han-de-azul-gong-si-he-ta-men-de-c4-la-ji-hui-shou-qi/"/>
-    <id>https://zongwuwang.github.io/2022/12/15/qiang-han-de-azul-gong-si-he-ta-men-de-c4-la-ji-hui-shou-qi/</id>
-    <published>2022-12-15T14:56:48.000Z</published>
-    <updated>2022-12-15T15:03:43.459Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="GC" scheme="https://zongwuwang.github.io/tags/GC/"/>
-    
-    <category term="C4" scheme="https://zongwuwang.github.io/tags/C4/"/>
     
   </entry>
   
