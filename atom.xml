@@ -6,7 +6,7 @@
   <link href="https://zongwuwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://zongwuwang.github.io/"/>
-  <updated>2023-04-04T17:33:26.496Z</updated>
+  <updated>2023-04-13T05:42:08.089Z</updated>
   <id>https://zongwuwang.github.io/</id>
   
   <author>
@@ -15,6 +15,107 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用intel pin tool进行原子指令统计</title>
+    <link href="https://zongwuwang.github.io/2023/04/13/shi-yong-intel-pin-tool-jin-xing-yuan-zi-zhi-ling-tong-ji/"/>
+    <id>https://zongwuwang.github.io/2023/04/13/shi-yong-intel-pin-tool-jin-xing-yuan-zi-zhi-ling-tong-ji/</id>
+    <published>2023-04-13T05:24:43.000Z</published>
+    <updated>2023-04-13T05:42:08.089Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="并行计算" scheme="https://zongwuwang.github.io/categories/%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97/"/>
+    
+    
+    <category term="atomic" scheme="https://zongwuwang.github.io/tags/atomic/"/>
+    
+    <category term="pin" scheme="https://zongwuwang.github.io/tags/pin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深度学习推荐系统实战笔记</title>
+    <link href="https://zongwuwang.github.io/2023/04/09/shen-du-xue-xi-tui-jian-xi-tong-shi-zhan-bi-ji/"/>
+    <id>https://zongwuwang.github.io/2023/04/09/shen-du-xue-xi-tui-jian-xi-tong-shi-zhan-bi-ji/</id>
+    <published>2023-04-09T14:34:32.000Z</published>
+    <updated>2023-04-09T14:57:53.973Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="算法" scheme="https://zongwuwang.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="推荐系统" scheme="https://zongwuwang.github.io/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="深度学习" scheme="https://zongwuwang.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深入理解内存IO过程</title>
+    <link href="https://zongwuwang.github.io/2023/04/08/shen-ru-li-jie-nei-cun-io-guo-cheng/"/>
+    <id>https://zongwuwang.github.io/2023/04/08/shen-ru-li-jie-nei-cun-io-guo-cheng/</id>
+    <published>2023-04-07T18:54:45.000Z</published>
+    <updated>2023-04-07T18:55:31.749Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="计算机硬件" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6/"/>
+    
+    
+    <category term="内存" scheme="https://zongwuwang.github.io/tags/%E5%86%85%E5%AD%98/"/>
+    
+    <category term="IO" scheme="https://zongwuwang.github.io/tags/IO/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DDR内存时序指南（转）</title>
+    <link href="https://zongwuwang.github.io/2023/04/08/ddr-nei-cun-shi-xu-zhi-nan/"/>
+    <id>https://zongwuwang.github.io/2023/04/08/ddr-nei-cun-shi-xu-zhi-nan/</id>
+    <published>2023-04-07T18:43:53.000Z</published>
+    <updated>2023-04-07T18:54:34.358Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="计算机硬件" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6/"/>
+    
+    
+    <category term="DDR" scheme="https://zongwuwang.github.io/tags/DDR/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DDR协议</title>
+    <link href="https://zongwuwang.github.io/2023/04/06/ddr-xie-yi/"/>
+    <id>https://zongwuwang.github.io/2023/04/06/ddr-xie-yi/</id>
+    <published>2023-04-06T13:30:56.000Z</published>
+    <updated>2023-04-07T05:38:41.832Z</updated>
+    
+    
+    <summary type="html">Welcome to my blog, enter password to read.</summary>
+    
+    
+    
+    <category term="计算机体系架构" scheme="https://zongwuwang.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="DDR" scheme="https://zongwuwang.github.io/tags/DDR/"/>
+    
+  </entry>
   
   <entry>
     <title>INTEL MLC(Memory Latency Checker)介绍</title>
@@ -356,115 +457,6 @@
     <category term="DRAM" scheme="https://zongwuwang.github.io/tags/DRAM/"/>
     
     <category term="DRAMsim3" scheme="https://zongwuwang.github.io/tags/DRAMsim3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用clangd替代c/c++配置vscode c++项目</title>
-    <link href="https://zongwuwang.github.io/2023/01/05/shi-yong-clangd-ti-dai-c-c-pei-zhi-vscode-c-xiang-mu/"/>
-    <id>https://zongwuwang.github.io/2023/01/05/shi-yong-clangd-ti-dai-c-c-pei-zhi-vscode-c-xiang-mu/</id>
-    <published>2023-01-05T14:10:41.000Z</published>
-    <updated>2023-01-05T14:19:18.148Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="vscode" scheme="https://zongwuwang.github.io/tags/vscode/"/>
-    
-    <category term="clangd" scheme="https://zongwuwang.github.io/tags/clangd/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bridging the performance gap for copy-based garbage collectors atop non-volatile memory</title>
-    <link href="https://zongwuwang.github.io/2022/12/21/bridging-the-performance-gap-for-copy-based-garbage-collectors-atop-non-volatile-memory/"/>
-    <id>https://zongwuwang.github.io/2022/12/21/bridging-the-performance-gap-for-copy-based-garbage-collectors-atop-non-volatile-memory/</id>
-    <published>2022-12-20T16:18:35.000Z</published>
-    <updated>2022-12-20T17:32:46.608Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="PaperReview" scheme="https://zongwuwang.github.io/categories/PaperReview/"/>
-    
-    
-    <category term="GC" scheme="https://zongwuwang.github.io/tags/GC/"/>
-    
-    <category term="NVM" scheme="https://zongwuwang.github.io/tags/NVM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>A Top-Down Method for Performance Analysis and Counters Architecture</title>
-    <link href="https://zongwuwang.github.io/2022/12/20/a-top-down-method-for-performance-analysis-and-counters-architecture/"/>
-    <id>https://zongwuwang.github.io/2022/12/20/a-top-down-method-for-performance-analysis-and-counters-architecture/</id>
-    <published>2022-12-19T17:05:18.000Z</published>
-    <updated>2022-12-19T18:45:32.491Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="CPU性能分析" scheme="https://zongwuwang.github.io/categories/CPU%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90/"/>
-    
-    
-    <category term="vtune" scheme="https://zongwuwang.github.io/tags/vtune/"/>
-    
-    <category term="top-down" scheme="https://zongwuwang.github.io/tags/top-down/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java 8 vs Java 17 垃圾收集器</title>
-    <link href="https://zongwuwang.github.io/2022/12/16/java-8-vs-java-17-la-ji-shou-ji-qi/"/>
-    <id>https://zongwuwang.github.io/2022/12/16/java-8-vs-java-17-la-ji-shou-ji-qi/</id>
-    <published>2022-12-16T05:21:30.000Z</published>
-    <updated>2022-12-16T05:51:29.468Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="JVM" scheme="https://zongwuwang.github.io/tags/JVM/"/>
-    
-    <category term="GC" scheme="https://zongwuwang.github.io/tags/GC/"/>
-    
-    <category term="java" scheme="https://zongwuwang.github.io/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前沿实践：垃圾回收器是如何演进的？</title>
-    <link href="https://zongwuwang.github.io/2022/12/16/qian-yan-shi-jian-la-ji-hui-shou-qi-shi-ru-he-yan-jin-de/"/>
-    <id>https://zongwuwang.github.io/2022/12/16/qian-yan-shi-jian-la-ji-hui-shou-qi-shi-ru-he-yan-jin-de/</id>
-    <published>2022-12-15T18:52:14.000Z</published>
-    <updated>2022-12-16T03:10:40.366Z</updated>
-    
-    
-    <summary type="html">Welcome to my blog, enter password to read.</summary>
-    
-    
-    
-    <category term="编程开发" scheme="https://zongwuwang.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="JVM" scheme="https://zongwuwang.github.io/tags/JVM/"/>
-    
-    <category term="GC" scheme="https://zongwuwang.github.io/tags/GC/"/>
-    
-    <category term="java" scheme="https://zongwuwang.github.io/tags/java/"/>
     
   </entry>
   
