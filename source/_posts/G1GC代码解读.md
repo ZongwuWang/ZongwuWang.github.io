@@ -1221,3 +1221,310 @@ void G1ParScanThreadState::trim_queue() {
 }
 ```
 {% endfolding %}
+
+
+
+**执行复制**
+oop G1ParScanThreadState::copy_to_survivor_space()
+
+## 4. Mark操作
+
+Mark操作由CMConcurrentMarkingTask::work()函数来定义，位于concurrentMark.cpp文件中。
+
+**核心调用栈：**
+
+```c++ {.line-numbers}
+libjvm.so!CMTask::make_reference_grey(CMTask * const this, oop obj, HeapRegion * hr) (\share\jdk8u-dev\hotspot\src\share\vm\gc_implementation\g1\concurrentMark.inline.hpp:405)
+libjvm.so!CMTask::deal_with_reference(CMTask * const this, oop obj) (\share\jdk8u-dev\hotspot\src\share\vm\gc_implementation\g1\concurrentMark.inline.hpp:765)
+libjvm.so!G1CMOopClosure::do_oop_nv<unsigned int>(G1CMOopClosure * const this, unsigned int * p) (\share\jdk8u-dev\hotspot\src\share\vm\gc_implementation\g1\g1OopClosures.inline.hpp:124)
+libjvm.so!InstanceKlass::oop_oop_iterate_nv(InstanceKlass * const this, oop obj, G1CMOopClosure * closure) (\share\jdk8u-dev\hotspot\src\share\vm\oops\instanceKlass.cpp:2364)
+libjvm.so!InstanceClassLoaderKlass::oop_oop_iterate_nv(InstanceClassLoaderKlass * const this, oop obj, G1CMOopClosure * closure) (\share\jdk8u-dev\hotspot\src\share\vm\oops\instanceClassLoaderKlass.cpp:109)
+libjvm.so!oopDesc::oop_iterate(oopDesc * const this, G1CMOopClosure * blk) (\share\jdk8u-dev\hotspot\src\share\vm\oops\oop.inline.hpp:764)
+libjvm.so!CMTask::process_grey_object<true>(CMTask * const this, oop obj) (\share\jdk8u-dev\hotspot\src\share\vm\gc_implementation\g1\concurrentMark.cpp:3529)
+libjvm.so!CMTask::scan_object(CMTask * const this, oop obj) (\share\jdk8u-dev\hotspot\src\share\vm\gc_implementation\g1\concurrentMark.hpp:1180)
+libjvm.so!CMBitMapClosure::do_bit(CMBitMapClosure * const this, size_t offset) (\share\jdk8u-dev\hotspot\src\share\vm\gc_implementation\g1\concurrentMark.cpp:3562)
+libjvm.so!CMBitMapRO::iterate(CMBitMapRO * const this, BitMapClosure * cl, MemRegion mr) (\share\jdk8u-dev\hotspot\src\share\vm\gc_implementation\g1\concurrentMark.inline.hpp:258)
+libjvm.so!CMTask::do_marking_step(CMTask * const this, double time_target_ms, bool do_termination, bool is_serial) (\share\jdk8u-dev\hotspot\src\share\vm\gc_implementation\g1\concurrentMark.cpp:4315)
+libjvm.so!CMConcurrentMarkingTask::work(CMConcurrentMarkingTask * const this, uint worker_id) (\share\jdk8u-dev\hotspot\src\share\vm\gc_implementation\g1\concurrentMark.cpp:1131)
+libjvm.so!GangWorker::loop(GangWorker * const this) (\share\jdk8u-dev\hotspot\src\share\vm\utilities\workgroup.cpp:329)
+libjvm.so!GangWorker::run(GangWorker * const this) (\share\jdk8u-dev\hotspot\src\share\vm\utilities\workgroup.cpp:242)
+libjvm.so!java_start(Thread * thread) (\share\jdk8u-dev\hotspot\src\os\linux\vm\os_linux.cpp:852)
+libpthread.so.0!start_thread(void * arg) (\build\glibc-SzIz7B\glibc-2.31\nptl\pthread_create.c:477)
+libc.so.6!clone() (\build\glibc-SzIz7B\glibc-2.31\sysdeps\unix\sysv\linux\x86_64\clone.S:95)
+```
+
+### 4.1 CMConcurrentMarkingTask::work解析
+
+work函数的核心代码如下所示，主要是执行do_marking_step函数。由于mark操作有可能随时被回收阶段打断，因此do_marking_step设置了每次运行的时间上线mark_step_duration_ms，以此为周期检查has_aborted()。
+
+### 4.2 CMTask::do_marking_step解析
+
+```c++ {.line-numbers}
+void work(uint worker_id) {
+  ResourceMark rm;
+  double start_vtime = os::elapsedVTime();
+  SuspendibleThreadSet::join();
+
+  CMTask* the_task = _cm->task(worker_id);
+  the_task->record_start_time();
+  if (!_cm->has_aborted()) {
+    do {
+      the_task->do_marking_step(mark_step_duration_ms,
+                                true  /* do_termination */,
+                                false /* is_serial*/);
+    } while (!_cm->has_aborted() && the_task->has_aborted());
+  }
+}
+```
+
+展开do_marking_step代码如下，在此减少主要代码逻辑：核心由第4~85行的do-while循环和第86~97行的if块组成。
+
+**do-while循环**
+每一次外层do-while循环，又由两部分组成，其中第一部分为第5~55行的if块，这个代码块的核心逻辑为第27行的`_nextMarkBitMap->iterate`，遍历`_nextMarkBitMap`以标记当前heap region中的每一个存活对象。当退出该if块时，当前heap region中存活对象都已被标记。此后，do-while循环的第二步利用while循环中的claim_region函数获取一个新的heap region，在下一次外层do-while循环中对获取的heap region进行标记。
+
+**if块**
+当以上的do-while循环退出时，表明当前线程无法获取新的heap region，这时候利用if块中的while循环不断从其他线程中进行工作窃取，并使用scan_object进行处理。
+
+```c++ {.line-numbers}
+void CMTask::do_marking_step(double time_target_ms,
+                             bool do_termination,
+                             bool is_serial) {
+  do {
+    if (!has_aborted() && _curr_region != NULL) {
+      // Some special cases:
+      // If the memory region is empty, we can just give up the region.
+      // If the current region is humongous then we only need to check
+      // the bitmap for the bit associated with the start of the object,
+      // scan the object if it's live, and give up the region.
+      // Otherwise, let's iterate over the bitmap of the part of the region
+      // that is left.
+      // If the iteration is successful, give up the region.
+      if (mr.is_empty()) {
+        giveup_current_region();
+        regular_clock_call();
+      } else if (_curr_region->isHumongous() && mr.start() == _curr_region->bottom()) {
+        if (_nextMarkBitMap->isMarked(mr.start())) {
+          // The object is marked - apply the closure
+          BitMap::idx_t offset = _nextMarkBitMap->heapWordToOffset(mr.start());
+          bitmap_closure.do_bit(offset);
+        }
+        // Even if this task aborted while scanning the humongous object
+        // we can (and should) give up the current region.
+        giveup_current_region();
+        regular_clock_call();
+      } else if (_nextMarkBitMap->iterate(&bitmap_closure, mr)) {
+        giveup_current_region();
+        regular_clock_call();
+      } else {
+        assert(has_aborted(), "currently the only way to do so");
+        // The only way to abort the bitmap iteration is to return
+        // false from the do_bit() method. However, inside the
+        // do_bit() method we move the _finger to point to the
+        // object currently being looked at. So, if we bail out, we
+        // have definitely set _finger to something non-null.
+        assert(_finger != NULL, "invariant");
+
+        // Region iteration was actually aborted. So now _finger
+        // points to the address of the object we last scanned. If we
+        // leave it there, when we restart this task, we will rescan
+        // the object. It is easy to avoid this. We move the finger by
+        // enough to point to the next possible object header (the
+        // bitmap knows by how much we need to move it as it knows its
+        // granularity).
+        assert(_finger < _region_limit, "invariant");
+        HeapWord* new_finger = _nextMarkBitMap->nextObject(_finger);
+        // Check if bitmap iteration was aborted while scanning the last object
+        if (new_finger >= _region_limit) {
+          giveup_current_region();
+        } else {
+          move_finger_to(new_finger);
+        }
+      }
+    }
+    // At this point we have either completed iterating over the
+    // region we were holding on to, or we have aborted.
+
+    // Read the note on the claim_region() method on why it might
+    // return NULL with potentially more regions available for
+    // claiming and why we have to check out_of_regions() to determine
+    // whether we're done or not.
+    while (!has_aborted() && _curr_region == NULL && !_cm->out_of_regions()) {
+      HeapRegion* claimed_region = _cm->claim_region(_worker_id);
+      if (claimed_region != NULL) {
+        // Yes, we managed to claim one
+        statsOnly( ++_regions_claimed );
+
+        if (_cm->verbose_low()) {
+          gclog_or_tty->print_cr("[%u] we successfully claimed "
+                                 "region " PTR_FORMAT,
+                                 _worker_id, p2i(claimed_region));
+        }
+
+        setup_for_region(claimed_region);
+        assert(_curr_region == claimed_region, "invariant");
+      }
+      // It is important to call the regular clock here. It might take
+      // a while to claim a region if, for example, we hit a large
+      // block of empty regions. So we need to call the regular clock
+      // method once round the loop to make sure it's called
+      // frequently enough.
+      regular_clock_call();
+    }
+  } while ( _curr_region != NULL && !has_aborted());
+  if (do_stealing && !has_aborted()) {
+    // We have not aborted. This means that we have finished all that
+    // we could. Let's try to do some stealing...
+    while (!has_aborted()) {
+      oop obj;
+      if (_cm->try_stealing(_worker_id, &_hash_seed, obj)) {
+        scan_object(obj);
+      } else {
+        break;
+      }
+    }
+  }
+}
+```
+
+至此，我们可以看出标记阶段的核心函数为scan_object，scan_object函数又是调用CMTask::process_grey_object函数。以下为process_grey_object的核心代码，核心为第11行obj->oop_iterate这个函数。
+
+```c++ {.line-numbers}
+template<bool scan>
+inline void CMTask::process_grey_object(oop obj) {
+  if (scan) {
+    if (G1CMObjArrayProcessor::is_array_slice(obj)) {
+      _words_scanned += _objArray_processor.process_slice(obj);
+    } else if (G1CMObjArrayProcessor::should_be_sliced(obj)) {
+      _words_scanned += _objArray_processor.process_obj(obj);
+    } else {
+      size_t obj_size = obj->size();
+      _words_scanned += obj_size;
+      obj->oop_iterate(_cm_oop_closure);;
+    }
+  }
+}
+```
+
+oop->iterate通过一系列宏替换，最后的实现为G1CMOopClosure::do_oop_nv，而这个函数直接调用了CMTask::deal_with_reference，这段代码很容易理解，核心就是调用make_reference_grey。
+
+```c++ {.line-numbers}
+inline void CMTask::deal_with_reference(oop obj) {
+  increment_refs_reached();
+  HeapWord* objAddr = (HeapWord*) obj;
+  if (_g1h->is_in_g1_reserved(objAddr)) {
+    if (!_nextMarkBitMap->isMarked(objAddr)) {
+      // Only get the containing region if the object is not marked on the
+      // bitmap (otherwise, it's a waste of time since we won't do
+      // anything with it).
+      HeapRegion* hr = _g1h->heap_region_containing_raw(obj);
+      if (!hr->obj_allocated_since_next_marking(obj)) {
+        make_reference_grey(obj, hr);
+      }
+    }
+  }
+}
+```
+
+make_reference_grey的实现如下所示，首先第2行的par_mark_and_count通过原子指令对nextMarkBitMap进行标记，如果标记成功(oldVal != newVal)，则准备对该对象的应用对象进行处理。第19行保证obj是位于nextTAMS之下，即不为标记快照之后新分配的对象（新分配的对象等待下次进行标记）。第20~24行的if-else块表明了g1gc针对两种数据类别的不同处理模式。如果引用对象为array，则直接处理，避免大批量数据压栈，如果为普通对象，则直接压栈到local queue中，等待后续处理。
+
+```c++ {.line-numbers}
+inline void CMTask::make_reference_grey(oop obj, HeapRegion* hr) {
+  if (_cm->par_mark_and_count(obj, hr, _marked_bytes_array, _card_bm)) {
+    // No OrderAccess:store_load() is needed. It is implicit in the
+    // CAS done in CMBitMap::parMark() call in the routine above.
+    HeapWord* global_finger = _cm->finger();
+    // We only need to push a newly grey object on the mark
+    // stack if it is in a section of memory the mark bitmap
+    // scan has already examined.  Mark bitmap scanning
+    // maintains progress "fingers" for determining that.
+    //
+    // Notice that the global finger might be moving forward
+    // concurrently. This is not a problem. In the worst case, we
+    // mark the object while it is above the global finger and, by
+    // the time we read the global finger, it has moved forward
+    // past this object. In this case, the object will probably
+    // be visited when a task is scanning the region and will also
+    // be pushed on the stack. So, some duplicate work, but no
+    // correctness problems.
+    if (is_below_finger(obj, global_finger)) {
+      if (obj->is_typeArray()) {
+        // Immediately process arrays of primitive types, rather
+        // than pushing on the mark stack.  This keeps us from
+        // adding humongous objects to the mark stack that might
+        // be reclaimed before the entry is processed - see
+        // selection of candidates for eager reclaim of humongous
+        // objects.  The cost of the additional type test is
+        // mitigated by avoiding a trip through the mark stack,
+        // by only doing a bookkeeping update and avoiding the
+        // actual scan of the object - a typeArray contains no
+        // references, and the metadata is built-in.
+        process_grey_object<false>(obj);
+      } else {
+        push(obj);
+      }
+    }
+  }
+}
+```
+
+由于在性能分析时发现par_mark_and_count的时间开销很大，在此也将该函数展开，并对热点代码段进行分析。由以下的代码可以看出：第6行利用原子指令进行nextMarkBitMap的标记，热点为count_object的实现。
+
+```c++ {.line-numbers}
+inline bool ConcurrentMark::par_mark_and_count(oop obj,
+                                               HeapRegion* hr,
+                                               size_t* marked_bytes_array,
+                                               BitMap* task_card_bm) {
+  HeapWord* addr = (HeapWord*)obj;
+  if (_nextMarkBitMap->parMark(addr)) {
+    // Update the task specific count data for the object.
+    count_object(obj, hr, marked_bytes_array, task_card_bm);
+    return true;
+  }
+  return false;
+}
+```
+
+count_object的核心功能为计算当前obj的字节数，然后再marked_bytes_array中计数，这个数组记录了每一个heap region的存活字节数，用于后续的回收。热点程序为obj->size()的实现，通过查询每个class的metadata获取字节数，metadata可以参考[^1][^2]。暂时估计为扫描的obj的类型随机，因此会频繁出现cache miss。
+
+根据[^3]：
+> From the Java 8 release, 'class metadata' is stored in the metaspace region. The beauty of the MetaSpace region is it grows automatically when in need and we can set its upper bound as well by setting maxMetaSpaceSize.
+> Before Java 8 release, it used to be a part of the PermGen region. And PermGen was a part of the heap so in that sense yes, to your question.
+
+```c++ {.line-numbers}
+inline void ConcurrentMark::count_object(oop obj,
+                                         HeapRegion* hr,
+                                         size_t* marked_bytes_array,
+                                         BitMap* task_card_bm) {
+  MemRegion mr((HeapWord*)obj, obj->size());
+  count_region(mr, hr, marked_bytes_array, task_card_bm);
+}
+```
+
+## 5. Refine RS Card
+
+**调用栈：**
+
+```c++ {.line-numbers}
+libjvm.so!G1RemSet::refine_card(G1RemSet * const this, jbyte * card_ptr, uint worker_i, bool check_for_refs_into_cset) (\share\jdk8u-dev\hotspot\src\share\vm\gc_implementation\g1\g1RemSet.cpp:452)
+libjvm.so!RefineRecordRefsIntoCSCardTableEntryClosure::do_card_ptr(RefineRecordRefsIntoCSCardTableEntryClosure * const this, jbyte * card_ptr, uint worker_i) (\share\jdk8u-dev\hotspot\src\share\vm\gc_implementation\g1\g1RemSet.cpp:280)
+libjvm.so!DirtyCardQueue::apply_closure_to_buffer(CardTableEntryClosure * cl, void ** buf, size_t index, size_t sz, bool consume, uint worker_i) (\share\jdk8u-dev\hotspot\src\share\vm\gc_implementation\g1\dirtyCardQueue.cpp:61)
+libjvm.so!DirtyCardQueueSet::apply_closure_to_completed_buffer_helper(DirtyCardQueueSet * const this, CardTableEntryClosure * cl, uint worker_i, BufferNode * nd) (\share\jdk8u-dev\hotspot\src\share\vm\gc_implementation\g1\dirtyCardQueue.cpp:195)
+libjvm.so!DirtyCardQueueSet::apply_closure_to_completed_buffer(DirtyCardQueueSet * const this, CardTableEntryClosure * cl, uint worker_i, int stop_at, bool during_pause) (\share\jdk8u-dev\hotspot\src\share\vm\gc_implementation\g1\dirtyCardQueue.cpp:214)
+libjvm.so!G1CollectedHeap::iterate_dirty_card_closure(G1CollectedHeap * const this, CardTableEntryClosure * cl, DirtyCardQueue * into_cset_dcq, bool concurrent, uint worker_i) (\share\jdk8u-dev\hotspot\src\share\vm\gc_implementation\g1\g1CollectedHeap.cpp:2271)
+libjvm.so!G1RemSet::updateRS(G1RemSet * const this, DirtyCardQueue * into_cset_dcq, uint worker_i) (\share\jdk8u-dev\hotspot\src\share\vm\gc_implementation\g1\g1RemSet.cpp:298)
+libjvm.so!G1RemSet::oops_into_collection_set_do(G1RemSet * const this, G1ParPushHeapRSClosure * oc, CodeBlobClosure * code_root_cl, uint worker_i) (\share\jdk8u-dev\hotspot\src\share\vm\gc_implementation\g1\g1RemSet.cpp:330)
+libjvm.so!G1RootProcessor::scan_remembered_sets(G1RootProcessor * const this, G1ParPushHeapRSClosure * scan_rs, OopClosure * scan_non_heap_weak_roots, uint worker_i) (\share\jdk8u-dev\hotspot\src\share\vm\gc_implementation\g1\g1RootProcessor.cpp:359)
+libjvm.so!G1ParTask::work(G1ParTask * const this, uint worker_id) (\share\jdk8u-dev\hotspot\src\share\vm\gc_implementation\g1\g1CollectedHeap.cpp:4869)
+libjvm.so!GangWorker::loop(GangWorker * const this) (\share\jdk8u-dev\hotspot\src\share\vm\utilities\workgroup.cpp:329)
+libjvm.so!GangWorker::run(GangWorker * const this) (\share\jdk8u-dev\hotspot\src\share\vm\utilities\workgroup.cpp:242)
+libjvm.so!java_start(Thread * thread) (\share\jdk8u-dev\hotspot\src\os\linux\vm\os_linux.cpp:852)
+libpthread.so.0!start_thread(void * arg) (\build\glibc-SzIz7B\glibc-2.31\nptl\pthread_create.c:477)
+libc.so.6!clone() (\build\glibc-SzIz7B\glibc-2.31\sysdeps\unix\sysv\linux\x86_64\clone.S:95)
+```
+
+
+## Reference
+
+[^1]: [Java的对象模型——Oop-Klass模型（一）](https://zhuanlan.zhihu.com/p/104494807)
+[^2]: [Java的对象模型——Oop-Klass模型（二）](https://zhuanlan.zhihu.com/p/104725313)
+[^3]: https://stackoverflow.com/a/62442535/20103737
